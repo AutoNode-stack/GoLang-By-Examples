@@ -1,0 +1,20 @@
+# SO y Editores
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Logs y temporales
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Entornos virtuales o caché de Python (usados durante la compilación de datos)
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/

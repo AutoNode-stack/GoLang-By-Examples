@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Go by Example en Español | Guía Completa Ampliada con Evaluaciones</title>
+  <meta name="description" content="Aprende Go (Golang) con todos los 85 ejemplos oficiales de Go by Example ampliados en español con explicaciones de nivel Básico, Intermedio y Experto, ejercicios prácticos de evaluación y enlaces a documentación oficial.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐹</text></svg>">
+</head>
+<body>
+  <div class="app-layout">
+    
+    <!-- BARRA LATERAL (SIDEBAR) -->
+    <aside class="sidebar" id="sidebar">
+      
+      <!-- Cabecera de la Marca -->
+      <div class="sidebar-header">
+        <a href="#" class="brand">
+          <div class="brand-logo">Go</div>
+          <div class="brand-text">
+            <h1>Go by Example</h1>
+            <span>Edición Pro en Español</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Barra de Progreso Global -->
+      <div class="progress-widget">
+        <div class="progress-header">
+          <span>Tu Progreso de Estudio</span>
+          <span class="progress-count" id="progressCount">0 / 85 (0%)</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progressBarFill"></div>
+        </div>
+      </div>
+
+      <!-- Buscador Rápido -->
+      <div class="search-box-wrapper">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input 
+            type="text" 
+            id="searchInput" 
+            class="search-input" 
+            placeholder="Buscar tema, concepto o código..." 
+            autocomplete="off"
+            spellcheck="false"
+          >
+          <kbd class="search-kbd">Ctrl K</kbd>
+        </div>
+      </div>
+
+      <!-- Filtros por Chip -->
+      <div class="filter-chips">
+        <button class="chip-btn active" data-filter="all">Todos (85)</button>
+        <button class="chip-btn" data-filter="principiante">Principiante</button>
+        <button class="chip-btn" data-filter="intermedio">Intermedio</button>
+        <button class="chip-btn" data-filter="avanzado">Avanzado</button>
+        <button class="chip-btn" data-filter="pendientes">Pendientes</button>
+        <button class="chip-btn" data-filter="completados">Completados</button>
+        <button class="chip-btn" data-filter="favoritos">Favoritos ★</button>
+      </div>
+
+      <!-- Lista de Temas por Categoría -->
+      <nav class="topics-nav" id="topicsNav">
+        <!-- Renderizado dinámico desde app.js -->
+      </nav>
+
+    </aside>
+
+    <!-- ÁREA DE CONTENIDO PRINCIPAL -->
+    <main class="main-wrapper">
+      
+      <!-- Topbar de Navegación y Herramientas -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-toggle-btn" id="menuToggleBtn" title="Alternar menú lateral" aria-label="Menú">
+            ☰
+          </button>
+          <nav class="breadcrumbs" aria-label="Miga de pan">
+            <span>Inicio</span>
+            <span>/</span>
+            <span id="breadCategory">Fundamentos</span>
+            <span>/</span>
+            <span class="current" id="breadCurrent">Hola Mundo</span>
+          </nav>
+        </div>
+
+        <div class="topbar-right">
+          <!-- Selector de Temas Antifatiga Visual -->
+          <div class="theme-selector-wrap" title="Selecciona un tema para descanso visual">
+            <button class="theme-btn active" data-theme="slate" title="Modo Calma Nocturna (Slate)">
+              🌙 <span>Calma</span>
+            </button>
+            <button class="theme-btn" data-theme="sepia" title="Modo Sepia / Papel Cálido (Filtro Luz Azul)">
+              ☕ <span>Sepia</span>
+            </button>
+            <button class="theme-btn" data-theme="oled" title="Modo OLED (Negro Puro)">
+              🌌 <span>OLED</span>
+            </button>
+            <button class="theme-btn" data-theme="nord" title="Modo Gris Nórdico">
+              ❄️ <span>Nord</span>
+            </button>
+          </div>
+
+          <!-- Botón Favorito -->
+          <button class="action-btn" id="btnToggleBookmark" title="Guardar en favoritos">
+            <span class="btn-icon">★</span>
+            <span class="btn-label">Favorito</span>
+          </button>
+
+          <!-- Botón de Completado -->
+          <button class="action-btn" id="btnToggleCompleted" title="Marcar como tema estudiado y completado">
+            <span class="btn-icon">✓</span>
+            <span class="btn-label">Marcar como Completado</span>
+          </button>
+
+          <!-- Botón Playground -->
+          <button class="action-btn" id="btnOpenPlayground" style="border-color: #00ADD8; color: #00ADD8;" title="Abrir código en Go Playground oficial">
+            <span>🚀 Playground</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Contenedor con Scroll del Artículo -->
+      <div class="content-scrollable">
+        
+        <!-- Encabezado del Tema -->
+        <article class="topic-header">
+          <div class="topic-meta">
+            <span class="topic-num" id="topicNum" style="font-size: 13px; font-weight: 700; color: var(--accent-primary);">#1</span>
+            <span class="topic-badge-difficulty badge-principiante" id="topicBadgeDifficulty">Principiante</span>
+            <span class="chip-btn" id="topicBadgeCategory" style="cursor: default;">⚡ Fundamentos del Lenguaje</span>
+          </div>
+
+          <h1 class="topic-title-h1" id="topicTitle">Hola Mundo</h1>
+          <div class="topic-title-en" id="topicTitleEn">Original: "Hello World" (Go by Example)</div>
+          <div class="topic-summary" id="topicSummary">
+            El primer programa canónico en Go que inicializa un paquete ejecutable e imprime un mensaje en la salida estándar.
+          </div>
+        </article>
+
+        <!-- Barra de Pestañas (Tabs) -->
+        <nav class="tabs-container" role="tablist">
+          <button class="tab-btn active" data-tab="code" role="tab">
+            📘 Código y Explicación Original
+          </button>
+          <button class="tab-btn" data-tab="basic" role="tab">
+            🟢 Nivel Básico
+          </button>
+          <button class="tab-btn" data-tab="inter" role="tab">
+            🟡 Nivel Intermedio
+          </button>
+          <button class="tab-btn" data-tab="expert" role="tab">
+            🔴 Nivel Experto
+          </button>
+          <button class="tab-btn" data-tab="eval" role="tab" style="color: var(--accent-warning);">
+            🎯 Ejercicio de Evaluación
+          </button>
+          <button class="tab-btn" data-tab="links" role="tab">
+            🌐 Enlaces y Docs
+          </button>
+        </nav>
+
+        <!-- PESTAÑA 1: CÓDIGO ORIGINAL Y EJECUCIÓN -->
+        <section class="tab-content active" id="tab-code">
+          <div class="level-card" style="margin-bottom: 20px; border-left: 3px solid var(--accent-primary);">
+            <div style="font-size: 12px; font-weight: 700; color: var(--accent-primary); text-transform: uppercase; margin-bottom: 8px;">
+              Explicación Oficial de Go by Example (Adaptada al Español)
+            </div>
+            <p id="originalDocText" style="font-size: 15px; color: var(--text-main); line-height: 1.7;">
+              Cargando explicación original...
+            </p>
+          </div>
+
+          <!-- Panel de Código Fuente de Go -->
+          <div class="code-panel">
+            <div class="code-header">
+              <div class="code-title">
+                <span>📄 main.go</span>
+              </div>
+              <div class="code-actions">
+                <button class="code-btn" id="btnCopyCode" title="Copiar código al portapapeles">
+                  📋 Copiar Código
+                </button>
+              </div>
+            </div>
+            <div class="code-container" id="codeContainer">
+              <pre><code>// Cargando código de Go...</code></pre>
+            </div>
+          </div>
+
+          <!-- Panel de Ejecución en Terminal -->
+          <div class="terminal-panel">
+            <div class="terminal-header">
+              <span class="terminal-dot dot-red"></span>
+              <span class="terminal-dot dot-yellow"></span>
+              <span class="terminal-dot dot-green"></span>
+              <span style="margin-left: 6px;">Terminal de Salida ($ go run)</span>
+            </div>
+            <div class="terminal-body" id="terminalContainer">
+              $ go run hello-world.go
+              hello world
+            </div>
+          </div>
+        </section>
+
+        <!-- PESTAÑA 2: NIVEL BÁSICO -->
+        <section class="tab-content" id="tab-basic">
+          <div class="level-card">
+            <div class="level-card-header">
+              <div class="level-icon-badge badge-basic-color">🟢</div>
+              <div>
+                <h3 class="level-card-title" id="basicTitle">Conceptos Fundamentales para Principiantes</h3>
+                <span style="font-size: 12px; color: var(--accent-success); font-weight: 600;">Para quien se inicia en Go o en la programación</span>
+              </div>
+            </div>
+            <div class="level-card-body" id="basicContent"></div>
+            <div class="keypoints-list">
+              <div class="keypoints-title">Puntos Clave a Recordar</div>
+              <ul id="basicKeypoints"></ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- PESTAÑA 3: NIVEL INTERMEDIO -->
+        <section class="tab-content" id="tab-inter">
+          <div class="level-card">
+            <div class="level-card-header">
+              <div class="level-icon-badge badge-inter-color">🟡</div>
+              <div>
+                <h3 class="level-card-title" id="interTitle">Mecanismos Internos y Buenas Prácticas</h3>
+                <span style="font-size: 12px; color: var(--accent-warning); font-weight: 600;">Para desarrolladores con experiencia y código idiomático</span>
+              </div>
+            </div>
+            <div class="level-card-body" id="interContent"></div>
+            <div class="keypoints-list" style="border-left-color: var(--accent-warning);">
+              <div class="keypoints-title" style="color: var(--accent-warning);">Buenas Prácticas y Convenciones</div>
+              <ul id="interKeypoints"></ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- PESTAÑA 4: NIVEL EXPERTO -->
+        <section class="tab-content" id="tab-expert">
+          <div class="level-card">
+            <div class="level-card-header">
+              <div class="level-icon-badge badge-expert-color">🔴</div>
+              <div>
+                <h3 class="level-card-title" id="expertTitle">Bajo Nivel, Rendimiento e Internals</h3>
+                <span style="font-size: 12px; color: var(--accent-purple); font-weight: 600;">Para ingenieros senior, arquitectos y optimización de sistemas</span>
+              </div>
+            </div>
+            <div class="level-card-body" id="expertContent"></div>
+            <div class="keypoints-list" style="border-left-color: var(--accent-purple);">
+              <div class="keypoints-title" style="color: var(--accent-purple);">Internals del Compilador y Runtime</div>
+              <ul id="expertKeypoints"></ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- PESTAÑA 5: EJERCICIO DE EVALUACIÓN PRÁCTICO -->
+        <section class="tab-content" id="tab-eval">
+          <div class="eval-card">
+            <div class="eval-header">
+              <span style="font-size: 26px;">🎯</span>
+              <h3 id="evalTitle">Reto de Evaluación Práctica</h3>
+            </div>
+
+            <div class="eval-statement" id="evalStatement">
+              Consigna del ejercicio...
+            </div>
+
+            <div class="eval-editor-wrap">
+              <div class="eval-editor-header">
+                <span>Tu Área de Práctica (Escribe y prueba tu código)</span>
+                <span>Go 1.22+ Syntax</span>
+              </div>
+              <textarea 
+                id="evalTextarea" 
+                class="eval-textarea" 
+                placeholder="// Escribe aquí tu código en Go..." 
+                spellcheck="false"
+              ></textarea>
+            </div>
+
+            <!-- Botones de Acción de Evaluación -->
+            <div class="eval-actions-bar">
+              <button class="action-btn" id="btnToggleHint" style="border-color: var(--accent-warning); color: var(--accent-warning);">
+                💡 Ver Pista
+              </button>
+              <button class="action-btn" id="btnRevealSolution" style="border-color: var(--accent-success); color: var(--accent-success);">
+                ✅ Revelar Solución y Análisis
+              </button>
+              <button class="action-btn" id="btnPlaygroundEval" style="border-color: #00ADD8; color: #00ADD8;">
+                🚀 Probar en Go Playground
+              </button>
+            </div>
+
+            <!-- Caja de Pista (Oculta por defecto) -->
+            <div class="hint-box" id="hintBox"></div>
+
+            <!-- Caja de Solución Revelada (Oculta por defecto) -->
+            <div class="solution-box" id="solutionBox">
+              <div style="font-size: 16px; font-weight: 700; color: var(--accent-success); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                <span>✓ Solución Canónica en Go</span>
+              </div>
+              
+              <div class="code-panel">
+                <div class="code-header">
+                  <div class="code-title">
+                    <span>📄 solucion.go</span>
+                  </div>
+                </div>
+                <div class="code-container" id="solutionCode">
+                  <pre><code>// Solución en Go...</code></pre>
+                </div>
+              </div>
+
+              <div class="solution-explanation" id="solutionExplanation">
+                Explicación de la solución...
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- PESTAÑA 6: ENLACES EXTERNOS Y DOCUMENTACIÓN OFICIAL -->
+        <section class="tab-content" id="tab-links">
+          <div style="margin-bottom: 20px;">
+            <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 6px;">Recursos Externos y Enlaces Oficiales</h3>
+            <p style="color: var(--text-muted); font-size: 14px;">
+              Acceso directo a la documentación oficial de Go (go.dev), la especificación del lenguaje, paquetes estándar y tutoriales recomendados para este tema.
+            </p>
+          </div>
+
+          <div class="external-links-grid" id="externalLinksGrid">
+            <!-- Renderizado dinámico desde app.js -->
+          </div>
+        </section>
+
+        <!-- Barra Inferior de Navegación (Anterior / Siguiente) -->
+        <footer class="bottom-nav">
+          <a href="#" class="nav-target-btn" id="btnNavPrev">
+            <span class="nav-target-label">← Tema Anterior</span>
+            <span class="nav-target-title" id="prevTitleText">Hola Mundo</span>
+          </a>
+
+          <a href="#" class="nav-target-btn" id="btnNavNext" style="text-align: right; margin-left: auto;">
+            <span class="nav-target-label">Tema Siguiente →</span>
+            <span class="nav-target-title" id="nextTitleText">Valores</span>
+          </a>
+        </footer>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/topics-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
