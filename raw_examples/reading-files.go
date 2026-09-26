@@ -1,6 +1,6 @@
-// Reading and writing files are basic tasks needed for
-// many Go programs. First we'll look at some examples of
-// reading files.
+// Leer y escribir archivos son tareas fundamentales para
+// la mayoría de programas en Go. Primero revisaremos algunos ejemplos
+// de lectura de archivos.
 
 package main
 
@@ -12,8 +12,8 @@ import (
 	"path/filepath"
 )
 
-// Reading files requires checking most calls for errors.
-// This helper will streamline our error checks below.
+// La lectura de archivos requiere comprobar errores en la mayoría de llamadas.
+// Esta función auxiliar simplificará nuestras comprobaciones de error a continuación.
 func check(e error) {
 	if e != nil {
 		panic(e)
@@ -22,29 +22,29 @@ func check(e error) {
 
 func main() {
 
-	// Perhaps the most basic file reading task is
-	// slurping a file's entire contents into memory.
+	// Quizás la tarea de lectura más básica sea
+	// volcar el contenido completo de un archivo directamente en memoria.
 	path := filepath.Join(os.TempDir(), "dat")
 	dat, err := os.ReadFile(path)
 	check(err)
 	fmt.Print(string(dat))
 
-	// You'll often want more control over how and what
-	// parts of a file are read. For these tasks, start
-	// by `Open`ing a file to obtain an `os.File` value.
+	// A menudo desearás un mayor control sobre cómo y qué partes
+	// del archivo se leen. Para estas tareas, comienza
+	// abriendo el archivo con `os.Open` para obtener un valor `os.File`.
 	f, err := os.Open(path)
 	check(err)
 
-	// Read some bytes from the beginning of the file.
-	// Allow up to 5 to be read but also note how many
-	// actually were read.
+	// Lee algunos bytes desde el comienzo del archivo.
+	// Permitimos leer hasta 5 bytes, pero también registramos cuántos
+	// fueron leídos realmente.
 	b1 := make([]byte, 5)
 	n1, err := f.Read(b1)
 	check(err)
 	fmt.Printf("%d bytes: %s\n", n1, string(b1[:n1]))
 
-	// You can also `Seek` to a known location in the file
-	// and `Read` from there.
+	// También puedes posicionarte con `Seek` en una ubicación conocida del archivo
+	// y leer desde allí.
 	o2, err := f.Seek(6, io.SeekStart)
 	check(err)
 	b2 := make([]byte, 2)
@@ -53,19 +53,18 @@ func main() {
 	fmt.Printf("%d bytes @ %d: ", n2, o2)
 	fmt.Printf("%v\n", string(b2[:n2]))
 
-	// Other methods of seeking are relative to the
-	// current cursor position,
+	// Otros métodos de posicionamiento son relativos a la
+	// posición actual del cursor,
 	_, err = f.Seek(2, io.SeekCurrent)
 	check(err)
 
-	// and relative to the end of the file.
+	// y relativos al final del archivo.
 	_, err = f.Seek(-4, io.SeekEnd)
 	check(err)
 
-	// The `io` package provides some functions that may
-	// be helpful for file reading. For example, reads
-	// like the ones above can be more robustly
-	// implemented with `ReadAtLeast`.
+	// El paquete `io` ofrece algunas funciones muy útiles
+	// para la lectura de archivos. Por ejemplo, lecturas como
+	// las anteriores pueden implementarse de forma más robusta con `ReadAtLeast`.
 	o3, err := f.Seek(6, io.SeekStart)
 	check(err)
 	b3 := make([]byte, 2)
@@ -73,22 +72,20 @@ func main() {
 	check(err)
 	fmt.Printf("%d bytes @ %d: %s\n", n3, o3, string(b3))
 
-	// There is no built-in rewind, but
-	// `Seek(0, io.SeekStart)` accomplishes this.
+	// No existe una función dedicada para rebobinar, pero
+	// `Seek(0, io.SeekStart)` cumple exactamente ese propósito.
 	_, err = f.Seek(0, io.SeekStart)
 	check(err)
 
-	// The `bufio` package implements a buffered
-	// reader that may be useful both for its efficiency
-	// with many small reads and because of the additional
-	// reading methods it provides.
+	// El paquete `bufio` implementa un lector con búfer
+	// que resulta muy eficiente tanto para lecturas pequeñas múltiples
+	// como por los métodos adicionales de lectura que provee.
 	r4 := bufio.NewReader(f)
 	b4, err := r4.Peek(5)
 	check(err)
 	fmt.Printf("5 bytes: %s\n", string(b4))
 
-	// Close the file when you're done (usually this would
-	// be scheduled immediately after `Open`ing with
-	// `defer`).
+	// Cierra el archivo al concluir (habitualmente esto se
+	// programaría inmediatamente tras `Open` mediante `defer`).
 	f.Close()
 }

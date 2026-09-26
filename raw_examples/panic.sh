@@ -1,11 +1,10 @@
-# Running this program will cause it to panic, print
-# an error message and goroutine traces, and exit with
-# a non-zero status.
+# Ejecutar este programa provocará un panic, imprimirá
+# un mensaje de error con las trazas de goroutines y finalizará
+# con un estado distinto de cero.
 
-# When first panic in `main` fires, the program exits
-# without reaching the rest of the code. If you'd like
-# to see the program try to create a temp file, comment
-# the first panic out.
+# Cuando se dispara el primer panic en `main`, el programa termina
+# sin alcanzar el resto del código. Si deseas ver al programa
+# intentar crear el archivo temporal, comenta la primera línea de panic.
 $ go run panic.go
 panic: a problem
 
@@ -15,6 +14,6 @@ main.main()
 ...
 exit status 2
 
-# Note that unlike some languages which use exceptions
-# for handling of many errors, in Go it is idiomatic
-# to use error-indicating return values wherever possible.
+# Ten en cuenta que, a diferencia de otros lenguajes que emplean excepciones
+# para el manejo común de errores, en Go es idiomático
+# utilizar valores de retorno explícitos siempre que sea posible.

@@ -13,5 +13,5 @@ regexp: p([a-z]+)ch
 a <fruit>
 a PEACH
 
-# For a complete reference on Go regular expressions check
-# the [`regexp`](https://pkg.go.dev/regexp) package docs.
+# Para una referencia exhaustiva sobre expresiones regulares en Go,
+# consulta la documentación del paquete [`regexp`](https://pkg.go.dev/regexp).

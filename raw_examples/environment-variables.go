@@ -1,7 +1,7 @@
-// [Environment variables](https://en.wikipedia.org/wiki/Environment_variable)
-// are a universal mechanism for [conveying configuration
-// information to Unix programs](https://www.12factor.net/config).
-// Let's look at how to set, get, and list environment variables.
+// Las [variables de entorno](https://en.wikipedia.org/wiki/Environment_variable)
+// son un mecanismo universal para [transmitir información de
+// configuración a programas Unix](https://www.12factor.net/config).
+// Veamos cómo definir, obtener y listar variables de entorno.
 
 package main
 
@@ -13,18 +13,18 @@ import (
 
 func main() {
 
-	// To set a key/value pair, use `os.Setenv`. To get a
-	// value for a key, use `os.Getenv`. This will return
-	// an empty string if the key isn't present in the
-	// environment.
+	// Para definir un par clave/valor, usa `os.Setenv`. Para obtener el
+	// valor de una clave, usa `os.Getenv`. Esto devolverá
+	// una cadena vacía si la clave no está presente en el
+	// entorno.
 	os.Setenv("FOO", "1")
 	fmt.Println("FOO:", os.Getenv("FOO"))
 	fmt.Println("BAR:", os.Getenv("BAR"))
 
-	// Use `os.Environ` to list all key/value pairs in the
-	// environment. This returns a slice of strings in the
-	// form `KEY=value`. You can `strings.SplitN` them to
-	// get the key and value. Here we print all the keys.
+	// Usa `os.Environ` para listar todos los pares clave/valor presentes en el
+	// entorno. Esto devuelve un slice de cadenas con el
+	// formato `KEY=value`. Puedes usar `strings.SplitN` para
+	// separar la clave y el valor. Aquí imprimimos todas las claves.
 	fmt.Println()
 	for _, e := range os.Environ() {
 		pair := strings.SplitN(e, "=", 2)

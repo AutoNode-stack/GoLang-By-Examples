@@ -1,6 +1,6 @@
-// The standard library's `strings` package provides many
-// useful string-related functions. Here are some examples
-// to give you a sense of the package.
+// El paquete `strings` de la biblioteca estándar proporciona numerosas
+// funciones útiles relacionadas con cadenas de texto. Aquí hay algunos ejemplos
+// para familiarizarse con el paquete.
 
 package main
 
@@ -9,19 +9,18 @@ import (
 	s "strings"
 )
 
-// We alias `fmt.Println` to a shorter name as we'll use
-// it a lot below.
+// Asignamos un alias a `fmt.Println` con un nombre más breve ya que lo
+// usaremos repetidamente a continuación.
 var p = fmt.Println
 
 func main() {
 
-	// Here's a sample of the functions available in
-	// `strings`. Since these are functions from the
-	// package, not methods on the string object itself,
-	// we need to pass the string in question as the first
-	// argument to the function. You can find more
-	// functions in the [`strings`](https://pkg.go.dev/strings)
-	// package docs.
+	// Aquí hay una muestra de las funciones disponibles en
+	// `strings`. Como se trata de funciones del paquete
+	// y no de métodos propios del objeto string, debemos
+	// pasar la cadena en cuestión como primer argumento
+	// a la función. Puedes encontrar muchas más funciones
+	// en la documentación de [`strings`](https://pkg.go.dev/strings).
 	p("Contains:  ", s.Contains("test", "es"))
 	p("Count:     ", s.Count("test", "t"))
 	p("HasPrefix: ", s.HasPrefix("test", "te"))

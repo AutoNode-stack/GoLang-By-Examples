@@ -1,7 +1,7 @@
-// A common requirement in programs is getting the number
-// of seconds, milliseconds, or nanoseconds since the
-// [Unix epoch](https://en.wikipedia.org/wiki/Unix_time).
-// Here's how to do it in Go.
+// Un requerimiento frecuente en desarrollo de software es obtener el número
+// de segundos, milisegundos o nanosegundos transcurridos desde la
+// [época Unix](https://en.wikipedia.org/wiki/Unix_time) (1 de enero de 1970).
+// Así es como se realiza en Go.
 
 package main
 
@@ -12,9 +12,9 @@ import (
 
 func main() {
 
-	// Use `time.Now` with `Unix`, `UnixMilli` or `UnixNano`
-	// to get elapsed time since the Unix epoch in seconds,
-	// milliseconds or nanoseconds, respectively.
+	// Usa `time.Now` junto con `Unix`, `UnixMilli` o `UnixNano`
+	// para obtener el tiempo transcurrido desde la época Unix en segundos,
+	// milisegundos o nanosegundos, respectivamente.
 	now := time.Now()
 	fmt.Println(now)
 
@@ -22,8 +22,8 @@ func main() {
 	fmt.Println(now.UnixMilli())
 	fmt.Println(now.UnixNano())
 
-	// You can also convert integer seconds or nanoseconds
-	// since the epoch into the corresponding `time`.
+	// También puedes convertir enteros de segundos o nanosegundos
+	// transcurridos desde la época al valor `time.Time` correspondiente.
 	fmt.Println(time.Unix(now.Unix(), 0))
 	fmt.Println(time.Unix(0, now.UnixNano()))
 }

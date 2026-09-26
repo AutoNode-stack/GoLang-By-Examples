@@ -1,15 +1,15 @@
-// In Go it's idiomatic to communicate errors via an
-// explicit, separate return value. This contrasts with
-// the exceptions used in languages like Java, Python and
-// Ruby and the overloaded single result / error value
-// sometimes used in C. Go's approach makes it easy to
-// see which functions return errors and to handle them
-// using the same language constructs employed for other,
-// non-error tasks.
+// En Go es idiomático comunicar errores mediante un
+// valor de retorno explícito y separado. Esto contrasta con
+// las excepciones utilizadas en lenguajes como Java, Python y
+// Ruby, y con el valor único sobrecargado de resultado/error
+// usado a veces en C. El enfoque de Go facilita
+// identificar qué funciones retornan errores y manejarlos
+// utilizando las mismas estructuras del lenguaje empleadas para
+// tareas ordinarias.
 //
-// See the documentation of the [errors package](https://pkg.go.dev/errors)
-// and [this blog post](https://go.dev/blog/go1.13-errors) for additional
-// details.
+// Consulta la documentación del [paquete errors](https://pkg.go.dev/errors)
+// y [este artículo de blog](https://go.dev/blog/go1.13-errors) para obtener
+// detalles adicionales.
 
 package main
 
@@ -18,22 +18,22 @@ import (
 	"fmt"
 )
 
-// By convention, errors are the last return value and
-// have type `error`, a built-in interface.
+// Por convención, los errores se ubican como el último valor de retorno y
+// tienen el tipo `error`, una interfaz incorporada en el lenguaje.
 func f(arg int) (int, error) {
 	if arg == 42 {
-		// `errors.New` constructs a basic `error` value
-		// with the given error message.
+		// `errors.New` construye un valor `error` básico
+		// con el mensaje de error especificado.
 		return -1, errors.New("can't work with 42")
 	}
 
-	// A `nil` value in the error position indicates that
-	// there was no error.
+	// Un valor `nil` en la posición del error indica que
+	// no hubo ningún error.
 	return arg + 3, nil
 }
 
-// A sentinel error is a predeclared variable that is used to
-// signify a specific error condition.
+// Un error centinela (sentinel error) es una variable predeclarada que se utiliza para
+// señalar una condición de error específica.
 var ErrOutOfTea = errors.New("no more tea available")
 var ErrPower = errors.New("can't boil water")
 
@@ -42,12 +42,12 @@ func makeTea(arg int) error {
 		return ErrOutOfTea
 	} else if arg == 4 {
 
-		// We can wrap errors with higher-level errors to add
-		// context. The simplest way to do this is with the
-		// `%w` verb in `fmt.Errorf`. Wrapped errors
-		// create a logical chain (A wraps B, which wraps C, etc.)
-		// that can be queried with functions like `errors.Is`
-		// and `errors.AsType`.
+		// Podemos envolver errores con errores de nivel superior para añadir
+		// contexto. La forma más sencilla de lograrlo es con el
+		// verbo `%w` en `fmt.Errorf`. Los errores envueltos
+		// forman una cadena lógica (A envuelve a B, que envuelve a C, etc.)
+		// que puede consultarse mediante funciones como `errors.Is`
+		// y `errors.AsType`.
 		return fmt.Errorf("making tea: %w", ErrPower)
 	}
 	return nil
@@ -56,8 +56,8 @@ func makeTea(arg int) error {
 func main() {
 	for _, i := range []int{7, 42} {
 
-		// It's idiomatic to use an inline error check in the `if`
-		// line.
+		// Es idiomático realizar la comprobación de errores en línea dentro de la
+		// cláusula `if`.
 		if r, e := f(i); e != nil {
 			fmt.Println("f failed:", e)
 		} else {
@@ -68,10 +68,9 @@ func main() {
 	for i := range 5 {
 		if err := makeTea(i); err != nil {
 
-			// `errors.Is` checks that a given error (or any error in its chain)
-			// matches a specific error value. This is especially useful with wrapped or
-			// nested errors, allowing you to identify specific error types or sentinel
-			// errors in a chain of errors.
+			// `errors.Is` comprueba si un error dado (o cualquiera en su cadena)
+			// coincide con un valor de error específico. Esto resulta especialmente útil con errores
+			// anidados o envueltos, permitiendo identificar errores centinela en una cadena.
 			if errors.Is(err, ErrOutOfTea) {
 				fmt.Println("We should buy new tea!")
 			} else if errors.Is(err, ErrPower) {

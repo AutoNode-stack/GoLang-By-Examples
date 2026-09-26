@@ -1,6 +1,5 @@
-// Go's `math/rand/v2` package provides
-// [pseudorandom number](https://en.wikipedia.org/wiki/Pseudorandom_number_generator)
-// generation.
+// El paquete `math/rand/v2` de Go proporciona generación de
+// [números pseudoaleatorios](https://en.wikipedia.org/wiki/Pseudorandom_number_generator).
 
 package main
 
@@ -11,28 +10,26 @@ import (
 
 func main() {
 
-	// For example, `rand.IntN` returns a random `int` n,
-	// `0 <= n < 100`.
+	// Por ejemplo, `rand.IntN` devuelve un entero aleatorio `n`,
+	// donde `0 <= n < 100`.
 	fmt.Print(rand.IntN(100), ",")
 	fmt.Print(rand.IntN(100))
 	fmt.Println()
 
-	// `rand.Float64` returns a `float64` `f`,
-	// `0.0 <= f < 1.0`.
+	// `rand.Float64` devuelve un flotante `f` de tipo `float64`,
+	// tal que `0.0 <= f < 1.0`.
 	fmt.Println(rand.Float64())
 
-	// This can be used to generate random floats in
-	// other ranges, for example `5.0 <= f' < 10.0`.
+	// Esto puede emplearse para generar números flotantes aleatorios en
+	// otros rangos, por ejemplo `5.0 <= f' < 10.0`.
 	fmt.Print((rand.Float64()*5)+5, ",")
 	fmt.Print((rand.Float64() * 5) + 5)
 	fmt.Println()
 
-	// If you want a known seed, create a new
-	// `rand.Source` and pass it into the `New`
-	// constructor. `NewPCG` creates a new
-	// [PCG](https://en.wikipedia.org/wiki/Permuted_congruential_generator)
-	// source that requires a seed of two `uint64`
-	// numbers.
+	// Si deseas una semilla fija predecible, crea un nuevo
+	// `rand.Source` y pásalo al constructor `New`. `NewPCG` genera una nueva
+	// fuente [PCG](https://en.wikipedia.org/wiki/Permuted_congruential_generator)
+	// que requiere una semilla compuesta por dos números `uint64`.
 	s2 := rand.NewPCG(42, 1024)
 	r2 := rand.New(s2)
 	fmt.Print(r2.IntN(100), ",")

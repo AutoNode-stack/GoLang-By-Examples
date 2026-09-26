@@ -1,5 +1,5 @@
-// Sometimes our Go programs need to spawn other
-// processes.
+// En ocasiones nuestros programas en Go necesitan iniciar y controlar otros
+// procesos del sistema operativo.
 
 package main
 
@@ -12,16 +12,16 @@ import (
 
 func main() {
 
-	// We'll start with a simple command that takes no
-	// arguments or input and just prints something to
-	// stdout. The `exec.Command` helper creates an object
-	// to represent this external process.
+	// Comenzaremos con un comando simple que no toma
+	// argumentos ni entrada y solo imprime información en
+	// stdout. El asistente `exec.Command` crea un objeto
+	// para representar este proceso externo.
 	dateCmd := exec.Command("date")
 
-	// The `Output` method runs the command, waits for it
-	// to finish and collects its standard output.
-	//  If there were no errors, `dateOut` will hold bytes
-	// with the date info.
+	// El método `Output` ejecuta el comando, espera a que
+	// finalice y recopila su salida estándar.
+	// Si no hubo errores, `dateOut` contendrá los bytes
+	// con la información de la fecha.
 	dateOut, err := dateCmd.Output()
 	if err != nil {
 		panic(err)
@@ -29,11 +29,11 @@ func main() {
 	fmt.Println("> date")
 	fmt.Println(string(dateOut))
 
-	// `Output` and other methods of `Command` will return
-	// `*exec.Error` if there was a problem executing the
-	// command (e.g. wrong path), and `*exec.ExitError`
-	// if the command ran but exited with a non-zero return
-	// code.
+	// `Output` y otros métodos de `Command` devolverán
+	// `*exec.Error` si hubo un problema al ejecutar el
+	// comando (por ejemplo, ruta incorrecta), y `*exec.ExitError`
+	// si el comando se ejecutó pero finalizó con un código de retorno
+	// distinto de cero.
 	_, err = exec.Command("date", "-x").Output()
 	if err != nil {
 		if e, ok := errors.AsType[*exec.Error](err); ok {
@@ -46,15 +46,15 @@ func main() {
 		}
 	}
 
-	// Next we'll look at a slightly more involved case
-	// where we pipe data to the external process on its
-	// `stdin` and collect the results from its `stdout`.
+	// A continuación veremos un caso un poco más elaborado
+	// donde canalizamos datos al proceso externo en su entrada
+	// `stdin` y recopilamos los resultados de su salida `stdout`.
 	grepCmd := exec.Command("grep", "hello")
 
-	// Here we explicitly grab input/output pipes, start
-	// the process, write some input to it, read the
-	// resulting output, and finally wait for the process
-	// to exit.
+	// Aquí capturamos explícitamente las tuberías de entrada/salida, iniciamos
+	// el proceso, le escribimos datos de entrada, leemos la
+	// salida resultante y finalmente esperamos a que el proceso
+	// termine.
 	grepIn, _ := grepCmd.StdinPipe()
 	grepOut, _ := grepCmd.StdoutPipe()
 	grepCmd.Start()
@@ -63,20 +63,18 @@ func main() {
 	grepBytes, _ := io.ReadAll(grepOut)
 	grepCmd.Wait()
 
-	// We omitted error checks in the above example, but
-	// you could use the usual `if err != nil` pattern for
-	// all of them. We also only collect the `StdoutPipe`
-	// results, but you could collect the `StderrPipe` in
-	// exactly the same way.
+	// Omitimos comprobaciones exhaustivas de error en el ejemplo anterior, pero
+	// puedes usar el patrón habitual `if err != nil` para
+	// todas ellas. También solo recopilamos los resultados de `StdoutPipe`,
+	// pero podrías recopilar los de `StderrPipe` de la misma manera.
 	fmt.Println("> grep hello")
 	fmt.Println(string(grepBytes))
 
-	// Note that when spawning commands we need to
-	// provide an explicitly delineated command and
-	// argument array, vs. being able to just pass in one
-	// command-line string. If you want to spawn a full
-	// command with a string, you can use `bash`'s `-c`
-	// option:
+	// Ten en cuenta que al lanzar comandos debemos
+	// proporcionar un array explícito del comando y sus
+	// argumentos, en lugar de pasar una sola cadena continua. Si
+	// deseas ejecutar un comando completo mediante una cadena, puedes usar
+	// la opción `-c` de `bash`:
 	lsCmd := exec.Command("bash", "-c", "ls -a -l -h")
 	lsOut, err := lsCmd.Output()
 	if err != nil {

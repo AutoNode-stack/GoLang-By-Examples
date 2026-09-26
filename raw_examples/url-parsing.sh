@@ -1,5 +1,5 @@
-# Running our URL parsing program shows all the different
-# pieces that we extracted.
+# Ejecutar nuestro programa de parseo de URLs muestra todas las
+# partes individuales que logramos extraer.
 $ go run url-parsing.go 
 postgres
 user:pass

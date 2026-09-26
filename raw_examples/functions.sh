@@ -1,6 +1,6 @@
-$ go run functions.go 
+$ go run functions.go
 1+2 = 3
 1+2+3 = 6
 
-# There are several other features to Go functions. One is
-# multiple return values, which we'll look at next.
+# Hay muchas otras características en las funciones de Go. Una
+# de ellas son los valores de retorno múltiples, que veremos a continuación.

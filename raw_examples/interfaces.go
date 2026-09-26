@@ -1,5 +1,5 @@
-// _Interfaces_ are named collections of method
-// signatures.
+// Las _interfaces_ son colecciones con nombre de firmas de
+// métodos.
 
 package main
 
@@ -8,14 +8,14 @@ import (
 	"math"
 )
 
-// Here's a basic interface for geometric shapes.
+// Aquí tenemos una interfaz básica para figuras geométricas.
 type geometry interface {
 	area() float64
 	perim() float64
 }
 
-// For our example we'll implement this interface on
-// `rect` and `circle` types.
+// Para nuestro ejemplo implementaremos esta interfaz en los
+// tipos `rect` y `circle`.
 type rect struct {
 	width, height float64
 }
@@ -23,9 +23,9 @@ type circle struct {
 	radius float64
 }
 
-// To implement an interface in Go, we just need to
-// implement all the methods in the interface. Here we
-// implement `geometry` on `rect`s.
+// Para implementar una interfaz en Go, solo necesitamos
+// implementar todos los métodos declarados en ella. Aquí
+// implementamos `geometry` en `rect`.
 func (r rect) area() float64 {
 	return r.width * r.height
 }
@@ -33,7 +33,7 @@ func (r rect) perim() float64 {
 	return 2*r.width + 2*r.height
 }
 
-// The implementation for `circle`s.
+// La implementación para `circle`.
 func (c circle) area() float64 {
 	return math.Pi * c.radius * c.radius
 }
@@ -41,19 +41,19 @@ func (c circle) perim() float64 {
 	return 2 * math.Pi * c.radius
 }
 
-// If a variable has an interface type, then we can call
-// methods that are in the named interface. Here's a
-// generic `measure` function taking advantage of this
-// to work on any `geometry`.
+// Si una variable tiene un tipo interfaz, podemos invocar
+// los métodos declarados en dicha interfaz. Aquí tenemos una
+// función genérica `measure` que aprovecha esto para operar
+// sobre cualquier `geometry`.
 func measure(g geometry) {
 	fmt.Println(g)
 	fmt.Println(g.area())
 	fmt.Println(g.perim())
 }
 
-// Sometimes it's useful to know the runtime type of an
-// interface value. One option is using a *type assertion*
-// as shown here; another is a [type `switch`](switch).
+// En ocasiones resulta útil conocer el tipo en tiempo de ejecución de un
+// valor de interfaz. Una opción es usar una *aserción de tipo* (type assertion)
+// como se muestra aquí; otra alternativa es un [switch de tipo](switch).
 func detectCircle(g geometry) {
 	if c, ok := g.(circle); ok {
 		fmt.Println("circle with radius", c.radius)
@@ -64,10 +64,9 @@ func main() {
 	r := rect{width: 3, height: 4}
 	c := circle{radius: 5}
 
-	// The `circle` and `rect` struct types both
-	// implement the `geometry` interface so we can use
-	// instances of
-	// these structs as arguments to `measure`.
+	// Tanto el tipo struct `circle` como `rect`
+	// implementan la interfaz `geometry`, por lo que podemos usar
+	// instancias de estas estructuras como argumentos para `measure`.
 	measure(r)
 	measure(c)
 

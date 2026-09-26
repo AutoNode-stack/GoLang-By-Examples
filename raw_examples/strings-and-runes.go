@@ -1,11 +1,11 @@
-// A Go string is a read-only slice of bytes. The language
-// and the standard library treat strings specially - as
-// containers of text encoded in [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
-// In other languages, strings are made of "characters".
-// In Go, the concept of a character is called a `rune` - it's
-// an integer that represents a Unicode code point.
-// [This Go blog post](https://go.dev/blog/strings) is a good
-// introduction to the topic.
+// Una cadena en Go es un slice de bytes de solo lectura. El lenguaje
+// y la biblioteca estándar tratan las cadenas de forma especial: como
+// contenedores de texto codificado en [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
+// En otros lenguajes, las cadenas están compuestas de "caracteres".
+// En Go, el concepto de carácter se denomina `rune` (runa): es
+// un entero que representa un punto de código Unicode.
+// [Esta publicación del blog de Go](https://go.dev/blog/strings) es una excelente
+// introducción a este tema.
 
 package main
 
@@ -16,56 +16,56 @@ import (
 
 func main() {
 
-	// `s` is a `string` assigned a literal value
-	// representing the word "hello" in the Thai
-	// language. Go string literals are UTF-8
-	// encoded text.
+	// `s` es una variable `string` a la que se le asigna un valor literal
+	// que representa la palabra "hola" en el idioma
+	// tailandés. Los literales de cadena en Go son texto codificado
+	// en UTF-8.
 	const s = "สวัสดี"
 
-	// Since strings are equivalent to `[]byte`, this
-	// will produce the length of the raw bytes stored within.
+	// Dado que las cadenas son equivalentes a `[]byte`, esto
+	// producirá la longitud de los bytes sin procesar almacenados internamente.
 	fmt.Println("Len:", len(s))
 
-	// Indexing into a string produces the raw byte values at
-	// each index. This loop generates the hex values of all
-	// the bytes that constitute the code points in `s`.
+	// Indexar dentro de una cadena produce los valores de bytes crudos en
+	// cada posición. Este bucle genera los valores hexadecimales de todos
+	// los bytes que componen los puntos de código en `s`.
 	for i := 0; i < len(s); i++ {
 		fmt.Printf("%x ", s[i])
 	}
 	fmt.Println()
 
-	// To count how many _runes_ are in a string, we can use
-	// the `utf8` package. Note that the run-time of
-	// `RuneCountInString` depends on the size of the string,
-	// because it has to decode each UTF-8 rune sequentially.
-	// Some Thai characters are represented by UTF-8 code points
-	// that can span multiple bytes, so the result of this count
-	// may be surprising.
+	// Para contar cuántas _runas_ hay en una cadena, podemos usar
+	// el paquete `utf8`. Ten en cuenta que el tiempo de ejecución de
+	// `RuneCountInString` depende del tamaño de la cadena,
+	// ya que debe decodificar cada runa UTF-8 secuencialmente.
+	// Algunos caracteres tailandeses se representan mediante puntos de código UTF-8
+	// que pueden abarcar varios bytes, por lo que el resultado de este conteo
+	// puede resultar sorprendente.
 	fmt.Println("Rune count:", utf8.RuneCountInString(s))
 
-	// A `range` loop handles strings specially and decodes
-	// each `rune` along with its offset in the string.
+	// Un bucle `range` maneja las cadenas de manera especial y decodifica
+	// cada `rune` junto con su desplazamiento (offset) en la cadena.
 	for idx, runeValue := range s {
 		fmt.Printf("%#U starts at %d\n", runeValue, idx)
 	}
 
-	// We can achieve the same iteration by using the
-	// `utf8.DecodeRuneInString` function explicitly.
+	// Podemos lograr la misma iteración utilizando la
+	// función `utf8.DecodeRuneInString` de forma explícita.
 	fmt.Println("\nUsing DecodeRuneInString")
 	for i, w := 0, 0; i < len(s); i += w {
 		runeValue, width := utf8.DecodeRuneInString(s[i:])
 		fmt.Printf("%#U starts at %d\n", runeValue, i)
 		w = width
 
-		// This demonstrates passing a `rune` value to a function.
+		// Esto demuestra cómo pasar un valor `rune` a una función.
 		examineRune(runeValue)
 	}
 }
 
 func examineRune(r rune) {
 
-	// Values enclosed in single quotes are _rune literals_. We
-	// can compare a `rune` value to a rune literal directly.
+	// Los valores entre comillas simples son _literales de runa_.
+	// Podemos comparar un valor `rune` directamente con un literal de runa.
 	if r == 't' {
 		fmt.Println("found tee")
 	} else if r == 'ส' {

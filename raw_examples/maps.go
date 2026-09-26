@@ -1,5 +1,5 @@
-// _Maps_ are Go's built-in [associative data type](https://en.wikipedia.org/wiki/Associative_array)
-// (sometimes called _hashes_ or _dicts_ in other languages).
+// Los _maps_ (mapas) son el [tipo de dato asociativo](https://en.wikipedia.org/wiki/Associative_array)
+// integrado en Go (a veces denominados _hashes_ o _diccionarios_ en otros lenguajes).
 
 package main
 
@@ -10,60 +10,59 @@ import (
 
 func main() {
 
-	// To create an empty map, use the builtin `make`:
+	// Para crear un mapa vacío, usa la función incorporada `make`:
 	// `make(map[key-type]val-type)`.
 	m := make(map[string]int)
 
-	// Set key/value pairs using typical `name[key] = val`
-	// syntax.
+	// Establece pares clave/valor usando la sintaxis habitual
+	// `name[key] = val`.
 	m["k1"] = 7
 	m["k2"] = 13
 
-	// Printing a map with e.g. `fmt.Println` will show all of
-	// its key/value pairs.
+	// Imprimir un mapa con `fmt.Println` mostrará todos sus
+	// pares clave/valor.
 	fmt.Println("map:", m)
 
-	// Get a value for a key with `name[key]`.
+	// Obtén el valor de una clave con `name[key]`.
 	v1 := m["k1"]
 	fmt.Println("v1:", v1)
 
-	// If the key doesn't exist, the
-	// [zero value](https://go.dev/ref/spec#The_zero_value) of the
-	// value type is returned.
+	// Si la clave no existe, se devuelve el
+	// [valor cero](https://go.dev/ref/spec#The_zero_value) del
+	// tipo de valor correspondiente.
 	v3 := m["k3"]
 	fmt.Println("v3:", v3)
 
-	// The builtin `len` returns the number of key/value
-	// pairs when called on a map.
+	// La función incorporada `len` devuelve el número de pares
+	// clave/valor cuando se invoca sobre un mapa.
 	fmt.Println("len:", len(m))
 
-	// The builtin `delete` removes key/value pairs from
-	// a map.
+	// La función incorporada `delete` elimina pares clave/valor
+	// de un mapa.
 	delete(m, "k2")
 	fmt.Println("map:", m)
 
-	// To remove *all* key/value pairs from a map, use
-	// the `clear` builtin.
+	// Para eliminar *todos* los pares clave/valor de un mapa, utiliza
+	// la función incorporada `clear`.
 	clear(m)
 	fmt.Println("map:", m)
 
-	// The optional second return value when getting a
-	// value from a map indicates if the key was present
-	// in the map. This can be used to disambiguate
-	// between missing keys and keys with zero values
-	// like `0` or `""`. Here we didn't need the value
-	// itself, so we ignored it with the _blank identifier_
-	// `_`.
+	// El segundo valor de retorno opcional al obtener un valor
+	// de un mapa indica si la clave estaba presente
+	// en el mapa. Esto permite desambiguar entre claves inexistentes
+	// y claves con valores cero como `0` o `""`.
+	// Aquí no necesitábamos el valor en sí, por lo que lo ignoramos
+	// con el _identificador en blanco_ `_`.
 	_, prs := m["k2"]
 	fmt.Println("prs:", prs)
 
-	// You can also declare and initialize a new map in
-	// the same line with this syntax.
+	// También puedes declarar e inicializar un mapa nuevo en
+	// la misma línea con esta sintaxis.
 	n := map[string]int{"foo": 1, "bar": 2}
 	fmt.Println("map:", n)
 
-	// The `maps` package contains a number of useful
-	// utility functions for maps.
+	// El paquete `maps` contiene una variedad de funciones
+	// de utilidad convenientes para mapas.
 	n2 := map[string]int{"foo": 1, "bar": 2}
 	if maps.Equal(n, n2) {
 		fmt.Println("n == n2")

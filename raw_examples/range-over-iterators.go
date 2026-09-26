@@ -1,6 +1,7 @@
-// Starting with version 1.23, Go has added support for
-// [iterators](https://go.dev/blog/range-functions),
-// which lets us range over pretty much anything!
+// Desde la versión 1.22, Go agregó soporte para
+// [iteradores definidos por el usuario](https://go.dev/blog/range-functions)
+// para bucles `range`. En la versión 1.23, los iteradores se convirtieron
+// en una característica estándar del lenguaje.
 
 package main
 
@@ -11,11 +12,10 @@ import (
 	"strings"
 )
 
-// Let's look at the `List` type from the
-// [previous example](generics) again. In that example
-// we had an `AllElements` method that returned a slice
-// of all elements in the list. With Go iterators, we
-// can do it better - as shown below.
+// En el [ejemplo anterior](generics) implementamos una
+// lista enlazada personalizada y un método `AllElements` que
+// devolvía todos los elementos en un slice. Con iteradores,
+// podemos hacerlo de manera mucho más elegante e idiomática.
 type List[T any] struct {
 	head, tail *element[T]
 }
@@ -35,15 +35,15 @@ func (lst *List[T]) Push(v T) {
 	}
 }
 
-// All returns an _iterator_, which in Go is a function
-// with a [special signature](https://pkg.go.dev/iter#Seq).
+// `All` devuelve un iterador, representado en Go por una función
+// con una [firma especial](https://pkg.go.dev/iter#Seq).
 func (lst *List[T]) All() iter.Seq[T] {
 	return func(yield func(T) bool) {
-		// The iterator function takes another function as
-		// a parameter, called `yield` by convention (but
-		// the name can be arbitrary). It will call `yield` for
-		// every element we want to iterate over, and note `yield`'s
-		// return value for a potential early termination.
+		// La función de iterador recibe otra función como
+		// parámetro, llamada `yield` por convención (aunque
+		// el nombre puede ser arbitrario). Invocará `yield` por
+		// cada elemento que deseemos iterar, y verificará el
+		// valor retornado por `yield` para una posible terminación anticipada.
 		for e := lst.head; e != nil; e = e.next {
 			if !yield(e.val) {
 				return
@@ -52,10 +52,10 @@ func (lst *List[T]) All() iter.Seq[T] {
 	}
 }
 
-// Iteration doesn't require an underlying data structure,
-// and doesn't even have to be finite! Here's a function
-// returning an iterator over Fibonacci numbers: it keeps
-// running as long as `yield` keeps returning `true`.
+// La iteración no requiere una estructura de datos subyacente,
+// ¡y ni siquiera tiene que ser finita! Aquí hay una función
+// que retorna un iterador sobre números de Fibonacci: continúa
+// ejecutándose mientras `yield` siga retornando `true`.
 func genFib() iter.Seq[int] {
 	return func(yield func(int) bool) {
 		a, b := 0, 1
@@ -75,30 +75,30 @@ func main() {
 	lst.Push(13)
 	lst.Push(23)
 
-	// Since `List.All` returns an iterator, we can use it
-	// in a regular `range` loop.
+	// Dado que `List.All` retorna un iterador, podemos usarlo
+	// en un bucle `range` convencional.
 	for e := range lst.All() {
 		fmt.Println(e)
 	}
 
-	// Packages like [slices](https://pkg.go.dev/slices) have
-	// a number of useful functions to work with iterators.
-	// For example, `Collect` takes any iterator and collects
-	// all its values into a slice.
+	// Paquetes como [slices](https://pkg.go.dev/slices) tienen
+	// varias funciones útiles para trabajar con iteradores.
+	// Por ejemplo, `Collect` toma cualquier iterador y reúne
+	// todos sus valores en un slice.
 	all := slices.Collect(lst.All())
 	fmt.Println("all:", all)
 
-	// Standard library packages now expose iterator helpers
-	// too. For example, `strings.SplitSeq` iterates over parts
-	// of a byte slice without first building a result slice.
+	// Los paquetes de la biblioteca estándar ahora también exponen ayudantes de iteradores.
+	// Por ejemplo, `strings.SplitSeq` itera sobre partes
+	// de un slice de bytes sin construir previamente un slice de resultados en memoria.
 	for part := range strings.SplitSeq("go-by-example", "-") {
 		fmt.Printf("part: %s\n", part)
 	}
 
 	for n := range genFib() {
 
-		// Once the loop hits `break` or an early return, the `yield` function
-		// passed to the iterator will return `false`.
+		// Una vez que el bucle alcanza un `break` o un retorno anticipado, la función `yield`
+		// pasada al iterador devolverá `false`.
 		if n >= 10 {
 			break
 		}

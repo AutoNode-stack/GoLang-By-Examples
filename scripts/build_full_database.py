@@ -40,18 +40,18 @@ def build():
     
     # 12 categories definition with metadata
     categories = [
-        {"id": "fundamentos", "name": "Fundamentos del Lenguaje", "icon": "⚡", "count": 7, "description": "Sintaxis básica, tipos primitivos, variables, constantes y control de flujo"},
-        {"id": "estructuras-datos", "name": "Estructuras de Datos y Colecciones", "icon": "📦", "count": 4, "description": "Arrays fijos, slices dinámicos, tablas hash (maps) e iteración range"},
-        {"id": "funciones-memoria", "name": "Funciones, Clausuras y Punteros", "icon": "🔧", "count": 7, "description": "Parámetros, retornos múltiples, variádicas, closures, recursión, memoria y runas"},
-        {"id": "poo-generics", "name": "Tipos Avanzados y POO en Go", "icon": "🏛️", "count": 7, "description": "Structs, métodos, interfaces implícitas, enums, composición, genéricos e iteradores"},
-        {"id": "errores-panico", "name": "Manejo de Errores y Excepciones", "icon": "🛡️", "count": 5, "description": "Errores como valores, errores personalizados, panic, defer y recover"},
-        {"id": "concurrencia-canales", "name": "Concurrencia: Goroutines y Canales", "icon": "🚀", "count": 10, "description": "Hilos ligeros, canales unbuffered y buffered, direcciones, select y timeouts"},
-        {"id": "sincronizacion-avanzada", "name": "Sincronización y Concurrencia Avanzada", "icon": "⚙️", "count": 8, "description": "Timers, tickers, worker pools, waitgroups, rate limiting, atomics y mutexes"},
-        {"id": "texto-formatos", "name": "Manipulación de Texto y Formatos", "icon": "🔤", "count": 8, "description": "Ordenamiento, strings, printf, plantillas de texto, regex, JSON y XML"},
-        {"id": "tiempo-cripto", "name": "Tiempo, Matemáticas y Criptografía", "icon": "⏳", "count": 8, "description": "Time, epoch, parseo de fechas, rand, strconv, URLs, SHA-256 y Base64"},
-        {"id": "archivos-io", "name": "Entrada / Salida y Archivos", "icon": "📁", "count": 7, "description": "Lectura, escritura, filtros de línea, rutas, directorios, temporales y embed"},
-        {"id": "cli-testing", "name": "CLI, Pruebas y Benchmarking", "icon": "🧪", "count": 6, "description": "Testing, benchmarks, argumentos, banderas flags, subcomandos, env vars y slog"},
-        {"id": "redes-sistema", "name": "Redes, Procesos y Sistema Operativo", "icon": "🌐", "count": 8, "description": "Cliente/servidor HTTP, sockets TCP, Context, subprocesos, señales y exit"}
+        {"id": "fundamentos", "name": "Fundamentos del Lenguaje", "icon": "zap", "count": 7, "description": "Sintaxis básica, tipos primitivos, variables, constantes y control de flujo"},
+        {"id": "estructuras-datos", "name": "Estructuras de Datos y Colecciones", "icon": "package", "count": 4, "description": "Arrays fijos, slices dinámicos, tablas hash (maps) e iteración range"},
+        {"id": "funciones-memoria", "name": "Funciones, Clausuras y Punteros", "icon": "tool", "count": 7, "description": "Parámetros, retornos múltiples, variádicas, closures, recursión, memoria y runas"},
+        {"id": "poo-generics", "name": "Tipos Avanzados y POO en Go", "icon": "cpu", "count": 7, "description": "Structs, métodos, interfaces implícitas, enums, composición, genéricos e iteradores"},
+        {"id": "errores-panico", "name": "Manejo de Errores y Excepciones", "icon": "shield", "count": 5, "description": "Errores como valores, errores personalizados, panic, defer y recover"},
+        {"id": "concurrencia-canales", "name": "Concurrencia: Goroutines y Canales", "icon": "rocket", "count": 10, "description": "Hilos ligeros, canales unbuffered y buffered, direcciones, select y timeouts"},
+        {"id": "sincronizacion-avanzada", "name": "Sincronización y Concurrencia Avanzada", "icon": "settings", "count": 8, "description": "Timers, tickers, worker pools, waitgroups, rate limiting, atomics y mutexes"},
+        {"id": "texto-formatos", "name": "Manipulación de Texto y Formatos", "icon": "file-code", "count": 8, "description": "Ordenamiento, strings, printf, plantillas de texto, regex, JSON y XML"},
+        {"id": "tiempo-cripto", "name": "Tiempo, Matemáticas y Criptografía", "icon": "clock", "count": 8, "description": "Time, epoch, parseo de fechas, rand, strconv, URLs, SHA-256 y Base64"},
+        {"id": "archivos-io", "name": "Entrada / Salida y Archivos", "icon": "folder", "count": 7, "description": "Lectura, escritura, filtros de línea, rutas, directorios, temporales y embed"},
+        {"id": "cli-testing", "name": "CLI, Pruebas y Benchmarking", "icon": "target", "count": 6, "description": "Testing, benchmarks, argumentos, banderas flags, subcomandos, env vars y slog"},
+        {"id": "redes-sistema", "name": "Redes, Procesos y Sistema Operativo", "icon": "globe", "count": 8, "description": "Cliente/servidor HTTP, sockets TCP, Context, subprocesos, señales y exit"}
     ]
 
     for idx, title in enumerate(titles, 1):

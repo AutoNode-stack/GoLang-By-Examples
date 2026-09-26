@@ -1,8 +1,8 @@
-// Go supports _embedding_ of structs and interfaces
-// to express a more seamless _composition_ of types.
-// This is not to be confused with [`//go:embed`](embed-directive) which is
-// a go directive introduced in Go version 1.16+ to embed
-// files and folders into the application binary.
+// Go admite la _incrustación_ (embedding) de estructuras e interfaces
+// para expresar una _composición_ fluida de tipos.
+// Esto no debe confundirse con [`//go:embed`](embed-directive), que es
+// una directiva del compilador introducida en Go 1.16+ para incrustar
+// archivos y carpetas dentro del binario de la aplicación.
 
 package main
 
@@ -16,8 +16,8 @@ func (b base) describe() string {
 	return fmt.Sprintf("base with num=%v", b.num)
 }
 
-// A `container` _embeds_ a `base`. An embedding looks
-// like a field without a name.
+// Un `container` _incrusta_ un `base`. Una incrustación se define
+// como un campo sin nombre de identificador.
 type container struct {
 	base
 	str string
@@ -25,9 +25,9 @@ type container struct {
 
 func main() {
 
-	// When creating structs with literals, we have to
-	// initialize the embedding explicitly; here the
-	// embedded type serves as the field name.
+	// Al crear estructuras con literales, debemos inicializar
+	// la incrustación explícitamente; aquí el tipo incrustado
+	// actúa como el nombre del campo.
 	co := container{
 		base: base{
 			num: 1,
@@ -35,28 +35,27 @@ func main() {
 		str: "some name",
 	}
 
-	// We can access the base's fields directly on `co`,
-	// e.g. `co.num`.
+	// Podemos acceder a los campos de base directamente desde `co`,
+	// por ejemplo `co.num`.
 	fmt.Printf("co={num: %v, str: %v}\n", co.num, co.str)
 
-	// Alternatively, we can spell out the full path using
-	// the embedded type name.
+	// Como alternativa, podemos escribir la ruta completa utilizando
+	// el nombre del tipo incrustado.
 	fmt.Println("also num:", co.base.num)
 
-	// Since `container` embeds `base`, the methods of
-	// `base` also become methods of a `container`. Here
-	// we invoke a method that was embedded from `base`
-	// directly on `co`.
+	// Dado que `container` incrusta `base`, los métodos de
+	// `base` también pasan a ser métodos de `container`. Aquí
+	// invocamos directamente sobre `co` un método incrustado
+	// desde `base`.
 	fmt.Println("describe:", co.describe())
 
 	type describer interface {
 		describe() string
 	}
 
-	// Embedding structs with methods may be used to bestow
-	// interface implementations onto other structs. Here
-	// we see that a `container` now implements the
-	// `describer` interface because it embeds `base`.
+	// Incrustar estructuras con métodos permite otorgar implementaciones
+	// de interfaces a otras estructuras. Aquí vemos que `container`
+	// ahora implementa la interfaz `describer` gracias a que incrusta `base`.
 	var d describer = co
 	fmt.Println("describer:", d.describe())
 }

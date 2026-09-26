@@ -1,13 +1,12 @@
-// [_Command-line flags_](https://en.wikipedia.org/wiki/Command-line_interface#Command-line_option)
-// are a common way to specify options for command-line
-// programs. For example, in `wc -l` the `-l` is a
-// command-line flag.
+// Las [_banderas de línea de comandos_](https://en.wikipedia.org/wiki/Command-line_interface#Command-line_option) (flags)
+// son una forma estándar de especificar opciones en programas de consola.
+// Por ejemplo, en `wc -l`, `-l` es una bandera de línea de comandos.
 
 package main
 
-// Go provides a `flag` package supporting basic
-// command-line flag parsing. We'll use this package to
-// implement our example command-line program.
+// Go provee el paquete `flag` que admite el parseo básico
+// de banderas de línea de comandos. Usaremos este paquete para
+// implementar nuestro programa de ejemplo.
 import (
 	"flag"
 	"fmt"
@@ -15,34 +14,32 @@ import (
 
 func main() {
 
-	// Basic flag declarations are available for string,
-	// integer, and boolean options. Here we declare a
-	// string flag `word` with a default value `"foo"`
-	// and a short description. This `flag.String` function
-	// returns a string pointer (not a string value);
-	// we'll see how to use this pointer below.
+	// Las declaraciones básicas de banderas están disponibles para opciones de
+	// tipo string, integer y boolean. Aquí declaramos una bandera
+	// de cadena `word` con valor predeterminado `"foo"` y una breve
+	// descripción. Esta función `flag.String` retorna un puntero a string
+	// (no un valor string directo); veremos cómo utilizar este puntero abajo.
 	wordPtr := flag.String("word", "foo", "a string")
 
-	// This declares `numb` and `fork` flags, using a
-	// similar approach to the `word` flag.
+	// Esto declara las banderas `numb` y `fork`, siguiendo un
+	// enfoque similar al de la bandera `word`.
 	numbPtr := flag.Int("numb", 42, "an int")
 	forkPtr := flag.Bool("fork", false, "a bool")
 
-	// It's also possible to declare an option that uses an
-	// existing var declared elsewhere in the program.
-	// Note that we need to pass in a pointer to the flag
-	// declaration function.
+	// También es posible declarar una opción que utilice una variable
+	// preexistente declarada en otra parte del programa. Nota que
+	// debemos pasar un puntero a la función de declaración de la bandera.
 	var svar string
 	flag.StringVar(&svar, "svar", "bar", "a string var")
 
-	// Once all flags are declared, call `flag.Parse()`
-	// to execute the command-line parsing.
+	// Una vez declaradas todas las banderas, invocamos `flag.Parse()`
+	// para ejecutar el análisis sintáctico de la línea de comandos.
 	flag.Parse()
 
-	// Here we'll just dump out the parsed options and
-	// any trailing positional arguments. Note that we
-	// need to dereference the pointers with e.g. `*wordPtr`
-	// to get the actual option values.
+	// Aquí simplemente volcamos las opciones parseadas y los
+	// argumentos posicionales finales restantes. Ten en cuenta que
+	// debemos desreferenciar los punteros mediante `*wordPtr` para
+	// obtener los valores reales de las opciones.
 	fmt.Println("word:", *wordPtr)
 	fmt.Println("numb:", *numbPtr)
 	fmt.Println("fork:", *forkPtr)

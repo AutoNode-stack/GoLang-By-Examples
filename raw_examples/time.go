@@ -1,5 +1,5 @@
-// Go offers extensive support for times and durations;
-// here are some examples.
+// Go ofrece un soporte integral para el manejo de fechas, horas y duraciones;
+// aquí tenemos algunos ejemplos clave.
 
 package main
 
@@ -11,19 +11,19 @@ import (
 func main() {
 	p := fmt.Println
 
-	// We'll start by getting the current time.
+	// Comenzaremos obteniendo la fecha y hora actual con `time.Now()`.
 	now := time.Now()
 	p(now)
 
-	// You can build a `time` struct by providing the
-	// year, month, day, etc. Times are always associated
-	// with a `Location`, i.e. time zone.
+	// Puedes construir una estructura `time` proporcionando el
+	// año, mes, día, etc. Las horas siempre están asociadas
+	// a una `Location`, es decir, una zona horaria.
 	then := time.Date(
 		2009, 11, 17, 20, 34, 58, 651387237, time.UTC)
 	p(then)
 
-	// You can extract the various components of the time
-	// value as expected.
+	// Puedes extraer los diversos componentes del valor de tiempo
+	// según se espera.
 	p(then.Year())
 	p(then.Month())
 	p(then.Day())
@@ -33,31 +33,30 @@ func main() {
 	p(then.Nanosecond())
 	p(then.Location())
 
-	// The Monday-Sunday `Weekday` is also available.
+	// El día de la semana `Weekday` (de lunes a domingo) también está disponible.
 	p(then.Weekday())
 
-	// These methods compare two times, testing if the
-	// first occurs before, after, or at the same time
-	// as the second, respectively.
+	// Estos métodos comparan dos instantes temporales, evaluando si el
+	// primero ocurre antes, después o al mismo tiempo exacto
+	// que el segundo, respectivamente.
 	p(then.Before(now))
 	p(then.After(now))
 	p(then.Equal(now))
 
-	// The `Sub` methods returns a `Duration` representing
-	// the interval between two times.
+	// El método `Sub` devuelve una estructura `Duration` que representa
+	// el intervalo de tiempo entre dos instantes.
 	diff := now.Sub(then)
 	p(diff)
 
-	// We can compute the length of the duration in
-	// various units.
+	// Podemos calcular la longitud de la duración en
+	// diversas unidades temporales.
 	p(diff.Hours())
 	p(diff.Minutes())
 	p(diff.Seconds())
 	p(diff.Nanoseconds())
 
-	// You can use `Add` to advance a time by a given
-	// duration, or with a `-` to move backwards by a
-	// duration.
+	// Puedes usar `Add` para avanzar un instante de tiempo según una
+	// duración dada, o con un `-` para retroceder en el tiempo.
 	p(then.Add(diff))
 	p(then.Add(-diff))
 }

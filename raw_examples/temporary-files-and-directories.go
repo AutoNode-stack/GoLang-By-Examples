@@ -1,8 +1,8 @@
-// Throughout program execution, we often want to create
-// data that isn't needed after the program exits.
-// *Temporary files and directories* are useful for this
-// purpose since they don't pollute the file system over
-// time.
+// Durante la ejecución de un programa, a menudo deseamos crear
+// datos que no se requieren una vez que el programa concluye.
+// Los *archivos y directorios temporales* resultan idóneos para este
+// propósito, ya que no ensucian el sistema de archivos con el paso del
+// tiempo.
 
 package main
 
@@ -20,45 +20,41 @@ func check(e error) {
 
 func main() {
 
-	// The easiest way to create a temporary file is by
-	// calling `os.CreateTemp`. It creates a file *and*
-	// opens it for reading and writing. We provide `""`
-	// as the first argument, so `os.CreateTemp` will
-	// create the file in the default location for our OS.
+	// La forma más directa de crear un archivo temporal es invocando
+	// `os.CreateTemp`. Crea un archivo *y* lo abre para
+	// lectura y escritura. Proporcionamos `""` como primer argumento
+	// para que `os.CreateTemp` cree el archivo en la ubicación
+	// predeterminada del sistema operativo (por ejemplo `/tmp` en Unix).
 	f, err := os.CreateTemp("", "sample")
 	check(err)
 
-	// Display the name of the temporary file. On
-	// Unix-based OSes the directory will likely be `/tmp`.
-	// The file name starts with the prefix given as the
-	// second argument to `os.CreateTemp` and the rest
-	// is chosen automatically to ensure that concurrent
-	// calls will always create different file names.
+	// Muestra el nombre del archivo temporal. En sistemas basados
+	// en Unix el directorio suele ser `/tmp`. El nombre del archivo
+	// inicia con el prefijo indicado como segundo argumento y el resto
+	// se genera automáticamente para garantizar unicidad ante accesos concurrentes.
 	fmt.Println("Temp file name:", f.Name())
 
-	// Clean up the file after we're done. The OS is
-	// likely to clean up temporary files by itself after
-	// some time, but it's good practice to do this
-	// explicitly.
+	// Limpiamos el archivo una vez que terminamos. El sistema operativo
+	// eventualmente limpia los temporales, pero es una buena práctica
+	// hacerlo explícitamente con `defer`.
 	defer os.Remove(f.Name())
 
-	// We can write some data to the file.
+	// Podemos escribir datos en el archivo temporal.
 	_, err = f.Write([]byte{1, 2, 3, 4})
 	check(err)
 
-	// If we intend to write many temporary files, we may
-	// prefer to create a temporary *directory*.
-	// `os.MkdirTemp`'s arguments are the same as
-	// `CreateTemp`'s, but it returns a directory *name*
-	// rather than an open file.
+	// Si tenemos la intención de escribir múltiples archivos temporales,
+	// es preferible crear un *directorio* temporal. Los argumentos de
+	// `os.MkdirTemp` son iguales a los de `CreateTemp`, pero retorna el
+	// *nombre* del directorio en lugar de un archivo abierto.
 	dname, err := os.MkdirTemp("", "sampledir")
 	check(err)
 	fmt.Println("Temp dir name:", dname)
 
 	defer os.RemoveAll(dname)
 
-	// Now we can synthesize temporary file names by
-	// prefixing them with our temporary directory.
+	// Ahora podemos componer nombres de archivos temporales
+	// anteponiendo la ruta de nuestro directorio temporal.
 	fname := filepath.Join(dname, "file1")
 	err = os.WriteFile(fname, []byte{1, 2}, 0666)
 	check(err)

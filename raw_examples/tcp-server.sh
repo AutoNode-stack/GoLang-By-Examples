@@ -1,7 +1,6 @@
-# Run the TCP server in the background.
+# Inicia el servidor TCP en segundo plano.
 $ go run tcp-server.go &
 
-# Send data and capture the response using netcat.
+# Envía datos y captura la respuesta utilizando netcat.
 $ echo "Hello from netcat" | nc localhost 8090
 ACK: HELLO FROM NETCAT
-

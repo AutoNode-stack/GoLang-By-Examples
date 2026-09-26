@@ -1,9 +1,9 @@
-// The Go standard library provides straightforward
-// tools for outputting logs from Go programs, with
-// the [log](https://pkg.go.dev/log) package for
-// free-form output and the
-// [log/slog](https://pkg.go.dev/log/slog) package for
-// structured output.
+// La biblioteca estándar de Go proporciona excelentes
+// herramientas para emitir registros (logs) desde programas, con
+// el paquete [log](https://pkg.go.dev/log) para
+// salidas en texto libre y el paquete
+// [log/slog](https://pkg.go.dev/log/slog) para
+// salidas estructuradas.
 package main
 
 import (
@@ -17,61 +17,60 @@ import (
 
 func main() {
 
-	// Simply invoking functions like `Println` from the
-	// `log` package uses the _standard_ logger, which
-	// is already pre-configured for reasonable logging
-	// output to `os.Stderr`. Additional methods like
-	// `Fatal*` or `Panic*` will exit the program after
-	// logging.
+	// La simple invocación de funciones como `Println` desde el
+	// paquete `log` utiliza el logger _estándar_, el cual
+	// viene preconfigurado con una salida razonable
+	// hacia `os.Stderr`. Métodos adicionales como
+	// `Fatal*` o `Panic*` terminarán el programa tras
+	// registrar el mensaje.
 	log.Println("standard logger")
 
-	// Loggers can be configured with _flags_ to set
-	// their output format. By default, the standard
-	// logger has the `log.Ldate` and `log.Ltime` flags
-	// set, and these are collected in `log.LstdFlags`.
-	// We can change its flags to emit time with
-	// microsecond accuracy, for example.
+	// Los loggers pueden configurarse con _banderas_ (flags) para definir
+	// su formato de salida. Por defecto, el logger estándar
+	// tiene activadas las banderas `log.Ldate` y `log.Ltime`,
+	// agrupadas en `log.LstdFlags`.
+	// Podemos modificar sus banderas para emitir la hora con
+	// precisión de microsegundos, por ejemplo.
 	log.SetFlags(log.LstdFlags | log.Lmicroseconds)
 	log.Println("with micro")
 
-	// It also supports emitting the file name and
-	// line from which the `log` function is called.
+	// También permite emitir el nombre del archivo y la
+	// línea exacta desde donde se invocó la función `log`.
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
 	log.Println("with file/line")
 
-	// It may be useful to create a custom logger and
-	// pass it around. When creating a new logger, we
-	// can set a _prefix_ to distinguish its output
-	// from other loggers.
+	// Puede resultar muy útil crear un logger personalizado y
+	// pasarlo entre componentes. Al crear un nuevo logger, podemos
+	// definir un _prefijo_ para distinguir su salida
+	// de la de otros loggers.
 	mylog := log.New(os.Stdout, "my:", log.LstdFlags)
 	mylog.Println("from mylog")
 
-	// We can set the prefix
-	// on existing loggers (including the standard one)
-	// with the `SetPrefix` method.
+	// Podemos modificar el prefijo
+	// en loggers existentes (incluyendo el estándar)
+	// mediante el método `SetPrefix`.
 	mylog.SetPrefix("ohmy:")
 	mylog.Println("from mylog")
 
-	// Loggers can have custom output targets;
-	// any `io.Writer` works.
+	// Los loggers admiten destinos de salida personalizados;
+	// cualquier implementación de `io.Writer` es válida.
 	var buf bytes.Buffer
 	buflog := log.New(&buf, "buf:", log.LstdFlags)
 
-	// This call writes the log output into `buf`.
+	// Esta llamada escribe la salida de log dentro de `buf`.
 	buflog.Println("hello")
 
-	// This will actually show it on standard output.
+	// Esto lo mostrará en la salida estándar.
 	fmt.Print("from buflog:", buf.String())
 
-	// The `slog` package provides
-	// _structured_ log output. For example, logging
-	// in JSON format is straightforward.
+	// El paquete `slog` provee
+	// salida de registros _estructurada_. Por ejemplo, registrar
+	// en formato JSON es sumamente sencillo.
 	jsonHandler := slog.NewJSONHandler(os.Stderr, nil)
 	myslog := slog.New(jsonHandler)
 	myslog.Info("hi there")
 
-	// In addition to the message, `slog` output can
-	// contain an arbitrary number of key=value
-	// pairs.
+	// Además del mensaje principal, la salida de `slog` puede
+	// contener un número arbitrario de pares clave=valor.
 	myslog.Info("hello again", "key", "val", "age", 25)
 }

@@ -1,7 +1,7 @@
-# Running the program shows that the counters
-# updated as expected.
+# Ejecutar el programa demuestra que los contadores
+# se actualizaron con total exactitud y sincronía.
 $ go run mutexes.go
 map[a:20000 b:10000]
 
-# Next we'll look at implementing this same state
-# management task using only goroutines and channels.
+# A continuación veremos cómo resolver esta misma tarea de gestión
+# de estado empleando únicamente goroutines y canales.

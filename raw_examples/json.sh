@@ -15,8 +15,7 @@ apple
 {"apple":5,"lettuce":7}
 {1 [apple peach]}
 
-
-# We've covered the basic of JSON in Go here, but check
-# out the [JSON and Go](https://go.dev/blog/json)
-# blog post and the [JSON package docs](https://pkg.go.dev/encoding/json/v2)
-# for more.
+# Hemos cubierto los fundamentos de JSON en Go aquí; consulta
+# el artículo [JSON y Go](https://go.dev/blog/json)
+# y la documentación del [paquete JSON](https://pkg.go.dev/encoding/json/v2)
+# para profundizar en el tema.

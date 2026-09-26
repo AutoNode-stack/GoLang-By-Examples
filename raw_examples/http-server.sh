@@ -1,6 +1,6 @@
-# Run the server in the background.
+# Inicia el servidor en segundo plano.
 $ go run http-server.go &
 
-# Access the `/hello` route.
+# Accede a la ruta `/hello`.
 $ curl localhost:8090/hello
 hello

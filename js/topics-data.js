@@ -5,84 +5,84 @@ const GO_CATEGORIES = [
   {
     "id": "fundamentos",
     "name": "Fundamentos del Lenguaje",
-    "icon": "⚡",
+    "icon": "zap",
     "count": 7,
     "description": "Sintaxis básica, tipos primitivos, variables, constantes y control de flujo"
   },
   {
     "id": "estructuras-datos",
     "name": "Estructuras de Datos y Colecciones",
-    "icon": "📦",
+    "icon": "package",
     "count": 4,
     "description": "Arrays fijos, slices dinámicos, tablas hash (maps) e iteración range"
   },
   {
     "id": "funciones-memoria",
     "name": "Funciones, Clausuras y Punteros",
-    "icon": "🔧",
+    "icon": "tool",
     "count": 7,
     "description": "Parámetros, retornos múltiples, variádicas, closures, recursión, memoria y runas"
   },
   {
     "id": "poo-generics",
     "name": "Tipos Avanzados y POO en Go",
-    "icon": "🏛️",
+    "icon": "cpu",
     "count": 7,
     "description": "Structs, métodos, interfaces implícitas, enums, composición, genéricos e iteradores"
   },
   {
     "id": "errores-panico",
     "name": "Manejo de Errores y Excepciones",
-    "icon": "🛡️",
+    "icon": "shield",
     "count": 5,
     "description": "Errores como valores, errores personalizados, panic, defer y recover"
   },
   {
     "id": "concurrencia-canales",
     "name": "Concurrencia: Goroutines y Canales",
-    "icon": "🚀",
+    "icon": "rocket",
     "count": 10,
     "description": "Hilos ligeros, canales unbuffered y buffered, direcciones, select y timeouts"
   },
   {
     "id": "sincronizacion-avanzada",
     "name": "Sincronización y Concurrencia Avanzada",
-    "icon": "⚙️",
+    "icon": "settings",
     "count": 8,
     "description": "Timers, tickers, worker pools, waitgroups, rate limiting, atomics y mutexes"
   },
   {
     "id": "texto-formatos",
     "name": "Manipulación de Texto y Formatos",
-    "icon": "🔤",
+    "icon": "file-code",
     "count": 8,
     "description": "Ordenamiento, strings, printf, plantillas de texto, regex, JSON y XML"
   },
   {
     "id": "tiempo-cripto",
     "name": "Tiempo, Matemáticas y Criptografía",
-    "icon": "⏳",
+    "icon": "clock",
     "count": 8,
     "description": "Time, epoch, parseo de fechas, rand, strconv, URLs, SHA-256 y Base64"
   },
   {
     "id": "archivos-io",
     "name": "Entrada / Salida y Archivos",
-    "icon": "📁",
+    "icon": "folder",
     "count": 7,
     "description": "Lectura, escritura, filtros de línea, rutas, directorios, temporales y embed"
   },
   {
     "id": "cli-testing",
     "name": "CLI, Pruebas y Benchmarking",
-    "icon": "🧪",
+    "icon": "target",
     "count": 6,
     "description": "Testing, benchmarks, argumentos, banderas flags, subcomandos, env vars y slog"
   },
   {
     "id": "redes-sistema",
     "name": "Redes, Procesos y Sistema Operativo",
-    "icon": "🌐",
+    "icon": "globe",
     "count": 8,
     "description": "Cliente/servidor HTTP, sockets TCP, Context, subprocesos, señales y exit"
   }
@@ -96,7 +96,7 @@ const GO_TOPICS = [
     "titleEs": "Hola Mundo",
     "category": "Fundamentos del Lenguaje",
     "categorySlug": "fundamentos",
-    "categoryIcon": "⚡",
+    "categoryIcon": "zap",
     "difficulty": "Principiante",
     "summary": "El primer programa canónico en Go que inicializa un paquete ejecutable e imprime un mensaje en la salida estándar.",
     "originalExpl": "Nuestro primer programa imprimirá el clásico mensaje 'hello world'. Para ejecutarlo, guardamos el código en hello-world.go y usamos 'go run'. También podemos compilar un binario ejecutable directamente con 'go build'.",
@@ -138,29 +138,29 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Documentación Oficial: Tutorial Get Started",
+        "title": "Documentación oficial: Tutorial de inicio rápido",
         "url": "https://go.dev/doc/tutorial/getting-started",
         "description": "Guía introductoria paso a paso en el sitio oficial de Go."
       },
       {
-        "title": "The Go Playground",
+        "title": "Área de pruebas oficial de Go (The Go Playground)",
         "url": "https://go.dev/play/",
         "description": "Entorno oficial en la nube para probar código Go sin instalar nada."
       },
       {
-        "title": "Especificación del Lenguaje: Program Execution",
+        "title": "Especificación de Go: Ejecución de programas",
         "url": "https://go.dev/ref/spec#Program_execution",
         "description": "Detalles formales de cómo se inicializa e inicia un programa en Go."
       },
       {
-        "title": "Go by Example: Hello World",
+        "title": "Go by Example Original: Hello World",
         "url": "https://gobyexample.com/hello-world",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// Our first program will print the classic \"hello world\"\n// message. Here's the full source code.\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\tfmt.Println(\"hello world\")\n}\n",
-    "output": "# To run the program, put the code in `hello-world.go` and\n# use `go run`.\n$ go run hello-world.go\nhello world\n\n# Sometimes we'll want to build our programs into\n# binaries. We can do this using `go build`.\n$ go build hello-world.go\n$ ls\nhello-world\thello-world.go\n\n# We can then execute the built binary directly.\n$ ./hello-world\nhello world\n\n# Now that we can run and build basic Go programs, let's\n# learn more about the language.\n",
+    "code": "// Nuestro primer programa imprimirá el clásico mensaje \"hello world\".\n// Aquí está el código fuente completo.\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\tfmt.Println(\"hello world\")\n}\n",
+    "output": "# Para ejecutar el programa, guarda el código en `hello-world.go` y\n# usa `go run`.\n$ go run hello-world.go\nhello world\n\n# En ocasiones querremos compilar nuestros programas en binarios\n# ejecutables. Podemos hacerlo usando `go build`.\n$ go build hello-world.go\n$ ls\nhello-world\thello-world.go\n\n# Luego podemos ejecutar el binario compilado directamente.\n$ ./hello-world\nhello world\n\n# Ahora que sabemos ejecutar y compilar programas básicos en Go,\n# aprendamos más sobre el lenguaje.\n",
     "officialUrl": "https://gobyexample.com/hello-world"
   },
   {
@@ -170,7 +170,7 @@ const GO_TOPICS = [
     "titleEs": "Valores y Tipos Primitivos",
     "category": "Fundamentos del Lenguaje",
     "categorySlug": "fundamentos",
-    "categoryIcon": "⚡",
+    "categoryIcon": "zap",
     "difficulty": "Principiante",
     "summary": "Exploración de los tipos de valores elementales en Go: cadenas, enteros, flotantes y booleanos, junto con sus operadores básicos.",
     "originalExpl": "Go tiene varios tipos de valores, incluyendo cadenas de texto, enteros, números de punto flotante, booleanos y operadores aritméticos y lógicos asociados.",
@@ -211,28 +211,28 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Tour: Basic types",
+        "title": "Tour interactivo de Go: Tipos básicos de Go",
         "url": "https://go.dev/tour/basics/11",
         "description": "Recorrido interactivo por los tipos primitivos en Go."
       },
       {
-        "title": "Effective Go: Constants and Types",
+        "title": "Guía canónica Effective Go: Constantes y sistemas de tipos",
         "url": "https://go.dev/doc/effective_go#constants",
         "description": "Guía idiomática sobre constantes y tipos de valores."
       },
       {
-        "title": "Go Spec: Basic types",
+        "title": "Especificación de Go: Tipos básicos y primitivos del lenguaje",
         "url": "https://go.dev/ref/spec#Numeric_types",
         "description": "Especificación oficial de todos los tipos numéricos y primitivos."
       },
       {
-        "title": "Go by Example: Values",
+        "title": "Go by Example Original: Values",
         "url": "https://gobyexample.com/values",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// Go has various value types including strings,\n// integers, floats, booleans, etc. Here are a few\n// basic examples.\n\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\n\t// Strings, which can be added together with `+`.\n\tfmt.Println(\"go\" + \"lang\")\n\n\t// Integers and floats.\n\tfmt.Println(\"1+1 =\", 1+1)\n\tfmt.Println(\"7.0/3.0 =\", 7.0/3.0)\n\n\t// Booleans, with boolean operators as you'd expect.\n\tfmt.Println(true && false)\n\tfmt.Println(true || false)\n\tfmt.Println(!true)\n}\n",
+    "code": "// Go cuenta con diversos tipos de valores, incluyendo cadenas de texto (strings),\n// enteros, flotantes, booleanos, etc. Aquí hay algunos\n// ejemplos básicos.\n\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\n\t// Cadenas de texto, que se pueden concatenar con `+`.\n\tfmt.Println(\"go\" + \"lang\")\n\n\t// Enteros y flotantes.\n\tfmt.Println(\"1+1 =\", 1+1)\n\tfmt.Println(\"7.0/3.0 =\", 7.0/3.0)\n\n\t// Booleanos, con los operadores booleanos habituales.\n\tfmt.Println(true && false)\n\tfmt.Println(true || false)\n\tfmt.Println(!true)\n}\n",
     "output": "$ go run values.go\ngolang\n1+1 = 2\n7.0/3.0 = 2.3333333333333335\nfalse\ntrue\nfalse\n",
     "officialUrl": "https://gobyexample.com/values"
   },
@@ -243,7 +243,7 @@ const GO_TOPICS = [
     "titleEs": "Variables e Inferencia de Tipos",
     "category": "Fundamentos del Lenguaje",
     "categorySlug": "fundamentos",
-    "categoryIcon": "⚡",
+    "categoryIcon": "zap",
     "difficulty": "Principiante",
     "summary": "Declaración explícita con 'var', inferencia automática de tipo y la sintaxis corta ':=' dentro de funciones.",
     "originalExpl": "En Go, las variables se declaran explícitamente y son utilizadas por el compilador para verificar la corrección de tipos en las llamadas a funciones. La sintaxis ':=' es un atajo para declarar e inicializar una variable.",
@@ -284,28 +284,28 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Tour: Variables",
+        "title": "Tour interactivo de Go: Declaración y asignación de variables",
         "url": "https://go.dev/tour/basics/8",
         "description": "Declaración e inicialización en el tour interactivo de Go."
       },
       {
-        "title": "Effective Go: Variable declarations",
+        "title": "Guía canónica Effective Go: Declaración e inicialización de variables",
         "url": "https://go.dev/doc/effective_go#variables",
         "description": "Estilo y convenciones al declarar variables en Go."
       },
       {
-        "title": "Go Spec: Variable Declarations",
+        "title": "Especificación de Go: Declaraciones de variables y ámbito léxico",
         "url": "https://go.dev/ref/spec#Variable_declarations",
         "description": "Especificación del lenguaje sobre variables y zero-values."
       },
       {
-        "title": "Go by Example: Variables",
+        "title": "Go by Example Original: Variables",
         "url": "https://gobyexample.com/variables",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// In Go, _variables_ are explicitly declared and used by\n// the compiler to e.g. check type-correctness of function\n// calls.\n\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\n\t// `var` declares 1 or more variables.\n\tvar a = \"initial\"\n\tfmt.Println(a)\n\n\t// You can declare multiple variables at once.\n\tvar b, c int = 1, 2\n\tfmt.Println(b, c)\n\n\t// Go will infer the type of initialized variables.\n\tvar d = true\n\tfmt.Println(d)\n\n\t// Variables declared without a corresponding\n\t// initialization are _zero-valued_. For example, the\n\t// zero value for an `int` is `0`.\n\tvar e int\n\tfmt.Println(e)\n\n\t// The `:=` syntax is shorthand for declaring and\n\t// initializing a variable, e.g. for\n\t// `var f string = \"apple\"` in this case.\n\t// This syntax is only available inside functions.\n\tf := \"apple\"\n\tfmt.Println(f)\n}\n",
+    "code": "// En Go, las _variables_ se declaran explícitamente y son utilizadas\n// por el compilador para, por ejemplo, verificar la corrección de tipos\n// en las llamadas a funciones.\n\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\n\t// `var` declara 1 o más variables.\n\tvar a = \"initial\"\n\tfmt.Println(a)\n\n\t// Se pueden declarar múltiples variables al mismo tiempo.\n\tvar b, c int = 1, 2\n\tfmt.Println(b, c)\n\n\t// Go inferirá el tipo de las variables inicializadas.\n\tvar d = true\n\tfmt.Println(d)\n\n\t// Las variables declaradas sin una inicialización correspondiente\n\t// adquieren el _valor cero_ (zero-valued). Por ejemplo, el\n\t// valor cero para un `int` es `0`.\n\tvar e int\n\tfmt.Println(e)\n\n\t// La sintaxis `:=` es una forma abreviada para declarar e\n\t// inicializar una variable; por ejemplo, equivale a\n\t// `var f string = \"apple\"` en este caso.\n\t// Esta sintaxis solo está disponible dentro de funciones.\n\tf := \"apple\"\n\tfmt.Println(f)\n}\n",
     "output": "$ go run variables.go\ninitial\n1 2\ntrue\n0\napple\n",
     "officialUrl": "https://gobyexample.com/variables"
   },
@@ -316,7 +316,7 @@ const GO_TOPICS = [
     "titleEs": "Constantes e Iota",
     "category": "Fundamentos del Lenguaje",
     "categorySlug": "fundamentos",
-    "categoryIcon": "⚡",
+    "categoryIcon": "zap",
     "difficulty": "Principiante",
     "summary": "Valores inmutables conocidos en tiempo de compilación con alta precisión y el generador de secuencias 'iota'.",
     "originalExpl": "Go soporta constantes de caracteres, cadenas, booleanos y valores numéricos. Se declaran con la palabra clave 'const' y no pueden ser modificadas una vez definidas.",
@@ -357,28 +357,28 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "The Go Blog: Constants",
+        "title": "Blog oficial de Go: Constantes en Go: precisión y tipos",
         "url": "https://go.dev/blog/constants",
         "description": "Artículo definitivo del equipo de Go sobre constantes no tipadas y precisión."
       },
       {
-        "title": "Go Tour: Constants",
+        "title": "Tour interactivo de Go: Constantes numéricas y de texto",
         "url": "https://go.dev/tour/basics/15",
         "description": "Ejercicios interactivos con constantes numéricas y de caracteres."
       },
       {
-        "title": "Go Spec: Iota",
+        "title": "Especificación de Go: El identificador predefinido iota",
         "url": "https://go.dev/ref/spec#Iota",
         "description": "Especificación técnica del funcionamiento de iota."
       },
       {
-        "title": "Go by Example: Constants",
+        "title": "Go by Example Original: Constants",
         "url": "https://gobyexample.com/constants",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// Go supports _constants_ of character, string, boolean,\n// and numeric values.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\n// `const` declares a constant value.\nconst s string = \"constant\"\n\nfunc main() {\n\tfmt.Println(s)\n\n\t// A `const` statement can also appear inside a\n\t// function body.\n\tconst n = 500000000\n\n\t// Constant expressions perform arithmetic with\n\t// arbitrary precision.\n\tconst d = 3e20 / n\n\tfmt.Println(d)\n\n\t// A numeric constant has no type until it's given\n\t// one, such as by an explicit conversion.\n\tfmt.Println(int64(d))\n\n\t// A number can be given a type by using it in a\n\t// context that requires one, such as a variable\n\t// assignment or function call. For example, here\n\t// `math.Sin` expects a `float64`.\n\tfmt.Println(math.Sin(n))\n}\n",
+    "code": "// Go admite _constantes_ de caracteres, cadenas de texto, valores booleanos\n// y numéricos.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\n// `const` declara un valor constante.\nconst s string = \"constant\"\n\nfunc main() {\n\tfmt.Println(s)\n\n\t// Una sentencia `const` también puede aparecer dentro del\n\t// cuerpo de una función.\n\tconst n = 500000000\n\n\t// Las expresiones constantes realizan aritmética con\n\t// precisión arbitraria.\n\tconst d = 3e20 / n\n\tfmt.Println(d)\n\n\t// Una constante numérica no tiene un tipo definido hasta que se le asigna\n\t// uno, por ejemplo mediante una conversión explícita.\n\tfmt.Println(int64(d))\n\n\t// A un número se le puede asignar un tipo utilizándolo en un\n\t// contexto que lo requiera, como una asignación de variable\n\t// o una llamada a función. Por ejemplo, aquí\n\t// `math.Sin` espera un `float64`.\n\tfmt.Println(math.Sin(n))\n}\n",
     "output": "$ go run constant.go \nconstant\n6e+11\n600000000000\n-0.28470407323754404\n",
     "officialUrl": "https://gobyexample.com/constants"
   },
@@ -389,7 +389,7 @@ const GO_TOPICS = [
     "titleEs": "El Bucle For (Única Estructura de Repetición)",
     "category": "Fundamentos del Lenguaje",
     "categorySlug": "fundamentos",
-    "categoryIcon": "⚡",
+    "categoryIcon": "zap",
     "difficulty": "Principiante",
     "summary": "Go solo tiene una palabra clave para bucles: 'for'. Con ella se construyen bucles tradicionales, bucles while y bucles infinitos.",
     "originalExpl": "'for' es la única estructura de control de bucles en Go. Cubre bucles básicos de 3 componentes, bucles de una sola condición (tipo while) y bucles infinitos con break y continue.",
@@ -430,29 +430,29 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Tour: For loops",
+        "title": "Tour interactivo de Go: Bucles de iteración con for",
         "url": "https://go.dev/tour/flowcontrol/1",
         "description": "Práctica con las diferentes formas del bucle for."
       },
       {
-        "title": "The Go Blog: Loopvar Scoping in Go 1.22",
+        "title": "Blog oficial de Go: Resolución del ámbito de variables de bucle en Go 1.22",
         "url": "https://go.dev/blog/loopvar-preview",
         "description": "Explicación oficial del cambio de alcance de variables en bucles."
       },
       {
-        "title": "Effective Go: For statement",
+        "title": "Guía canónica Effective Go: Sentencia de iteración for",
         "url": "https://go.dev/doc/effective_go#for",
         "description": "Uso idiomático del bucle for en proyectos reales de Go."
       },
       {
-        "title": "Go by Example: For",
+        "title": "Go by Example Original: For",
         "url": "https://gobyexample.com/for",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// `for` is Go's only looping construct. Here are\n// some basic types of `for` loops.\n\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\n\t// The most basic type, with a single condition.\n\ti := 1\n\tfor i <= 3 {\n\t\tfmt.Println(i)\n\t\ti = i + 1\n\t}\n\n\t// A classic initial/condition/after `for` loop.\n\tfor j := 0; j < 3; j++ {\n\t\tfmt.Println(j)\n\t}\n\n\t// Another way of accomplishing the basic \"do this\n\t// N times\" iteration is `range` over an integer.\n\tfor i := range 3 {\n\t\tfmt.Println(\"range\", i)\n\t}\n\n\t// `for` without a condition will loop repeatedly\n\t// until you `break` out of the loop or `return` from\n\t// the enclosing function.\n\tfor {\n\t\tfmt.Println(\"loop\")\n\t\tbreak\n\t}\n\n\t// You can also `continue` to the next iteration of\n\t// the loop.\n\tfor n := range 6 {\n\t\tif n%2 == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tfmt.Println(n)\n\t}\n}\n",
-    "output": "$ go run for.go\n1\n2\n3\n0\n1\n2\nrange 0\nrange 1\nrange 2\nloop\n1\n3\n5\n\n# We'll see some other `for` forms later when we look at\n# `range` statements, channels, and other data\n# structures.\n",
+    "code": "// `for` es la única estructura de bucle en Go. Aquí se presentan\n// algunos tipos básicos de bucles `for`.\n\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\n\t// El tipo más básico, con una única condición.\n\ti := 1\n\tfor i <= 3 {\n\t\tfmt.Println(i)\n\t\ti = i + 1\n\t}\n\n\t// Un bucle `for` clásico con inicialización/condición/paso posterior.\n\tfor j := 0; j < 3; j++ {\n\t\tfmt.Println(j)\n\t}\n\n\t// Otra forma de lograr la iteración básica de \"hacer esto N veces\"\n\t// es usar `range` sobre un número entero.\n\tfor i := range 3 {\n\t\tfmt.Println(\"range\", i)\n\t}\n\n\t// Un `for` sin condición iterará repetidamente hasta que\n\t// uses `break` para salir del bucle o `return` para retornar\n\t// desde la función contenedora.\n\tfor {\n\t\tfmt.Println(\"loop\")\n\t\tbreak\n\t}\n\n\t// También puedes usar `continue` para avanzar a la siguiente iteración\n\t// del bucle.\n\tfor n := range 6 {\n\t\tif n%2 == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tfmt.Println(n)\n\t}\n}\n",
+    "output": "$ go run for.go\n1\n2\n3\n0\n1\n2\nrange 0\nrange 1\nrange 2\nloop\n1\n3\n5\n\n# Veremos otras formas de `for` más adelante cuando examinemos\n# las sentencias `range`, canales y otras estructuras de datos.\n",
     "officialUrl": "https://gobyexample.com/for"
   },
   {
@@ -462,7 +462,7 @@ const GO_TOPICS = [
     "titleEs": "Condicionales If / Else",
     "category": "Fundamentos del Lenguaje",
     "categorySlug": "fundamentos",
-    "categoryIcon": "⚡",
+    "categoryIcon": "zap",
     "difficulty": "Principiante",
     "summary": "Estructuras condicionales en Go con la sintaxis única de declaración previa antes de la condición.",
     "originalExpl": "Bifurcaciones con 'if' y 'else' en Go. No requiere paréntesis alrededor de las condiciones, pero las llaves son obligatorias. Permite una instrucción de inicialización antes de la condición.",
@@ -503,29 +503,29 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Tour: If statements",
+        "title": "Tour interactivo de Go: Condicionales if en Go",
         "url": "https://go.dev/tour/flowcontrol/5",
         "description": "Ejercicios con condicionales if y sentencias cortas de inicialización."
       },
       {
-        "title": "Effective Go: If control structure",
+        "title": "Guía canónica Effective Go: Estructuras de control condicionales if/else",
         "url": "https://go.dev/doc/effective_go#if",
         "description": "El estilo canónico de Go para evitar bloques else profundos."
       },
       {
-        "title": "Go Spec: If statements",
+        "title": "Especificación de Go: Sintaxis y reglas de sentencias if",
         "url": "https://go.dev/ref/spec#If_statements",
         "description": "Especificación formal del comportamiento sintáctico de if."
       },
       {
-        "title": "Go by Example: If/Else",
+        "title": "Go by Example Original: If/Else",
         "url": "https://gobyexample.com/if-else",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// Branching with `if` and `else` in Go is\n// straight-forward.\n\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\n\t// Here's a basic example.\n\tif 7%2 == 0 {\n\t\tfmt.Println(\"7 is even\")\n\t} else {\n\t\tfmt.Println(\"7 is odd\")\n\t}\n\n\t// You can have an `if` statement without an else.\n\tif 8%4 == 0 {\n\t\tfmt.Println(\"8 is divisible by 4\")\n\t}\n\n\t// Logical operators like `&&` and `||` are often\n\t// useful in conditions.\n\tif 8%2 == 0 || 7%2 == 0 {\n\t\tfmt.Println(\"either 8 or 7 are even\")\n\t}\n\n\t// A statement can precede conditionals; any variables\n\t// declared in this statement are available in the current\n\t// and all subsequent branches.\n\tif num := 9; num < 0 {\n\t\tfmt.Println(num, \"is negative\")\n\t} else if num < 10 {\n\t\tfmt.Println(num, \"has 1 digit\")\n\t} else {\n\t\tfmt.Println(num, \"has multiple digits\")\n\t}\n}\n\n// Note that you don't need parentheses around conditions\n// in Go, but that the braces are required.\n",
-    "output": "$ go run if-else.go\n7 is odd\n8 is divisible by 4\neither 8 or 7 are even\n9 has 1 digit\n\n# There is no [ternary if](https://en.wikipedia.org/wiki/%3F:)\n# in Go, so you'll need to use a full `if` statement even\n# for basic conditions.\n",
+    "code": "// La bifurcación condicional con `if` y `else` en Go es\n// directa y sencilla.\n\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\n\t// Aquí hay un ejemplo básico.\n\tif 7%2 == 0 {\n\t\tfmt.Println(\"7 is even\")\n\t} else {\n\t\tfmt.Println(\"7 is odd\")\n\t}\n\n\t// Se puede tener una sentencia `if` sin bloque else.\n\tif 8%4 == 0 {\n\t\tfmt.Println(\"8 is divisible by 4\")\n\t}\n\n\t// Los operadores lógicos como `&&` y `||` suelen ser\n\t// muy útiles en las condiciones.\n\tif 8%2 == 0 || 7%2 == 0 {\n\t\tfmt.Println(\"either 8 or 7 are even\")\n\t}\n\n\t// Una declaración puede preceder a los condicionales; cualquier variable\n\t// declarada en esta declaración estará disponible en la rama actual\n\t// y en todas las ramas subsiguientes.\n\tif num := 9; num < 0 {\n\t\tfmt.Println(num, \"is negative\")\n\t} else if num < 10 {\n\t\tfmt.Println(num, \"has 1 digit\")\n\t} else {\n\t\tfmt.Println(num, \"has multiple digits\")\n\t}\n}\n\n// Ten en cuenta que no se necesitan paréntesis alrededor de las condiciones\n// en Go, pero las llaves `{}` son obligatorias.\n",
+    "output": "$ go run if-else.go\n7 is odd\n8 is divisible by 4\neither 8 or 7 are even\n9 has 1 digit\n\n# No existe un operador ternario `if` en Go, por lo que\n# deberás usar una sentencia `if` completa incluso para\n# condiciones básicas.\n",
     "officialUrl": "https://gobyexample.com/if-else"
   },
   {
@@ -535,7 +535,7 @@ const GO_TOPICS = [
     "titleEs": "Sentencias Switch",
     "category": "Fundamentos del Lenguaje",
     "categorySlug": "fundamentos",
-    "categoryIcon": "⚡",
+    "categoryIcon": "zap",
     "difficulty": "Principiante",
     "summary": "Switch condicional, múltiple expresión por caso, switch sin condición (reemplazo de if-else largos) y switch de tipos.",
     "originalExpl": "Las declaraciones switch expresan condicionales a través de múltiples ramas. En Go no se necesita 'break' al final de cada caso; no hay caída automática (fallthrough) por defecto.",
@@ -576,28 +576,28 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Tour: Switch",
+        "title": "Tour interactivo de Go: Bifurcaciones con switch",
         "url": "https://go.dev/tour/flowcontrol/9",
         "description": "Ejercicios con switch en el tour interactivo."
       },
       {
-        "title": "Effective Go: Switch",
+        "title": "Guía canónica Effective Go: Sentencias de selección múltiple switch",
         "url": "https://go.dev/doc/effective_go#switch",
         "description": "Guía idiomática sobre switch sin condición y switch de tipos."
       },
       {
-        "title": "Go Spec: Switch statements",
+        "title": "Especificación de Go: Sentencias de bifurcación switch",
         "url": "https://go.dev/ref/spec#Switch_statements",
         "description": "Reglas de expresión y sintaxis oficial de switch."
       },
       {
-        "title": "Go by Example: Switch",
+        "title": "Go by Example Original: Switch",
         "url": "https://gobyexample.com/switch",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// _Switch statements_ express conditionals across many\n// branches.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc main() {\n\n\t// Here's a basic `switch`.\n\ti := 2\n\tfmt.Print(\"Write \", i, \" as \")\n\tswitch i {\n\tcase 1:\n\t\tfmt.Println(\"one\")\n\tcase 2:\n\t\tfmt.Println(\"two\")\n\tcase 3:\n\t\tfmt.Println(\"three\")\n\t}\n\n\t// You can use commas to separate multiple expressions\n\t// in the same `case` statement. We use the optional\n\t// `default` case in this example as well.\n\tswitch time.Now().Weekday() {\n\tcase time.Saturday, time.Sunday:\n\t\tfmt.Println(\"It's the weekend\")\n\tdefault:\n\t\tfmt.Println(\"It's a weekday\")\n\t}\n\n\t// `switch` without an expression is an alternate way\n\t// to express if/else logic. Here we also show how the\n\t// `case` expressions can be non-constants.\n\tt := time.Now()\n\tswitch {\n\tcase t.Hour() < 12:\n\t\tfmt.Println(\"It's before noon\")\n\tdefault:\n\t\tfmt.Println(\"It's after noon\")\n\t}\n\n\t// A type `switch` compares types instead of values.  You\n\t// can use this to discover the type of an interface\n\t// value.  In this example, the variable `t` will have the\n\t// type corresponding to its clause.\n\twhatAmI := func(i any) {\n\t\tswitch t := i.(type) {\n\t\tcase bool:\n\t\t\tfmt.Println(\"I'm a bool\")\n\t\tcase int:\n\t\t\tfmt.Println(\"I'm an int\")\n\t\tdefault:\n\t\t\tfmt.Printf(\"Don't know type %T\\n\", t)\n\t\t}\n\t}\n\twhatAmI(true)\n\twhatAmI(1)\n\twhatAmI(\"hey\")\n}\n",
+    "code": "// Las _sentencias switch_ expresan condicionales a través de múltiples\n// ramas de ejecución.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc main() {\n\n\t// Aquí hay un `switch` básico.\n\ti := 2\n\tfmt.Print(\"Write \", i, \" as \")\n\tswitch i {\n\tcase 1:\n\t\tfmt.Println(\"one\")\n\tcase 2:\n\t\tfmt.Println(\"two\")\n\tcase 3:\n\t\tfmt.Println(\"three\")\n\t}\n\n\t// Puedes usar comas para separar múltiples expresiones\n\t// en la misma cláusula `case`. En este ejemplo también\n\t// usamos el caso opcional `default`.\n\tswitch time.Now().Weekday() {\n\tcase time.Saturday, time.Sunday:\n\t\tfmt.Println(\"It's the weekend\")\n\tdefault:\n\t\tfmt.Println(\"It's a weekday\")\n\t}\n\n\t// Un `switch` sin expresión es una forma alternativa de\n\t// expresar la lógica if/else. Aquí también demostramos cómo las\n\t// expresiones en `case` pueden ser valores no constantes.\n\tt := time.Now()\n\tswitch {\n\tcase t.Hour() < 12:\n\t\tfmt.Println(\"It's before noon\")\n\tdefault:\n\t\tfmt.Println(\"It's after noon\")\n\t}\n\n\t// Un `switch` de tipo compara tipos en lugar de valores. Puedes\n\t// usarlo para descubrir el tipo dinámico de un valor de interfaz.\n\t// En este ejemplo, la variable `t` tendrá el\n\t// tipo correspondiente a su cláusula evaluada.\n\twhatAmI := func(i any) {\n\t\tswitch t := i.(type) {\n\t\tcase bool:\n\t\t\tfmt.Println(\"I'm a bool\")\n\t\tcase int:\n\t\t\tfmt.Println(\"I'm an int\")\n\t\tdefault:\n\t\t\tfmt.Printf(\"Don't know type %T\\n\", t)\n\t\t}\n\t}\n\twhatAmI(true)\n\twhatAmI(1)\n\twhatAmI(\"hey\")\n}\n",
     "output": "$ go run switch.go \nWrite 2 as two\nIt's a weekday\nIt's after noon\nI'm a bool\nI'm an int\nDon't know type string\n",
     "officialUrl": "https://gobyexample.com/switch"
   },
@@ -608,7 +608,7 @@ const GO_TOPICS = [
     "titleEs": "Arreglos (Arrays de Tamaño Fijo)",
     "category": "Estructuras de Datos y Colecciones",
     "categorySlug": "estructuras-datos",
-    "categoryIcon": "📦",
+    "categoryIcon": "package",
     "difficulty": "Principiante",
     "summary": "Colecciones contiguas en memoria de tamaño fijo donde la longitud forma parte inseparable del tipo de dato.",
     "originalExpl": "En Go, un arreglo (array) es una secuencia numerada de elementos de una longitud específica. En el código Go típico, los slices son mucho más comunes; los arrays son útiles en situaciones especializadas.",
@@ -650,29 +650,29 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Tour: Arrays",
+        "title": "Tour interactivo de Go: Arrays y arreglos estáticos",
         "url": "https://go.dev/tour/moretypes/6",
         "description": "Concepto y sintaxis de arrays en el tour oficial."
       },
       {
-        "title": "The Go Blog: Slices and Arrays",
+        "title": "Blog oficial de Go: Arreglos fijos y slices dinámicos",
         "url": "https://go.dev/blog/slices-intro",
         "description": "Artículo de referencia sobre las diferencias entre arrays y slices."
       },
       {
-        "title": "Go Spec: Array types",
+        "title": "Especificación de Go: Tipos de array (arreglos de tamaño fijo)",
         "url": "https://go.dev/ref/spec#Array_types",
         "description": "Especificación del estándar para tipos de arreglo."
       },
       {
-        "title": "Go by Example: Arrays",
+        "title": "Go by Example Original: Arrays",
         "url": "https://gobyexample.com/arrays",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// In Go, an _array_ is a numbered sequence of elements of a\n// specific length. In typical Go code, [slices](slices) are\n// much more common; arrays are useful in some special\n// scenarios.\n\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\n\t// Here we create an array `a` that will hold exactly\n\t// 5 `int`s. The type of elements and length are both\n\t// part of the array's type. By default an array is\n\t// zero-valued, which for `int`s means `0`s.\n\tvar a [5]int\n\tfmt.Println(\"emp:\", a)\n\n\t// We can set a value at an index using the\n\t// `array[index] = value` syntax, and get a value with\n\t// `array[index]`.\n\ta[4] = 100\n\tfmt.Println(\"set:\", a)\n\tfmt.Println(\"get:\", a[4])\n\n\t// The builtin `len` returns the length of an array.\n\tfmt.Println(\"len:\", len(a))\n\n\t// Use this syntax to declare and initialize an array\n\t// in one line.\n\tb := [5]int{1, 2, 3, 4, 5}\n\tfmt.Println(\"dcl:\", b)\n\n\t// You can also have the compiler count the number of\n\t// elements for you with `...`\n\tb = [...]int{1, 2, 3, 4, 5}\n\tfmt.Println(\"dcl:\", b)\n\n\t// If you specify the index with `:`, the elements in\n\t// between will be zeroed.\n\tb = [...]int{100, 3: 400, 500}\n\tfmt.Println(\"idx:\", b)\n\n\t// Array types are one-dimensional, but you can\n\t// compose types to build multi-dimensional data\n\t// structures.\n\tvar twoD [2][3]int\n\tfor i := range 2 {\n\t\tfor j := range 3 {\n\t\t\ttwoD[i][j] = i + j\n\t\t}\n\t}\n\tfmt.Println(\"2d: \", twoD)\n\n\t// You can create and initialize multi-dimensional\n\t// arrays at once too.\n\ttwoD = [2][3]int{\n\t\t{1, 2, 3},\n\t\t{1, 2, 3},\n\t}\n\tfmt.Println(\"2d: \", twoD)\n}\n",
-    "output": "# Note that arrays appear in the form `[v1 v2 v3 ...]`\n# when printed with `fmt.Println`.\n$ go run arrays.go\nemp: [0 0 0 0 0]\nset: [0 0 0 0 100]\nget: 100\nlen: 5\ndcl: [1 2 3 4 5]\ndcl: [1 2 3 4 5]\nidx: [100 0 0 400 500]\n2d:  [[0 1 2] [1 2 3]]\n2d:  [[1 2 3] [1 2 3]]\n",
+    "code": "// En Go, un _array_ (arreglo) es una secuencia numerada de elementos de una\n// longitud específica. En el código idiomático de Go, los [slices](slices) son\n// mucho más comunes; los arrays son útiles en algunos escenarios\n// particulares de memoria contigua.\n\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\n\t// Aquí creamos un array `a` que contendrá exactamente\n\t// 5 valores de tipo `int`. Tanto el tipo de los elementos como la longitud\n\t// forman parte del tipo del array. Por defecto, un array tiene el\n\t// valor cero, que para los `int` representa `0`.\n\tvar a [5]int\n\tfmt.Println(\"emp:\", a)\n\n\t// Podemos establecer un valor en un índice mediante la\n\t// sintaxis `array[index] = value`, y obtener un valor con\n\t// `array[index]`.\n\ta[4] = 100\n\tfmt.Println(\"set:\", a)\n\tfmt.Println(\"get:\", a[4])\n\n\t// La función incorporada `len` devuelve la longitud de un array.\n\tfmt.Println(\"len:\", len(a))\n\n\t// Usa esta sintaxis para declarar e inicializar un array\n\t// en una sola línea.\n\tb := [5]int{1, 2, 3, 4, 5}\n\tfmt.Println(\"dcl:\", b)\n\n\t// También puedes hacer que el compilador cuente la cantidad de\n\t// elementos automáticamente utilizando `...`\n\tb = [...]int{1, 2, 3, 4, 5}\n\tfmt.Println(\"dcl:\", b)\n\n\t// Si especificas el índice con `:`, los elementos\n\t// intermedios se rellenarán con ceros.\n\tb = [...]int{100, 3: 400, 500}\n\tfmt.Println(\"idx:\", b)\n\n\t// Los tipos de array son unidimensionales, pero puedes\n\t// componer tipos para construir estructuras de datos\n\t// multidimensionales.\n\tvar twoD [2][3]int\n\tfor i := range 2 {\n\t\tfor j := range 3 {\n\t\t\ttwoD[i][j] = i + j\n\t\t}\n\t}\n\tfmt.Println(\"2d: \", twoD)\n\n\t// También puedes crear e inicializar arrays multidimensionales\n\t// de una sola vez.\n\ttwoD = [2][3]int{\n\t\t{1, 2, 3},\n\t\t{1, 2, 3},\n\t}\n\tfmt.Println(\"2d: \", twoD)\n}\n",
+    "output": "$ go run arrays.go\nemp: [0 0 0 0 0]\nset: [0 0 0 0 100]\nget: 100\nlen: 5\ndcl: [1 2 3 4 5]\ndcl: [1 2 3 4 5]\nidx: [100 0 0 400 500]\n2d:  [[0 1 2] [1 2 3]]\n2d:  [[1 2 3] [1 2 3]]\n\n# Ten en cuenta que los arrays aparecen en la forma `[v1 v2 v3 ...]`\n# cuando se imprimen con `fmt.Println`.\n",
     "officialUrl": "https://gobyexample.com/arrays"
   },
   {
@@ -682,7 +682,7 @@ const GO_TOPICS = [
     "titleEs": "Slices Dinámicos",
     "category": "Estructuras de Datos y Colecciones",
     "categorySlug": "estructuras-datos",
-    "categoryIcon": "📦",
+    "categoryIcon": "package",
     "difficulty": "Principiante",
     "summary": "La estructura de colección principal en Go: vistas dinámicas, flexibles y eficientes sobre arreglos subyacentes.",
     "originalExpl": "Los slices son un tipo de datos fundamental en Go, ofreciendo una interfaz más poderosa para secuencias que los arreglos. Se crean con make(), admiten append(), rebanado con sintaxis [bajo:alto] y funciones del paquete estándar 'slices'.",
@@ -724,29 +724,29 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Blog: Go Slices: usage and internals",
+        "title": "Blog oficial de Go: Slices en Go: uso e internals",
         "url": "https://go.dev/blog/slices-intro",
         "description": "Artículo canónico sobre la anatomía de los slices en Go."
       },
       {
-        "title": "Package slices (Standard Library)",
+        "title": "Paquete slices (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/slices",
         "description": "Documentación oficial de las utilidades genéricas del paquete slices."
       },
       {
-        "title": "Go Spec: Slice expressions",
+        "title": "Especificación de Go: Expresiones de corte y slicing de arrays",
         "url": "https://go.dev/ref/spec#Slice_expressions",
         "description": "Sintaxis de rebanado simple y de 3 índices en la especificación."
       },
       {
-        "title": "Go by Example: Slices",
+        "title": "Go by Example Original: Slices",
         "url": "https://gobyexample.com/slices",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// _Slices_ are an important data type in Go, giving\n// a more powerful interface to sequences than arrays.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"slices\"\n)\n\nfunc main() {\n\n\t// Unlike arrays, slices are typed only by the\n\t// elements they contain (not the number of elements).\n\t// An uninitialized slice equals to nil and has\n\t// length 0.\n\tvar s []string\n\tfmt.Println(\"uninit:\", s, s == nil, len(s) == 0)\n\n\t// To create a slice with non-zero length, use\n\t// the builtin `make`. Here we make a slice of\n\t// `string`s of length `3` (initially zero-valued).\n\t// By default a new slice's capacity is equal to its\n\t// length; if we know the slice is going to grow ahead\n\t// of time, it's possible to pass a capacity explicitly\n\t// as an additional parameter to `make`.\n\ts = make([]string, 3)\n\tfmt.Println(\"emp:\", s, \"len:\", len(s), \"cap:\", cap(s))\n\n\t// We can set and get just like with arrays.\n\ts[0] = \"a\"\n\ts[1] = \"b\"\n\ts[2] = \"c\"\n\tfmt.Println(\"set:\", s)\n\tfmt.Println(\"get:\", s[2])\n\n\t// `len` returns the length of the slice as expected.\n\tfmt.Println(\"len:\", len(s))\n\n\t// In addition to these basic operations, slices\n\t// support several more that make them richer than\n\t// arrays. One is the builtin `append`, which\n\t// returns a slice containing one or more new values.\n\t// Note that we need to accept a return value from\n\t// `append` as we may get a new slice value.\n\ts = append(s, \"d\")\n\ts = append(s, \"e\", \"f\")\n\tfmt.Println(\"apd:\", s)\n\n\t// Slices can also be `copy`'d. Here we create an\n\t// empty slice `c` of the same length as `s` and copy\n\t// into `c` from `s`.\n\tc := make([]string, len(s))\n\tcopy(c, s)\n\tfmt.Println(\"cpy:\", c)\n\n\t// Slices support a \"slice\" operator with the syntax\n\t// `slice[low:high]`. For example, this gets a slice\n\t// of the elements `s[2]`, `s[3]`, and `s[4]`.\n\tl := s[2:5]\n\tfmt.Println(\"sl1:\", l)\n\n\t// This slices up to (but excluding) `s[5]`.\n\tl = s[:5]\n\tfmt.Println(\"sl2:\", l)\n\n\t// And this slices up from (and including) `s[2]`.\n\tl = s[2:]\n\tfmt.Println(\"sl3:\", l)\n\n\t// We can declare and initialize a variable for slice\n\t// in a single line as well.\n\tt := []string{\"g\", \"h\", \"i\"}\n\tfmt.Println(\"dcl:\", t)\n\n\t// The `slices` package contains a number of useful\n\t// utility functions for slices.\n\tt2 := []string{\"g\", \"h\", \"i\"}\n\tif slices.Equal(t, t2) {\n\t\tfmt.Println(\"t == t2\")\n\t}\n\n\t// Slices can be composed into multi-dimensional data\n\t// structures. The length of the inner slices can\n\t// vary, unlike with multi-dimensional arrays.\n\ttwoD := make([][]int, 3)\n\tfor i := range 3 {\n\t\tinnerLen := i + 1\n\t\ttwoD[i] = make([]int, innerLen)\n\t\tfor j := range innerLen {\n\t\t\ttwoD[i][j] = i + j\n\t\t}\n\t}\n\tfmt.Println(\"2d: \", twoD)\n}\n",
-    "output": "# Note that while slices are different types than arrays,\n# they are rendered similarly by `fmt.Println`.\n$ go run slices.go\nuninit: [] true true\nemp: [  ] len: 3 cap: 3\nset: [a b c]\nget: c\nlen: 3\napd: [a b c d e f]\ncpy: [a b c d e f]\nsl1: [c d e]\nsl2: [a b c d e]\nsl3: [c d e f]\ndcl: [g h i]\nt == t2\n2d:  [[0] [1 2] [2 3 4]]\n\n# Check out this [great blog post](https://go.dev/blog/slices-intro)\n# by the Go team for more details on the design and\n# implementation of slices in Go.\n\n# Now that we've seen arrays and slices we'll look at\n# Go's other key builtin data structure: maps.\n",
+    "code": "// Los _slices_ son un tipo de dato clave en Go, que proporcionan una\n// interfaz más potente y flexible para secuencias de datos que los arrays.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"slices\"\n)\n\nfunc main() {\n\n\t// A diferencia de los arrays, los slices se tipan únicamente por los\n\t// elementos que contienen (no por el número de elementos).\n\t// Un slice no inicializado es igual a nil y tiene una longitud de 0.\n\tvar s []string\n\tfmt.Println(\"uninit:\", s, s == nil, len(s) == 0)\n\n\t// Para crear un slice vacío con longitud distinta de cero, usa\n\t// la función incorporada `make`. Aquí creamos un slice de `string`s de\n\t// longitud `3` (inicializado con valores cero).\n\t// Por defecto, la capacidad de un nuevo slice es igual a su longitud;\n\t// si sabemos de antemano que el slice crecerá, es posible\n\t// pasar una capacidad explícita como argumento adicional a `make`.\n\ts = make([]string, 3)\n\tfmt.Println(\"emp:\", s, \"len:\", len(s), \"cap:\", cap(s))\n\n\t// Podemos asignar y obtener valores exactamente igual que con los arrays.\n\ts[0] = \"a\"\n\ts[1] = \"b\"\n\ts[2] = \"c\"\n\tfmt.Println(\"set:\", s)\n\tfmt.Println(\"get:\", s[2])\n\n\t// `len` devuelve la longitud del slice como se espera.\n\tfmt.Println(\"len:\", len(s))\n\n\t// Además de estas operaciones básicas, los slices admiten\n\t// varias más que los hacen mucho más ricos que los arrays.\n\t// Una de ellas es la función incorporada `append`, la cual\n\t// devuelve un slice que contiene uno o más valores nuevos.\n\t// Ten en cuenta que debemos capturar el valor de retorno de\n\t// `append`, ya que podríamos recibir una nueva referencia de slice.\n\ts = append(s, \"d\")\n\ts = append(s, \"e\", \"f\")\n\tfmt.Println(\"apd:\", s)\n\n\t// Los slices también se pueden copiar con `copy`. Aquí creamos un\n\t// slice vacío `c` de la misma longitud que `s` y copiamos\n\t// en `c` el contenido de `s`.\n\tc := make([]string, len(s))\n\tcopy(c, s)\n\tfmt.Println(\"cpy:\", c)\n\n\t// Los slices admiten el operador de corte con la sintaxis\n\t// `slice[low:high]`. Por ejemplo, esto obtiene un sub-slice\n\t// de los elementos `s[2]`, `s[3]` y `s[4]`.\n\tl := s[2:5]\n\tfmt.Println(\"sl1:\", l)\n\n\t// Esto corta hasta (pero excluyendo) `s[5]`.\n\tl = s[:5]\n\tfmt.Println(\"sl2:\", l)\n\n\t// Y esto corta desde (e incluyendo) `s[2]`.\n\tl = s[2:]\n\tfmt.Println(\"sl3:\", l)\n\n\t// También podemos declarar e inicializar una variable de tipo slice\n\t// en una sola línea.\n\tt := []string{\"g\", \"h\", \"i\"}\n\tfmt.Println(\"dcl:\", t)\n\n\t// El paquete `slices` contiene una serie de funciones\n\t// de utilidad muy convenientes para slices.\n\tt2 := []string{\"g\", \"h\", \"i\"}\n\tif slices.Equal(t, t2) {\n\t\tfmt.Println(\"t == t2\")\n\t}\n\n\t// Los slices pueden componerse en estructuras de datos\n\t// multidimensionales. La longitud de los slices internos puede\n\t// variar, a diferencia de los arrays multidimensionales.\n\ttwoD := make([][]int, 3)\n\tfor i := range 3 {\n\t\tinnerLen := i + 1\n\t\ttwoD[i] = make([]int, innerLen)\n\t\tfor j := range innerLen {\n\t\t\ttwoD[i][j] = i + j\n\t\t}\n\t}\n\tfmt.Println(\"2d: \", twoD)\n}\n",
+    "output": "$ go run slices.go\nuninit: [] true true\nemp: [  ] len: 3 cap: 3\nset: [a b c]\nget: c\nlen: 3\napd: [a b c d e f]\ncpy: [a b c d e f]\nsl1: [c d e]\nsl2: [a b c d e]\nsl3: [c d e f]\ndcl: [g h i]\nt == t2\n2d:  [[0] [1 2] [2 3 4]]\n\n# Consulta esta [excelente publicación de blog](https://go.dev/blog/slices-intro)\n# del equipo de Go para conocer más detalles sobre el diseño\n# y la implementación interna de los slices en Go.\n\n# Ahora que hemos visto arrays y slices, revisaremos la otra\n# estructura de datos asociativa integrada en Go: los mapas.\n",
     "officialUrl": "https://gobyexample.com/slices"
   },
   {
@@ -756,7 +756,7 @@ const GO_TOPICS = [
     "titleEs": "Mapas (Tablas Hash Asociativas)",
     "category": "Estructuras de Datos y Colecciones",
     "categorySlug": "estructuras-datos",
-    "categoryIcon": "📦",
+    "categoryIcon": "package",
     "difficulty": "Principiante",
     "summary": "Estructura asociativa clave-valor nativa basada en tablas hash eficientes con búsqueda en tiempo O(1).",
     "originalExpl": "Los mapas son el tipo asociativo integrado en Go (a veces llamado hashes o diccionarios en otros lenguajes). Se crean con make(map[clave]valor), se consultan, se eliminan con delete() y se comprueba su existencia con el modismo coma-ok.",
@@ -797,29 +797,29 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Blog: Go maps in action",
+        "title": "Blog oficial de Go: Maps en acción",
         "url": "https://go.dev/blog/maps",
         "description": "Artículo oficial explicando el funcionamiento de los mapas en Go."
       },
       {
-        "title": "Package maps (Standard Library)",
+        "title": "Paquete maps (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/maps",
         "description": "Documentación oficial del paquete maps en la biblioteca estándar."
       },
       {
-        "title": "Go Spec: Map types",
+        "title": "Especificación de Go: Tipos map (tablas asociativas)",
         "url": "https://go.dev/ref/spec#Map_types",
         "description": "Especificación de los requisitos de tipos comparables para claves."
       },
       {
-        "title": "Go by Example: Maps",
+        "title": "Go by Example Original: Maps",
         "url": "https://gobyexample.com/maps",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// _Maps_ are Go's built-in [associative data type](https://en.wikipedia.org/wiki/Associative_array)\n// (sometimes called _hashes_ or _dicts_ in other languages).\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"maps\"\n)\n\nfunc main() {\n\n\t// To create an empty map, use the builtin `make`:\n\t// `make(map[key-type]val-type)`.\n\tm := make(map[string]int)\n\n\t// Set key/value pairs using typical `name[key] = val`\n\t// syntax.\n\tm[\"k1\"] = 7\n\tm[\"k2\"] = 13\n\n\t// Printing a map with e.g. `fmt.Println` will show all of\n\t// its key/value pairs.\n\tfmt.Println(\"map:\", m)\n\n\t// Get a value for a key with `name[key]`.\n\tv1 := m[\"k1\"]\n\tfmt.Println(\"v1:\", v1)\n\n\t// If the key doesn't exist, the\n\t// [zero value](https://go.dev/ref/spec#The_zero_value) of the\n\t// value type is returned.\n\tv3 := m[\"k3\"]\n\tfmt.Println(\"v3:\", v3)\n\n\t// The builtin `len` returns the number of key/value\n\t// pairs when called on a map.\n\tfmt.Println(\"len:\", len(m))\n\n\t// The builtin `delete` removes key/value pairs from\n\t// a map.\n\tdelete(m, \"k2\")\n\tfmt.Println(\"map:\", m)\n\n\t// To remove *all* key/value pairs from a map, use\n\t// the `clear` builtin.\n\tclear(m)\n\tfmt.Println(\"map:\", m)\n\n\t// The optional second return value when getting a\n\t// value from a map indicates if the key was present\n\t// in the map. This can be used to disambiguate\n\t// between missing keys and keys with zero values\n\t// like `0` or `\"\"`. Here we didn't need the value\n\t// itself, so we ignored it with the _blank identifier_\n\t// `_`.\n\t_, prs := m[\"k2\"]\n\tfmt.Println(\"prs:\", prs)\n\n\t// You can also declare and initialize a new map in\n\t// the same line with this syntax.\n\tn := map[string]int{\"foo\": 1, \"bar\": 2}\n\tfmt.Println(\"map:\", n)\n\n\t// The `maps` package contains a number of useful\n\t// utility functions for maps.\n\tn2 := map[string]int{\"foo\": 1, \"bar\": 2}\n\tif maps.Equal(n, n2) {\n\t\tfmt.Println(\"n == n2\")\n\t}\n}\n",
-    "output": "# Note that maps appear in the form `map[k:v k:v]` when\n# printed with `fmt.Println`.\n$ go run maps.go \nmap: map[k1:7 k2:13]\nv1: 7\nv3: 0\nlen: 2\nmap: map[k1:7]\nmap: map[]\nprs: false\nmap: map[bar:2 foo:1]\nn == n2\n",
+    "code": "// Los _maps_ (mapas) son el [tipo de dato asociativo](https://en.wikipedia.org/wiki/Associative_array)\n// integrado en Go (a veces denominados _hashes_ o _diccionarios_ en otros lenguajes).\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"maps\"\n)\n\nfunc main() {\n\n\t// Para crear un mapa vacío, usa la función incorporada `make`:\n\t// `make(map[key-type]val-type)`.\n\tm := make(map[string]int)\n\n\t// Establece pares clave/valor usando la sintaxis habitual\n\t// `name[key] = val`.\n\tm[\"k1\"] = 7\n\tm[\"k2\"] = 13\n\n\t// Imprimir un mapa con `fmt.Println` mostrará todos sus\n\t// pares clave/valor.\n\tfmt.Println(\"map:\", m)\n\n\t// Obtén el valor de una clave con `name[key]`.\n\tv1 := m[\"k1\"]\n\tfmt.Println(\"v1:\", v1)\n\n\t// Si la clave no existe, se devuelve el\n\t// [valor cero](https://go.dev/ref/spec#The_zero_value) del\n\t// tipo de valor correspondiente.\n\tv3 := m[\"k3\"]\n\tfmt.Println(\"v3:\", v3)\n\n\t// La función incorporada `len` devuelve el número de pares\n\t// clave/valor cuando se invoca sobre un mapa.\n\tfmt.Println(\"len:\", len(m))\n\n\t// La función incorporada `delete` elimina pares clave/valor\n\t// de un mapa.\n\tdelete(m, \"k2\")\n\tfmt.Println(\"map:\", m)\n\n\t// Para eliminar *todos* los pares clave/valor de un mapa, utiliza\n\t// la función incorporada `clear`.\n\tclear(m)\n\tfmt.Println(\"map:\", m)\n\n\t// El segundo valor de retorno opcional al obtener un valor\n\t// de un mapa indica si la clave estaba presente\n\t// en el mapa. Esto permite desambiguar entre claves inexistentes\n\t// y claves con valores cero como `0` o `\"\"`.\n\t// Aquí no necesitábamos el valor en sí, por lo que lo ignoramos\n\t// con el _identificador en blanco_ `_`.\n\t_, prs := m[\"k2\"]\n\tfmt.Println(\"prs:\", prs)\n\n\t// También puedes declarar e inicializar un mapa nuevo en\n\t// la misma línea con esta sintaxis.\n\tn := map[string]int{\"foo\": 1, \"bar\": 2}\n\tfmt.Println(\"map:\", n)\n\n\t// El paquete `maps` contiene una variedad de funciones\n\t// de utilidad convenientes para mapas.\n\tn2 := map[string]int{\"foo\": 1, \"bar\": 2}\n\tif maps.Equal(n, n2) {\n\t\tfmt.Println(\"n == n2\")\n\t}\n}\n",
+    "output": "$ go run maps.go\nmap: map[k1:7 k2:13]\nv1: 7\nv3: 0\nlen: 2\nmap: map[k1:7]\nmap: map[]\nprs: false\nmap: map[bar:2 foo:1]\nn == n2\n\n# Ten en cuenta que los mapas aparecen en la forma `map[k:v k:v]`\n# cuando se imprimen con `fmt.Println`.\n",
     "officialUrl": "https://gobyexample.com/maps"
   },
   {
@@ -829,7 +829,7 @@ const GO_TOPICS = [
     "titleEs": "Funciones y Firmas",
     "category": "Funciones, Clausuras y Punteros",
     "categorySlug": "funciones-memoria",
-    "categoryIcon": "🔧",
+    "categoryIcon": "tool",
     "difficulty": "Principiante",
     "summary": "Bloques fundamentales de lógica reutilizable con parámetros tipados explícitamente y sintaxis de retorno.",
     "originalExpl": "Las funciones son centrales en Go. Se definen con 'func nombre(param1 tipo, param2 tipo) retorno { ... }'. Cuando varios parámetros consecutivos tienen el mismo tipo, se puede omitir el tipo hasta el último parámetro.",
@@ -870,29 +870,29 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Tour: Functions",
+        "title": "Tour interactivo de Go: Definición y retorno de funciones",
         "url": "https://go.dev/tour/basics/4",
         "description": "Conceptos y ejercicios básicos de funciones."
       },
       {
-        "title": "Effective Go: Functions",
+        "title": "Guía canónica Effective Go: Definición y uso de funciones",
         "url": "https://go.dev/doc/effective_go#functions",
         "description": "Guía idiomática sobre retornos con nombre y claridad de código."
       },
       {
-        "title": "Go Spec: Function declarations",
+        "title": "Especificación de Go: Declaración y firmas de funciones",
         "url": "https://go.dev/ref/spec#Function_declarations",
         "description": "Especificación de sintaxis y signaturas de funciones."
       },
       {
-        "title": "Go by Example: Functions",
+        "title": "Go by Example Original: Functions",
         "url": "https://gobyexample.com/functions",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// _Functions_ are central in Go. We'll learn about\n// functions with a few different examples.\n\npackage main\n\nimport \"fmt\"\n\n// Here's a function that takes two `int`s and returns\n// their sum as an `int`.\nfunc plus(a int, b int) int {\n\n\t// Go requires explicit returns, i.e. it won't\n\t// automatically return the value of the last\n\t// expression.\n\treturn a + b\n}\n\n// When you have multiple consecutive parameters of\n// the same type, you may omit the type name for the\n// like-typed parameters up to the final parameter that\n// declares the type.\nfunc plusPlus(a, b, c int) int {\n\treturn a + b + c\n}\n\nfunc main() {\n\n\t// Call a function just as you'd expect, with\n\t// `name(args)`.\n\tres := plus(1, 2)\n\tfmt.Println(\"1+2 =\", res)\n\n\tres = plusPlus(1, 2, 3)\n\tfmt.Println(\"1+2+3 =\", res)\n}\n",
-    "output": "$ go run functions.go \n1+2 = 3\n1+2+3 = 6\n\n# There are several other features to Go functions. One is\n# multiple return values, which we'll look at next.\n",
+    "code": "// Las _funciones_ son una pieza central en Go. Aprenderemos sobre\n// funciones mediante varios ejemplos distintos.\n\npackage main\n\nimport \"fmt\"\n\n// Aquí tenemos una función que toma dos `int` y devuelve\n// su suma como un `int`.\nfunc plus(a int, b int) int {\n\n\t// Go requiere retornos explícitos; es decir, no retornará\n\t// automáticamente el valor de la última expresión evaluada.\n\treturn a + b\n}\n\n// Cuando tienes múltiples parámetros consecutivos del\n// mismo tipo, puedes omitir el nombre del tipo para los\n// parámetros con tipos idénticos hasta el parámetro final que\n// declara el tipo.\nfunc plusPlus(a, b, c int) int {\n\treturn a + b + c\n}\n\nfunc main() {\n\n\t// Llama a una función de la manera habitual, con\n\t// `name(args)`.\n\tres := plus(1, 2)\n\tfmt.Println(\"1+2 =\", res)\n\n\tres = plusPlus(1, 2, 3)\n\tfmt.Println(\"1+2+3 =\", res)\n}\n",
+    "output": "$ go run functions.go\n1+2 = 3\n1+2+3 = 6\n\n# Hay muchas otras características en las funciones de Go. Una\n# de ellas son los valores de retorno múltiples, que veremos a continuación.\n",
     "officialUrl": "https://gobyexample.com/functions"
   },
   {
@@ -902,7 +902,7 @@ const GO_TOPICS = [
     "titleEs": "Retornos Múltiples de Funciones",
     "category": "Funciones, Clausuras y Punteros",
     "categorySlug": "funciones-memoria",
-    "categoryIcon": "🔧",
+    "categoryIcon": "tool",
     "difficulty": "Principiante",
     "summary": "Capacidad nativa de retornar múltiples valores desde una función, pilar del manejo de errores en Go.",
     "originalExpl": "Go tiene soporte integrado para múltiples valores de retorno. Esta característica se utiliza con frecuencia en Go idiomático, por ejemplo, para devolver tanto los valores de resultado como los de error de una función.",
@@ -943,29 +943,29 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Tour: Multiple results",
+        "title": "Tour interactivo de Go: Retorno de múltiples valores",
         "url": "https://go.dev/tour/basics/6",
         "description": "Práctica con retorno múltiple de valores."
       },
       {
-        "title": "Effective Go: Multiple return values",
+        "title": "Guía canónica Effective Go: Retornos múltiples idiomáticos",
         "url": "https://go.dev/doc/effective_go#multiple-returns",
         "description": "Cómo los retornos múltiples eliminan la necesidad de pasar punteros de salida."
       },
       {
-        "title": "Go Spec: Return statements",
+        "title": "Especificación de Go: Sentencias de retorno de valores",
         "url": "https://go.dev/ref/spec#Return_statements",
         "description": "Reglas de retorno en la especificación formal del lenguaje."
       },
       {
-        "title": "Go by Example: Multiple Return Values",
+        "title": "Go by Example Original: Multiple Return Values",
         "url": "https://gobyexample.com/multiple-return-values",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// Go has built-in support for _multiple return values_.\n// This feature is used often in idiomatic Go, for example\n// to return both result and error values from a function.\n\npackage main\n\nimport \"fmt\"\n\n// The `(int, int)` in this function signature shows that\n// the function returns 2 `int`s.\nfunc vals() (int, int) {\n\treturn 3, 7\n}\n\nfunc main() {\n\n\t// Here we use the 2 different return values from the\n\t// call with _multiple assignment_.\n\ta, b := vals()\n\tfmt.Println(a)\n\tfmt.Println(b)\n\n\t// If you only want a subset of the returned values,\n\t// use the blank identifier `_`.\n\t_, c := vals()\n\tfmt.Println(c)\n}\n",
-    "output": "$ go run multiple-return-values.go\n3\n7\n7\n\n# Accepting a variable number of arguments is another nice\n# feature of Go functions; we'll look at this next.\n",
+    "code": "// Go cuenta con soporte integrado para _valores de retorno múltiples_.\n// Esta característica se usa con frecuencia en Go idiomático, por ejemplo\n// para retornar tanto el resultado como el valor de error desde una función.\n\npackage main\n\nimport \"fmt\"\n\n// El `(int, int)` en la firma de esta función indica que\n// la función retorna 2 valores de tipo `int`.\nfunc vals() (int, int) {\n\treturn 3, 7\n}\n\nfunc main() {\n\n\t// Aquí utilizamos los 2 valores de retorno distintos de la\n\t// llamada mediante una _asignación múltiple_.\n\ta, b := vals()\n\tfmt.Println(a)\n\tfmt.Println(b)\n\n\t// Si solo deseas un subconjunto de los valores retornados,\n\t// utiliza el identificador en blanco `_`.\n\t_, c := vals()\n\tfmt.Println(c)\n}\n",
+    "output": "$ go run multiple-return-values.go\n3\n7\n7\n\n# Aceptar un número variable de argumentos es otra característica\n# elegante de las funciones en Go; veremos esto a continuación.\n",
     "officialUrl": "https://gobyexample.com/multiple-return-values"
   },
   {
@@ -975,7 +975,7 @@ const GO_TOPICS = [
     "titleEs": "Funciones Variádicas (...)",
     "category": "Funciones, Clausuras y Punteros",
     "categorySlug": "funciones-memoria",
-    "categoryIcon": "🔧",
+    "categoryIcon": "tool",
     "difficulty": "Principiante",
     "summary": "Funciones que pueden aceptar cualquier número de argumentos finales mediante la sintaxis de elipsis (...).",
     "originalExpl": "Las funciones variádicas pueden llamarse con cualquier cantidad de argumentos finales. Por ejemplo, fmt.Println es una función variádica común. Se declaran con '...tipo' antes del tipo del último parámetro.",
@@ -1016,29 +1016,29 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Tour: Passing slices to variadic functions",
+        "title": "Tour interactivo de Go: Paso de slices a funciones variádicas",
         "url": "https://go.dev/tour/moretypes/15",
         "description": "Uso de slices con funciones variádicas."
       },
       {
-        "title": "Go Spec: Passing arguments to ... parameters",
+        "title": "Especificación de Go: Paso de argumentos a parámetros variádicos",
         "url": "https://go.dev/ref/spec#Passing_arguments_to_..._parameters",
         "description": "Reglas del compilador para el paso de parámetros variádicos."
       },
       {
-        "title": "Rob Pike: Self-referential functions and the design of options",
+        "title": "Rob Pike: Funciones autorreferenciales y el patrón de opciones funcionales",
         "url": "https://commandcenter.blogspot.com/2014/01/self-referential-functions-and-design.html",
         "description": "Artículo de Rob Pike donde introduce el patrón Functional Options."
       },
       {
-        "title": "Go by Example: Variadic Functions",
+        "title": "Go by Example Original: Variadic Functions",
         "url": "https://gobyexample.com/variadic-functions",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// [_Variadic functions_](https://en.wikipedia.org/wiki/Variadic_function)\n// can be called with any number of trailing arguments.\n// For example, `fmt.Println` is a common variadic\n// function.\n\npackage main\n\nimport \"fmt\"\n\n// Here's a function that will take an arbitrary number\n// of `int`s as arguments.\nfunc sum(nums ...int) {\n\tfmt.Print(nums, \" \")\n\ttotal := 0\n\t// Within the function, the type of `nums` is\n\t// equivalent to `[]int`. We can call `len(nums)`,\n\t// iterate over it with `range`, etc.\n\tfor _, num := range nums {\n\t\ttotal += num\n\t}\n\tfmt.Println(total)\n}\n\nfunc main() {\n\n\t// Variadic functions can be called in the usual way\n\t// with individual arguments.\n\tsum(1, 2)\n\tsum(1, 2, 3)\n\n\t// If you already have multiple args in a slice,\n\t// apply them to a variadic function using\n\t// `func(slice...)` like this.\n\tnums := []int{1, 2, 3, 4}\n\tsum(nums...)\n}\n",
-    "output": "$ go run variadic-functions.go \n[1 2] 3\n[1 2 3] 6\n[1 2 3 4] 10\n\n# Another key aspect of functions in Go is their ability\n# to form closures, which we'll look at next.\n",
+    "code": "// Las [_funciones variádicas_](https://en.wikipedia.org/wiki/Variadic_function)\n// pueden invocarse con cualquier número de argumentos finales.\n// Por ejemplo, `fmt.Println` es una función variádica habitual.\n\npackage main\n\nimport \"fmt\"\n\n// Aquí tenemos una función que aceptará un número arbitrario\n// de enteros `int` como argumentos.\nfunc sum(nums ...int) {\n\tfmt.Print(nums, \" \")\n\ttotal := 0\n\t// Dentro de la función, el tipo de `nums` es\n\t// equivalente a `[]int`. Podemos invocar `len(nums)`,\n\t// iterar sobre él con `range`, etc.\n\tfor _, num := range nums {\n\t\ttotal += num\n\t}\n\tfmt.Println(total)\n}\n\nfunc main() {\n\n\t// Las funciones variádicas pueden invocarse de la forma convencional\n\t// con argumentos individuales separados por comas.\n\tsum(1, 2)\n\tsum(1, 2, 3)\n\n\t// Si ya dispones de múltiples argumentos dentro de un slice,\n\t// aplícalos a una función variádica usando la sintaxis\n\t// `func(slice...)` de esta manera.\n\tnums := []int{1, 2, 3, 4}\n\tsum(nums...)\n}\n",
+    "output": "$ go run variadic-functions.go\n[1 2] 3\n[1 2 3] 6\n[1 2 3 4] 10\n\n# Otro aspecto fundamental de las funciones en Go es su capacidad\n# de formar closures, lo cual veremos a continuación.\n",
     "officialUrl": "https://gobyexample.com/variadic-functions"
   },
   {
@@ -1048,7 +1048,7 @@ const GO_TOPICS = [
     "titleEs": "Clausuras (Closures) y Funciones Anónimas",
     "category": "Funciones, Clausuras y Punteros",
     "categorySlug": "funciones-memoria",
-    "categoryIcon": "🔧",
+    "categoryIcon": "tool",
     "difficulty": "Intermedio",
     "summary": "Funciones anónimas que capturan y mantienen el estado de variables de su ámbito léxico circundante.",
     "originalExpl": "Go soporta funciones anónimas, las cuales pueden formar clausuras (closures). Las funciones anónimas son útiles cuando quieres definir una función en línea sin tener que nombrarla.",
@@ -1089,29 +1089,29 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Tour: Function closures",
+        "title": "Tour interactivo de Go: Clausuras y closures de función",
         "url": "https://go.dev/tour/moretypes/25",
         "description": "Ejercicios interactivos con clausuras y acumuladores."
       },
       {
-        "title": "Go Spec: Function literals",
+        "title": "Especificación de Go: Literales de función y funciones anónimas",
         "url": "https://go.dev/ref/spec#Function_literals",
         "description": "Sintaxis de literales de función y clausuras en la especificación."
       },
       {
-        "title": "Effective Go: Functions as values",
+        "title": "Guía canónica Effective Go: Funciones como valores de primera clase",
         "url": "https://go.dev/doc/effective_go#functions",
         "description": "Buenas prácticas con funciones como valores de primera clase."
       },
       {
-        "title": "Go by Example: Closures",
+        "title": "Go by Example Original: Closures",
         "url": "https://gobyexample.com/closures",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// Go supports [_anonymous functions_](https://en.wikipedia.org/wiki/Anonymous_function),\n// which can form <a href=\"https://en.wikipedia.org/wiki/Closure_(computer_science)\"><em>closures</em></a>.\n// Anonymous functions are useful when you want to define\n// a function inline without having to name it.\n\npackage main\n\nimport \"fmt\"\n\n// This function `intSeq` returns another function, which\n// we define anonymously in the body of `intSeq`. The\n// returned function _closes over_ the variable `i` to\n// form a closure.\nfunc intSeq() func() int {\n\ti := 0\n\treturn func() int {\n\t\ti++\n\t\treturn i\n\t}\n}\n\nfunc main() {\n\n\t// We call `intSeq`, assigning the result (a function)\n\t// to `nextInt`. This function value captures its\n\t// own `i` value, which will be updated each time\n\t// we call `nextInt`.\n\tnextInt := intSeq()\n\n\t// See the effect of the closure by calling `nextInt`\n\t// a few times.\n\tfmt.Println(nextInt())\n\tfmt.Println(nextInt())\n\tfmt.Println(nextInt())\n\n\t// To confirm that the state is unique to that\n\t// particular function, create and test a new one.\n\tnewInts := intSeq()\n\tfmt.Println(newInts())\n}\n",
-    "output": "$ go run closures.go\n1\n2\n3\n1\n\n# The last feature of functions we'll look at for now is\n# recursion.\n",
+    "code": "// Go admite [_funciones anónimas_](https://en.wikipedia.org/wiki/Anonymous_function),\n// que pueden formar <a href=\"https://en.wikipedia.org/wiki/Closure_(computer_science)\"><em>closures</em></a> (clausuras).\n// Las funciones anónimas resultan muy útiles cuando deseas definir\n// una función en línea sin necesidad de asignarle un nombre.\n\npackage main\n\nimport \"fmt\"\n\n// Esta función `intSeq` retorna otra función, la cual\n// definimos de manera anónima en el cuerpo de `intSeq`. La\n// función retornada _captura_ la variable `i` para\n// formar un closure.\nfunc intSeq() func() int {\n\ti := 0\n\treturn func() int {\n\t\ti++\n\t\treturn i\n\t}\n}\n\nfunc main() {\n\n\t// Llamamos a `intSeq`, asignando el resultado (una función)\n\t// a `nextInt`. Este valor de función captura su\n\t// propio valor de `i`, el cual se actualizará cada vez\n\t// que invoquemos `nextInt`.\n\tnextInt := intSeq()\n\n\t// Observa el efecto del closure invocando `nextInt`\n\t// varias veces consecutivas.\n\tfmt.Println(nextInt())\n\tfmt.Println(nextInt())\n\tfmt.Println(nextInt())\n\n\t// Para confirmar que el estado es único para esa\n\t// función en particular, creamos y probamos una nueva instancia.\n\tnewInts := intSeq()\n\tfmt.Println(newInts())\n}\n",
+    "output": "$ go run closures.go\n1\n2\n3\n1\n\n# La última característica de funciones que examinaremos por ahora\n# es la recursión.\n",
     "officialUrl": "https://gobyexample.com/closures"
   },
   {
@@ -1121,7 +1121,7 @@ const GO_TOPICS = [
     "titleEs": "Recursión y Límites de Pila",
     "category": "Funciones, Clausuras y Punteros",
     "categorySlug": "funciones-memoria",
-    "categoryIcon": "🔧",
+    "categoryIcon": "tool",
     "difficulty": "Intermedio",
     "summary": "Funciones que se invocan a sí mismas para resolver problemas dividiéndolos en subproblemas idénticos.",
     "originalExpl": "Go soporta funciones recursivas. Un ejemplo clásico es el cálculo del factorial o la secuencia de Fibonacci. Para declarar una clausura recursiva en Go, se debe declarar la variable primero con su tipo explícito.",
@@ -1162,28 +1162,28 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Tour: Exercise Fibonacci closure",
+        "title": "Tour interactivo de Go: Ejercicio interactivo: Clausura de Fibonacci",
         "url": "https://go.dev/tour/moretypes/26",
         "description": "Ejercicio práctico de Fibonacci en el tour oficial."
       },
       {
-        "title": "Dave Cheney: Why does Go not have tail call optimization?",
+        "title": "Dave Cheney: Por qué Go no implementa optimización de llamadas de cola",
         "url": "https://dave.cheney.net/",
         "description": "Análisis técnico de por qué Go no incluye TCO para preservar los stack traces."
       },
       {
-        "title": "Go Runtime: Contiguous Stacks Design",
+        "title": "Arquitectura del runtime de Go: Pilas contiguas (Contiguous Stacks)",
         "url": "https://go.dev/doc/go1.3#stacks",
         "description": "Notas históricas de la arquitectura de stacks contiguos en el runtime de Go."
       },
       {
-        "title": "Go by Example: Recursion",
+        "title": "Go by Example Original: Recursion",
         "url": "https://gobyexample.com/recursion",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// Go supports\n// <a href=\"https://en.wikipedia.org/wiki/Recursion_(computer_science)\"><em>recursive functions</em></a>.\n// Here's a classic example.\n\npackage main\n\nimport \"fmt\"\n\n// This `fact` function calls itself until it reaches the\n// base case of `fact(0)`.\nfunc fact(n int) int {\n\tif n == 0 {\n\t\treturn 1\n\t}\n\treturn n * fact(n-1)\n}\n\nfunc main() {\n\tfmt.Println(fact(7))\n\n\t// Anonymous functions can also be recursive, but this requires\n\t// explicitly declaring a variable with `var` to store\n\t// the function before it's defined.\n\tvar fib func(n int) int\n\n\tfib = func(n int) int {\n\t\tif n < 2 {\n\t\t\treturn n\n\t\t}\n\n\t\t// Since `fib` was previously declared in `main`, Go\n\t\t// knows which function to call with `fib` here.\n\t\treturn fib(n-1) + fib(n-2)\n\t}\n\n\tfmt.Println(fib(7))\n}\n",
+    "code": "// Go admite\n// <a href=\"https://en.wikipedia.org/wiki/Recursion_(computer_science)\"><em>funciones recursivas</em></a>.\n// Aquí tenemos un ejemplo clásico de cálculo factorial.\n\npackage main\n\nimport \"fmt\"\n\n// Esta función `fact` se llama a sí misma hasta alcanzar el\n// caso base de `fact(0)`.\nfunc fact(n int) int {\n\tif n == 0 {\n\t\treturn 1\n\t}\n\treturn n * fact(n-1)\n}\n\nfunc main() {\n\tfmt.Println(fact(7))\n\n\t// Las funciones anónimas también pueden ser recursivas, pero esto requiere\n\t// declarar explícitamente una variable con `var` para almacenar\n\t// la función antes de definirla.\n\tvar fib func(n int) int\n\n\tfib = func(n int) int {\n\t\tif n < 2 {\n\t\t\treturn n\n\t\t}\n\n\t\t// Dado que `fib` fue declarada previamente en `main`, Go\n\t\t// sabe exactamente a qué función llamar con `fib` aquí.\n\t\treturn fib(n-1) + fib(n-2)\n\t}\n\n\tfmt.Println(fib(7))\n}\n",
     "output": "$ go run recursion.go \n5040\n13\n",
     "officialUrl": "https://gobyexample.com/recursion"
   },
@@ -1194,7 +1194,7 @@ const GO_TOPICS = [
     "titleEs": "Iteración con Range en Tipos Nativos",
     "category": "Estructuras de Datos y Colecciones",
     "categorySlug": "estructuras-datos",
-    "categoryIcon": "📦",
+    "categoryIcon": "package",
     "difficulty": "Principiante",
     "summary": "La instrucción 'range' itera de forma uniforme sobre slices, arrays, mapas, strings y canales.",
     "originalExpl": "'range' itera sobre elementos en una variedad de estructuras de datos. En slices y arrays devuelve el índice y el valor; en mapas devuelve la clave y el valor; en cadenas itera sobre puntos de código Unicode (runas).",
@@ -1235,28 +1235,28 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Tour: Range",
+        "title": "Tour interactivo de Go: Iteración range sobre slices y mapas",
         "url": "https://go.dev/tour/moretypes/16",
         "description": "Ejercicios con el iterador range en slices y mapas."
       },
       {
-        "title": "Effective Go: The range clause",
+        "title": "Guía canónica Effective Go: Cláusula de iteración range",
         "url": "https://go.dev/doc/effective_go#for",
         "description": "Guía idiomática sobre cómo usar range de forma limpia y eficiente."
       },
       {
-        "title": "Go Spec: Range clauses",
+        "title": "Especificación de Go: Cláusulas de iteración sobre colecciones",
         "url": "https://go.dev/ref/spec#For_statements",
         "description": "Especificación de todas las variantes sintácticas de range."
       },
       {
-        "title": "Go by Example: Range over Built-in Types",
+        "title": "Go by Example Original: Range over Built-in Types",
         "url": "https://gobyexample.com/range-over-built-in-types",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// _range_ iterates over elements in a variety of\n// built-in data structures. Let's see how to\n// use `range` with some of the data structures\n// we've already learned.\n\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\n\t// Here we use `range` to sum the numbers in a slice.\n\t// Arrays work like this too.\n\tnums := []int{2, 3, 4}\n\tsum := 0\n\tfor _, num := range nums {\n\t\tsum += num\n\t}\n\tfmt.Println(\"sum:\", sum)\n\n\t// `range` on arrays and slices provides both the\n\t// index and value for each entry. Above we didn't\n\t// need the index, so we ignored it with the\n\t// blank identifier `_`. Sometimes we actually want\n\t// the indexes though.\n\tfor i, num := range nums {\n\t\tif num == 3 {\n\t\t\tfmt.Println(\"index:\", i)\n\t\t}\n\t}\n\n\t// `range` on map iterates over key/value pairs.\n\tkvs := map[string]string{\"a\": \"apple\", \"b\": \"banana\"}\n\tfor k, v := range kvs {\n\t\tfmt.Printf(\"%s -> %s\\n\", k, v)\n\t}\n\n\t// `range` can also iterate over just the keys of a map.\n\tfor k := range kvs {\n\t\tfmt.Println(\"key:\", k)\n\t}\n\n\t// `range` on strings iterates over Unicode code\n\t// points. The first value is the starting byte index\n\t// of the `rune` and the second the `rune` itself.\n\t// See [Strings and Runes](strings-and-runes) for more\n\t// details.\n\tfor i, c := range \"go\" {\n\t\tfmt.Println(i, c)\n\t}\n}\n",
+    "code": "// `range` itera sobre los elementos en una variedad de\n// estructuras de datos integradas. Veamos cómo\n// usar `range` con algunas de las estructuras de datos\n// que ya hemos aprendido.\n\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\n\t// Aquí usamos `range` para sumar los números de un slice.\n\t// Los arrays funcionan exactamente igual.\n\tnums := []int{2, 3, 4}\n\tsum := 0\n\tfor _, num := range nums {\n\t\tsum += num\n\t}\n\tfmt.Println(\"sum:\", sum)\n\n\t// `range` en arrays y slices proporciona tanto el\n\t// índice como el valor de cada elemento. Arriba no\n\t// necesitábamos el índice, por lo que lo ignoramos con el\n\t// identificador en blanco `_`. Sin embargo, a veces sí\n\t// necesitamos los índices.\n\tfor i, num := range nums {\n\t\tif num == 3 {\n\t\t\tfmt.Println(\"index:\", i)\n\t\t}\n\t}\n\n\t// `range` en mapas itera sobre los pares clave/valor.\n\tkvs := map[string]string{\"a\": \"apple\", \"b\": \"banana\"}\n\tfor k, v := range kvs {\n\t\tfmt.Printf(\"%s -> %s\\n\", k, v)\n\t}\n\n\t// `range` también puede iterar únicamente sobre las claves de un mapa.\n\tfor k := range kvs {\n\t\tfmt.Println(\"key:\", k)\n\t}\n\n\t// `range` en cadenas itera sobre puntos de código Unicode\n\t// (code points). El primer valor es el índice de byte inicial\n\t// de la `rune` y el segundo es la `rune` en sí misma.\n\t// Consulta [Cadenas y Runas](strings-and-runes) para más\n\t// detalles.\n\tfor i, c := range \"go\" {\n\t\tfmt.Println(i, c)\n\t}\n}\n",
     "output": "$ go run range-over-built-in-types.go\nsum: 9\nindex: 1\na -> apple\nb -> banana\nkey: a\nkey: b\n0 103\n1 111\n",
     "officialUrl": "https://gobyexample.com/range-over-built-in-types"
   },
@@ -1267,7 +1267,7 @@ const GO_TOPICS = [
     "titleEs": "Punteros y Direccionamiento de Memoria",
     "category": "Funciones, Clausuras y Punteros",
     "categorySlug": "funciones-memoria",
-    "categoryIcon": "🔧",
+    "categoryIcon": "tool",
     "difficulty": "Intermedio",
     "summary": "Referencias directas a direcciones de memoria mediante los operadores & (dirección) y * (desreferenciación).",
     "originalExpl": "Go soporta punteros, permitiendo pasar referencias a valores y registros dentro del programa. No soporta aritmética de punteros como en C, lo que los hace mucho más seguros.",
@@ -1309,29 +1309,29 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Tour: Pointers",
+        "title": "Tour interactivo de Go: Punteros y direcciones de memoria",
         "url": "https://go.dev/tour/moretypes/1",
         "description": "Introducción y ejercicios con punteros en el tour interactivo."
       },
       {
-        "title": "Effective Go: Pointers vs. Values",
+        "title": "Guía canónica Effective Go: Semántica de punteros frente a semántica de valor",
         "url": "https://go.dev/doc/effective_go#pointers_vs_values",
         "description": "Criterios para decidir entre punteros y valores en métodos y funciones."
       },
       {
-        "title": "Bill Kennedy: Language Mechanics On Stacks And Pointers",
+        "title": "Bill Kennedy: Mecánica del lenguaje: Pilas (Stacks) y Punteros",
         "url": "https://www.ardanlabs.com/blog/2017/05/language-mechanics-on-stacks-and-pointers.html",
         "description": "Guía en profundidad sobre punteros y gestión de memoria en Go."
       },
       {
-        "title": "Go by Example: Pointers",
+        "title": "Go by Example Original: Pointers",
         "url": "https://gobyexample.com/pointers",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// Go supports <em><a href=\"https://en.wikipedia.org/wiki/Pointer_(computer_programming)\">pointers</a></em>,\n// allowing you to pass references to values and records\n// within your program.\n\npackage main\n\nimport \"fmt\"\n\n// We'll show how pointers work in contrast to values with\n// 2 functions: `zeroval` and `zeroptr`. `zeroval` has an\n// `int` parameter, so arguments will be passed to it by\n// value. `zeroval` will get a copy of `ival` distinct\n// from the one in the calling function.\nfunc zeroval(ival int) {\n\tival = 0\n}\n\n// `zeroptr` in contrast has an `*int` parameter, meaning\n// that it takes an `int` pointer. The `*iptr` code in the\n// function body then _dereferences_ the pointer from its\n// memory address to the current value at that address.\n// Assigning a value to a dereferenced pointer changes the\n// value at the referenced address.\nfunc zeroptr(iptr *int) {\n\t*iptr = 0\n}\n\nfunc main() {\n\ti := 1\n\tfmt.Println(\"initial:\", i)\n\n\tzeroval(i)\n\tfmt.Println(\"zeroval:\", i)\n\n\t// The `&i` syntax gives the memory address of `i`,\n\t// i.e. a pointer to `i`.\n\tzeroptr(&i)\n\tfmt.Println(\"zeroptr:\", i)\n\n\t// Pointers can be printed too.\n\tfmt.Println(\"pointer:\", &i)\n\n\t// A new pointer to a value can be created with the\n\t// builtin function `new`.\n\tp := new(42)\n\tfmt.Println(\"value at *p:\", *p)\n\tzeroptr(p)\n\tfmt.Println(\"value at *p:\", *p)\n}\n",
-    "output": "# `zeroval` doesn't change the `i` in `main`, but\n# `zeroptr` does because it has a reference to\n# the memory address for that variable.\n$ go run pointers.go\ninitial: 1\nzeroval: 1\nzeroptr: 0\npointer: 0x42131100\nvalue at *p: 42\nvalue at *p: 0",
+    "code": "// Go admite <em><a href=\"https://en.wikipedia.org/wiki/Pointer_(computer_programming)\">punteros</a></em>,\n// lo que permite pasar referencias a valores y registros\n// dentro de tu programa.\n\npackage main\n\nimport \"fmt\"\n\n// Mostraremos cómo funcionan los punteros en contraste con los valores\n// mediante 2 funciones: `zeroval` y `zeroptr`. `zeroval` tiene un\n// parámetro de tipo `int`, por lo que los argumentos se pasan por\n// valor. `zeroval` recibirá una copia de `ival` distinta\n// a la de la función que la invoca.\nfunc zeroval(ival int) {\n\tival = 0\n}\n\n// `zeroptr`, en cambio, tiene un parámetro `*int`, lo que significa\n// que recibe un puntero a `int`. El código `*iptr` en el cuerpo\n// de la función _desreferencia_ el puntero desde su dirección\n// de memoria al valor actual almacenado en dicha dirección.\n// Asignar un valor a un puntero desreferenciado modifica el\n// valor en la dirección referenciada.\nfunc zeroptr(iptr *int) {\n\t*iptr = 0\n}\n\nfunc main() {\n\ti := 1\n\tfmt.Println(\"initial:\", i)\n\n\tzeroval(i)\n\tfmt.Println(\"zeroval:\", i)\n\n\t// La sintaxis `&i` proporciona la dirección de memoria de `i`,\n\t// es decir, un puntero a `i`.\n\tzeroptr(&i)\n\tfmt.Println(\"zeroptr:\", i)\n\n\t// Los punteros también pueden imprimirse directamente.\n\tfmt.Println(\"pointer:\", &i)\n\n\t// Se puede crear un puntero nuevo a un valor utilizando la\n\t// función incorporada `new`.\n\tp := new(42)\n\tfmt.Println(\"value at *p:\", *p)\n\tzeroptr(p)\n\tfmt.Println(\"value at *p:\", *p)\n}\n",
+    "output": "# `zeroval` no modifica la variable `i` en `main`, pero\n# `zeroptr` sí lo hace porque posee una referencia a\n# la dirección de memoria de dicha variable.\n$ go run pointers.go\ninitial: 1\nzeroval: 1\nzeroptr: 0\npointer: 0x42131100\nvalue at *p: 42\nvalue at *p: 0\n",
     "officialUrl": "https://gobyexample.com/pointers"
   },
   {
@@ -1341,13 +1341,13 @@ const GO_TOPICS = [
     "titleEs": "Cadenas y Runas (UTF-8 Nativo)",
     "category": "Funciones, Clausuras y Punteros",
     "categorySlug": "funciones-memoria",
-    "categoryIcon": "🔧",
+    "categoryIcon": "tool",
     "difficulty": "Intermedio",
     "summary": "Manejo nativo de texto UTF-8: strings como secuencias inmutables de bytes y runas (rune) como puntos de código Unicode int32.",
     "originalExpl": "Un string en Go es una secuencia de bytes de solo lectura. El lenguaje trata las cadenas como texto codificado en UTF-8. En Go, el concepto de un carácter se llama 'runa' (rune), que es un alias del tipo int32.",
     "basicExpl": {
       "title": "Conceptos Fundamentales para Principiantes",
-      "content": "Para entender el texto en Go hay que diferenciar entre 'bytes' y 'caracteres':\n- Un 'string' es una lista de bytes crudos.\n- En el abecedario inglés normal (ASCII), cada letra ocupa 1 byte ('a' = 1 byte). Por eso `len(\"hello\")` da 5.\n- Pero en español, japonés o emojis, los caracteres ocupan entre 2 y 4 bytes cada uno ('ñ' = 2 bytes, '🚀' = 4 bytes). Por eso `len(\"año\")` da 4 bytes, ¡no 3!\n- Una 'runa' (rune) es un único punto de código Unicode completo (un carácter real), representado internamente por un entero de 32 bits (int32).",
+      "content": "Para entender el texto en Go hay que diferenciar entre 'bytes' y 'caracteres':\n- Un 'string' es una lista de bytes crudos.\n- En el abecedario inglés normal (ASCII), cada letra ocupa 1 byte ('a' = 1 byte). Por eso `len(\"hello\")` da 5.\n- Pero en español, japonés o emojis, los caracteres ocupan entre 2 y 4 bytes cada uno ('ñ' = 2 bytes, '語' = 3 bytes). Por eso `len(\"año\")` da 4 bytes, ¡no 3!\n- Una 'runa' (rune) es un único punto de código Unicode completo (un carácter real), representado internamente por un entero de 32 bits (int32).",
       "keyPoints": [
         "len(s) devuelve la cantidad de BYTES, no la cantidad de letras o caracteres.",
         "Para contar caracteres reales legibles, se usa `utf8.RuneCountInString(s)`.",
@@ -1375,36 +1375,36 @@ const GO_TOPICS = [
     },
     "evaluation": {
       "title": "Reto: Invertir Cadenas Multibyte con Emojis de Forma Segura",
-      "statement": "Escribe una función 'invertirTexto(s string) string' que invierta correctamente cualquier cadena de texto respetando los caracteres multibyte (tildes, caracteres asiáticos y emojis). Demuestra que funciona con '¡Golang es genial! 🚀'.",
-      "starterCode": "package main\n\nimport \"fmt\"\n\nfunc invertirTexto(s string) string {\n    // Convierte a []rune para no destruir los bytes UTF-8\n}\n\nfunc main() {\n    original := \"¡Golang es genial! 🚀\"\n    fmt.Println(\"Original:\", original)\n    fmt.Println(\"Invertido:\", invertirTexto(original))\n}",
+      "statement": "Escribe una función 'invertirTexto(s string) string' que invierta correctamente cualquier cadena de texto respetando los caracteres multibyte (tildes, caracteres asiáticos y emojis). Demuestra que funciona con '¡Golang es genial! 語'.",
+      "starterCode": "package main\n\nimport \"fmt\"\n\nfunc invertirTexto(s string) string {\n    // Convierte a []rune para no destruir los bytes UTF-8\n}\n\nfunc main() {\n    original := \"¡Golang es genial! \"\n    fmt.Println(\"Original:\", original)\n    fmt.Println(\"Invertido:\", invertirTexto(original))\n}",
       "hint": "Convierte el string a []rune, invierte el slice de runas intercambiando extremos y reconvierte a string.",
-      "solution": "package main\n\nimport \"fmt\"\n\nfunc invertirTexto(s string) string {\n    runas := []rune(s)\n    for i, j := 0, len(runas)-1; i < j; i, j = i+1, j-1 {\n        runas[i], runas[j] = runas[j], runas[i]\n    }\n    return string(runas)\n}\n\nfunc main() {\n    original := \"¡Golang es genial! 🚀\"\n    invertido := invertirTexto(original)\n    fmt.Println(\"Original :\", original)\n    fmt.Println(\"Invertido:\", invertido)\n}",
-      "explanation": "Si invirtieras el string como bytes con `[]byte`, los caracteres multibyte como '¡' (2 bytes) o '🚀' (4 bytes) quedarían con sus secuencias binarias al revés, corrompiéndose en caracteres ilegibles (mojibake). Al convertir a `[]rune`, cada carácter Unicode se manipula como una unidad atómica intacta."
+      "solution": "package main\n\nimport \"fmt\"\n\nfunc invertirTexto(s string) string {\n    runas := []rune(s)\n    for i, j := 0, len(runas)-1; i < j; i, j = i+1, j-1 {\n        runas[i], runas[j] = runas[j], runas[i]\n    }\n    return string(runas)\n}\n\nfunc main() {\n    original := \"¡Golang es genial! \"\n    invertido := invertirTexto(original)\n    fmt.Println(\"Original :\", original)\n    fmt.Println(\"Invertido:\", invertido)\n}",
+      "explanation": "Si invirtieras el string como bytes con `[]byte`, los caracteres multibyte como '¡' (2 bytes) o '語' (3 bytes) quedarían con sus secuencias binarias al revés, corrompiéndose en caracteres ilegibles (mojibake). Al convertir a `[]rune`, cada carácter Unicode se manipula como una unidad atómica intacta."
     },
     "externalLinks": [
       {
-        "title": "The Go Blog: Strings, bytes, runes and characters in Go",
+        "title": "Blog oficial de Go: Cadenas, bytes, runas y caracteres en Go",
         "url": "https://go.dev/blog/strings",
         "description": "El artículo fundamental de Rob Pike explicando cómo maneja Go el texto y UTF-8."
       },
       {
-        "title": "Package unicode/utf8",
+        "title": "Paquete unicode/utf8 (Documentación oficial)",
         "url": "https://pkg.go.dev/unicode/utf8",
         "description": "Documentación oficial de funciones para validar y contar runas en cadenas UTF-8."
       },
       {
-        "title": "Go Spec: Rune literals",
+        "title": "Especificación de Go: Literales de runa y codificación de caracteres Unicode",
         "url": "https://go.dev/ref/spec#Rune_literals",
         "description": "Especificación formal de los literales y tipos de runa."
       },
       {
-        "title": "Go by Example: Strings and Runes",
+        "title": "Go by Example Original: Strings and Runes",
         "url": "https://gobyexample.com/strings-and-runes",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// A Go string is a read-only slice of bytes. The language\n// and the standard library treat strings specially - as\n// containers of text encoded in [UTF-8](https://en.wikipedia.org/wiki/UTF-8).\n// In other languages, strings are made of \"characters\".\n// In Go, the concept of a character is called a `rune` - it's\n// an integer that represents a Unicode code point.\n// [This Go blog post](https://go.dev/blog/strings) is a good\n// introduction to the topic.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"unicode/utf8\"\n)\n\nfunc main() {\n\n\t// `s` is a `string` assigned a literal value\n\t// representing the word \"hello\" in the Thai\n\t// language. Go string literals are UTF-8\n\t// encoded text.\n\tconst s = \"สวัสดี\"\n\n\t// Since strings are equivalent to `[]byte`, this\n\t// will produce the length of the raw bytes stored within.\n\tfmt.Println(\"Len:\", len(s))\n\n\t// Indexing into a string produces the raw byte values at\n\t// each index. This loop generates the hex values of all\n\t// the bytes that constitute the code points in `s`.\n\tfor i := 0; i < len(s); i++ {\n\t\tfmt.Printf(\"%x \", s[i])\n\t}\n\tfmt.Println()\n\n\t// To count how many _runes_ are in a string, we can use\n\t// the `utf8` package. Note that the run-time of\n\t// `RuneCountInString` depends on the size of the string,\n\t// because it has to decode each UTF-8 rune sequentially.\n\t// Some Thai characters are represented by UTF-8 code points\n\t// that can span multiple bytes, so the result of this count\n\t// may be surprising.\n\tfmt.Println(\"Rune count:\", utf8.RuneCountInString(s))\n\n\t// A `range` loop handles strings specially and decodes\n\t// each `rune` along with its offset in the string.\n\tfor idx, runeValue := range s {\n\t\tfmt.Printf(\"%#U starts at %d\\n\", runeValue, idx)\n\t}\n\n\t// We can achieve the same iteration by using the\n\t// `utf8.DecodeRuneInString` function explicitly.\n\tfmt.Println(\"\\nUsing DecodeRuneInString\")\n\tfor i, w := 0, 0; i < len(s); i += w {\n\t\truneValue, width := utf8.DecodeRuneInString(s[i:])\n\t\tfmt.Printf(\"%#U starts at %d\\n\", runeValue, i)\n\t\tw = width\n\n\t\t// This demonstrates passing a `rune` value to a function.\n\t\texamineRune(runeValue)\n\t}\n}\n\nfunc examineRune(r rune) {\n\n\t// Values enclosed in single quotes are _rune literals_. We\n\t// can compare a `rune` value to a rune literal directly.\n\tif r == 't' {\n\t\tfmt.Println(\"found tee\")\n\t} else if r == 'ส' {\n\t\tfmt.Println(\"found so sua\")\n\t}\n}\n",
+    "code": "// Una cadena en Go es un slice de bytes de solo lectura. El lenguaje\n// y la biblioteca estándar tratan las cadenas de forma especial: como\n// contenedores de texto codificado en [UTF-8](https://en.wikipedia.org/wiki/UTF-8).\n// En otros lenguajes, las cadenas están compuestas de \"caracteres\".\n// En Go, el concepto de carácter se denomina `rune` (runa): es\n// un entero que representa un punto de código Unicode.\n// [Esta publicación del blog de Go](https://go.dev/blog/strings) es una excelente\n// introducción a este tema.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"unicode/utf8\"\n)\n\nfunc main() {\n\n\t// `s` es una variable `string` a la que se le asigna un valor literal\n\t// que representa la palabra \"hola\" en el idioma\n\t// tailandés. Los literales de cadena en Go son texto codificado\n\t// en UTF-8.\n\tconst s = \"สวัสดี\"\n\n\t// Dado que las cadenas son equivalentes a `[]byte`, esto\n\t// producirá la longitud de los bytes sin procesar almacenados internamente.\n\tfmt.Println(\"Len:\", len(s))\n\n\t// Indexar dentro de una cadena produce los valores de bytes crudos en\n\t// cada posición. Este bucle genera los valores hexadecimales de todos\n\t// los bytes que componen los puntos de código en `s`.\n\tfor i := 0; i < len(s); i++ {\n\t\tfmt.Printf(\"%x \", s[i])\n\t}\n\tfmt.Println()\n\n\t// Para contar cuántas _runas_ hay en una cadena, podemos usar\n\t// el paquete `utf8`. Ten en cuenta que el tiempo de ejecución de\n\t// `RuneCountInString` depende del tamaño de la cadena,\n\t// ya que debe decodificar cada runa UTF-8 secuencialmente.\n\t// Algunos caracteres tailandeses se representan mediante puntos de código UTF-8\n\t// que pueden abarcar varios bytes, por lo que el resultado de este conteo\n\t// puede resultar sorprendente.\n\tfmt.Println(\"Rune count:\", utf8.RuneCountInString(s))\n\n\t// Un bucle `range` maneja las cadenas de manera especial y decodifica\n\t// cada `rune` junto con su desplazamiento (offset) en la cadena.\n\tfor idx, runeValue := range s {\n\t\tfmt.Printf(\"%#U starts at %d\\n\", runeValue, idx)\n\t}\n\n\t// Podemos lograr la misma iteración utilizando la\n\t// función `utf8.DecodeRuneInString` de forma explícita.\n\tfmt.Println(\"\\nUsing DecodeRuneInString\")\n\tfor i, w := 0, 0; i < len(s); i += w {\n\t\truneValue, width := utf8.DecodeRuneInString(s[i:])\n\t\tfmt.Printf(\"%#U starts at %d\\n\", runeValue, i)\n\t\tw = width\n\n\t\t// Esto demuestra cómo pasar un valor `rune` a una función.\n\t\texamineRune(runeValue)\n\t}\n}\n\nfunc examineRune(r rune) {\n\n\t// Los valores entre comillas simples son _literales de runa_.\n\t// Podemos comparar un valor `rune` directamente con un literal de runa.\n\tif r == 't' {\n\t\tfmt.Println(\"found tee\")\n\t} else if r == 'ส' {\n\t\tfmt.Println(\"found so sua\")\n\t}\n}\n",
     "output": "$ go run strings-and-runes.go\nLen: 18\ne0 b8 aa e0 b8 a7 e0 b8 b1 e0 b8 aa e0 b8 94 e0 b8 b5 \nRune count: 6\nU+0E2A 'ส' starts at 0\nU+0E27 'ว' starts at 3\nU+0E31 'ั' starts at 6\nU+0E2A 'ส' starts at 9\nU+0E14 'ด' starts at 12\nU+0E35 'ี' starts at 15\n\nUsing DecodeRuneInString\nU+0E2A 'ส' starts at 0\nfound so sua\nU+0E27 'ว' starts at 3\nU+0E31 'ั' starts at 6\nU+0E2A 'ส' starts at 9\nfound so sua\nU+0E14 'ด' starts at 12\nU+0E35 'ี' starts at 15\n",
     "officialUrl": "https://gobyexample.com/strings-and-runes"
   },
@@ -1415,7 +1415,7 @@ const GO_TOPICS = [
     "titleEs": "Estructuras (Structs)",
     "category": "Tipos Avanzados y POO en Go",
     "categorySlug": "poo-generics",
-    "categoryIcon": "🏛️",
+    "categoryIcon": "cpu",
     "difficulty": "Principiante",
     "summary": "Colecciones tipadas de campos que forman la base del modelado de datos y programación orientada a tipos en Go.",
     "originalExpl": "Los structs de Go son colecciones tipadas de campos. Son útiles para agrupar datos y formar registros. Se accede a los campos con la notación de punto. Go desreferencia automáticamente los punteros a structs al acceder a sus campos.",
@@ -1457,28 +1457,28 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Tour: Structs",
+        "title": "Tour interactivo de Go: Estructuras de datos (Structs)",
         "url": "https://go.dev/tour/moretypes/2",
         "description": "Sintaxis básica y manipulación de structs."
       },
       {
-        "title": "Effective Go: Allocation with new and struct literals",
+        "title": "Guía canónica Effective Go: Asignación con new y literales de struct",
         "url": "https://go.dev/doc/effective_go#allocation_new",
         "description": "Guía oficial sobre inicialización de estructuras."
       },
       {
-        "title": "Go Spec: Struct types",
+        "title": "Especificación de Go: Tipos struct y definición de campos",
         "url": "https://go.dev/ref/spec#Struct_types",
         "description": "Definición formal de tipos de estructura y sintaxis de tags."
       },
       {
-        "title": "Go by Example: Structs",
+        "title": "Go by Example Original: Structs",
         "url": "https://gobyexample.com/structs",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// Go's _structs_ are typed collections of fields.\n// They're useful for grouping data together to form\n// records.\n\npackage main\n\nimport \"fmt\"\n\n// This `person` struct type has `name` and `age` fields.\ntype person struct {\n\tname string\n\tage  int\n}\n\n// `newPerson` constructs a new person struct with the given name.\nfunc newPerson(name string) *person {\n\t// Go is a garbage collected language; you can safely\n\t// return a pointer to a local variable - it will only\n\t// be cleaned up by the garbage collector when there\n\t// are no active references to it.\n\tp := person{name: name}\n\tp.age = 42\n\treturn &p\n}\n\nfunc main() {\n\n\t// This syntax creates a new struct.\n\tfmt.Println(person{\"Bob\", 20})\n\n\t// You can name the fields when initializing a struct.\n\tfmt.Println(person{name: \"Alice\", age: 30})\n\n\t// Omitted fields will be zero-valued.\n\tfmt.Println(person{name: \"Fred\"})\n\n\t// An `&` prefix yields a pointer to the struct.\n\tfmt.Println(&person{name: \"Ann\", age: 40})\n\n\t// It's idiomatic to encapsulate new struct creation in constructor functions\n\tfmt.Println(newPerson(\"Jon\"))\n\n\t// Access struct fields with a dot.\n\ts := person{name: \"Sean\", age: 50}\n\tfmt.Println(s.name)\n\n\t// Structs are mutable.\n\ts.age = 51\n\tfmt.Println(s)\n\n\t// You can also use dots with struct pointers - the\n\t// pointers are automatically dereferenced.\n\tsp := &s\n\tsp.age = 52\n\tfmt.Println(sp.age)\n\n\t// If a struct type is only used for a single value, we don't\n\t// have to give it a name. The value can have an anonymous\n\t// struct type. This technique is commonly used for\n\t// [table-driven tests](testing-and-benchmarking).\n\tdog := struct {\n\t\tname   string\n\t\tisGood bool\n\t}{\n\t\t\"Rex\",\n\t\ttrue,\n\t}\n\tfmt.Println(dog)\n}\n",
+    "code": "// Los _structs_ en Go son colecciones tipadas de campos.\n// Resultan sumamente útiles para agrupar datos y formar\n// registros.\n\npackage main\n\nimport \"fmt\"\n\n// Este tipo struct `person` tiene los campos `name` y `age`.\ntype person struct {\n\tname string\n\tage  int\n}\n\n// `newPerson` construye una nueva estructura person con el nombre indicado.\nfunc newPerson(name string) *person {\n\t// Go es un lenguaje con recolección de basura (garbage collector); puedes retornar\n\t// con seguridad un puntero a una variable local: solo será\n\t// liberada por el recolector de basura cuando ya no existan\n\t// referencias activas hacia ella.\n\tp := person{name: name}\n\tp.age = 42\n\treturn &p\n}\n\nfunc main() {\n\n\t// Esta sintaxis crea una nueva estructura con valores posicionales.\n\tfmt.Println(person{\"Bob\", 20})\n\n\t// Puedes nombrar explícitamente los campos al inicializar una estructura.\n\tfmt.Println(person{name: \"Alice\", age: 30})\n\n\t// Los campos omitidos se inicializarán con su respectivo valor cero.\n\tfmt.Println(person{name: \"Fred\"})\n\n\t// El prefijo `&` produce un puntero hacia la estructura.\n\tfmt.Println(&person{name: \"Ann\", age: 40})\n\n\t// En Go idiomático se acostumbra encapsular la creación de estructuras en funciones constructoras.\n\tfmt.Println(newPerson(\"Jon\"))\n\n\t// Accede a los campos del struct mediante la notación de punto.\n\ts := person{name: \"Sean\", age: 50}\n\tfmt.Println(s.name)\n\n\t// Las estructuras son mutables.\n\ts.age = 51\n\tfmt.Println(s)\n\n\t// También puedes usar el punto con punteros a estructuras: los\n\t// punteros se desreferencian automáticamente.\n\tsp := &s\n\tsp.age = 52\n\tfmt.Println(sp.age)\n\n\t// Si un tipo struct solo se utiliza para un valor único, no\n\t// es necesario asignarle un nombre. El valor puede tener un\n\t// tipo struct anónimo. Esta técnica se utiliza comúnmente en\n\t// [pruebas basadas en tablas](testing-and-benchmarking).\n\tdog := struct {\n\t\tname   string\n\t\tisGood bool\n\t}{\n\t\t\"Rex\",\n\t\ttrue,\n\t}\n\tfmt.Println(dog)\n}\n",
     "output": "{Bob 20}\n{Alice 30}\n{Fred 0}\n&{Ann 40}\n&{Jon 42}\nSean\n{Sean 51}\n52\n{Rex true}\n",
     "officialUrl": "https://gobyexample.com/structs"
   },
@@ -1489,7 +1489,7 @@ const GO_TOPICS = [
     "titleEs": "Métodos y Receptores (Value vs Pointer)",
     "category": "Tipos Avanzados y POO en Go",
     "categorySlug": "poo-generics",
-    "categoryIcon": "🏛️",
+    "categoryIcon": "cpu",
     "difficulty": "Intermedio",
     "summary": "Funciones asociadas a un tipo receptor específico (receiver) que definen el comportamiento de tipos en Go.",
     "originalExpl": "Go soporta métodos definidos en tipos de estructura. El receptor del método puede ser de tipo valor o puntero. Los receptores de puntero permiten mutar el struct y evitan copiar el valor en cada llamada.",
@@ -1531,29 +1531,29 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Tour: Methods",
+        "title": "Tour interactivo de Go: Métodos sobre tipos y structs",
         "url": "https://go.dev/tour/methods/1",
         "description": "Definición y uso de métodos en el tour interactivo."
       },
       {
-        "title": "Effective Go: Methods and Pointer vs. Value Receivers",
+        "title": "Guía canónica Effective Go: Métodos y receptores de puntero frente a valor",
         "url": "https://go.dev/doc/effective_go#methods",
         "description": "Guía canónica de diseño sobre receptores de valor y puntero."
       },
       {
-        "title": "Go Spec: Method declarations",
+        "title": "Especificación de Go: Declaración de métodos y conjuntos de métodos",
         "url": "https://go.dev/ref/spec#Method_declarations",
         "description": "Especificación del lenguaje sobre receptores y method sets."
       },
       {
-        "title": "Go by Example: Methods",
+        "title": "Go by Example Original: Methods",
         "url": "https://gobyexample.com/methods",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// Go supports _methods_ defined on struct types.\n\npackage main\n\nimport \"fmt\"\n\ntype rect struct {\n\twidth, height int\n}\n\n// This `area` method has a _receiver type_ of `*rect`.\nfunc (r *rect) area() int {\n\treturn r.width * r.height\n}\n\n// Methods can be defined for either pointer or value\n// receiver types. Here's an example of a value receiver.\nfunc (r rect) perim() int {\n\treturn 2*r.width + 2*r.height\n}\n\nfunc main() {\n\tr := rect{width: 10, height: 5}\n\n\t// Here we call the 2 methods defined for our struct.\n\tfmt.Println(\"area: \", r.area())\n\tfmt.Println(\"perim:\", r.perim())\n\n\t// Go automatically handles conversion between values\n\t// and pointers for method calls. You may want to use\n\t// a pointer receiver type to avoid copying on method\n\t// calls or to allow the method to mutate the\n\t// receiving struct.\n\trp := &r\n\tfmt.Println(\"area: \", rp.area())\n\tfmt.Println(\"perim:\", rp.perim())\n}\n",
-    "output": "$ go run methods.go \narea:  50\nperim: 30\narea:  50\nperim: 30\n\n# Next we'll look at Go's mechanism for grouping and\n# naming related sets of methods: interfaces.\n",
+    "code": "// Go admite _métodos_ definidos sobre tipos de estructuras (structs).\n\npackage main\n\nimport \"fmt\"\n\ntype rect struct {\n\twidth, height int\n}\n\n// Este método `area` tiene un _tipo receptor_ (receiver) de `*rect`.\nfunc (r *rect) area() int {\n\treturn r.width * r.height\n}\n\n// Los métodos pueden definirse tanto para receptores de puntero como\n// para receptores de valor. Aquí hay un ejemplo con receptor de valor.\nfunc (r rect) perim() int {\n\treturn 2*r.width + 2*r.height\n}\n\nfunc main() {\n\tr := rect{width: 10, height: 5}\n\n\t// Aquí invocamos los 2 métodos definidos para nuestra estructura.\n\tfmt.Println(\"area: \", r.area())\n\tfmt.Println(\"perim:\", r.perim())\n\n\t// Go maneja automáticamente la conversión entre valores y punteros\n\t// en las llamadas a métodos. Es recomendable usar un receptor de puntero\n\t// para evitar copiar la estructura en cada invocación o para permitir\n\t// que el método mute la estructura receptora.\n\trp := &r\n\tfmt.Println(\"area: \", rp.area())\n\tfmt.Println(\"perim:\", rp.perim())\n}\n",
+    "output": "$ go run methods.go \narea:  50\nperim: 30\narea:  50\nperim: 30\n\n# A continuación veremos el mecanismo de Go para agrupar y\n# nombrar conjuntos de métodos relacionados: las interfaces.\n",
     "officialUrl": "https://gobyexample.com/methods"
   },
   {
@@ -1563,7 +1563,7 @@ const GO_TOPICS = [
     "titleEs": "Interfaces y Polimorfismo Implícito",
     "category": "Tipos Avanzados y POO en Go",
     "categorySlug": "poo-generics",
-    "categoryIcon": "🏛️",
+    "categoryIcon": "cpu",
     "difficulty": "Intermedio",
     "summary": "Contratos de conjuntos de métodos implementados implícitamente que permiten polimorfismo desacoplado y código testeable.",
     "originalExpl": "Las interfaces son colecciones nombradas de firmas de métodos. En Go, no se declara explícitamente que un tipo implementa una interfaz (no hay palabra clave 'implements'); un tipo implementa una interfaz simplemente implementando todos sus métodos.",
@@ -1604,29 +1604,29 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Tour: Interfaces",
+        "title": "Tour interactivo de Go: Interfaces implícitas",
         "url": "https://go.dev/tour/methods/9",
         "description": "Explicación interactiva del polimorfismo implícito."
       },
       {
-        "title": "Russ Cox: Go Data Structures: Interfaces",
+        "title": "Russ Cox: Estructuras de datos en Go: Implementación de Interfaces",
         "url": "https://research.swtch.com/interfaces",
         "description": "Artículo técnico de Russ Cox sobre cómo se implementan las itables e ifaces en memoria."
       },
       {
-        "title": "Effective Go: Interfaces and methods",
+        "title": "Guía canónica Effective Go: Interfaces implícitas y métodos",
         "url": "https://go.dev/doc/effective_go#interfaces_and_types",
         "description": "Buenas prácticas de diseño con interfaces en Go."
       },
       {
-        "title": "Go by Example: Interfaces",
+        "title": "Go by Example Original: Interfaces",
         "url": "https://gobyexample.com/interfaces",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// _Interfaces_ are named collections of method\n// signatures.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\n// Here's a basic interface for geometric shapes.\ntype geometry interface {\n\tarea() float64\n\tperim() float64\n}\n\n// For our example we'll implement this interface on\n// `rect` and `circle` types.\ntype rect struct {\n\twidth, height float64\n}\ntype circle struct {\n\tradius float64\n}\n\n// To implement an interface in Go, we just need to\n// implement all the methods in the interface. Here we\n// implement `geometry` on `rect`s.\nfunc (r rect) area() float64 {\n\treturn r.width * r.height\n}\nfunc (r rect) perim() float64 {\n\treturn 2*r.width + 2*r.height\n}\n\n// The implementation for `circle`s.\nfunc (c circle) area() float64 {\n\treturn math.Pi * c.radius * c.radius\n}\nfunc (c circle) perim() float64 {\n\treturn 2 * math.Pi * c.radius\n}\n\n// If a variable has an interface type, then we can call\n// methods that are in the named interface. Here's a\n// generic `measure` function taking advantage of this\n// to work on any `geometry`.\nfunc measure(g geometry) {\n\tfmt.Println(g)\n\tfmt.Println(g.area())\n\tfmt.Println(g.perim())\n}\n\n// Sometimes it's useful to know the runtime type of an\n// interface value. One option is using a *type assertion*\n// as shown here; another is a [type `switch`](switch).\nfunc detectCircle(g geometry) {\n\tif c, ok := g.(circle); ok {\n\t\tfmt.Println(\"circle with radius\", c.radius)\n\t}\n}\n\nfunc main() {\n\tr := rect{width: 3, height: 4}\n\tc := circle{radius: 5}\n\n\t// The `circle` and `rect` struct types both\n\t// implement the `geometry` interface so we can use\n\t// instances of\n\t// these structs as arguments to `measure`.\n\tmeasure(r)\n\tmeasure(c)\n\n\tdetectCircle(r)\n\tdetectCircle(c)\n}\n",
-    "output": "$ go run interfaces.go\n{3 4}\n12\n14\n{5}\n78.53981633974483\n31.41592653589793\ncircle with radius 5\n\n# To understand how Go's interfaces work under the hood,\n# check out this [blog post](https://research.swtch.com/interfaces).\n",
+    "code": "// Las _interfaces_ son colecciones con nombre de firmas de\n// métodos.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\n// Aquí tenemos una interfaz básica para figuras geométricas.\ntype geometry interface {\n\tarea() float64\n\tperim() float64\n}\n\n// Para nuestro ejemplo implementaremos esta interfaz en los\n// tipos `rect` y `circle`.\ntype rect struct {\n\twidth, height float64\n}\ntype circle struct {\n\tradius float64\n}\n\n// Para implementar una interfaz en Go, solo necesitamos\n// implementar todos los métodos declarados en ella. Aquí\n// implementamos `geometry` en `rect`.\nfunc (r rect) area() float64 {\n\treturn r.width * r.height\n}\nfunc (r rect) perim() float64 {\n\treturn 2*r.width + 2*r.height\n}\n\n// La implementación para `circle`.\nfunc (c circle) area() float64 {\n\treturn math.Pi * c.radius * c.radius\n}\nfunc (c circle) perim() float64 {\n\treturn 2 * math.Pi * c.radius\n}\n\n// Si una variable tiene un tipo interfaz, podemos invocar\n// los métodos declarados en dicha interfaz. Aquí tenemos una\n// función genérica `measure` que aprovecha esto para operar\n// sobre cualquier `geometry`.\nfunc measure(g geometry) {\n\tfmt.Println(g)\n\tfmt.Println(g.area())\n\tfmt.Println(g.perim())\n}\n\n// En ocasiones resulta útil conocer el tipo en tiempo de ejecución de un\n// valor de interfaz. Una opción es usar una *aserción de tipo* (type assertion)\n// como se muestra aquí; otra alternativa es un [switch de tipo](switch).\nfunc detectCircle(g geometry) {\n\tif c, ok := g.(circle); ok {\n\t\tfmt.Println(\"circle with radius\", c.radius)\n\t}\n}\n\nfunc main() {\n\tr := rect{width: 3, height: 4}\n\tc := circle{radius: 5}\n\n\t// Tanto el tipo struct `circle` como `rect`\n\t// implementan la interfaz `geometry`, por lo que podemos usar\n\t// instancias de estas estructuras como argumentos para `measure`.\n\tmeasure(r)\n\tmeasure(c)\n\n\tdetectCircle(r)\n\tdetectCircle(c)\n}\n",
+    "output": "$ go run interfaces.go\n{3 4}\n12\n14\n{5}\n78.53981633974483\n31.41592653589793\ncircle with radius 5\n\n# Para comprender cómo funcionan las interfaces de Go internamente,\n# consulta esta [publicación de blog](https://research.swtch.com/interfaces).\n",
     "officialUrl": "https://gobyexample.com/interfaces"
   },
   {
@@ -1636,7 +1636,7 @@ const GO_TOPICS = [
     "titleEs": "Enumeraciones y el Patrón Iota",
     "category": "Tipos Avanzados y POO en Go",
     "categorySlug": "poo-generics",
-    "categoryIcon": "🏛️",
+    "categoryIcon": "cpu",
     "difficulty": "Intermedio",
     "summary": "Implementación idiomática de tipos enumerados seguros usando tipos personalizados, bloques const e iota.",
     "originalExpl": "Go no tiene un tipo 'enum' dedicado como una palabra clave fija. En su lugar, se implementan enumeraciones combinando un tipo personalizado basado en un entero (o string) con el generador 'iota' dentro de un bloque 'const'.",
@@ -1677,28 +1677,28 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "The Go Blog: Generating code with stringer",
+        "title": "Blog oficial de Go: Generación automática de código con la herramienta stringer",
         "url": "https://go.dev/blog/strings",
         "description": "Cómo usar la herramienta oficial stringer para generar métodos String() en enums."
       },
       {
-        "title": "Effective Go: Constants",
+        "title": "Guía canónica Effective Go: Constantes y enumeraciones con iota",
         "url": "https://go.dev/doc/effective_go#constants",
         "description": "El uso de iota para enumeraciones en Effective Go."
       },
       {
-        "title": "Go Spec: Iota",
+        "title": "Especificación de Go: El identificador predefinido iota",
         "url": "https://go.dev/ref/spec#Iota",
         "description": "Especificación de las reglas de incremento del identificador iota."
       },
       {
-        "title": "Go by Example: Enums",
+        "title": "Go by Example Original: Enums",
         "url": "https://gobyexample.com/enums",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// _Enumerated types_ (enums) are a special case of\n// [sum types](https://en.wikipedia.org/wiki/Algebraic_data_type).\n// An enum is a type that has a fixed number of possible\n// values, each with a distinct name. Go doesn't have an\n// enum type as a distinct language feature, but enums\n// are simple to implement using existing language idioms.\n\npackage main\n\nimport \"fmt\"\n\n// Our enum type `ServerState` has an underlying `int` type.\ntype ServerState int\n\n// The possible values for `ServerState` are defined as\n// constants. The special keyword [iota](https://go.dev/ref/spec#Iota)\n// generates successive constant values automatically; in this\n// case 0, 1, 2 and so on.\nconst (\n\tStateIdle ServerState = iota\n\tStateConnected\n\tStateError\n\tStateRetrying\n)\n\n// By implementing the [fmt.Stringer](https://pkg.go.dev/fmt#Stringer)\n// interface, values of `ServerState` can be printed out or converted\n// to strings.\n//\n// This can get cumbersome if there are many possible values. In such\n// cases the [stringer tool](https://pkg.go.dev/golang.org/x/tools/cmd/stringer)\n// can be used in conjunction with `go:generate` to automate the\n// process. See [this post](https://eli.thegreenplace.net/2021/a-comprehensive-guide-to-go-generate)\n// for a longer explanation.\nvar stateName = map[ServerState]string{\n\tStateIdle:      \"idle\",\n\tStateConnected: \"connected\",\n\tStateError:     \"error\",\n\tStateRetrying:  \"retrying\",\n}\n\nfunc (ss ServerState) String() string {\n\treturn stateName[ss]\n}\n\nfunc main() {\n\tns := transition(StateIdle)\n\tfmt.Println(ns)\n\t// If we have a value of type `int`, we cannot pass it to `transition` - the\n\t// compiler will complain about type mismatch. This provides some degree of\n\t// compile-time type safety for enums.\n\n\tns2 := transition(ns)\n\tfmt.Println(ns2)\n}\n\n// transition emulates a state transition for a\n// server; it takes the existing state and returns\n// a new state.\nfunc transition(s ServerState) ServerState {\n\tswitch s {\n\tcase StateIdle:\n\t\treturn StateConnected\n\tcase StateConnected, StateRetrying:\n\t\t// Suppose we check some predicates here to\n\t\t// determine the next state...\n\t\treturn StateIdle\n\tcase StateError:\n\t\treturn StateError\n\tdefault:\n\t\tpanic(fmt.Errorf(\"unknown state: %s\", s))\n\t}\n}\n",
+    "code": "// Los _tipos enumerados_ (enums) son un caso especial de\n// [tipos suma](https://en.wikipedia.org/wiki/Algebraic_data_type).\n// Un enum es un tipo que posee un número fijo de valores posibles,\n// cada uno con un nombre distintivo. Go no cuenta con una palabra clave\n// `enum` dedicada en su sintaxis, pero los enums son muy sencillos\n// de implementar usando los modismos habituales del lenguaje.\n\npackage main\n\nimport \"fmt\"\n\n// Nuestro tipo de enumeración `ServerState` tiene un tipo subyacente `int`.\ntype ServerState int\n\n// Los valores posibles para `ServerState` se definen como\n// constantes. La palabra reservada especial [iota](https://go.dev/ref/spec#Iota)\n// genera valores constantes sucesivos de forma automática; en este\n// caso 0, 1, 2 y así sucesivamente.\nconst (\n\tStateIdle ServerState = iota\n\tStateConnected\n\tStateError\n\tStateRetrying\n)\n\n// Al implementar la interfaz [fmt.Stringer](https://pkg.go.dev/fmt#Stringer),\n// los valores de `ServerState` pueden imprimirse o convertirse\n// a cadenas de texto.\n//\n// Esto puede volverse tedioso si hay muchos valores posibles. En tales casos,\n// la herramienta [stringer](https://pkg.go.dev/golang.org/x/tools/cmd/stringer)\n// puede usarse junto con `go:generate` para automatizar el\n// proceso. Consulta [este artículo](https://eli.thegreenplace.net/2021/a-comprehensive-guide-to-go-generate)\n// para una explicación más exhaustiva.\nvar stateName = map[ServerState]string{\n\tStateIdle:      \"idle\",\n\tStateConnected: \"connected\",\n\tStateError:     \"error\",\n\tStateRetrying:  \"retrying\",\n}\n\nfunc (ss ServerState) String() string {\n\treturn stateName[ss]\n}\n\nfunc main() {\n\tns := transition(StateIdle)\n\tfmt.Println(ns)\n\t// Si tenemos un valor de tipo `int`, no podemos pasarlo a `transition`: el\n\t// compilador señalará un error de incompatibilidad de tipos. Esto otorga cierta\n\t// seguridad de tipos en tiempo de compilación para los enums.\n\n\tns2 := transition(ns)\n\tfmt.Println(ns2)\n}\n\n// `transition` emula una transición de estado para un\n// servidor; toma el estado existente y retorna\n// un nuevo estado.\nfunc transition(s ServerState) ServerState {\n\tswitch s {\n\tcase StateIdle:\n\t\treturn StateConnected\n\tcase StateConnected, StateRetrying:\n\t\t// Supongamos que aquí evaluamos ciertos predicados para\n\t\t// determinar el próximo estado...\n\t\treturn StateIdle\n\tcase StateError:\n\t\treturn StateError\n\tdefault:\n\t\tpanic(fmt.Errorf(\"unknown state: %s\", s))\n\t}\n}\n",
     "output": "$ go run enums.go\nconnected\nidle\n",
     "officialUrl": "https://gobyexample.com/enums"
   },
@@ -1709,7 +1709,7 @@ const GO_TOPICS = [
     "titleEs": "Composición y Embebido de Structs (Herencia sin Clases)",
     "category": "Tipos Avanzados y POO en Go",
     "categorySlug": "poo-generics",
-    "categoryIcon": "🏛️",
+    "categoryIcon": "cpu",
     "difficulty": "Intermedio",
     "summary": "Composición sobre herencia: inserción de tipos anónimos dentro de estructuras para reutilizar y promover campos y métodos.",
     "originalExpl": "Go soporta la incrustación (embedding) de estructuras e interfaces para expresar una composición más rica de tipos. Los campos y métodos del struct embebido se promocionan automáticamente al struct contenedor.",
@@ -1750,28 +1750,28 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Effective Go: Embedding",
+        "title": "Guía canónica Effective Go: Composición e incrustación de structs e interfaces",
         "url": "https://go.dev/doc/effective_go#embedding",
         "description": "La guía oficial de Go sobre el uso de struct e interface embedding."
       },
       {
-        "title": "Go Spec: Struct types and embedded fields",
+        "title": "Especificación de Go: Campos anónimos e incrustados en structs",
         "url": "https://go.dev/ref/spec#Struct_types",
         "description": "Reglas de selectores y promoción de identificadores embebidos."
       },
       {
-        "title": "Eli Bendersky: Embedding in Go",
+        "title": "Eli Bendersky: Composición e incrustación de tipos en Go",
         "url": "https://eli.thegreenplace.net/2020/embedding-in-go-part-1-structs/",
         "description": "Artículo detallado de Eli Bendersky sobre los patrones de embebido."
       },
       {
-        "title": "Go by Example: Struct Embedding",
+        "title": "Go by Example Original: Struct Embedding",
         "url": "https://gobyexample.com/struct-embedding",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// Go supports _embedding_ of structs and interfaces\n// to express a more seamless _composition_ of types.\n// This is not to be confused with [`//go:embed`](embed-directive) which is\n// a go directive introduced in Go version 1.16+ to embed\n// files and folders into the application binary.\n\npackage main\n\nimport \"fmt\"\n\ntype base struct {\n\tnum int\n}\n\nfunc (b base) describe() string {\n\treturn fmt.Sprintf(\"base with num=%v\", b.num)\n}\n\n// A `container` _embeds_ a `base`. An embedding looks\n// like a field without a name.\ntype container struct {\n\tbase\n\tstr string\n}\n\nfunc main() {\n\n\t// When creating structs with literals, we have to\n\t// initialize the embedding explicitly; here the\n\t// embedded type serves as the field name.\n\tco := container{\n\t\tbase: base{\n\t\t\tnum: 1,\n\t\t},\n\t\tstr: \"some name\",\n\t}\n\n\t// We can access the base's fields directly on `co`,\n\t// e.g. `co.num`.\n\tfmt.Printf(\"co={num: %v, str: %v}\\n\", co.num, co.str)\n\n\t// Alternatively, we can spell out the full path using\n\t// the embedded type name.\n\tfmt.Println(\"also num:\", co.base.num)\n\n\t// Since `container` embeds `base`, the methods of\n\t// `base` also become methods of a `container`. Here\n\t// we invoke a method that was embedded from `base`\n\t// directly on `co`.\n\tfmt.Println(\"describe:\", co.describe())\n\n\ttype describer interface {\n\t\tdescribe() string\n\t}\n\n\t// Embedding structs with methods may be used to bestow\n\t// interface implementations onto other structs. Here\n\t// we see that a `container` now implements the\n\t// `describer` interface because it embeds `base`.\n\tvar d describer = co\n\tfmt.Println(\"describer:\", d.describe())\n}\n",
+    "code": "// Go admite la _incrustación_ (embedding) de estructuras e interfaces\n// para expresar una _composición_ fluida de tipos.\n// Esto no debe confundirse con [`//go:embed`](embed-directive), que es\n// una directiva del compilador introducida en Go 1.16+ para incrustar\n// archivos y carpetas dentro del binario de la aplicación.\n\npackage main\n\nimport \"fmt\"\n\ntype base struct {\n\tnum int\n}\n\nfunc (b base) describe() string {\n\treturn fmt.Sprintf(\"base with num=%v\", b.num)\n}\n\n// Un `container` _incrusta_ un `base`. Una incrustación se define\n// como un campo sin nombre de identificador.\ntype container struct {\n\tbase\n\tstr string\n}\n\nfunc main() {\n\n\t// Al crear estructuras con literales, debemos inicializar\n\t// la incrustación explícitamente; aquí el tipo incrustado\n\t// actúa como el nombre del campo.\n\tco := container{\n\t\tbase: base{\n\t\t\tnum: 1,\n\t\t},\n\t\tstr: \"some name\",\n\t}\n\n\t// Podemos acceder a los campos de base directamente desde `co`,\n\t// por ejemplo `co.num`.\n\tfmt.Printf(\"co={num: %v, str: %v}\\n\", co.num, co.str)\n\n\t// Como alternativa, podemos escribir la ruta completa utilizando\n\t// el nombre del tipo incrustado.\n\tfmt.Println(\"also num:\", co.base.num)\n\n\t// Dado que `container` incrusta `base`, los métodos de\n\t// `base` también pasan a ser métodos de `container`. Aquí\n\t// invocamos directamente sobre `co` un método incrustado\n\t// desde `base`.\n\tfmt.Println(\"describe:\", co.describe())\n\n\ttype describer interface {\n\t\tdescribe() string\n\t}\n\n\t// Incrustar estructuras con métodos permite otorgar implementaciones\n\t// de interfaces a otras estructuras. Aquí vemos que `container`\n\t// ahora implementa la interfaz `describer` gracias a que incrusta `base`.\n\tvar d describer = co\n\tfmt.Println(\"describer:\", d.describe())\n}\n",
     "output": "$ go run struct-embedding.go\nco={num: 1, str: some name}\nalso num: 1\ndescribe: base with num=1\ndescriber: base with num=1\n",
     "officialUrl": "https://gobyexample.com/struct-embedding"
   },
@@ -1782,7 +1782,7 @@ const GO_TOPICS = [
     "titleEs": "Genéricos (Type Parameters)",
     "category": "Tipos Avanzados y POO en Go",
     "categorySlug": "poo-generics",
-    "categoryIcon": "🏛️",
+    "categoryIcon": "cpu",
     "difficulty": "Avanzado",
     "summary": "Programación genérica en Go (1.18+) mediante parámetros de tipo, restricciones y el paquete estándar 'cmp'.",
     "originalExpl": "A partir de la versión 1.18, Go soporta genéricos, también conocidos como parámetros de tipo. Permiten escribir funciones y estructuras de datos independientes de los tipos concretos que manejan.",
@@ -1823,28 +1823,28 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Tutorial: Getting started with generics",
+        "title": "Tutorial oficial de Go: Introducción a genéricos",
         "url": "https://go.dev/doc/tutorial/generics",
         "description": "Tutorial oficial paso a paso sobre funciones y tipos genéricos."
       },
       {
-        "title": "The Go Blog: An Introduction To Generics",
+        "title": "Blog oficial de Go: Introducción oficial a genéricos en Go",
         "url": "https://go.dev/blog/intro-generics",
         "description": "Artículo de lanzamiento de genéricos por Ian Lance Taylor y Robert Griesemer."
       },
       {
-        "title": "Package cmp (Standard Library)",
+        "title": "Paquete cmp (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/cmp",
         "description": "Documentación oficial del paquete de comparación y ordenamiento cmp."
       },
       {
-        "title": "Go by Example: Generics",
+        "title": "Go by Example Original: Generics",
         "url": "https://gobyexample.com/generics",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// Starting with version 1.18, Go has added support for\n// _generics_, also known as _type parameters_.\n\npackage main\n\nimport \"fmt\"\n\n// As an example of a generic function, `SlicesIndex` takes\n// a slice of any `comparable` type and an element of that\n// type and returns the index of the first occurrence of\n// v in s, or -1 if not present. The `comparable` constraint\n// means that we can compare values of this type with the\n// `==` and `!=` operators. For a more thorough explanation\n// of this type signature, see [this blog post](https://go.dev/blog/deconstructing-type-parameters).\n// Note that this function exists in the standard library\n// as [slices.Index](https://pkg.go.dev/slices#Index).\nfunc SlicesIndex[S ~[]E, E comparable](s S, v E) int {\n\tfor i := range s {\n\t\tif v == s[i] {\n\t\t\treturn i\n\t\t}\n\t}\n\treturn -1\n}\n\n// As an example of a generic type, `List` is a\n// singly-linked list with values of any type.\ntype List[T any] struct {\n\thead, tail *element[T]\n}\n\ntype element[T any] struct {\n\tnext *element[T]\n\tval  T\n}\n\n// We can define methods on generic types just like we\n// do on regular types, but we have to keep the type\n// parameters in place. The type is `List[T]`, not `List`.\nfunc (lst *List[T]) Push(v T) {\n\tif lst.tail == nil {\n\t\tlst.head = &element[T]{val: v}\n\t\tlst.tail = lst.head\n\t} else {\n\t\tlst.tail.next = &element[T]{val: v}\n\t\tlst.tail = lst.tail.next\n\t}\n}\n\n// AllElements returns all the List elements as a slice.\n// In the next example we'll see a more idiomatic way\n// of iterating over all elements of custom types.\nfunc (lst *List[T]) AllElements() []T {\n\tvar elems []T\n\tfor e := lst.head; e != nil; e = e.next {\n\t\telems = append(elems, e.val)\n\t}\n\treturn elems\n}\n\nfunc main() {\n\tvar s = []string{\"foo\", \"bar\", \"zoo\"}\n\n\t// When invoking generic functions, we can often rely\n\t// on _type inference_. Note that we don't have to\n\t// specify the types for `S` and `E` when\n\t// calling `SlicesIndex` - the compiler infers them\n\t// automatically.\n\tfmt.Println(\"index of zoo:\", SlicesIndex(s, \"zoo\"))\n\n\t// ... though we could also specify them explicitly.\n\t_ = SlicesIndex[[]string, string](s, \"zoo\")\n\n\tlst := List[int]{}\n\tlst.Push(10)\n\tlst.Push(13)\n\tlst.Push(23)\n\tfmt.Println(\"list:\", lst.AllElements())\n}\n",
+    "code": "// A partir de la versión 1.18, Go añadió soporte para\n// _genéricos_, también conocidos como _parámetros de tipo_.\n\npackage main\n\nimport \"fmt\"\n\n// Como ejemplo de una función genérica, `SlicesIndex` recibe\n// un slice de cualquier tipo `comparable` y un elemento de ese\n// tipo, devolviendo el índice de la primera coincidencia de\n// v en s, o -1 si no está presente. La restricción `comparable`\n// significa que podemos comparar valores de este tipo con los\n// operadores `==` y `!=`. Para una explicación más detallada\n// de esta firma de tipos, consulta [este artículo de blog](https://go.dev/blog/deconstructing-type-parameters).\n// Ten en cuenta que esta función existe en la biblioteca estándar\n// como [slices.Index](https://pkg.go.dev/slices#Index).\nfunc SlicesIndex[S ~[]E, E comparable](s S, v E) int {\n\tfor i := range s {\n\t\tif v == s[i] {\n\t\t\treturn i\n\t\t}\n\t}\n\treturn -1\n}\n\n// Como ejemplo de un tipo genérico, `List` es una\n// lista simplemente enlazada con valores de cualquier tipo.\ntype List[T any] struct {\n\thead, tail *element[T]\n}\n\ntype element[T any] struct {\n\tnext *element[T]\n\tval  T\n}\n\n// Podemos definir métodos sobre tipos genéricos exactamente igual\n// que en los tipos regulares, pero debemos mantener los parámetros\n// de tipo en su lugar. El tipo es `List[T]`, no `List`.\nfunc (lst *List[T]) Push(v T) {\n\tif lst.tail == nil {\n\t\tlst.head = &element[T]{val: v}\n\t\tlst.tail = lst.head\n\t} else {\n\t\tlst.tail.next = &element[T]{val: v}\n\t\tlst.tail = lst.tail.next\n\t}\n}\n\n// AllElements devuelve todos los elementos de la List como un slice.\n// En el siguiente ejemplo veremos una forma más idiomática\n// de iterar sobre todos los elementos de tipos personalizados.\nfunc (lst *List[T]) AllElements() []T {\n\tvar elems []T\n\tfor e := lst.head; e != nil; e = e.next {\n\t\telems = append(elems, e.val)\n\t}\n\treturn elems\n}\n\nfunc main() {\n\tvar s = []string{\"foo\", \"bar\", \"zoo\"}\n\n\t// Al invocar funciones genéricas, con frecuencia podemos confiar\n\t// en la _inferencia de tipos_. Observa que no necesitamos\n\t// especificar los tipos para `S` y `E` al llamar\n\t// a `SlicesIndex`: el compilador los infiere automáticamente.\n\tfmt.Println(\"index of zoo:\", SlicesIndex(s, \"zoo\"))\n\n\t// ... aunque también podríamos especificarlos explícitamente.\n\t_ = SlicesIndex[[]string, string](s, \"zoo\")\n\n\tlst := List[int]{}\n\tlst.Push(10)\n\tlst.Push(13)\n\tlst.Push(23)\n\tfmt.Println(\"list:\", lst.AllElements())\n}\n",
     "output": "$ go run generics.go\nindex of zoo: 2\nlist: [10 13 23]\n",
     "officialUrl": "https://gobyexample.com/generics"
   },
@@ -1855,7 +1855,7 @@ const GO_TOPICS = [
     "titleEs": "Iteradores con Range (Go 1.22+ y 1.23+)",
     "category": "Tipos Avanzados y POO en Go",
     "categorySlug": "poo-generics",
-    "categoryIcon": "🏛️",
+    "categoryIcon": "cpu",
     "difficulty": "Avanzado",
     "summary": "El nuevo estándar de iteración en Go: funciones iteradoras iter.Seq e iter.Seq2 integradas directamente en el bucle 'for range'.",
     "originalExpl": "A partir de Go 1.22 (y formalizado en Go 1.23 con el paquete 'iter'), 'range' puede iterar sobre funciones de tipo iterador. Esto permite crear secuencias personalizadas de elementos de forma perezosa (lazy evaluation).",
@@ -1896,28 +1896,28 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "The Go Blog: Range Over Function Types",
+        "title": "Blog oficial de Go: Iteración range sobre tipos de función (Iteradores en Go)",
         "url": "https://go.dev/blog/range-functions",
         "description": "Explicación completa de Russ Cox sobre iteradores y range over func en Go."
       },
       {
-        "title": "Package iter (Standard Library)",
+        "title": "Paquete iter (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/iter",
         "description": "Documentación oficial del paquete iter en la biblioteca estándar."
       },
       {
-        "title": "Go Wiki: Rangefunc Experiment",
+        "title": "Wiki oficial de Go: Experimento de funciones range",
         "url": "https://go.dev/wiki/RangefuncExperiment",
         "description": "Especificaciones técnicas y diseño de la propuesta de iteradores."
       },
       {
-        "title": "Go by Example: Range over Iterators",
+        "title": "Go by Example Original: Range over Iterators",
         "url": "https://gobyexample.com/range-over-iterators",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// Starting with version 1.23, Go has added support for\n// [iterators](https://go.dev/blog/range-functions),\n// which lets us range over pretty much anything!\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"iter\"\n\t\"slices\"\n\t\"strings\"\n)\n\n// Let's look at the `List` type from the\n// [previous example](generics) again. In that example\n// we had an `AllElements` method that returned a slice\n// of all elements in the list. With Go iterators, we\n// can do it better - as shown below.\ntype List[T any] struct {\n\thead, tail *element[T]\n}\n\ntype element[T any] struct {\n\tnext *element[T]\n\tval  T\n}\n\nfunc (lst *List[T]) Push(v T) {\n\tif lst.tail == nil {\n\t\tlst.head = &element[T]{val: v}\n\t\tlst.tail = lst.head\n\t} else {\n\t\tlst.tail.next = &element[T]{val: v}\n\t\tlst.tail = lst.tail.next\n\t}\n}\n\n// All returns an _iterator_, which in Go is a function\n// with a [special signature](https://pkg.go.dev/iter#Seq).\nfunc (lst *List[T]) All() iter.Seq[T] {\n\treturn func(yield func(T) bool) {\n\t\t// The iterator function takes another function as\n\t\t// a parameter, called `yield` by convention (but\n\t\t// the name can be arbitrary). It will call `yield` for\n\t\t// every element we want to iterate over, and note `yield`'s\n\t\t// return value for a potential early termination.\n\t\tfor e := lst.head; e != nil; e = e.next {\n\t\t\tif !yield(e.val) {\n\t\t\t\treturn\n\t\t\t}\n\t\t}\n\t}\n}\n\n// Iteration doesn't require an underlying data structure,\n// and doesn't even have to be finite! Here's a function\n// returning an iterator over Fibonacci numbers: it keeps\n// running as long as `yield` keeps returning `true`.\nfunc genFib() iter.Seq[int] {\n\treturn func(yield func(int) bool) {\n\t\ta, b := 0, 1\n\n\t\tfor {\n\t\t\tif !yield(a) {\n\t\t\t\treturn\n\t\t\t}\n\t\t\ta, b = b, a+b\n\t\t}\n\t}\n}\n\nfunc main() {\n\tlst := List[int]{}\n\tlst.Push(10)\n\tlst.Push(13)\n\tlst.Push(23)\n\n\t// Since `List.All` returns an iterator, we can use it\n\t// in a regular `range` loop.\n\tfor e := range lst.All() {\n\t\tfmt.Println(e)\n\t}\n\n\t// Packages like [slices](https://pkg.go.dev/slices) have\n\t// a number of useful functions to work with iterators.\n\t// For example, `Collect` takes any iterator and collects\n\t// all its values into a slice.\n\tall := slices.Collect(lst.All())\n\tfmt.Println(\"all:\", all)\n\n\t// Standard library packages now expose iterator helpers\n\t// too. For example, `strings.SplitSeq` iterates over parts\n\t// of a byte slice without first building a result slice.\n\tfor part := range strings.SplitSeq(\"go-by-example\", \"-\") {\n\t\tfmt.Printf(\"part: %s\\n\", part)\n\t}\n\n\tfor n := range genFib() {\n\n\t\t// Once the loop hits `break` or an early return, the `yield` function\n\t\t// passed to the iterator will return `false`.\n\t\tif n >= 10 {\n\t\t\tbreak\n\t\t}\n\t\tfmt.Println(n)\n\t}\n}\n",
+    "code": "// Desde la versión 1.22, Go agregó soporte para\n// [iteradores definidos por el usuario](https://go.dev/blog/range-functions)\n// para bucles `range`. En la versión 1.23, los iteradores se convirtieron\n// en una característica estándar del lenguaje.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"iter\"\n\t\"slices\"\n\t\"strings\"\n)\n\n// En el [ejemplo anterior](generics) implementamos una\n// lista enlazada personalizada y un método `AllElements` que\n// devolvía todos los elementos en un slice. Con iteradores,\n// podemos hacerlo de manera mucho más elegante e idiomática.\ntype List[T any] struct {\n\thead, tail *element[T]\n}\n\ntype element[T any] struct {\n\tnext *element[T]\n\tval  T\n}\n\nfunc (lst *List[T]) Push(v T) {\n\tif lst.tail == nil {\n\t\tlst.head = &element[T]{val: v}\n\t\tlst.tail = lst.head\n\t} else {\n\t\tlst.tail.next = &element[T]{val: v}\n\t\tlst.tail = lst.tail.next\n\t}\n}\n\n// `All` devuelve un iterador, representado en Go por una función\n// con una [firma especial](https://pkg.go.dev/iter#Seq).\nfunc (lst *List[T]) All() iter.Seq[T] {\n\treturn func(yield func(T) bool) {\n\t\t// La función de iterador recibe otra función como\n\t\t// parámetro, llamada `yield` por convención (aunque\n\t\t// el nombre puede ser arbitrario). Invocará `yield` por\n\t\t// cada elemento que deseemos iterar, y verificará el\n\t\t// valor retornado por `yield` para una posible terminación anticipada.\n\t\tfor e := lst.head; e != nil; e = e.next {\n\t\t\tif !yield(e.val) {\n\t\t\t\treturn\n\t\t\t}\n\t\t}\n\t}\n}\n\n// La iteración no requiere una estructura de datos subyacente,\n// ¡y ni siquiera tiene que ser finita! Aquí hay una función\n// que retorna un iterador sobre números de Fibonacci: continúa\n// ejecutándose mientras `yield` siga retornando `true`.\nfunc genFib() iter.Seq[int] {\n\treturn func(yield func(int) bool) {\n\t\ta, b := 0, 1\n\n\t\tfor {\n\t\t\tif !yield(a) {\n\t\t\t\treturn\n\t\t\t}\n\t\t\ta, b = b, a+b\n\t\t}\n\t}\n}\n\nfunc main() {\n\tlst := List[int]{}\n\tlst.Push(10)\n\tlst.Push(13)\n\tlst.Push(23)\n\n\t// Dado que `List.All` retorna un iterador, podemos usarlo\n\t// en un bucle `range` convencional.\n\tfor e := range lst.All() {\n\t\tfmt.Println(e)\n\t}\n\n\t// Paquetes como [slices](https://pkg.go.dev/slices) tienen\n\t// varias funciones útiles para trabajar con iteradores.\n\t// Por ejemplo, `Collect` toma cualquier iterador y reúne\n\t// todos sus valores en un slice.\n\tall := slices.Collect(lst.All())\n\tfmt.Println(\"all:\", all)\n\n\t// Los paquetes de la biblioteca estándar ahora también exponen ayudantes de iteradores.\n\t// Por ejemplo, `strings.SplitSeq` itera sobre partes\n\t// de un slice de bytes sin construir previamente un slice de resultados en memoria.\n\tfor part := range strings.SplitSeq(\"go-by-example\", \"-\") {\n\t\tfmt.Printf(\"part: %s\\n\", part)\n\t}\n\n\tfor n := range genFib() {\n\n\t\t// Una vez que el bucle alcanza un `break` o un retorno anticipado, la función `yield`\n\t\t// pasada al iterador devolverá `false`.\n\t\tif n >= 10 {\n\t\t\tbreak\n\t\t}\n\t\tfmt.Println(n)\n\t}\n}\n",
     "output": "$ go run range-over-iterators.go\n10\n13\n23\nall: [10 13 23]\npart: go\npart: by\npart: example\n0\n1\n1\n2\n3\n5\n8\n",
     "officialUrl": "https://gobyexample.com/range-over-iterators"
   },
@@ -1928,7 +1928,7 @@ const GO_TOPICS = [
     "titleEs": "Manejo Idiomático de Errores",
     "category": "Manejo de Errores y Excepciones",
     "categorySlug": "errores-panico",
-    "categoryIcon": "🛡️",
+    "categoryIcon": "shield",
     "difficulty": "Principiante",
     "summary": "Los errores como valores explícitos de primera clase mediante la interfaz nativa 'error' y el paquete 'errors'.",
     "originalExpl": "En Go es idiomático comunicar errores a través de un valor de retorno explícito y separado. Esto contrasta con las excepciones usadas en lenguajes como Java o Python y con los códigos de resultado sobrecargados en C.",
@@ -1971,28 +1971,28 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "The Go Blog: Working with Errors in Go 1.13",
+        "title": "Blog oficial de Go: Manejo de árboles de errores e inspección con Go 1.13",
         "url": "https://go.dev/blog/go1.13-errors",
         "description": "El artículo canónico sobre error wrapping, errors.Is y errors.As."
       },
       {
-        "title": "Effective Go: Errors",
+        "title": "Guía canónica Effective Go: Manejo y formateo de errores",
         "url": "https://go.dev/doc/effective_go#errors",
         "description": "Convenciones oficiales para el formateo y manejo de errores."
       },
       {
-        "title": "Package errors (Standard Library)",
+        "title": "Paquete errors (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/errors",
         "description": "Documentación oficial del paquete errors, Join, Is y As."
       },
       {
-        "title": "Go by Example: Errors",
+        "title": "Go by Example Original: Errors",
         "url": "https://gobyexample.com/errors",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// In Go it's idiomatic to communicate errors via an\n// explicit, separate return value. This contrasts with\n// the exceptions used in languages like Java, Python and\n// Ruby and the overloaded single result / error value\n// sometimes used in C. Go's approach makes it easy to\n// see which functions return errors and to handle them\n// using the same language constructs employed for other,\n// non-error tasks.\n//\n// See the documentation of the [errors package](https://pkg.go.dev/errors)\n// and [this blog post](https://go.dev/blog/go1.13-errors) for additional\n// details.\n\npackage main\n\nimport (\n\t\"errors\"\n\t\"fmt\"\n)\n\n// By convention, errors are the last return value and\n// have type `error`, a built-in interface.\nfunc f(arg int) (int, error) {\n\tif arg == 42 {\n\t\t// `errors.New` constructs a basic `error` value\n\t\t// with the given error message.\n\t\treturn -1, errors.New(\"can't work with 42\")\n\t}\n\n\t// A `nil` value in the error position indicates that\n\t// there was no error.\n\treturn arg + 3, nil\n}\n\n// A sentinel error is a predeclared variable that is used to\n// signify a specific error condition.\nvar ErrOutOfTea = errors.New(\"no more tea available\")\nvar ErrPower = errors.New(\"can't boil water\")\n\nfunc makeTea(arg int) error {\n\tif arg == 2 {\n\t\treturn ErrOutOfTea\n\t} else if arg == 4 {\n\n\t\t// We can wrap errors with higher-level errors to add\n\t\t// context. The simplest way to do this is with the\n\t\t// `%w` verb in `fmt.Errorf`. Wrapped errors\n\t\t// create a logical chain (A wraps B, which wraps C, etc.)\n\t\t// that can be queried with functions like `errors.Is`\n\t\t// and `errors.AsType`.\n\t\treturn fmt.Errorf(\"making tea: %w\", ErrPower)\n\t}\n\treturn nil\n}\n\nfunc main() {\n\tfor _, i := range []int{7, 42} {\n\n\t\t// It's idiomatic to use an inline error check in the `if`\n\t\t// line.\n\t\tif r, e := f(i); e != nil {\n\t\t\tfmt.Println(\"f failed:\", e)\n\t\t} else {\n\t\t\tfmt.Println(\"f worked:\", r)\n\t\t}\n\t}\n\n\tfor i := range 5 {\n\t\tif err := makeTea(i); err != nil {\n\n\t\t\t// `errors.Is` checks that a given error (or any error in its chain)\n\t\t\t// matches a specific error value. This is especially useful with wrapped or\n\t\t\t// nested errors, allowing you to identify specific error types or sentinel\n\t\t\t// errors in a chain of errors.\n\t\t\tif errors.Is(err, ErrOutOfTea) {\n\t\t\t\tfmt.Println(\"We should buy new tea!\")\n\t\t\t} else if errors.Is(err, ErrPower) {\n\t\t\t\tfmt.Println(\"Now it is dark.\")\n\t\t\t} else {\n\t\t\t\tfmt.Printf(\"unknown error: %s\\n\", err)\n\t\t\t}\n\t\t\tcontinue\n\t\t}\n\n\t\tfmt.Println(\"Tea is ready!\")\n\t}\n}\n",
+    "code": "// En Go es idiomático comunicar errores mediante un\n// valor de retorno explícito y separado. Esto contrasta con\n// las excepciones utilizadas en lenguajes como Java, Python y\n// Ruby, y con el valor único sobrecargado de resultado/error\n// usado a veces en C. El enfoque de Go facilita\n// identificar qué funciones retornan errores y manejarlos\n// utilizando las mismas estructuras del lenguaje empleadas para\n// tareas ordinarias.\n//\n// Consulta la documentación del [paquete errors](https://pkg.go.dev/errors)\n// y [este artículo de blog](https://go.dev/blog/go1.13-errors) para obtener\n// detalles adicionales.\n\npackage main\n\nimport (\n\t\"errors\"\n\t\"fmt\"\n)\n\n// Por convención, los errores se ubican como el último valor de retorno y\n// tienen el tipo `error`, una interfaz incorporada en el lenguaje.\nfunc f(arg int) (int, error) {\n\tif arg == 42 {\n\t\t// `errors.New` construye un valor `error` básico\n\t\t// con el mensaje de error especificado.\n\t\treturn -1, errors.New(\"can't work with 42\")\n\t}\n\n\t// Un valor `nil` en la posición del error indica que\n\t// no hubo ningún error.\n\treturn arg + 3, nil\n}\n\n// Un error centinela (sentinel error) es una variable predeclarada que se utiliza para\n// señalar una condición de error específica.\nvar ErrOutOfTea = errors.New(\"no more tea available\")\nvar ErrPower = errors.New(\"can't boil water\")\n\nfunc makeTea(arg int) error {\n\tif arg == 2 {\n\t\treturn ErrOutOfTea\n\t} else if arg == 4 {\n\n\t\t// Podemos envolver errores con errores de nivel superior para añadir\n\t\t// contexto. La forma más sencilla de lograrlo es con el\n\t\t// verbo `%w` en `fmt.Errorf`. Los errores envueltos\n\t\t// forman una cadena lógica (A envuelve a B, que envuelve a C, etc.)\n\t\t// que puede consultarse mediante funciones como `errors.Is`\n\t\t// y `errors.AsType`.\n\t\treturn fmt.Errorf(\"making tea: %w\", ErrPower)\n\t}\n\treturn nil\n}\n\nfunc main() {\n\tfor _, i := range []int{7, 42} {\n\n\t\t// Es idiomático realizar la comprobación de errores en línea dentro de la\n\t\t// cláusula `if`.\n\t\tif r, e := f(i); e != nil {\n\t\t\tfmt.Println(\"f failed:\", e)\n\t\t} else {\n\t\t\tfmt.Println(\"f worked:\", r)\n\t\t}\n\t}\n\n\tfor i := range 5 {\n\t\tif err := makeTea(i); err != nil {\n\n\t\t\t// `errors.Is` comprueba si un error dado (o cualquiera en su cadena)\n\t\t\t// coincide con un valor de error específico. Esto resulta especialmente útil con errores\n\t\t\t// anidados o envueltos, permitiendo identificar errores centinela en una cadena.\n\t\t\tif errors.Is(err, ErrOutOfTea) {\n\t\t\t\tfmt.Println(\"We should buy new tea!\")\n\t\t\t} else if errors.Is(err, ErrPower) {\n\t\t\t\tfmt.Println(\"Now it is dark.\")\n\t\t\t} else {\n\t\t\t\tfmt.Printf(\"unknown error: %s\\n\", err)\n\t\t\t}\n\t\t\tcontinue\n\t\t}\n\n\t\tfmt.Println(\"Tea is ready!\")\n\t}\n}\n",
     "output": "$ go run errors.go\nf worked: 10\nf failed: can't work with 42\nTea is ready!\nTea is ready!\nWe should buy new tea!\nTea is ready!\nNow it is dark.\n",
     "officialUrl": "https://gobyexample.com/errors"
   },
@@ -2003,7 +2003,7 @@ const GO_TOPICS = [
     "titleEs": "Errores Personalizados y Tipos de Error",
     "category": "Manejo de Errores y Excepciones",
     "categorySlug": "errores-panico",
-    "categoryIcon": "🛡️",
+    "categoryIcon": "shield",
     "difficulty": "Intermedio",
     "summary": "Creación de estructuras con metadatos de error ricos implementando el método Error() string y soporte para Unwrap.",
     "originalExpl": "Es posible usar tipos personalizados como errores implementando el método Error() en ellos. Esto permite asociar campos con información de depuración detallada (códigos de estado, marcas de tiempo, rutas de archivo) al error.",
@@ -2044,28 +2044,28 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Tour: Errors",
+        "title": "Tour interactivo de Go: Manejo idiomático de errores",
         "url": "https://go.dev/tour/methods/19",
         "description": "Implementación de errores personalizados en el tour oficial."
       },
       {
-        "title": "Dave Cheney: Don't just check errors, handle them gracefully",
+        "title": "Dave Cheney: No solo compruebes errores, gestiónalos con elegancia",
         "url": "https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully",
         "description": "Artículo de referencia sobre diseño e inspección de errores en Go."
       },
       {
-        "title": "Go Blog: Error handling and Go",
+        "title": "Blog oficial de Go: Manejo idiomático de errores",
         "url": "https://go.dev/blog/error-handling-and-go",
         "description": "Patrones de diseño de errores de la biblioteca estándar."
       },
       {
-        "title": "Go by Example: Custom Errors",
+        "title": "Go by Example Original: Custom Errors",
         "url": "https://gobyexample.com/custom-errors",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// It's possible to define custom error types by\n// implementing the `Error()` method on them. Here's a\n// variant on the example above that uses a custom type\n// to explicitly represent an argument error.\n\npackage main\n\nimport (\n\t\"errors\"\n\t\"fmt\"\n)\n\n// A custom error type usually has the suffix \"Error\".\ntype argError struct {\n\targ     int\n\tmessage string\n}\n\n// Adding this `Error` method makes `argError` implement\n// the `error` interface.\nfunc (e *argError) Error() string {\n\treturn fmt.Sprintf(\"%d - %s\", e.arg, e.message)\n}\n\nfunc f(arg int) (int, error) {\n\tif arg == 42 {\n\n\t\t// Return our custom error.\n\t\treturn -1, &argError{arg, \"can't work with it\"}\n\t}\n\treturn arg + 3, nil\n}\n\nfunc main() {\n\n\t// `errors.AsType` is a more advanced version of `errors.Is`.\n\t// It checks that a given error (or any error in its chain)\n\t// matches a specific error type and converts to a value\n\t// of that type, also returning `true`. If there's no match, the\n\t// second return value is `false`.\n\t_, err := f(42)\n\tif ae, ok := errors.AsType[*argError](err); ok {\n\t\tfmt.Println(ae.arg)\n\t\tfmt.Println(ae.message)\n\t} else {\n\t\tfmt.Println(\"err doesn't match argError\")\n\t}\n}\n",
+    "code": "// Es posible definir tipos de error personalizados\n// implementando en ellos el método `Error()`. Aquí tenemos una\n// variante del ejemplo anterior que utiliza un tipo personalizado\n// para representar explícitamente un error de argumento.\n\npackage main\n\nimport (\n\t\"errors\"\n\t\"fmt\"\n)\n\n// Un tipo de error personalizado habitualmente lleva el sufijo \"Error\".\ntype argError struct {\n\targ     int\n\tmessage string\n}\n\n// Añadir este método `Error` hace que `argError` implemente\n// la interfaz `error`.\nfunc (e *argError) Error() string {\n\treturn fmt.Sprintf(\"%d - %s\", e.arg, e.message)\n}\n\nfunc f(arg int) (int, error) {\n\tif arg == 42 {\n\n\t\t// Retornamos nuestro error personalizado.\n\t\treturn -1, &argError{arg, \"can't work with it\"}\n\t}\n\treturn arg + 3, nil\n}\n\nfunc main() {\n\n\t// `errors.AsType` es una versión avanzada de `errors.Is`.\n\t// Comprueba si un error dado (o cualquiera en su cadena)\n\t// coincide con un tipo de error específico y lo convierte a un valor\n\t// de dicho tipo, devolviendo además `true`. Si no hay coincidencia, el\n\t// segundo valor retornado es `false`.\n\t_, err := f(42)\n\tif ae, ok := errors.AsType[*argError](err); ok {\n\t\tfmt.Println(ae.arg)\n\t\tfmt.Println(ae.message)\n\t} else {\n\t\tfmt.Println(\"err doesn't match argError\")\n\t}\n}\n",
     "output": "$ go run custom-errors.go\n42\ncan't work with it\n",
     "officialUrl": "https://gobyexample.com/custom-errors"
   },
@@ -2076,7 +2076,7 @@ const GO_TOPICS = [
     "titleEs": "Goroutines (Hilos Ligeros de Concurrencia)",
     "category": "Concurrencia y Canales",
     "categorySlug": "concurrencia-canales",
-    "categoryIcon": "🚀",
+    "categoryIcon": "rocket",
     "difficulty": "Intermedio",
     "summary": "Subprocesos ultra-ligeros administrados por el runtime de Go iniciados con la palabra clave 'go'.",
     "originalExpl": "Una goroutine es un hilo ligero de ejecución gestionado por el runtime de Go. Se inician anteponiendo la palabra clave 'go' a una llamada de función normal o anónima.",
@@ -2117,29 +2117,29 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Tour: Goroutines",
+        "title": "Tour interactivo de Go: Goroutines y concurrencia",
         "url": "https://go.dev/tour/concurrency/1",
         "description": "Práctica con goroutines en el tour interactivo."
       },
       {
-        "title": "Effective Go: Goroutines",
+        "title": "Guía canónica Effective Go: Goroutines y procesos ligeros",
         "url": "https://go.dev/doc/effective_go#goroutines",
         "description": "Filosofía del diseño concurrente de Go."
       },
       {
-        "title": "Ardan Labs: Scheduling In Go",
+        "title": "Ardan Labs: El planificador de tareas (Scheduler) de Go en profundidad",
         "url": "https://www.ardanlabs.com/blog/2018/08/scheduling-in-go-part1.html",
         "description": "Trilogía de artículos en profundidad sobre el funcionamiento del scheduler de Go."
       },
       {
-        "title": "Go by Example: Goroutines",
+        "title": "Go by Example Original: Goroutines",
         "url": "https://gobyexample.com/goroutines",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// A _goroutine_ is a lightweight thread of execution.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc f(from string) {\n\tfor i := range 3 {\n\t\tfmt.Println(from, \":\", i)\n\t}\n}\n\nfunc main() {\n\n\t// Suppose we have a function call `f(s)`. Here's how\n\t// we'd call that in the usual way, running it\n\t// synchronously.\n\tf(\"direct\")\n\n\t// To invoke this function in a goroutine, use\n\t// `go f(s)`. This new goroutine will execute\n\t// concurrently with the calling one.\n\tgo f(\"goroutine\")\n\n\t// You can also start a goroutine for an anonymous\n\t// function call.\n\tgo func(msg string) {\n\t\tfmt.Println(msg)\n\t}(\"going\")\n\n\t// Our two function calls are running asynchronously in\n\t// separate goroutines now. Wait for them to finish\n\t// (for a more robust approach, use a [WaitGroup](waitgroups)).\n\ttime.Sleep(time.Second)\n\tfmt.Println(\"done\")\n}\n",
-    "output": "# When we run this program, we see the output of the\n# blocking call first, then the output of the two\n# goroutines. The goroutines' output may be interleaved,\n# because goroutines are being run concurrently by the\n# Go runtime.\n$ go run goroutines.go\ndirect : 0\ndirect : 1\ndirect : 2\ngoroutine : 0\ngoing\ngoroutine : 1\ngoroutine : 2\ndone\n\n# Next we'll look at a complement to goroutines in\n# concurrent Go programs: channels.\n",
+    "code": "// Una _goroutine_ es un hilo ligero de ejecución gestionado por el runtime de Go.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc f(from string) {\n\tfor i := range 3 {\n\t\tfmt.Println(from, \":\", i)\n\t}\n}\n\nfunc main() {\n\n\t// Supongamos que tenemos una llamada a función `f(s)`. Así es como\n\t// la llamaríamos de la manera habitual, ejecutándola\n\t// de forma síncrona.\n\tf(\"direct\")\n\n\t// Para invocar esta función en una goroutine, usa\n\t// `go f(s)`. Esta nueva goroutine se ejecutará\n\t// de manera concurrente con la función invocadora.\n\tgo f(\"goroutine\")\n\n\t// También puedes iniciar una goroutine para una llamada\n\t// a función anónima.\n\tgo func(msg string) {\n\t\tfmt.Println(msg)\n\t}(\"going\")\n\n\t// Nuestras dos llamadas a función se están ejecutando asíncronamente en\n\t// goroutines separadas en este momento. Esperamos a que terminen\n\t// (para un enfoque más robusto y profesional, usa un [WaitGroup](waitgroups)).\n\ttime.Sleep(time.Second)\n\tfmt.Println(\"done\")\n}\n",
+    "output": "# Al ejecutar este programa, observamos primero la salida de la llamada\n# bloqueante (síncrona), seguida por la salida de las dos\n# goroutines. La salida de las goroutines puede aparecer intercalada,\n# ya que el runtime de Go las ejecuta concurrentemente.\n$ go run goroutines.go\ndirect : 0\ndirect : 1\ndirect : 2\ngoroutine : 0\ngoing\ngoroutine : 1\ngoroutine : 2\ndone\n\n# A continuación veremos el complemento ideal para las goroutines en\n# programas concurrentes de Go: los canales.\n",
     "officialUrl": "https://gobyexample.com/goroutines"
   },
   {
@@ -2149,7 +2149,7 @@ const GO_TOPICS = [
     "titleEs": "Canales (Channels) y Comunicación",
     "category": "Concurrencia y Canales",
     "categorySlug": "concurrencia-canales",
-    "categoryIcon": "🚀",
+    "categoryIcon": "rocket",
     "difficulty": "Intermedio",
     "summary": "Conductos tipados para conectar goroutines concurrentes y permitir el paso de datos y sincronización sin bloqueos manuales.",
     "originalExpl": "Los canales son los conductos que conectan goroutines concurrentes. Puedes enviar valores a los canales desde una goroutine y recibir esos valores en otra goroutine con el operador '<-'.",
@@ -2190,29 +2190,29 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Tour: Channels",
+        "title": "Tour interactivo de Go: Canales de comunicación",
         "url": "https://go.dev/tour/concurrency/2",
         "description": "Ejercicios con canales y sincronización básica."
       },
       {
-        "title": "Effective Go: Channels",
+        "title": "Guía canónica Effective Go: Canales y comunicación concurrente",
         "url": "https://go.dev/doc/effective_go#channels",
         "description": "Principios de comunicación y concurrencia con canales."
       },
       {
-        "title": "Kavya Joshi: Understanding Channels",
+        "title": "Kavya Joshi: Entendiendo la estructura interna de los canales en Go",
         "url": "https://www.youtube.com/watch?v=KBZlN0nGxzU",
         "description": "Charla magistral de GopherCon sobre la estructura hchan y funcionamiento interno."
       },
       {
-        "title": "Go by Example: Channels",
+        "title": "Go by Example Original: Channels",
         "url": "https://gobyexample.com/channels",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// _Channels_ are the pipes that connect concurrent\n// goroutines. You can send values into channels from one\n// goroutine and receive those values into another\n// goroutine.\n\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\n\t// Create a new channel with `make(chan val-type)`.\n\t// Channels are typed by the values they convey.\n\tmessages := make(chan string)\n\n\t// _Send_ a value into a channel using the `channel <-`\n\t// syntax. Here we send `\"ping\"`  to the `messages`\n\t// channel we made above, from a new goroutine.\n\tgo func() { messages <- \"ping\" }()\n\n\t// The `<-channel` syntax _receives_ a value from the\n\t// channel. Here we'll receive the `\"ping\"` message\n\t// we sent above and print it out.\n\tmsg := <-messages\n\tfmt.Println(msg)\n}\n",
-    "output": "# When we run the program the `\"ping\"` message is\n# successfully passed from one goroutine to another via\n# our channel.\n$ go run channels.go \nping\n\n# By default sends and receives block until both the\n# sender and receiver are ready. This property allowed\n# us to wait at the end of our program for the `\"ping\"`\n# message without having to use any other synchronization.\n",
+    "code": "// Los _canales_ (channels) son los conductos que comunican goroutines\n// concurrentes. Puedes enviar valores a los canales desde una\n// goroutine y recibir dichos valores en otra\n// goroutine.\n\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\n\t// Crea un nuevo canal con `make(chan val-type)`.\n\t// Los canales están tipados según los valores que transmiten.\n\tmessages := make(chan string)\n\n\t// _Envía_ un valor a un canal utilizando la sintaxis\n\t// `channel <-`. Aquí enviamos `\"ping\"` al canal `messages`\n\t// que creamos arriba, desde una nueva goroutine.\n\tgo func() { messages <- \"ping\" }()\n\n\t// La sintaxis `<-channel` _recibe_ un valor desde el\n\t// canal. Aquí recibiremos el mensaje `\"ping\"` que\n\t// enviamos anteriormente y lo imprimiremos.\n\tmsg := <-messages\n\tfmt.Println(msg)\n}\n",
+    "output": "# Al ejecutar el programa, el mensaje `\"ping\"` se\n# transmite exitosamente de una goroutine a otra a través\n# de nuestro canal.\n$ go run channels.go \nping\n\n# Por defecto, los envíos y recepciones se bloquean hasta que tanto el\n# emisor como el receptor estén listos. Esta propiedad nos permitió\n# esperar al final de nuestro programa la llegada del mensaje `\"ping\"`\n# sin necesidad de recurrir a ningún otro mecanismo de sincronización.\n",
     "officialUrl": "https://gobyexample.com/channels"
   },
   {
@@ -2222,7 +2222,7 @@ const GO_TOPICS = [
     "titleEs": "Canales con Búfer (Buffered Channels)",
     "category": "Concurrencia y Canales",
     "categorySlug": "concurrencia-canales",
-    "categoryIcon": "🚀",
+    "categoryIcon": "rocket",
     "difficulty": "Intermedio",
     "summary": "Canales con capacidad predefinida que aceptan un número limitado de valores sin un receptor concurrente inmediato.",
     "originalExpl": "Por defecto los canales no tienen búfer. Los canales con búfer aceptan un número limitado de valores sin un receptor correspondiente para esos valores. Se inicializan pasando la capacidad a make().",
@@ -2263,28 +2263,28 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Tour: Buffered Channels",
+        "title": "Tour interactivo de Go: Canales con búfer",
         "url": "https://go.dev/tour/concurrency/3",
         "description": "Práctica con canales con capacidad en el tour interactivo."
       },
       {
-        "title": "Effective Go: Buffered channels",
+        "title": "Guía canónica Effective Go: Canales con búfer como semáforos",
         "url": "https://go.dev/doc/effective_go#buffered_channels",
         "description": "Uso de canales con búfer como semáforos de concurrencia."
       },
       {
-        "title": "Go Spec: Channel types",
+        "title": "Especificación de Go: Tipos de canal y operadores de comunicación",
         "url": "https://go.dev/ref/spec#Channel_types",
         "description": "Especificación del estándar sobre capacidad y almacenamiento en canales."
       },
       {
-        "title": "Go by Example: Channel Buffering",
+        "title": "Go by Example Original: Channel Buffering",
         "url": "https://gobyexample.com/channel-buffering",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// By default channels are _unbuffered_, meaning that they\n// will only accept sends (`chan <-`) if there is a\n// corresponding receive (`<- chan`) ready to receive the\n// sent value. _Buffered channels_ accept a limited\n// number of  values without a corresponding receiver for\n// those values.\n\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\n\t// Here we `make` a channel of strings buffering up to\n\t// 2 values.\n\tmessages := make(chan string, 2)\n\n\t// Because this channel is buffered, we can send these\n\t// values into the channel without a corresponding\n\t// concurrent receive.\n\tmessages <- \"buffered\"\n\tmessages <- \"channel\"\n\n\t// Later we can receive these two values as usual.\n\tfmt.Println(<-messages)\n\tfmt.Println(<-messages)\n}\n",
+    "code": "// Por defecto los canales son _no almacenados en búfer_ (unbuffered), lo que significa que\n// solo aceptarán envíos (`chan <-`) si existe una\n// recepción correspondiente (`<- chan`) lista para recibir el\n// valor enviado. Los _canales con búfer_ (buffered channels) aceptan una cantidad\n// limitada de valores sin que exista un receptor concurrente para ellos.\n\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\n\t// Aquí creamos con `make` un canal de cadenas con búfer de hasta\n\t// 2 valores.\n\tmessages := make(chan string, 2)\n\n\t// Dado que este canal tiene búfer, podemos enviar estos\n\t// valores al canal sin una recepción concurrente\n\t// correspondiente.\n\tmessages <- \"buffered\"\n\tmessages <- \"channel\"\n\n\t// Posteriormente podemos recibir ambos valores como de costumbre.\n\tfmt.Println(<-messages)\n\tfmt.Println(<-messages)\n}\n",
     "output": "$ go run channel-buffering.go \nbuffered\nchannel\n",
     "officialUrl": "https://gobyexample.com/channel-buffering"
   },
@@ -2295,7 +2295,7 @@ const GO_TOPICS = [
     "titleEs": "Sincronización con Canales",
     "category": "Concurrencia y Canales",
     "categorySlug": "concurrencia-canales",
-    "categoryIcon": "🚀",
+    "categoryIcon": "rocket",
     "difficulty": "Intermedio",
     "summary": "Uso de operaciones de recepción bloqueantes para coordinar la ejecución entre múltiples goroutines.",
     "originalExpl": "Podemos usar canales para sincronizar la ejecución a través de goroutines. Aquí hay un ejemplo del uso de una recepción bloqueante para esperar a que una goroutine termine.",
@@ -2336,23 +2336,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "The Go Memory Model: Channel communication",
+        "title": "Modelo de memoria de Go: Comunicación por canales",
         "url": "https://go.dev/ref/mem#chan",
         "description": "Especificación oficial de las garantías happens-before en canales."
       },
       {
-        "title": "Go by Example: Channel Synchronization",
+        "title": "Go by Example Original: Channel Synchronization",
         "url": "https://gobyexample.com/channel-synchronization",
         "description": "Ejemplo original en Go by Example."
       },
       {
-        "title": "Effective Go: Synchronization",
+        "title": "Guía canónica Effective Go: Coordinación y primitivas de sincronización",
         "url": "https://go.dev/doc/effective_go#concurrency",
         "description": "Principios de diseño sobre coordinación de procesos ligeros."
       }
     ],
-    "code": "// We can use channels to synchronize execution\n// across goroutines. Here's an example of using a\n// blocking receive to wait for a goroutine to finish.\n// When waiting for multiple goroutines to finish,\n// you may prefer to use a [WaitGroup](waitgroups).\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\n// This is the function we'll run in a goroutine. The\n// `done` channel will be used to notify another\n// goroutine that this function's work is done.\nfunc worker(done chan bool) {\n\tfmt.Print(\"working...\")\n\ttime.Sleep(time.Second)\n\tfmt.Println(\"done\")\n\n\t// Send a value to notify that we're done.\n\tdone <- true\n}\n\nfunc main() {\n\n\t// Start a worker goroutine, giving it the channel to\n\t// notify on.\n\tdone := make(chan bool, 1)\n\tgo worker(done)\n\n\t// Block until we receive a notification from the\n\t// worker on the channel.\n\t<-done\n}\n",
-    "output": "$ go run channel-synchronization.go      \nworking...done                  \n\n# If you removed the `<- done` line from this program,\n# the program could exit before the `worker` finished\n# its work, or in some cases even before it started.\n",
+    "code": "// Podemos usar canales para sincronizar la ejecución\n// entre distintas goroutines. Aquí tenemos un ejemplo de cómo usar una\n// recepción bloqueante para esperar a que una goroutine finalice.\n// Al esperar que terminen múltiples goroutines,\n// suele ser preferible utilizar un [WaitGroup](waitgroups).\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\n// Esta es la función que ejecutaremos en una goroutine. El\n// canal `done` se utilizará para notificar a otra\n// goroutine que el trabajo de esta función ha finalizado.\nfunc worker(done chan bool) {\n\tfmt.Print(\"working...\")\n\ttime.Sleep(time.Second)\n\tfmt.Println(\"done\")\n\n\t// Enviamos un valor para notificar que hemos terminado.\n\tdone <- true\n}\n\nfunc main() {\n\n\t// Iniciamos una goroutine trabajadora, entregándole el canal para\n\t// que nos notifique.\n\tdone := make(chan bool, 1)\n\tgo worker(done)\n\n\t// Nos bloqueamos hasta recibir la notificación de la\n\t// goroutine trabajadora a través del canal.\n\t<-done\n}\n",
+    "output": "$ go run channel-synchronization.go      \nworking...done                  \n\n# Si eliminaras la línea `<- done` de este programa,\n# el programa podría terminar antes de que el `worker` finalizara\n# su trabajo, o en algunos casos incluso antes de que comenzara.\n",
     "officialUrl": "https://gobyexample.com/channel-synchronization"
   },
   {
@@ -2362,7 +2362,7 @@ const GO_TOPICS = [
     "titleEs": "Direcciones de Canales en Parámetros",
     "category": "Concurrencia y Canales",
     "categorySlug": "concurrencia-canales",
-    "categoryIcon": "🚀",
+    "categoryIcon": "rocket",
     "difficulty": "Intermedio",
     "summary": "Restricción de canales a solo-envío (chan<-) o solo-recepción (<-chan) para aumentar la seguridad de tipos en funciones.",
     "originalExpl": "Al usar canales como parámetros de funciones, puedes especificar si un canal está destinado únicamente a enviar o recibir valores. Esta especificidad aumenta la seguridad de tipos del programa.",
@@ -2404,28 +2404,28 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Spec: Channel types and directions",
+        "title": "Especificación de Go: Direcciones de canal (solo envío y solo recepción)",
         "url": "https://go.dev/ref/spec#Channel_types",
         "description": "Especificación formal de la sintaxis y reglas de canales direccionales."
       },
       {
-        "title": "The Go Blog: Go Concurrency Patterns: Pipelines",
+        "title": "Blog oficial de Go: Patrones de concurrencia: Diseño de pipelines de procesamiento",
         "url": "https://go.dev/blog/pipelines",
         "description": "Guía canónica de diseño de pipelines concurrentes con canales direccionados."
       },
       {
-        "title": "Effective Go: Channels of channels",
+        "title": "Guía canónica Effective Go: Canales de canales y multiplexación",
         "url": "https://go.dev/doc/effective_go#chan_of_chan",
         "description": "Patrones avanzados con canales en Effective Go."
       },
       {
-        "title": "Go by Example: Channel Directions",
+        "title": "Go by Example Original: Channel Directions",
         "url": "https://gobyexample.com/channel-directions",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// When using channels as function parameters, you can\n// specify if a channel is meant to only send or receive\n// values. This specificity increases the type-safety of\n// the program.\n\npackage main\n\nimport \"fmt\"\n\n// This `ping` function only accepts a channel for sending\n// values. It would be a compile-time error to try to\n// receive on this channel.\nfunc ping(pings chan<- string, msg string) {\n\tpings <- msg\n}\n\n// The `pong` function accepts one channel for receives\n// (`pings`) and a second for sends (`pongs`).\nfunc pong(pings <-chan string, pongs chan<- string) {\n\tmsg := <-pings\n\tpongs <- msg\n}\n\nfunc main() {\n\tpings := make(chan string, 1)\n\tpongs := make(chan string, 1)\n\tping(pings, \"passed message\")\n\tpong(pings, pongs)\n\tfmt.Println(<-pongs)\n}\n",
+    "code": "// Al usar canales como parámetros de funciones, puedes\n// especificar si el canal está destinado únicamente a enviar o a recibir\n// valores. Esta especificidad incrementa la seguridad de tipos\n// del programa en tiempo de compilación.\n\npackage main\n\nimport \"fmt\"\n\n// Esta función `ping` solo acepta un canal para enviar\n// valores. Intentar recibir desde este canal generaría\n// un error en tiempo de compilación.\nfunc ping(pings chan<- string, msg string) {\n\tpings <- msg\n}\n\n// La función `pong` acepta un canal para recepciones\n// (`pings`) y un segundo canal para envíos (`pongs`).\nfunc pong(pings <-chan string, pongs chan<- string) {\n\tmsg := <-pings\n\tpongs <- msg\n}\n\nfunc main() {\n\tpings := make(chan string, 1)\n\tpongs := make(chan string, 1)\n\tping(pings, \"passed message\")\n\tpong(pings, pongs)\n\tfmt.Println(<-pongs)\n}\n",
     "output": "$ go run channel-directions.go\npassed message\n",
     "officialUrl": "https://gobyexample.com/channel-directions"
   },
@@ -2436,7 +2436,7 @@ const GO_TOPICS = [
     "titleEs": "Multiplexación con Select",
     "category": "Concurrencia y Canales",
     "categorySlug": "concurrencia-canales",
-    "categoryIcon": "🚀",
+    "categoryIcon": "rocket",
     "difficulty": "Avanzado",
     "summary": "Estructura de control para esperar simultáneamente múltiples operaciones de comunicación en canales.",
     "originalExpl": "La sentencia 'select' de Go te permite esperar en múltiples operaciones de canal. Combinar goroutines y canales con select es una de las características más poderosas de Go.",
@@ -2477,29 +2477,29 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Tour: Select",
+        "title": "Tour interactivo de Go: Multiplexación con select",
         "url": "https://go.dev/tour/concurrency/5",
         "description": "Práctica con la sentencia select en el tour oficial."
       },
       {
-        "title": "Go Spec: Select statements",
+        "title": "Especificación de Go: Sentencias select de comunicación múltiple",
         "url": "https://go.dev/ref/spec#Select_statements",
         "description": "Especificación de las reglas de ejecución y evaluación de select."
       },
       {
-        "title": "The Go Blog: Go Concurrency Patterns: Timing out, moving on",
+        "title": "Blog oficial de Go: Patrones de concurrencia: Tiempos de espera y cancelación",
         "url": "https://go.dev/blog/concurrency-timeouts",
         "description": "Técnicas avanzadas de timeouts y cancelación con select."
       },
       {
-        "title": "Go by Example: Select",
+        "title": "Go by Example Original: Select",
         "url": "https://gobyexample.com/select",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// Go's _select_ lets you wait on multiple channel\n// operations. Combining goroutines and channels with\n// select is a powerful feature of Go.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc main() {\n\n\t// For our example we'll select across two channels.\n\tc1 := make(chan string)\n\tc2 := make(chan string)\n\n\t// Each channel will receive a value after some amount\n\t// of time, to simulate e.g. blocking RPC operations\n\t// executing in concurrent goroutines.\n\tgo func() {\n\t\ttime.Sleep(1 * time.Second)\n\t\tc1 <- \"one\"\n\t}()\n\tgo func() {\n\t\ttime.Sleep(2 * time.Second)\n\t\tc2 <- \"two\"\n\t}()\n\n\t// We'll use `select` to await both of these values\n\t// simultaneously, printing each one as it arrives.\n\tfor range 2 {\n\t\tselect {\n\t\tcase msg1 := <-c1:\n\t\t\tfmt.Println(\"received\", msg1)\n\t\tcase msg2 := <-c2:\n\t\t\tfmt.Println(\"received\", msg2)\n\t\t}\n\t}\n}\n",
-    "output": "# We receive the values `\"one\"` and then `\"two\"` as\n# expected.\n$ time go run select.go \nreceived one\nreceived two\n\n# Note that the total execution time is only ~2 seconds\n# since both the 1 and 2 second `Sleeps` execute\n# concurrently.\nreal\t0m2.245s\n",
+    "code": "// La sentencia _select_ de Go te permite esperar sobre múltiples operaciones\n// de canales. Combinar goroutines y canales con\n// select constituye una de las características más potentes de Go.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc main() {\n\n\t// Para nuestro ejemplo haremos un select sobre dos canales.\n\tc1 := make(chan string)\n\tc2 := make(chan string)\n\n\t// Cada canal recibirá un valor después de cierto tiempo,\n\t// para simular, por ejemplo, operaciones RPC bloqueantes\n\t// ejecutándose en goroutines concurrentes.\n\tgo func() {\n\t\ttime.Sleep(1 * time.Second)\n\t\tc1 <- \"one\"\n\t}()\n\tgo func() {\n\t\ttime.Sleep(2 * time.Second)\n\t\tc2 <- \"two\"\n\t}()\n\n\t// Usaremos `select` para esperar ambos valores de forma\n\t// simultánea, imprimiendo cada uno a medida que arribe.\n\tfor range 2 {\n\t\tselect {\n\t\tcase msg1 := <-c1:\n\t\t\tfmt.Println(\"received\", msg1)\n\t\tcase msg2 := <-c2:\n\t\t\tfmt.Println(\"received\", msg2)\n\t\t}\n\t}\n}\n",
+    "output": "# Recibimos los valores `\"one\"` y luego `\"two\"` como\n# se esperaba.\n$ time go run select.go \nreceived one\nreceived two\n\n# Ten en cuenta que el tiempo total de ejecución es de apenas ~2 segundos,\n# ya que ambos `Sleep` de 1 y 2 segundos se ejecutan de\n# forma concurrente.\nreal\t0m2.245s\n",
     "officialUrl": "https://gobyexample.com/select"
   },
   {
@@ -2509,7 +2509,7 @@ const GO_TOPICS = [
     "titleEs": "Timeouts y Temporizadores en Canales",
     "category": "Concurrencia y Canales",
     "categorySlug": "concurrencia-canales",
-    "categoryIcon": "🚀",
+    "categoryIcon": "rocket",
     "difficulty": "Intermedio",
     "summary": "Control de límites de tiempo para operaciones concurrentes mediante la combinación de select y time.After.",
     "originalExpl": "Los timeouts son importantes para programas que se conectan a recursos externos o que necesitan limitar el tiempo de ejecución. Implementar timeouts en Go es fácil y elegante gracias a los canales y select.",
@@ -2550,23 +2550,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "The Go Blog: Concurrency Timeouts",
+        "title": "Blog oficial de Go: Gestión de tiempos de espera y cancelación en concurrencia",
         "url": "https://go.dev/blog/concurrency-timeouts",
         "description": "Artículo oficial de Go sobre el patrón canónico de timeout con canales."
       },
       {
-        "title": "Package time: After and Timer",
+        "title": "Paquete time: After and Timer",
         "url": "https://pkg.go.dev/time#After",
         "description": "Documentación oficial de la biblioteca estándar para time.After."
       },
       {
-        "title": "Go by Example: Timeouts",
+        "title": "Go by Example Original: Timeouts",
         "url": "https://gobyexample.com/timeouts",
         "description": "Ejemplo interactivo en Go by Example."
       }
     ],
-    "code": "// _Timeouts_ are important for programs that connect to\n// external resources or that otherwise need to bound\n// execution time. Implementing timeouts in Go is easy and\n// elegant thanks to channels and `select`.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc main() {\n\n\t// For our example, suppose we're executing an external\n\t// call that returns its result on a channel `c1`\n\t// after 2s. Note that the channel is buffered, so the\n\t// send in the goroutine is nonblocking. This is a\n\t// common pattern to prevent goroutine leaks in case the\n\t// channel is never read.\n\tc1 := make(chan string, 1)\n\tgo func() {\n\t\ttime.Sleep(2 * time.Second)\n\t\tc1 <- \"result 1\"\n\t}()\n\n\t// Here's the `select` implementing a timeout.\n\t// `res := <-c1` awaits the result and `<-time.After`\n\t// awaits a value to be sent after the timeout of\n\t// 1s. Since `select` proceeds with the first\n\t// receive that's ready, we'll take the timeout case\n\t// if the operation takes more than the allowed 1s.\n\tselect {\n\tcase res := <-c1:\n\t\tfmt.Println(res)\n\tcase <-time.After(1 * time.Second):\n\t\tfmt.Println(\"timeout 1\")\n\t}\n\n\t// If we allow a longer timeout of 3s, then the receive\n\t// from `c2` will succeed and we'll print the result.\n\tc2 := make(chan string, 1)\n\tgo func() {\n\t\ttime.Sleep(2 * time.Second)\n\t\tc2 <- \"result 2\"\n\t}()\n\tselect {\n\tcase res := <-c2:\n\t\tfmt.Println(res)\n\tcase <-time.After(3 * time.Second):\n\t\tfmt.Println(\"timeout 2\")\n\t}\n}\n",
-    "output": "# Running this program shows the first operation timing\n# out and the second succeeding.\n$ go run timeouts.go \ntimeout 1\nresult 2\n",
+    "code": "// Los _tiempos de espera_ (timeouts) son vitales para programas que se conectan a\n// recursos externos o que de algún modo necesitan acotar\n// el tiempo de ejecución. Implementar timeouts en Go es sencillo y\n// elegante gracias a los canales y a la sentencia `select`.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc main() {\n\n\t// Para nuestro ejemplo, supongamos que ejecutamos una llamada\n\t// externa que retorna su resultado en un canal `c1`\n\t// tras 2s. Nota que el canal tiene búfer, por lo que el\n\t// envío en la goroutine no es bloqueante. Este es un\n\t// patrón común para prevenir fugas de goroutines (goroutine leaks) si el\n\t// canal nunca llega a leerse.\n\tc1 := make(chan string, 1)\n\tgo func() {\n\t\ttime.Sleep(2 * time.Second)\n\t\tc1 <- \"result 1\"\n\t}()\n\n\t// Aquí está el `select` que implementa el tiempo de espera.\n\t// `res := <-c1` aguarda el resultado y `<-time.After`\n\t// aguarda el envío de un valor tras un timeout de\n\t// 1s. Dado que `select` procede con la primera\n\t// recepción lista, tomaremos el caso de timeout\n\t// si la operación demora más del segundo permitido.\n\tselect {\n\tcase res := <-c1:\n\t\tfmt.Println(res)\n\tcase <-time.After(1 * time.Second):\n\t\tfmt.Println(\"timeout 1\")\n\t}\n\n\t// Si permitimos un timeout más holgado de 3s, la recepción\n\t// desde `c2` tendrá éxito e imprimiremos el resultado.\n\tc2 := make(chan string, 1)\n\tgo func() {\n\t\ttime.Sleep(2 * time.Second)\n\t\tc2 <- \"result 2\"\n\t}()\n\tselect {\n\tcase res := <-c2:\n\t\tfmt.Println(res)\n\tcase <-time.After(3 * time.Second):\n\t\tfmt.Println(\"timeout 2\")\n\t}\n}\n",
+    "output": "# Ejecutar este programa muestra cómo la primera operación agota el tiempo\n# de espera (timeout) y la segunda culmina con éxito.\n$ go run timeouts.go \ntimeout 1\nresult 2\n",
     "officialUrl": "https://gobyexample.com/timeouts"
   },
   {
@@ -2576,7 +2576,7 @@ const GO_TOPICS = [
     "titleEs": "Operaciones No Bloqueantes en Canales",
     "category": "Concurrencia y Canales",
     "categorySlug": "concurrencia-canales",
-    "categoryIcon": "🚀",
+    "categoryIcon": "rocket",
     "difficulty": "Intermedio",
     "summary": "Envíos y recepciones que continúan de inmediato sin pausar la goroutine si el canal no está listo, usando select con default.",
     "originalExpl": "Los envíos y recepciones básicos en canales son bloqueantes. Sin embargo, podemos usar select con una cláusula default para implementar envíos, recepciones e incluso select multidireccionales no bloqueantes.",
@@ -2617,22 +2617,22 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Tour: Default Selection",
+        "title": "Tour interactivo de Go: Selección por defecto en select",
         "url": "https://go.dev/tour/concurrency/6",
         "description": "Práctica con select y default en el tour interactivo."
       },
       {
-        "title": "Effective Go: Non-blocking communication",
+        "title": "Guía canónica Effective Go: Comunicación no bloqueante con select",
         "url": "https://go.dev/doc/effective_go#channels",
         "description": "Casos de uso idiomáticos de canales no bloqueantes."
       },
       {
-        "title": "Go by Example: Non-Blocking Channel Operations",
+        "title": "Go by Example Original: Non-Blocking Channel Operations",
         "url": "https://gobyexample.com/non-blocking-channel-operations",
         "description": "Ejemplo en Go by Example."
       }
     ],
-    "code": "// Basic sends and receives on channels are blocking.\n// However, we can use `select` with a `default` clause to\n// implement _non-blocking_ sends, receives, and even\n// non-blocking multi-way `select`s.\n\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\tmessages := make(chan string)\n\tsignals := make(chan bool)\n\n\t// Here's a non-blocking receive. If a value is\n\t// available on `messages` then `select` will take\n\t// the `<-messages` `case` with that value. If not\n\t// it will immediately take the `default` case.\n\tselect {\n\tcase msg := <-messages:\n\t\tfmt.Println(\"received message\", msg)\n\tdefault:\n\t\tfmt.Println(\"no message received\")\n\t}\n\n\t// A non-blocking send works similarly. Here `msg`\n\t// cannot be sent to the `messages` channel, because\n\t// the channel has no buffer and there is no receiver.\n\t// Therefore the `default` case is selected.\n\tmsg := \"hi\"\n\tselect {\n\tcase messages <- msg:\n\t\tfmt.Println(\"sent message\", msg)\n\tdefault:\n\t\tfmt.Println(\"no message sent\")\n\t}\n\n\t// We can use multiple `case`s above the `default`\n\t// clause to implement a multi-way non-blocking\n\t// select. Here we attempt non-blocking receives\n\t// on both `messages` and `signals`.\n\tselect {\n\tcase msg := <-messages:\n\t\tfmt.Println(\"received message\", msg)\n\tcase sig := <-signals:\n\t\tfmt.Println(\"received signal\", sig)\n\tdefault:\n\t\tfmt.Println(\"no activity\")\n\t}\n}\n",
+    "code": "// Los envíos y recepciones básicos en canales son bloqueantes.\n// Sin embargo, podemos usar `select` con una cláusula `default` para\n// implementar envíos, recepciones e incluso selects multidireccionales\n// _no bloqueantes_.\n\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\tmessages := make(chan string)\n\tsignals := make(chan bool)\n\n\t// Aquí tenemos una recepción no bloqueante. Si un valor está\n\t// disponible en `messages`, el `select` tomará el\n\t// `case <-messages` con dicho valor. De lo contrario,\n\t// tomará inmediatamente la rama `default`.\n\tselect {\n\tcase msg := <-messages:\n\t\tfmt.Println(\"received message\", msg)\n\tdefault:\n\t\tfmt.Println(\"no message received\")\n\t}\n\n\t// Un envío no bloqueante opera de manera análoga. Aquí `msg`\n\t// no puede enviarse al canal `messages`, porque\n\t// el canal carece de búfer y no hay ningún receptor presente.\n\t// Por ende, se selecciona la rama `default`.\n\tmsg := \"hi\"\n\tselect {\n\tcase messages <- msg:\n\t\tfmt.Println(\"sent message\", msg)\n\tdefault:\n\t\tfmt.Println(\"no message sent\")\n\t}\n\n\t// Podemos usar múltiples cláusulas `case` antes de la rama\n\t// `default` para implementar un select no bloqueante multidireccional.\n\t// Aquí intentamos recepciones no bloqueantes tanto\n\t// en `messages` como en `signals`.\n\tselect {\n\tcase msg := <-messages:\n\t\tfmt.Println(\"received message\", msg)\n\tcase sig := <-signals:\n\t\tfmt.Println(\"received signal\", sig)\n\tdefault:\n\t\tfmt.Println(\"no activity\")\n\t}\n}\n",
     "output": "$ go run non-blocking-channel-operations.go \nno message received\nno message sent\nno activity\n",
     "officialUrl": "https://gobyexample.com/non-blocking-channel-operations"
   },
@@ -2643,7 +2643,7 @@ const GO_TOPICS = [
     "titleEs": "Cierre de Canales y Detección (coma-ok)",
     "category": "Concurrencia y Canales",
     "categorySlug": "concurrencia-canales",
-    "categoryIcon": "🚀",
+    "categoryIcon": "rocket",
     "difficulty": "Intermedio",
     "summary": "Cierre explícito de canales mediante close() e inspección del estado abierto/cerrado con el modismo coma-ok.",
     "originalExpl": "Cerrar un canal indica que no se enviarán más valores a través de él. Esto puede ser útil para comunicar la finalización a los receptores del canal mediante el modismo coma-ok.",
@@ -2684,29 +2684,29 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Tour: Range and Close",
+        "title": "Tour interactivo de Go: Iteración y cierre de canales",
         "url": "https://go.dev/tour/concurrency/4",
         "description": "Cierre de canales y modismo coma-ok en el tour oficial."
       },
       {
-        "title": "Go Spec: Close built-in function",
+        "title": "Especificación de Go: Función integrada close para canales",
         "url": "https://go.dev/ref/spec#Close",
         "description": "Especificación formal del comportamiento de la función close."
       },
       {
-        "title": "Go 101: How to Gracefully Close Channels",
+        "title": "Go 101: Cómo cerrar canales de forma segura y elegante",
         "url": "https://go101.org/article/channel-closing.html",
         "description": "Guía de referencia avanzada sobre patrones seguros de cierre de canales en Go."
       },
       {
-        "title": "Go by Example: Closing Channels",
+        "title": "Go by Example Original: Closing Channels",
         "url": "https://gobyexample.com/closing-channels",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// _Closing_ a channel indicates that no more values\n// will be sent on it. This can be useful to communicate\n// completion to the channel's receivers.\n\npackage main\n\nimport \"fmt\"\n\n// In this example we'll use a `jobs` channel to\n// communicate work to be done from the `main()` goroutine\n// to a worker goroutine. When we have no more jobs for\n// the worker we'll `close` the `jobs` channel.\nfunc main() {\n\tjobs := make(chan int, 5)\n\tdone := make(chan bool)\n\n\t// Here's the worker goroutine. It repeatedly receives\n\t// from `jobs` with `j, more := <-jobs`. In this\n\t// special 2-value form of receive, the `more` value\n\t// will be `false` if `jobs` has been `close`d and all\n\t// values in the channel have already been received.\n\t// We use this to notify on `done` when we've worked\n\t// all our jobs.\n\tgo func() {\n\t\tfor {\n\t\t\tj, more := <-jobs\n\t\t\tif more {\n\t\t\t\tfmt.Println(\"received job\", j)\n\t\t\t} else {\n\t\t\t\tfmt.Println(\"received all jobs\")\n\t\t\t\tdone <- true\n\t\t\t\treturn\n\t\t\t}\n\t\t}\n\t}()\n\n\t// This sends 3 jobs to the worker over the `jobs`\n\t// channel, then closes it.\n\tfor j := 1; j <= 3; j++ {\n\t\tjobs <- j\n\t\tfmt.Println(\"sent job\", j)\n\t}\n\tclose(jobs)\n\tfmt.Println(\"sent all jobs\")\n\n\t// We await the worker using the\n\t// [synchronization](channel-synchronization) approach\n\t// we saw earlier.\n\t<-done\n\n\t// Reading from a closed channel succeeds immediately,\n\t// returning the zero value of the underlying type.\n\t// The optional second return value is `true` if the\n\t// value received was delivered by a successful send\n\t// operation to the channel, or `false` if it was a\n\t// zero value generated because the channel is closed\n\t// and empty.\n\t_, ok := <-jobs\n\tfmt.Println(\"received more jobs:\", ok)\n}\n",
-    "output": "$ go run closing-channels.go \nsent job 1\nreceived job 1\nsent job 2\nreceived job 2\nsent job 3\nreceived job 3\nsent all jobs\nreceived all jobs\nreceived more jobs: false\n\n# The idea of closed channels leads naturally to our next\n# example: `range` over channels.\n",
+    "code": "// _Cerrar_ un canal indica que ya no se enviarán más valores\n// a través de él. Esto resulta muy útil para comunicar\n// la finalización del trabajo a los receptores del canal.\n\npackage main\n\nimport \"fmt\"\n\n// En este ejemplo utilizaremos un canal `jobs` para comunicar\n// el trabajo a realizar desde la goroutine `main()` a una\n// goroutine trabajadora. Cuando ya no tengamos más trabajos para\n// el trabajador, haremos un `close` sobre el canal `jobs`.\nfunc main() {\n\tjobs := make(chan int, 5)\n\tdone := make(chan bool)\n\n\t// Aquí está la goroutine trabajadora. Recibe repetidamente\n\t// de `jobs` mediante `j, more := <-jobs`. En esta variante\n\t// de recepción con dos valores, `more` será `false` si\n\t// `jobs` ha sido cerrado y todos los valores en el canal\n\t// ya han sido recibidos. Usamos esto para notificar en\n\t// `done` una vez que hayamos procesado todos los trabajos.\n\tgo func() {\n\t\tfor {\n\t\t\tj, more := <-jobs\n\t\t\tif more {\n\t\t\t\tfmt.Println(\"received job\", j)\n\t\t\t} else {\n\t\t\t\tfmt.Println(\"received all jobs\")\n\t\t\t\tdone <- true\n\t\t\t\treturn\n\t\t\t}\n\t\t}\n\t}()\n\n\t// Esto envía 3 trabajos al trabajador a través del canal\n\t// `jobs`, y luego lo cierra.\n\tfor j := 1; j <= 3; j++ {\n\t\tjobs <- j\n\t\tfmt.Println(\"sent job\", j)\n\t}\n\tclose(jobs)\n\tfmt.Println(\"sent all jobs\")\n\n\t// Esperamos al trabajador usando el enfoque de\n\t// [sincronización](channel-synchronization) que vimos anteriormente.\n\t<-done\n\n\t// Leer de un canal cerrado tiene éxito inmediatamente,\n\t// devolviendo el valor cero del tipo subyacente.\n\t// El segundo valor de retorno opcional es `true` si el\n\t// valor recibido provino de una operación de envío exitosa,\n\t// o `false` si es un valor cero generado porque el canal\n\t// está cerrado y vacío.\n\t_, ok := <-jobs\n\tfmt.Println(\"received more jobs:\", ok)\n}\n",
+    "output": "$ go run closing-channels.go \nsent job 1\nreceived job 1\nsent job 2\nreceived job 2\nsent job 3\nreceived job 3\nsent all jobs\nreceived all jobs\nreceived more jobs: false\n\n# El concepto de canales cerrados nos conduce de forma natural a nuestro próximo\n# ejemplo: iteración con `range` sobre canales.\n",
     "officialUrl": "https://gobyexample.com/closing-channels"
   },
   {
@@ -2716,7 +2716,7 @@ const GO_TOPICS = [
     "titleEs": "Iteración Range sobre Canales",
     "category": "Concurrencia y Canales",
     "categorySlug": "concurrencia-canales",
-    "categoryIcon": "🚀",
+    "categoryIcon": "rocket",
     "difficulty": "Intermedio",
     "summary": "Consumo simplificado y continuo de valores de un canal con bucle 'for range' hasta su cierre definitivo.",
     "originalExpl": "Podemos usar la sintaxis 'for range' para iterar sobre los valores recibidos de un canal. El bucle continuará recibiendo valores hasta que el canal sea cerrado explícitamente.",
@@ -2757,29 +2757,29 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go Tour: Range and Close",
+        "title": "Tour interactivo de Go: Iteración y cierre de canales",
         "url": "https://go.dev/tour/concurrency/4",
         "description": "Iteración de canales con for range en el tour interactivo."
       },
       {
-        "title": "Effective Go: Channels",
+        "title": "Guía canónica Effective Go: Canales y comunicación concurrente",
         "url": "https://go.dev/doc/effective_go#channels",
         "description": "Buenas prácticas con iteración sobre canales en Effective Go."
       },
       {
-        "title": "Go Spec: For statements with range clause",
+        "title": "Especificación de Go: Sentencias for con cláusula de rango",
         "url": "https://go.dev/ref/spec#For_statements",
         "description": "Reglas gramaticales para la iteración range en canales."
       },
       {
-        "title": "Go by Example: Range over Channels",
+        "title": "Go by Example Original: Range over Channels",
         "url": "https://gobyexample.com/range-over-channels",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// In a [previous](range-over-built-in-types) example we saw how `for` and\n// `range` provide iteration over basic data structures.\n// We can also use this syntax to iterate over\n// values received from a channel.\n\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\n\t// We'll iterate over 2 values in the `queue` channel.\n\tqueue := make(chan string, 2)\n\tqueue <- \"one\"\n\tqueue <- \"two\"\n\tclose(queue)\n\n\t// This `range` iterates over each element as it's\n\t// received from `queue`. Because we `close`d the\n\t// channel above, the iteration terminates after\n\t// receiving the 2 elements.\n\tfor elem := range queue {\n\t\tfmt.Println(elem)\n\t}\n}\n",
-    "output": "$ go run range-over-channels.go\none\ntwo\n\n# This example also showed that it's possible to close\n# a non-empty channel but still have the remaining\n# values be received.\n",
+    "code": "// En un ejemplo [anterior](range-over-built-in-types) vimos cómo `for` y\n// `range` proporcionan iteración sobre estructuras de datos básicas.\n// También podemos usar esta sintaxis para iterar sobre\n// los valores recibidos de un canal.\n\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\n\t// Iteraremos sobre 2 valores en el canal `queue`.\n\tqueue := make(chan string, 2)\n\tqueue <- \"one\"\n\tqueue <- \"two\"\n\tclose(queue)\n\n\t// Este bucle `range` itera sobre cada elemento a medida que se\n\t// recibe desde `queue`. Dado que cerramos (`close`) el\n\t// canal arriba, la iteración concluye tras recibir\n\t// los 2 elementos existentes.\n\tfor elem := range queue {\n\t\tfmt.Println(elem)\n\t}\n}\n",
+    "output": "$ go run range-over-channels.go\none\ntwo\n\n# Este ejemplo también demostró que es posible cerrar\n# un canal no vacío y aún así recibir todos los valores\n# restantes en su búfer.\n",
     "officialUrl": "https://gobyexample.com/range-over-channels"
   },
   {
@@ -2789,7 +2789,7 @@ const GO_TOPICS = [
     "titleEs": "Temporizadores Únicos (time.Timer)",
     "category": "Sincronización y Concurrencia Avanzada",
     "categorySlug": "sincronizacion-avanzada",
-    "categoryIcon": "⚙️",
+    "categoryIcon": "settings",
     "difficulty": "Intermedio",
     "summary": "Ejecución de eventos futuros tras una duración específica con capacidad de cancelación antes de expirar.",
     "originalExpl": "Los temporizadores (timers) son para cuando quieres hacer algo en el futuro una sola vez. Se crean con time.NewTimer(). A diferencia de time.Sleep, un Timer puede ser cancelado antes de que expire con Stop().",
@@ -2831,23 +2831,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package time: Timer",
+        "title": "Paquete time: Timer",
         "url": "https://pkg.go.dev/time#Timer",
         "description": "Documentación oficial de la estructura Timer y sus métodos."
       },
       {
-        "title": "The Go Blog: Go 1.23 Timer and Ticker Improvements",
+        "title": "Blog oficial de Go: Mejoras de rendimiento en temporizadores para Go 1.23",
         "url": "https://go.dev/blog/go1.23-timers",
         "description": "Novedades oficiales sobre la recolección de basura y drenaje de timers en Go 1.23."
       },
       {
-        "title": "Go by Example: Timers",
+        "title": "Go by Example Original: Timers",
         "url": "https://gobyexample.com/timers",
         "description": "Ejemplo interactivo en Go by Example."
       }
     ],
-    "code": "// We often want to execute Go code at some point in the\n// future, or repeatedly at some interval. Go's built-in\n// _timer_ and _ticker_ features make both of these tasks\n// easy. We'll look first at timers and then\n// at [tickers](tickers).\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc main() {\n\n\t// Timers represent a single event in the future. You\n\t// tell the timer how long you want to wait, and it\n\t// provides a channel that will be notified at that\n\t// time. This timer will wait 2 seconds.\n\ttimer1 := time.NewTimer(2 * time.Second)\n\n\t// The `<-timer1.C` blocks on the timer's channel `C`\n\t// until it sends a value indicating that the timer\n\t// fired.\n\t<-timer1.C\n\tfmt.Println(\"Timer 1 fired\")\n\n\t// If you just wanted to wait, you could have used\n\t// `time.Sleep`. One reason a timer may be useful is\n\t// that you can cancel the timer before it fires.\n\t// Here's an example of that.\n\ttimer2 := time.NewTimer(time.Second)\n\tgo func() {\n\t\t<-timer2.C\n\t\tfmt.Println(\"Timer 2 fired\")\n\t}()\n\tstop2 := timer2.Stop()\n\tif stop2 {\n\t\tfmt.Println(\"Timer 2 stopped\")\n\t}\n\n\t// Give the `timer2` enough time to fire, if it ever\n\t// was going to, to show it is in fact stopped.\n\ttime.Sleep(2 * time.Second)\n}\n",
-    "output": "# The first timer will fire ~2s after we start the\n# program, but the second should be stopped before it has\n# a chance to fire.\n$ go run timers.go\nTimer 1 fired\nTimer 2 stopped\n",
+    "code": "// A menudo deseamos ejecutar código en Go en algún punto del\n// futuro, o repetidamente en un intervalo determinado. Las funciones\n// integradas de _timers_ (temporizadores) y _tickers_ facilitan\n// enormemente ambas tareas. Primero veremos los temporizadores y luego\n// los [tickers](tickers).\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc main() {\n\n\t// Los temporizadores representan un único evento en el futuro. Le\n\t// indicas al temporizador cuánto tiempo deseas esperar, y este\n\t// proporciona un canal que será notificado en ese momento exacto.\n\t// Este temporizador esperará 2 segundos.\n\ttimer1 := time.NewTimer(2 * time.Second)\n\n\t// El `<-timer1.C` se bloquea en el canal `C` del temporizador\n\t// hasta que este envía un valor indicando que el tiempo ha expirado.\n\t<-timer1.C\n\tfmt.Println(\"Timer 1 fired\")\n\n\t// Si únicamente quisieras esperar, podrías haber empleado\n\t// `time.Sleep`. Una razón por la cual un temporizador es tan útil es\n\t// que puedes cancelarlo antes de que expire.\n\t// Aquí tenemos un ejemplo de cancelación.\n\ttimer2 := time.NewTimer(time.Second)\n\tgo func() {\n\t\t<-timer2.C\n\t\tfmt.Println(\"Timer 2 fired\")\n\t}()\n\tstop2 := timer2.Stop()\n\tif stop2 {\n\t\tfmt.Println(\"Timer 2 stopped\")\n\t}\n\n\t// Damos a `timer2` suficiente tiempo para dispararse (en caso de que\n\t// no se hubiera detenido), demostrando así que en efecto fue cancelado.\n\ttime.Sleep(2 * time.Second)\n}\n",
+    "output": "# El primer temporizador expirará ~2s después de iniciar el\n# programa, pero el segundo se detendrá antes de que tenga oportunidad\n# de dispararse.\n$ go run timers.go\nTimer 1 fired\nTimer 2 stopped\n",
     "officialUrl": "https://gobyexample.com/timers"
   },
   {
@@ -2857,7 +2857,7 @@ const GO_TOPICS = [
     "titleEs": "Tickers Periódicos (time.Ticker)",
     "category": "Sincronización y Concurrencia Avanzada",
     "categorySlug": "sincronizacion-avanzada",
-    "categoryIcon": "⚙️",
+    "categoryIcon": "settings",
     "difficulty": "Intermedio",
     "summary": "Emisión periódica y regular de pulsos de tiempo a intervalos fijos para tareas recurrentes.",
     "originalExpl": "Los temporizadores son para cuando quieres hacer algo una sola vez en el futuro; los tickers son para cuando quieres hacer algo repetidamente a intervalos regulares. Se detienen con ticker.Stop().",
@@ -2899,23 +2899,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package time: Ticker",
+        "title": "Paquete time: Ticker",
         "url": "https://pkg.go.dev/time#Ticker",
         "description": "Documentación oficial de la estructura time.Ticker."
       },
       {
-        "title": "Go by Example: Tickers",
+        "title": "Go by Example Original: Tickers",
         "url": "https://gobyexample.com/tickers",
         "description": "Ejemplo interactivo en Go by Example."
       },
       {
-        "title": "Go Design Documents: Modernized Timers",
+        "title": "Diseño interno de Go: Modernización de temporizadores (Timers)",
         "url": "https://go.dev/design/59402-improved-timer",
         "description": "Propuesta y diseño de la modernización de tickers en Go."
       }
     ],
-    "code": "// [Timers](timers) are for when you want to do\n// something once in the future - _tickers_ are for when\n// you want to do something repeatedly at regular\n// intervals. Here's an example of a ticker that ticks\n// periodically until we stop it.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc main() {\n\n\t// Tickers use a similar mechanism to timers: a\n\t// channel that is sent values. Here we'll use the\n\t// `select` builtin on the channel to await the\n\t// values as they arrive every 500ms.\n\tticker := time.NewTicker(500 * time.Millisecond)\n\tdone := make(chan bool)\n\n\tgo func() {\n\t\tfor {\n\t\t\tselect {\n\t\t\tcase <-done:\n\t\t\t\treturn\n\t\t\tcase t := <-ticker.C:\n\t\t\t\tfmt.Println(\"Tick at\", t)\n\t\t\t}\n\t\t}\n\t}()\n\n\t// Tickers can be stopped like timers. Once a ticker\n\t// is stopped it won't receive any more values on its\n\t// channel. We'll stop ours after 1600ms.\n\ttime.Sleep(1600 * time.Millisecond)\n\tticker.Stop()\n\tdone <- true\n\tfmt.Println(\"Ticker stopped\")\n}\n",
-    "output": "# When we run this program the ticker should tick 3 times\n# before we stop it.\n$ go run tickers.go\nTick at 2012-09-23 11:29:56.487625 -0700 PDT\nTick at 2012-09-23 11:29:56.988063 -0700 PDT\nTick at 2012-09-23 11:29:57.488076 -0700 PDT\nTicker stopped\n",
+    "code": "// Los [temporizadores](timers) sirven cuando deseas realizar\n// una acción una vez en el futuro; los _tickers_ son para cuando\n// necesitas realizar una tarea repetidamente a intervalos\n// regulares. Aquí hay un ejemplo de un ticker que emite pulsos\n// periódicamente hasta que decidimos detenerlo.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc main() {\n\n\t// Los tickers utilizan un mecanismo similar a los temporizadores: un\n\t// canal al cual se le envían valores periódicos. Aquí usaremos la sentencia\n\t// `select` sobre el canal para aguardar los\n\t// valores a medida que llegan cada 500ms.\n\tticker := time.NewTicker(500 * time.Millisecond)\n\tdone := make(chan bool)\n\n\tgo func() {\n\t\tfor {\n\t\t\tselect {\n\t\t\tcase <-done:\n\t\t\t\treturn\n\t\t\tcase t := <-ticker.C:\n\t\t\t\tfmt.Println(\"Tick at\", t)\n\t\t\t}\n\t\t}\n\t}()\n\n\t// Los tickers se pueden detener al igual que los temporizadores. Una vez que un ticker\n\t// se detiene, no recibirá más valores en su\n\t// canal. Detendremos el nuestro transcurridos 1600ms.\n\ttime.Sleep(1600 * time.Millisecond)\n\tticker.Stop()\n\tdone <- true\n\tfmt.Println(\"Ticker stopped\")\n}\n",
+    "output": "# Al ejecutar este programa, el ticker emitirá 3 pulsos\n# antes de que lo detengamos.\n$ go run tickers.go\nTick at 2012-09-23 11:29:56.487625 -0700 PDT\nTick at 2012-09-23 11:29:56.988063 -0700 PDT\nTick at 2012-09-23 11:29:57.488076 -0700 PDT\nTicker stopped\n",
     "officialUrl": "https://gobyexample.com/tickers"
   },
   {
@@ -2925,7 +2925,7 @@ const GO_TOPICS = [
     "titleEs": "Pool de Trabajadores (Worker Pools)",
     "category": "Sincronización y Concurrencia Avanzada",
     "categorySlug": "sincronizacion-avanzada",
-    "categoryIcon": "⚙️",
+    "categoryIcon": "settings",
     "difficulty": "Avanzado",
     "summary": "Patrón de concurrencia que limita el número de goroutines concurrentes procesando una cola de tareas compartida.",
     "originalExpl": "En este ejemplo veremos cómo implementar un pool de trabajadores usando goroutines y canales. Un número fijo de workers procesa concurrentemente una cola de tareas.",
@@ -2966,23 +2966,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Go by Example: Worker Pools",
+        "title": "Go by Example Original: Worker Pools",
         "url": "https://gobyexample.com/worker-pools",
         "description": "Ejemplo original de Worker Pools en Go by Example."
       },
       {
-        "title": "The Go Blog: Pipelines and cancellation",
+        "title": "Blog oficial de Go: Pipelines concurrentes y cancelación preventiva",
         "url": "https://go.dev/blog/pipelines",
         "description": "Arquitectura de pools de trabajo y propagación de cancelación."
       },
       {
-        "title": "Bryan Mills: Rethinking Classical Concurrency Patterns",
+        "title": "Bryan Mills: Replanteando patrones clásicos de concurrencia en Go",
         "url": "https://www.youtube.com/watch?v=5zXAHh5tJqQ",
         "description": "Conferencia magistral en GopherCon sobre buenas prácticas en pools y concurrencia."
       }
     ],
-    "code": "// In this example we'll look at how to implement\n// a _worker pool_ using goroutines and channels.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\n// Here's the worker, of which we'll run several\n// concurrent instances. These workers will receive\n// work on the `jobs` channel and send the corresponding\n// results on `results`. We'll sleep a second per job to\n// simulate an expensive task.\nfunc worker(id int, jobs <-chan int, results chan<- int) {\n\tfor j := range jobs {\n\t\tfmt.Println(\"worker\", id, \"started  job\", j)\n\t\ttime.Sleep(time.Second)\n\t\tfmt.Println(\"worker\", id, \"finished job\", j)\n\t\tresults <- j * 2\n\t}\n}\n\nfunc main() {\n\n\t// In order to use our pool of workers we need to send\n\t// them work and collect their results. We make 2\n\t// channels for this.\n\tconst numJobs = 5\n\tjobs := make(chan int, numJobs)\n\tresults := make(chan int, numJobs)\n\n\t// This starts up 3 workers, initially blocked\n\t// because there are no jobs yet.\n\tfor w := 1; w <= 3; w++ {\n\t\tgo worker(w, jobs, results)\n\t}\n\n\t// Here we send 5 `jobs` and then `close` that\n\t// channel to indicate that's all the work we have.\n\tfor j := 1; j <= numJobs; j++ {\n\t\tjobs <- j\n\t}\n\tclose(jobs)\n\n\t// Finally we collect all the results of the work.\n\t// This also ensures that the worker goroutines have\n\t// finished. An alternative way to wait for multiple\n\t// goroutines is to use a [WaitGroup](waitgroups).\n\tfor a := 1; a <= numJobs; a++ {\n\t\t<-results\n\t}\n}\n",
-    "output": "# Our running program shows the 5 jobs being executed by\n# various workers. The program only takes about 2 seconds\n# despite doing about 5 seconds of total work because\n# there are 3 workers operating concurrently.\n$ time go run worker-pools.go \nworker 1 started  job 1\nworker 2 started  job 2\nworker 3 started  job 3\nworker 1 finished job 1\nworker 1 started  job 4\nworker 2 finished job 2\nworker 2 started  job 5\nworker 3 finished job 3\nworker 1 finished job 4\nworker 2 finished job 5\n\nreal\t0m2.358s\n",
+    "code": "// En este ejemplo veremos cómo implementar\n// un _pool de trabajadores_ (worker pool) utilizando goroutines y canales.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\n// Aquí está el trabajador, del cual ejecutaremos varias\n// instancias concurrentes. Estos trabajadores recibirán\n// tareas en el canal `jobs` y enviarán los resultados\n// correspondientes en `results`. Haremos una pausa de un segundo por tarea\n// para simular un proceso computacionalmente costoso.\nfunc worker(id int, jobs <-chan int, results chan<- int) {\n\tfor j := range jobs {\n\t\tfmt.Println(\"worker\", id, \"started  job\", j)\n\t\ttime.Sleep(time.Second)\n\t\tfmt.Println(\"worker\", id, \"finished job\", j)\n\t\tresults <- j * 2\n\t}\n}\n\nfunc main() {\n\n\t// Para usar nuestro grupo de trabajadores necesitamos enviarles\n\t// tareas y recopilar sus resultados. Creamos 2 canales para ello.\n\tconst numJobs = 5\n\tjobs := make(chan int, numJobs)\n\tresults := make(chan int, numJobs)\n\n\t// Esto inicia 3 trabajadores, inicialmente bloqueados\n\t// debido a que aún no hay tareas en la cola.\n\tfor w := 1; w <= 3; w++ {\n\t\tgo worker(w, jobs, results)\n\t}\n\n\t// Aquí enviamos 5 `jobs` y luego cerramos (`close`) ese\n\t// canal para indicar que hemos enviado todo el trabajo disponible.\n\tfor j := 1; j <= numJobs; j++ {\n\t\tjobs <- j\n\t}\n\tclose(jobs)\n\n\t// Finalmente recopilamos todos los resultados del procesamiento.\n\t// Esto también garantiza que las goroutines trabajadoras hayan\n\t// culminado su labor. Una alternativa para aguardar múltiples\n\t// goroutines es emplear un [WaitGroup](waitgroups).\n\tfor a := 1; a <= numJobs; a++ {\n\t\t<-results\n\t}\n}\n",
+    "output": "# El programa en ejecución muestra las 5 tareas siendo procesadas por\n# diversos trabajadores concurrentes. El programa toma únicamente unos 2 segundos\n# a pesar de realizar 5 segundos de trabajo total acumulado, ya que\n# hay 3 trabajadores operando de manera simultánea.\n$ time go run worker-pools.go \nworker 1 started  job 1\nworker 2 started  job 2\nworker 3 started  job 3\nworker 1 finished job 1\nworker 1 started  job 4\nworker 2 finished job 2\nworker 2 started  job 5\nworker 3 finished job 3\nworker 1 finished job 4\nworker 2 finished job 5\n\nreal\t0m2.358s\n",
     "officialUrl": "https://gobyexample.com/worker-pools"
   },
   {
@@ -2992,7 +2992,7 @@ const GO_TOPICS = [
     "titleEs": "Grupos de Espera con sync.WaitGroup",
     "category": "Sincronización y Concurrencia Avanzada",
     "categorySlug": "sincronizacion-avanzada",
-    "categoryIcon": "⚙️",
+    "categoryIcon": "settings",
     "difficulty": "Intermedio",
     "summary": "Mecanismo canónico de sincronización para esperar la finalización colectiva de múltiples goroutines concurrentes.",
     "originalExpl": "Para esperar a que múltiples goroutines terminen, podemos usar un waitgroup. Se encuentra en el paquete 'sync' y proporciona los métodos Add, Done y Wait.",
@@ -3035,23 +3035,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package sync: WaitGroup",
+        "title": "Paquete sync: WaitGroup",
         "url": "https://pkg.go.dev/sync#WaitGroup",
         "description": "Documentación oficial de la biblioteca estándar sobre WaitGroup."
       },
       {
-        "title": "Go by Example: WaitGroups",
+        "title": "Go by Example Original: WaitGroups",
         "url": "https://gobyexample.com/waitgroups",
         "description": "Ejemplo canónico en Go by Example."
       },
       {
-        "title": "Dave Cheney: Synchronisation primitives in Go",
+        "title": "Dave Cheney: Primitivas de sincronización y concurrencia en Go",
         "url": "https://dave.cheney.net/",
         "description": "Guía práctica de Dave Cheney sobre sincronización con WaitGroups y Mutexes."
       }
     ],
-    "code": "// To wait for multiple goroutines to finish, we can\n// use a *wait group*.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"sync\"\n\t\"time\"\n)\n\n// This is the function we'll run in every goroutine.\nfunc worker(id int) {\n\tfmt.Printf(\"Worker %d starting\\n\", id)\n\n\t// Sleep to simulate an expensive task.\n\ttime.Sleep(time.Second)\n\tfmt.Printf(\"Worker %d done\\n\", id)\n}\n\nfunc main() {\n\n\t// This WaitGroup is used to wait for all the\n\t// goroutines launched here to finish. Note: if a WaitGroup is\n\t// explicitly passed into functions, it should be done *by pointer*.\n\tvar wg sync.WaitGroup\n\n\t// Launch several goroutines using `WaitGroup.Go`\n\tfor i := 1; i <= 5; i++ {\n\t\twg.Go(func() {\n\t\t\tworker(i)\n\t\t})\n\t}\n\n\t// Block until all the goroutines started by `wg` are\n\t// done. A goroutine is done when the function it invokes\n\t// returns.\n\twg.Wait()\n\n\t// Note that this approach has no straightforward way\n\t// to propagate errors from workers. For more\n\t// advanced use cases, consider using the\n\t// [errgroup package](https://pkg.go.dev/golang.org/x/sync/errgroup).\n}\n",
-    "output": "$ go run waitgroups.go\nWorker 5 starting\nWorker 3 starting\nWorker 4 starting\nWorker 1 starting\nWorker 2 starting\nWorker 4 done\nWorker 1 done\nWorker 2 done\nWorker 5 done\nWorker 3 done\n\n# The order of workers starting up and finishing\n# is likely to be different for each invocation.\n",
+    "code": "// Para esperar a que múltiples goroutines concluyan su ejecución,\n// podemos utilizar un *wait group* (`sync.WaitGroup`).\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"sync\"\n\t\"time\"\n)\n\n// Esta es la función que ejecutaremos en cada goroutine.\nfunc worker(id int) {\n\tfmt.Printf(\"Worker %d starting\\n\", id)\n\n\t// Pausa para simular una tarea pesada.\n\ttime.Sleep(time.Second)\n\tfmt.Printf(\"Worker %d done\\n\", id)\n}\n\nfunc main() {\n\n\t// Este WaitGroup se utiliza para esperar a que terminen todas las\n\t// goroutines iniciadas aquí. Nota: si un WaitGroup se pasa explícitamente\n\t// a funciones, debe hacerse siempre *por puntero*.\n\tvar wg sync.WaitGroup\n\n\t// Iniciamos varias goroutines utilizando `WaitGroup.Go`\n\tfor i := 1; i <= 5; i++ {\n\t\twg.Go(func() {\n\t\t\tworker(i)\n\t\t})\n\t}\n\n\t// Nos bloqueamos hasta que todas las goroutines iniciadas por `wg`\n\t// hayan finalizado. Una goroutine finaliza cuando su función invocada retorna.\n\twg.Wait()\n\n\t// Ten en cuenta que este enfoque no proporciona una forma directa\n\t// de propagar errores desde los trabajadores. Para casos de uso más\n\t// avanzados, considera utilizar el\n\t// [paquete errgroup](https://pkg.go.dev/golang.org/x/sync/errgroup).\n}\n",
+    "output": "$ go run waitgroups.go\nWorker 5 starting\nWorker 3 starting\nWorker 4 starting\nWorker 1 starting\nWorker 2 starting\nWorker 4 done\nWorker 1 done\nWorker 2 done\nWorker 5 done\nWorker 3 done\n\n# Es muy probable que el orden en que los trabajadores inician y terminan\n# varíe en cada ejecución.\n",
     "officialUrl": "https://gobyexample.com/waitgroups"
   },
   {
@@ -3061,7 +3061,7 @@ const GO_TOPICS = [
     "titleEs": "Limitación de Tasa (Rate Limiting y Token Bucket)",
     "category": "Sincronización y Concurrencia Avanzada",
     "categorySlug": "sincronizacion-avanzada",
-    "categoryIcon": "⚙️",
+    "categoryIcon": "settings",
     "difficulty": "Avanzado",
     "summary": "Control del flujo y velocidad de procesamiento de peticiones para proteger recursos y respetar cuotas de APIs.",
     "originalExpl": "La limitación de tasa (rate limiting) es un mecanismo importante para controlar la utilización de recursos y mantener la calidad del servicio. Go soporta rate limiting elegantemente con goroutines, canales y tickers.",
@@ -3102,23 +3102,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package golang.org/x/time/rate",
+        "title": "Paquete golang.org/x/time/rate (Documentación oficial)",
         "url": "https://pkg.go.dev/golang.org/x/time/rate",
         "description": "Documentación oficial del paquete de rate limiting de producción en Go."
       },
       {
-        "title": "Go by Example: Rate Limiting",
+        "title": "Go by Example Original: Rate Limiting",
         "url": "https://gobyexample.com/rate-limiting",
         "description": "Ejemplo en Go by Example."
       },
       {
-        "title": "Cloudflare Blog: How we built rate limiting with Go",
+        "title": "Blog de Cloudflare: Cómo diseñamos limitación de tasa (Rate Limiting) en Go",
         "url": "https://blog.cloudflare.com/counting-things-a-lot-of-different-things/",
         "description": "Artículo de ingeniería de Cloudflare sobre algoritmos de limitación de tasa a escala masiva."
       }
     ],
-    "code": "// [_Rate limiting_](https://en.wikipedia.org/wiki/Rate_limiting)\n// is an important mechanism for controlling resource\n// utilization and maintaining quality of service. Go\n// elegantly supports rate limiting with goroutines,\n// channels, and [tickers](tickers).\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc main() {\n\n\t// First we'll look at basic rate limiting. Suppose\n\t// we want to limit our handling of incoming requests.\n\t// We'll serve these requests off a channel of the\n\t// same name.\n\trequests := make(chan int, 5)\n\tfor i := 1; i <= 5; i++ {\n\t\trequests <- i\n\t}\n\tclose(requests)\n\n\t// This `limiter` channel will receive a value\n\t// every 200 milliseconds. This is the regulator in\n\t// our rate limiting scheme.\n\tlimiter := time.Tick(200 * time.Millisecond)\n\n\t// By blocking on a receive from the `limiter` channel\n\t// before serving each request, we limit ourselves to\n\t// 1 request every 200 milliseconds.\n\tfor req := range requests {\n\t\t<-limiter\n\t\tfmt.Println(\"request\", req, time.Now())\n\t}\n\n\t// We may want to allow short bursts of requests in\n\t// our rate limiting scheme while preserving the\n\t// overall rate limit. We can accomplish this by\n\t// buffering our limiter channel. This `burstyLimiter`\n\t// channel will allow bursts of up to 3 events.\n\tburstyLimiter := make(chan time.Time, 3)\n\n\t// Fill up the channel to represent allowed bursting.\n\tfor range 3 {\n\t\tburstyLimiter <- time.Now()\n\t}\n\n\t// Every 200 milliseconds we'll try to add a new\n\t// value to `burstyLimiter`, up to its limit of 3.\n\tgo func() {\n\t\tfor t := range time.Tick(200 * time.Millisecond) {\n\t\t\tburstyLimiter <- t\n\t\t}\n\t}()\n\n\t// Now simulate 5 more incoming requests. The first\n\t// 3 of these will benefit from the burst capability\n\t// of `burstyLimiter`.\n\tburstyRequests := make(chan int, 5)\n\tfor i := 1; i <= 5; i++ {\n\t\tburstyRequests <- i\n\t}\n\tclose(burstyRequests)\n\tfor req := range burstyRequests {\n\t\t<-burstyLimiter\n\t\tfmt.Println(\"request\", req, time.Now())\n\t}\n}\n",
-    "output": "# Running our program we see the first batch of requests\n# handled once every ~200 milliseconds as desired.\n$ go run rate-limiting.go\nrequest 1 2012-10-19 00:38:18.687438 +0000 UTC\nrequest 2 2012-10-19 00:38:18.887471 +0000 UTC\nrequest 3 2012-10-19 00:38:19.087238 +0000 UTC\nrequest 4 2012-10-19 00:38:19.287338 +0000 UTC\nrequest 5 2012-10-19 00:38:19.487331 +0000 UTC\n\n# For the second batch of requests we serve the first\n# 3 immediately because of the burstable rate limiting,\n# then serve the remaining 2 with ~200ms delays each.\nrequest 1 2012-10-19 00:38:20.487578 +0000 UTC\nrequest 2 2012-10-19 00:38:20.487645 +0000 UTC\nrequest 3 2012-10-19 00:38:20.487676 +0000 UTC\nrequest 4 2012-10-19 00:38:20.687483 +0000 UTC\nrequest 5 2012-10-19 00:38:20.887542 +0000 UTC\n",
+    "code": "// El [_límite de tasa_](https://en.wikipedia.org/wiki/Rate_limiting) (rate limiting)\n// es un mecanismo esencial para controlar el uso de recursos\n// y mantener la calidad del servicio. Go admite elegantemente\n// el control de frecuencia con goroutines, canales y [tickers](tickers).\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc main() {\n\n\t// Primero veremos una limitación de tasa básica. Supongamos\n\t// que deseamos limitar el procesamiento de peticiones entrantes.\n\t// Atenderemos estas solicitudes a través de un canal.\n\trequests := make(chan int, 5)\n\tfor i := 1; i <= 5; i++ {\n\t\trequests <- i\n\t}\n\tclose(requests)\n\n\t// Este canal `limiter` recibirá un valor\n\t// cada 200 milisegundos. Es el regulador en\n\t// nuestro esquema de control de tasa.\n\tlimiter := time.Tick(200 * time.Millisecond)\n\n\t// Al bloquearnos en una recepción del canal `limiter`\n\t// antes de procesar cada solicitud, nos limitamos a\n\t// 1 solicitud cada 200 milisegundos.\n\tfor req := range requests {\n\t\t<-limiter\n\t\tfmt.Println(\"request\", req, time.Now())\n\t}\n\n\t// Es posible que deseemos permitir ráfagas cortas (bursts) de peticiones\n\t// manteniendo el límite general a largo plazo. Podemos lograrlo\n\t// añadiendo búfer a nuestro canal regulador. Este canal `burstyLimiter`\n\t// permitirá ráfagas de hasta 3 eventos consecutivos.\n\tburstyLimiter := make(chan time.Time, 3)\n\n\t// Llenamos el canal para representar la capacidad de ráfaga permitida.\n\tfor range 3 {\n\t\tburstyLimiter <- time.Now()\n\t}\n\n\t// Cada 200 milisegundos intentaremos agregar un nuevo\n\t// valor a `burstyLimiter`, hasta alcanzar su límite de 3.\n\tgo func() {\n\t\tfor t := range time.Tick(200 * time.Millisecond) {\n\t\t\tburstyLimiter <- t\n\t\t}\n\t}()\n\n\t// Ahora simulamos 5 peticiones entrantes más. Las primeras\n\t// 3 se beneficiarán de la capacidad de ráfaga de `burstyLimiter`.\n\tburstyRequests := make(chan int, 5)\n\tfor i := 1; i <= 5; i++ {\n\t\tburstyRequests <- i\n\t}\n\tclose(burstyRequests)\n\tfor req := range burstyRequests {\n\t\t<-burstyLimiter\n\t\tfmt.Println(\"request\", req, time.Now())\n\t}\n}\n",
+    "output": "# Al ejecutar nuestro programa vemos el primer lote de peticiones\n# procesado una vez cada ~200 milisegundos según lo programado.\n$ go run rate-limiting.go\nrequest 1 2012-10-19 00:38:18.687438 +0000 UTC\nrequest 2 2012-10-19 00:38:18.887471 +0000 UTC\nrequest 3 2012-10-19 00:38:19.087238 +0000 UTC\nrequest 4 2012-10-19 00:38:19.287338 +0000 UTC\nrequest 5 2012-10-19 00:38:19.487331 +0000 UTC\n\n# Para el segundo lote de peticiones atendemos las 3 primeras de forma\n# inmediata debido al búfer de ráfaga, y luego despachamos las 2 restantes\n# con demoras de ~200ms cada una.\nrequest 1 2012-10-19 00:38:20.487578 +0000 UTC\nrequest 2 2012-10-19 00:38:20.487645 +0000 UTC\nrequest 3 2012-10-19 00:38:20.487676 +0000 UTC\nrequest 4 2012-10-19 00:38:20.687483 +0000 UTC\nrequest 5 2012-10-19 00:38:20.887542 +0000 UTC\n",
     "officialUrl": "https://gobyexample.com/rate-limiting"
   },
   {
@@ -3128,7 +3128,7 @@ const GO_TOPICS = [
     "titleEs": "Contadores y Operaciones Atómicas (sync/atomic)",
     "category": "Sincronización y Concurrencia Avanzada",
     "categorySlug": "sincronizacion-avanzada",
-    "categoryIcon": "⚙️",
+    "categoryIcon": "settings",
     "difficulty": "Avanzado",
     "summary": "Gestión de estado concurrente ultra-rápida y libre de locks mediante instrucciones atómicas a nivel de hardware de la CPU.",
     "originalExpl": "El mecanismo principal para gestionar el estado en Go es la comunicación a través de canales. Cuando necesitas gestionar un estado simple como un contador compartido, el paquete sync/atomic ofrece operaciones atómicas de bajo nivel.",
@@ -3170,23 +3170,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package sync/atomic",
+        "title": "Paquete sync/atomic (Documentación oficial)",
         "url": "https://pkg.go.dev/sync/atomic",
         "description": "Documentación oficial de los tipos y operaciones atómicas de la biblioteca estándar."
       },
       {
-        "title": "Go by Example: Atomic Counters",
+        "title": "Go by Example Original: Atomic Counters",
         "url": "https://gobyexample.com/atomic-counters",
         "description": "Ejemplo en Go by Example."
       },
       {
-        "title": "Ardan Labs: Concurrency, Goroutines and Atomic Operations",
+        "title": "Ardan Labs: Concurrencia, Goroutines y Operaciones Atómicas",
         "url": "https://www.ardanlabs.com/blog/2014/01/concurrency-goroutines-and-channels.html",
         "description": "Análisis comparativo de rendimiento entre canales, mutexes y operaciones atómicas."
       }
     ],
-    "code": "// The primary mechanism for managing state in Go is\n// communication over channels. We saw this for example\n// with [worker pools](worker-pools). There are a few other\n// options for managing state though. Here we'll\n// look at using the `sync/atomic` package for _atomic\n// counters_ accessed by multiple goroutines.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"sync\"\n\t\"sync/atomic\"\n)\n\nfunc main() {\n\n\t// We'll use an atomic integer type to represent our\n\t// (always-positive) counter.\n\tvar ops atomic.Uint64\n\n\t// A WaitGroup will help us wait for all goroutines\n\t// to finish their work.\n\tvar wg sync.WaitGroup\n\n\t// We'll start 50 goroutines that each increment the\n\t// counter exactly 1000 times.\n\tfor range 50 {\n\t\twg.Go(func() {\n\t\t\tfor range 1000 {\n\t\t\t\t// To atomically increment the counter we use `Add`.\n\t\t\t\tops.Add(1)\n\t\t\t}\n\t\t})\n\t}\n\n\t// Wait until all the goroutines are done.\n\twg.Wait()\n\n\t// Here no goroutines are writing to 'ops', but using\n\t// `Load` it's safe to atomically read a value even while\n\t// other goroutines are (atomically) updating it.\n\tfmt.Println(\"ops:\", ops.Load())\n}\n",
-    "output": "# We expect to get exactly 50,000 operations. Had we\n# used a non-atomic integer and incremented it with\n# `ops++`, we'd likely get a different number,\n# changing between runs, because the goroutines\n# would interfere with each other. Moreover, we'd\n# get data race failures when running with the\n# `-race` flag.\n$ go run atomic-counters.go\nops: 50000\n\n# Next we'll look at mutexes, another tool for managing\n# state.\n",
+    "code": "// El mecanismo primordial para gestionar estado en Go es\n// la comunicación a través de canales. Vimos esto, por ejemplo,\n// con los [pools de trabajadores](worker-pools). Existen no obstante\n// otras opciones para gestionar estado. Aquí examinaremos el uso\n// del paquete `sync/atomic` para _contadores atómicos_\n// accedidos por múltiples goroutines simultáneamente.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"sync\"\n\t\"sync/atomic\"\n)\n\nfunc main() {\n\n\t// Usaremos un tipo entero atómico para representar nuestro\n\t// contador (siempre positivo).\n\tvar ops atomic.Uint64\n\n\t// Un WaitGroup nos ayudará a esperar a que todas las goroutines\n\t// concluyan su trabajo.\n\tvar wg sync.WaitGroup\n\n\t// Iniciaremos 50 goroutines que incrementarán el\n\t// contador exactamente 1000 veces cada una.\n\tfor range 50 {\n\t\twg.Go(func() {\n\t\t\tfor range 1000 {\n\t\t\t\t// Para incrementar el contador de forma atómica usamos `Add`.\n\t\t\t\tops.Add(1)\n\t\t\t}\n\t\t})\n\t}\n\n\t// Esperamos hasta que todas las goroutines hayan finalizado.\n\twg.Wait()\n\n\t// En este punto ninguna goroutine escribe en 'ops', pero usando\n\t// `Load` es completamente seguro leer un valor de forma atómica incluso\n\t// mientras otras goroutines lo están actualizando (atómicamente).\n\tfmt.Println(\"ops:\", ops.Load())\n}\n",
+    "output": "# Esperamos obtener exactamente 50,000 operaciones. De haber\n# utilizado un entero común sin atomicidad e incrementado con\n# `ops++`, obtendríamos un número dispar y variable en cada\n# ejecución debido a la interferencia entre goroutines.\n# Además, registraríamos fallos por condiciones de carrera (data race)\n# al compilar o ejecutar con la bandera `-race`.\n$ go run atomic-counters.go\nops: 50000\n\n# A continuación veremos los mutexes, otra herramienta esencial\n# para gestionar estado concurrente.\n",
     "officialUrl": "https://gobyexample.com/atomic-counters"
   },
   {
@@ -3196,7 +3196,7 @@ const GO_TOPICS = [
     "titleEs": "Exclusión Mutua con Mutex y RWMutex",
     "category": "Sincronización y Concurrencia Avanzada",
     "categorySlug": "sincronizacion-avanzada",
-    "categoryIcon": "⚙️",
+    "categoryIcon": "settings",
     "difficulty": "Intermedio",
     "summary": "Protección de estructuras de datos complejas mediante exclusión mutua tradicional con sync.Mutex y sync.RWMutex.",
     "originalExpl": "Para estados más complejos que un simple contador podemos usar un Mutex (exclusión mutua) para acceder a los datos de forma segura a través de múltiples goroutines.",
@@ -3238,23 +3238,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package sync: Mutex and RWMutex",
+        "title": "Paquete sync: Mutex and RWMutex",
         "url": "https://pkg.go.dev/sync#Mutex",
         "description": "Documentación oficial de la biblioteca estándar para Mutex y RWMutex."
       },
       {
-        "title": "Go by Example: Mutexes",
+        "title": "Go by Example Original: Mutexes",
         "url": "https://gobyexample.com/mutexes",
         "description": "Ejemplo interactivo en Go by Example."
       },
       {
-        "title": "The Go Blog: Introducing the Go Race Detector",
+        "title": "Blog oficial de Go: Introducción al detector de condiciones de carrera (Race Detector)",
         "url": "https://go.dev/blog/race-detector",
         "description": "Cómo funciona el detector de carreras ThreadSanitizer en Go."
       }
     ],
-    "code": "// In the previous example we saw how to manage simple\n// counter state using [atomic operations](atomic-counters).\n// For more complex state we can use a [_mutex_](https://en.wikipedia.org/wiki/Mutual_exclusion)\n// to safely access data across multiple goroutines.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"sync\"\n)\n\n// Container holds a map of counters; since we want to\n// update it concurrently from multiple goroutines, we\n// add a `Mutex` to synchronize access.\n// Note that mutexes must not be copied, so if this\n// `struct` is passed around, it should be done by\n// pointer.\ntype Container struct {\n\tmu       sync.Mutex\n\tcounters map[string]int\n}\n\nfunc (c *Container) inc(name string) {\n\t// Lock the mutex before accessing `counters`; unlock\n\t// it at the end of the function using a [defer](defer)\n\t// statement.\n\tc.mu.Lock()\n\tdefer c.mu.Unlock()\n\tc.counters[name]++\n}\n\nfunc main() {\n\tc := Container{\n\t\t// Note that the zero value of a mutex is usable as-is, so no\n\t\t// initialization is required here.\n\t\tcounters: map[string]int{\"a\": 0, \"b\": 0},\n\t}\n\n\tvar wg sync.WaitGroup\n\n\t// This function increments a named counter\n\t// in a loop.\n\tdoIncrement := func(name string, n int) {\n\t\tfor range n {\n\t\t\tc.inc(name)\n\t\t}\n\t}\n\n\t// Run several goroutines concurrently; note\n\t// that they all access the same `Container`,\n\t// and two of them access the same counter.\n\twg.Go(func() {\n\t\tdoIncrement(\"a\", 10000)\n\t})\n\n\twg.Go(func() {\n\t\tdoIncrement(\"a\", 10000)\n\t})\n\n\twg.Go(func() {\n\t\tdoIncrement(\"b\", 10000)\n\t})\n\n\t// Wait for the goroutines to finish\n\twg.Wait()\n\tfmt.Println(c.counters)\n}\n",
-    "output": "# Running the program shows that the counters\n# updated as expected.\n$ go run mutexes.go\nmap[a:20000 b:10000]\n\n# Next we'll look at implementing this same state\n# management task using only goroutines and channels.\n",
+    "code": "// En el ejemplo anterior vimos cómo gestionar el estado de un contador\n// simple utilizando [operaciones atómicas](atomic-counters).\n// Para estados más complejos podemos recurrir a un [_mutex_](https://en.wikipedia.org/wiki/Mutual_exclusion)\n// (exclusión mutua) para acceder a los datos de forma segura entre múltiples goroutines.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"sync\"\n)\n\n// Container almacena un mapa de contadores; como deseamos\n// actualizarlo concurrentemente desde múltiples goroutines,\n// añadimos un `Mutex` para sincronizar el acceso.\n// Ten en cuenta que los mutexes no deben copiarse; si este\n// `struct` se pasa como parámetro, debe hacerse siempre\n// por puntero.\ntype Container struct {\n\tmu       sync.Mutex\n\tcounters map[string]int\n}\n\nfunc (c *Container) inc(name string) {\n\t// Bloqueamos el mutex antes de acceder a `counters`; lo liberamos\n\t// al final de la función mediante una sentencia [defer](defer).\n\tc.mu.Lock()\n\tdefer c.mu.Unlock()\n\tc.counters[name]++\n}\n\nfunc main() {\n\tc := Container{\n\t\t// Observa que el valor cero de un mutex es completamente utilizable tal cual,\n\t\t// por lo que no se requiere inicialización explícita aquí.\n\t\tcounters: map[string]int{\"a\": 0, \"b\": 0},\n\t}\n\n\tvar wg sync.WaitGroup\n\n\t// Esta función incrementa un contador por nombre\n\t// dentro de un bucle.\n\tdoIncrement := func(name string, n int) {\n\t\tfor range n {\n\t\t\tc.inc(name)\n\t\t}\n\t}\n\n\t// Ejecutamos varias goroutines de manera concurrente; observa\n\t// que todas acceden al mismo `Container`, y dos de ellas\n\t// acceden al mismo contador \"a\".\n\twg.Go(func() {\n\t\tdoIncrement(\"a\", 10000)\n\t})\n\n\twg.Go(func() {\n\t\tdoIncrement(\"a\", 10000)\n\t})\n\n\twg.Go(func() {\n\t\tdoIncrement(\"b\", 10000)\n\t})\n\n\t// Esperamos a que las goroutines finalicen.\n\twg.Wait()\n\tfmt.Println(c.counters)\n}\n",
+    "output": "# Ejecutar el programa demuestra que los contadores\n# se actualizaron con total exactitud y sincronía.\n$ go run mutexes.go\nmap[a:20000 b:10000]\n\n# A continuación veremos cómo resolver esta misma tarea de gestión\n# de estado empleando únicamente goroutines y canales.\n",
     "officialUrl": "https://gobyexample.com/mutexes"
   },
   {
@@ -3264,7 +3264,7 @@ const GO_TOPICS = [
     "titleEs": "Goroutines con Estado (Actor Pattern)",
     "category": "Sincronización y Concurrencia Avanzada",
     "categorySlug": "sincronizacion-avanzada",
-    "categoryIcon": "⚙️",
+    "categoryIcon": "settings",
     "difficulty": "Avanzado",
     "summary": "Gestión de estado concurrente delegando la propiedad exclusiva de los datos a una única goroutine dedicada.",
     "originalExpl": "En el ejemplo anterior usamos mutexes para sincronizar el acceso a un estado compartido. Otra opción es delegar la gestión del estado a una única goroutine dedicada que se comunica mediante canales. Esto sigue la filosofía de Go de compartir memoria comunicándose.",
@@ -3305,23 +3305,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "The Go Blog: Share Memory By Communicating",
+        "title": "Blog oficial de Go: No te comuniques compartiendo memoria, comparte memoria comunicándote",
         "url": "https://go.dev/blog/codelab-share",
         "description": "Artículo fundacional sobre la filosofía de diseño concurrente en Go."
       },
       {
-        "title": "Go by Example: Stateful Goroutines",
+        "title": "Go by Example Original: Stateful Goroutines",
         "url": "https://gobyexample.com/stateful-goroutines",
         "description": "Ejemplo en Go by Example."
       },
       {
-        "title": "Effective Go: Concurrency by communication",
+        "title": "Guía canónica Effective Go: Concurrencia mediante comunicación",
         "url": "https://go.dev/doc/effective_go#concurrency",
         "description": "Guía canónica de diseño sobre comunicación entre goroutines."
       }
     ],
-    "code": "// In the previous example we used explicit locking with\n// [mutexes](mutexes) to synchronize access to shared state\n// across multiple goroutines. Another option is to use the\n// built-in synchronization features of  goroutines and\n// channels to achieve the same result. This channel-based\n// approach aligns with Go's ideas of sharing memory by\n// communicating and having each piece of data owned\n// by exactly one goroutine.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n\t\"sync/atomic\"\n\t\"time\"\n)\n\n// In this example our state will be owned by a single\n// goroutine. This will guarantee that the data is never\n// corrupted with concurrent access. In order to read or\n// write that state, other goroutines will send messages\n// to the owning goroutine and receive corresponding\n// replies. These `readOp` and `writeOp` `struct`s\n// encapsulate those requests and a way for the owning\n// goroutine to respond.\ntype readOp struct {\n\tkey  int\n\tresp chan int\n}\ntype writeOp struct {\n\tkey  int\n\tval  int\n\tresp chan bool\n}\n\nfunc main() {\n\n\t// As before we'll count how many operations we perform.\n\tvar readOps uint64\n\tvar writeOps uint64\n\n\t// The `reads` and `writes` channels will be used by\n\t// other goroutines to issue read and write requests,\n\t// respectively.\n\treads := make(chan readOp)\n\twrites := make(chan writeOp)\n\n\t// Here is the goroutine that owns the `state`, which\n\t// is a map as in the previous example but now private\n\t// to the stateful goroutine. This goroutine repeatedly\n\t// selects on the `reads` and `writes` channels,\n\t// responding to requests as they arrive. A response\n\t// is executed by first performing the requested\n\t// operation and then sending a value on the response\n\t// channel `resp` to indicate success (and the desired\n\t// value in the case of `reads`).\n\tgo func() {\n\t\tvar state = make(map[int]int)\n\t\tfor {\n\t\t\tselect {\n\t\t\tcase read := <-reads:\n\t\t\t\tread.resp <- state[read.key]\n\t\t\tcase write := <-writes:\n\t\t\t\tstate[write.key] = write.val\n\t\t\t\twrite.resp <- true\n\t\t\t}\n\t\t}\n\t}()\n\n\t// This starts 100 goroutines to issue reads to the\n\t// state-owning goroutine via the `reads` channel.\n\t// Each read requires constructing a `readOp`, sending\n\t// it over the `reads` channel, and then receiving the\n\t// result over the provided `resp` channel.\n\tfor range 100 {\n\t\tgo func() {\n\t\t\tfor {\n\t\t\t\tread := readOp{\n\t\t\t\t\tkey:  rand.Intn(5),\n\t\t\t\t\tresp: make(chan int)}\n\t\t\t\treads <- read\n\t\t\t\t<-read.resp\n\t\t\t\tatomic.AddUint64(&readOps, 1)\n\t\t\t\ttime.Sleep(time.Millisecond)\n\t\t\t}\n\t\t}()\n\t}\n\n\t// We start 10 writes as well, using a similar\n\t// approach.\n\tfor range 10 {\n\t\tgo func() {\n\t\t\tfor {\n\t\t\t\twrite := writeOp{\n\t\t\t\t\tkey:  rand.Intn(5),\n\t\t\t\t\tval:  rand.Intn(100),\n\t\t\t\t\tresp: make(chan bool)}\n\t\t\t\twrites <- write\n\t\t\t\t<-write.resp\n\t\t\t\tatomic.AddUint64(&writeOps, 1)\n\t\t\t\ttime.Sleep(time.Millisecond)\n\t\t\t}\n\t\t}()\n\t}\n\n\t// Let the goroutines work for a second.\n\ttime.Sleep(time.Second)\n\n\t// Finally, capture and report the op counts.\n\treadOpsFinal := atomic.LoadUint64(&readOps)\n\tfmt.Println(\"readOps:\", readOpsFinal)\n\twriteOpsFinal := atomic.LoadUint64(&writeOps)\n\tfmt.Println(\"writeOps:\", writeOpsFinal)\n}\n",
-    "output": "# Running our program shows that the goroutine-based\n# state management example completes about 80,000\n# total operations.\n$ go run stateful-goroutines.go\nreadOps: 71708\nwriteOps: 7177\n\n# For this particular case the goroutine-based approach\n# was a bit more involved than the mutex-based one. It\n# might be useful in certain cases though, for example\n# where you have other channels involved or when managing\n# multiple such mutexes would be error-prone. You should\n# use whichever approach feels most natural, especially\n# with respect to understanding the correctness of your\n# program.\n",
+    "code": "// En el ejemplo previo utilizamos bloqueos explícitos con\n// [mutexes](mutexes) para sincronizar el acceso a estado compartido\n// entre múltiples goroutines. Otra alternativa consiste en aprovechar las\n// capacidades integradas de goroutines y canales para lograr idéntico resultado.\n// Este enfoque basado en canales concuerda con la filosofía de Go de compartir\n// memoria comunicando, donde cada pieza de dato pertenece\n// a exactamente una goroutine propietaria.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n\t\"sync/atomic\"\n\t\"time\"\n)\n\n// En este ejemplo nuestro estado pertenecerá a una única\n// goroutine. Esto garantiza que la información nunca se corrompa\n// con accesos concurrentes. Para leer o escribir en ese estado,\n// otras goroutines enviarán mensajes a la goroutine propietaria\n// y recibirán las respuestas correspondientes. Estas estructuras\n// `readOp` y `writeOp` encapsulan dichas peticiones y proporcionan un canal\n// para que la goroutine propietaria responda.\ntype readOp struct {\n\tkey  int\n\tresp chan int\n}\ntype writeOp struct {\n\tkey  int\n\tval  int\n\tresp chan bool\n}\n\nfunc main() {\n\n\t// Como antes, contabilizaremos cuántas operaciones realizamos.\n\tvar readOps uint64\n\tvar writeOps uint64\n\n\t// Los canales `reads` y `writes` serán utilizados por\n\t// otras goroutines para emitir solicitudes de lectura y escritura,\n\t// respectivamente.\n\treads := make(chan readOp)\n\twrites := make(chan writeOp)\n\n\t// Aquí está la goroutine propietaria del `state`, el cual\n\t// es un mapa como en el ejemplo anterior pero ahora privado\n\t// para esta goroutine con estado. Esta goroutine realiza un\n\t// select repetidamente sobre los canales `reads` y `writes`,\n\t// respondiendo a las solicitudes según van llegando. Una respuesta\n\t// se ejecuta realizando primero la operación solicitada y luego\n\t// enviando un valor en el canal de respuesta `resp` para indicar éxito\n\t// (y el valor obtenido en el caso de las lecturas).\n\tgo func() {\n\t\tvar state = make(map[int]int)\n\t\tfor {\n\t\t\tselect {\n\t\t\tcase read := <-reads:\n\t\t\t\tread.resp <- state[read.key]\n\t\t\tcase write := <-writes:\n\t\t\t\tstate[write.key] = write.val\n\t\t\t\twrite.resp <- true\n\t\t\t}\n\t\t}\n\t}()\n\n\t// Esto inicia 100 goroutines para emitir lecturas hacia la\n\t// goroutine propietaria del estado a través del canal `reads`.\n\t// Cada lectura requiere construir una `readOp`, enviarla\n\t// por el canal `reads` y luego recibir el resultado por\n\t// el canal `resp` proporcionado.\n\tfor range 100 {\n\t\tgo func() {\n\t\t\tfor {\n\t\t\t\tread := readOp{\n\t\t\t\t\tkey:  rand.Intn(5),\n\t\t\t\t\tresp: make(chan int)}\n\t\t\t\treads <- read\n\t\t\t\t<-read.resp\n\t\t\t\tatomic.AddUint64(&readOps, 1)\n\t\t\t\ttime.Sleep(time.Millisecond)\n\t\t\t}\n\t\t}()\n\t}\n\n\t// Iniciamos 10 escrituras también, utilizando un\n\t// enfoque similar.\n\tfor range 10 {\n\t\tgo func() {\n\t\t\tfor {\n\t\t\t\twrite := writeOp{\n\t\t\t\t\tkey:  rand.Intn(5),\n\t\t\t\t\tval:  rand.Intn(100),\n\t\t\t\t\tresp: make(chan bool)}\n\t\t\t\twrites <- write\n\t\t\t\t<-write.resp\n\t\t\t\tatomic.AddUint64(&writeOps, 1)\n\t\t\t\ttime.Sleep(time.Millisecond)\n\t\t\t}\n\t\t}()\n\t}\n\n\t// Dejamos que las goroutines trabajen durante un segundo.\n\ttime.Sleep(time.Second)\n\n\t// Finalmente capturamos e informamos el recuento de operaciones.\n\treadOpsFinal := atomic.LoadUint64(&readOps)\n\tfmt.Println(\"readOps:\", readOpsFinal)\n\twriteOpsFinal := atomic.LoadUint64(&writeOps)\n\tfmt.Println(\"writeOps:\", writeOpsFinal)\n}\n",
+    "output": "# Ejecutar nuestro programa demuestra que el ejemplo de gestión de estado\n# basado en goroutines completa aproximadamente 80,000 operaciones en total.\n$ go run stateful-goroutines.go\nreadOps: 71708\nwriteOps: 7177\n\n# Para este caso particular el enfoque basado en goroutines requirió un poco más\n# de código que el basado en mutexes. No obstante, resulta sumamente útil en\n# casos donde intervienen otros canales o cuando gestionar múltiples\n# mutexes resultaría propenso a errores. Debes emplear el enfoque que te resulte\n# más natural y garantice la corrección de tu programa.\n",
     "officialUrl": "https://gobyexample.com/stateful-goroutines"
   },
   {
@@ -3331,7 +3331,7 @@ const GO_TOPICS = [
     "titleEs": "Ordenamiento con Paquetes Slices y Sort",
     "category": "Manipulación de Texto y Formatos",
     "categorySlug": "texto-formatos",
-    "categoryIcon": "🔤",
+    "categoryIcon": "file-code",
     "difficulty": "Principiante",
     "summary": "Ordenamiento rápido y eficiente de colecciones primitivas utilizando el paquete estándar moderno 'slices' y el clásico 'sort'.",
     "originalExpl": "El paquete de ordenamiento de Go implementa algoritmos de ordenamiento para tipos integrados y definidos por el usuario. Desde Go 1.21, el paquete 'slices' proporciona funciones de ordenamiento genéricas mucho más convenientes y rápidas.",
@@ -3372,22 +3372,22 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package slices: Sort and BinarySearch",
+        "title": "Paquete slices: Sort and BinarySearch",
         "url": "https://pkg.go.dev/slices#Sort",
         "description": "Documentación oficial del paquete slices en la biblioteca estándar."
       },
       {
-        "title": "The Go Blog: Pattern-defeating Quicksort in Go 1.19",
+        "title": "Blog oficial de Go: Algoritmo de ordenamiento pdqsort introducido en Go 1.19",
         "url": "https://go.dev/doc/go1.19#sort",
         "description": "Detalles técnicos sobre la adopción del algoritmo pdqsort en Go."
       },
       {
-        "title": "Go by Example: Sorting",
+        "title": "Go by Example Original: Sorting",
         "url": "https://gobyexample.com/sorting",
         "description": "Ejemplo en Go by Example."
       }
     ],
-    "code": "// Go's `slices` package implements sorting for builtins\n// and user-defined types. We'll look at sorting for\n// builtins first.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"slices\"\n)\n\nfunc main() {\n\n\t// Sorting functions are generic, and work for any\n\t// _ordered_ built-in type. For a list of ordered\n\t// types, see [cmp.Ordered](https://pkg.go.dev/cmp#Ordered).\n\tstrs := []string{\"c\", \"a\", \"b\"}\n\tslices.Sort(strs)\n\tfmt.Println(\"Strings:\", strs)\n\n\t// An example of sorting `int`s.\n\tints := []int{7, 2, 4}\n\tslices.Sort(ints)\n\tfmt.Println(\"Ints:   \", ints)\n\n\t// We can also use the `slices` package to check if\n\t// a slice is already in sorted order.\n\ts := slices.IsSorted(ints)\n\tfmt.Println(\"Sorted: \", s)\n}\n",
+    "code": "// El paquete `slices` de Go implementa funciones de ordenamiento para tipos\n// primitivos y tipos definidos por el usuario. Primero examinaremos el ordenamiento\n// de tipos integrados en el lenguaje.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"slices\"\n)\n\nfunc main() {\n\n\t// Las funciones de ordenamiento son genéricas y funcionan con cualquier\n\t// tipo primitivo _ordenado_. Para consultar la lista de tipos ordenados,\n\t// revisa [cmp.Ordered](https://pkg.go.dev/cmp#Ordered).\n\tstrs := []string{\"c\", \"a\", \"b\"}\n\tslices.Sort(strs)\n\tfmt.Println(\"Strings:\", strs)\n\n\t// Un ejemplo de ordenamiento de enteros `int`.\n\tints := []int{7, 2, 4}\n\tslices.Sort(ints)\n\tfmt.Println(\"Ints:   \", ints)\n\n\t// También podemos usar el paquete `slices` para verificar si\n\t// un slice ya se encuentra ordenado.\n\ts := slices.IsSorted(ints)\n\tfmt.Println(\"Sorted: \", s)\n}\n",
     "output": "$ go run sorting.go\nStrings: [a b c]\nInts:    [2 4 7]\nSorted:  true\n",
     "officialUrl": "https://gobyexample.com/sorting"
   },
@@ -3398,7 +3398,7 @@ const GO_TOPICS = [
     "titleEs": "Ordenamiento Personalizado con Funciones",
     "category": "Manipulación de Texto y Formatos",
     "categorySlug": "texto-formatos",
-    "categoryIcon": "🔤",
+    "categoryIcon": "file-code",
     "difficulty": "Intermedio",
     "summary": "Ordenamiento de colecciones complejas o structs utilizando comparadores personalizados mediante slices.SortFunc y cmp.Compare.",
     "originalExpl": "A veces queremos ordenar una colección por algo que no sea su orden natural. Por ejemplo, supongamos que queremos ordenar cadenas por su longitud en lugar de alfabéticamente.",
@@ -3439,22 +3439,22 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package slices: SortFunc",
+        "title": "Paquete slices: SortFunc",
         "url": "https://pkg.go.dev/slices#SortFunc",
         "description": "Documentación oficial de la función genérica slices.SortFunc."
       },
       {
-        "title": "Package cmp: Compare function",
+        "title": "Paquete cmp: Compare function",
         "url": "https://pkg.go.dev/cmp#Compare",
         "description": "Documentación oficial del paquete cmp de ordenamiento."
       },
       {
-        "title": "Go by Example: Sorting by Functions",
+        "title": "Go by Example Original: Sorting by Functions",
         "url": "https://gobyexample.com/sorting-by-functions",
         "description": "Ejemplo interactivo en Go by Example."
       }
     ],
-    "code": "// Sometimes we'll want to sort a collection by something\n// other than its natural order. For example, suppose we\n// wanted to sort strings by their length instead of\n// alphabetically. Here's an example of custom sorts\n// in Go.\n\npackage main\n\nimport (\n\t\"cmp\"\n\t\"fmt\"\n\t\"slices\"\n)\n\nfunc main() {\n\tfruits := []string{\"peach\", \"banana\", \"kiwi\"}\n\n\t// We implement a comparison function for string\n\t// lengths. `cmp.Compare` is helpful for this.\n\tlenCmp := func(a, b string) int {\n\t\treturn cmp.Compare(len(a), len(b))\n\t}\n\n\t// Now we can call `slices.SortFunc` with this custom\n\t// comparison function to sort `fruits` by name length.\n\tslices.SortFunc(fruits, lenCmp)\n\tfmt.Println(fruits)\n\n\t// We can use the same technique to sort a slice of\n\t// values that aren't built-in types.\n\ttype Person struct {\n\t\tname string\n\t\tage  int\n\t}\n\n\tpeople := []Person{\n\t\tPerson{name: \"Jax\", age: 37},\n\t\tPerson{name: \"TJ\", age: 25},\n\t\tPerson{name: \"Alex\", age: 72},\n\t}\n\n\t// Sort `people` by age using `slices.SortFunc`.\n\t//\n\t// Note: if the `Person` struct is large,\n\t// you may want the slice to contain `*Person` instead\n\t// and adjust the sorting function accordingly. If in\n\t// doubt, [benchmark](testing-and-benchmarking)!\n\tslices.SortFunc(people,\n\t\tfunc(a, b Person) int {\n\t\t\treturn cmp.Compare(a.age, b.age)\n\t\t})\n\tfmt.Println(people)\n}\n",
+    "code": "// En ocasiones necesitaremos ordenar una colección según un criterio\n// diferente a su orden natural. Por ejemplo, supongamos que\n// deseamos ordenar cadenas por su longitud en lugar de hacerlo\n// alfabéticamente. Aquí tenemos un ejemplo de ordenamiento personalizado\n// en Go.\n\npackage main\n\nimport (\n\t\"cmp\"\n\t\"fmt\"\n\t\"slices\"\n)\n\nfunc main() {\n\tfruits := []string{\"peach\", \"banana\", \"kiwi\"}\n\n\t// Implementamos una función de comparación para la longitud\n\t// de las cadenas. `cmp.Compare` resulta muy conveniente para esto.\n\tlenCmp := func(a, b string) int {\n\t\treturn cmp.Compare(len(a), len(b))\n\t}\n\n\t// Ahora podemos invocar `slices.SortFunc` con esta función de\n\t// comparación personalizada para ordenar `fruits` según la longitud del nombre.\n\tslices.SortFunc(fruits, lenCmp)\n\tfmt.Println(fruits)\n\n\t// Podemos utilizar la misma técnica para ordenar un slice de\n\t// valores que no sean tipos primitivos.\n\ttype Person struct {\n\t\tname string\n\t\tage  int\n\t}\n\n\tpeople := []Person{\n\t\tPerson{name: \"Jax\", age: 37},\n\t\tPerson{name: \"TJ\", age: 25},\n\t\tPerson{name: \"Alex\", age: 72},\n\t}\n\n\t// Ordenamos `people` por edad utilizando `slices.SortFunc`.\n\t//\n\t// Nota: si el struct `Person` es grande,\n\t// es recomendable que el slice contenga `*Person` en su lugar\n\t// y ajustar la función de comparación adecuadamente. ¡Ante la\n\t// duda, realiza un [benchmark](testing-and-benchmarking)!\n\tslices.SortFunc(people,\n\t\tfunc(a, b Person) int {\n\t\t\treturn cmp.Compare(a.age, b.age)\n\t\t})\n\tfmt.Println(people)\n}\n",
     "output": "$ go run sorting-by-functions.go \n[kiwi peach banana]\n[{TJ 25} {Jax 37} {Alex 72}]\n",
     "officialUrl": "https://gobyexample.com/sorting-by-functions"
   },
@@ -3465,7 +3465,7 @@ const GO_TOPICS = [
     "titleEs": "Pánico (Panic) y Errores Fatales",
     "category": "Manejo de Errores y Excepciones",
     "categorySlug": "errores-panico",
-    "categoryIcon": "🛡️",
+    "categoryIcon": "shield",
     "difficulty": "Intermedio",
     "summary": "Mecanismo nativo de parada de emergencia cuando un programa entra en un estado imposible del que no puede recuperarse.",
     "originalExpl": "Un panic típicamente significa que algo salió inesperadamente mal. Mayormente lo usamos para fallar rápidamente en errores que no deberían ocurrir durante la operación normal, o que no estamos preparados para manejar con gracia.",
@@ -3506,29 +3506,29 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "The Go Blog: Defer, Panic, and Recover",
+        "title": "Blog oficial de Go: Mecanismos de defer, panic y recover en Go",
         "url": "https://go.dev/blog/defer-panic-and-recover",
         "description": "El artículo fundamental de Go sobre el ciclo de vida de pánicos y recuperaciones."
       },
       {
-        "title": "Effective Go: Panic",
+        "title": "Guía canónica Effective Go: Manejo de excepciones y uso justificado de panic",
         "url": "https://go.dev/doc/effective_go#panic",
         "description": "Guía idiomática sobre cuándo está justificado utilizar panic."
       },
       {
-        "title": "Go Spec: Handling panics",
+        "title": "Especificación de Go: Gestión y recuperación de panics",
         "url": "https://go.dev/ref/spec#Handling_panics",
         "description": "Especificación formal del comportamiento de la función panic."
       },
       {
-        "title": "Go by Example: Panic",
+        "title": "Go by Example Original: Panic",
         "url": "https://gobyexample.com/panic",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// A `panic` typically means something went unexpectedly\n// wrong. Mostly we use it to fail fast on errors that\n// shouldn't occur during normal operation, or that we\n// aren't prepared to handle gracefully.\n\npackage main\n\nimport (\n\t\"os\"\n\t\"path/filepath\"\n)\n\nfunc main() {\n\n\t// We'll use panic throughout this site to check for\n\t// unexpected errors. This is the only program on the\n\t// site designed to panic.\n\tpanic(\"a problem\")\n\n\t// A common use of panic is to abort if a function\n\t// returns an error value that we don't know how to\n\t// (or want to) handle. Here's an example of\n\t// `panic`king if we get an unexpected error when creating a new file.\n\tpath := filepath.Join(os.TempDir(), \"file\")\n\t_, err := os.Create(path)\n\tif err != nil {\n\t\tpanic(err)\n\t}\n}\n",
-    "output": "# Running this program will cause it to panic, print\n# an error message and goroutine traces, and exit with\n# a non-zero status.\n\n# When first panic in `main` fires, the program exits\n# without reaching the rest of the code. If you'd like\n# to see the program try to create a temp file, comment\n# the first panic out.\n$ go run panic.go\npanic: a problem\n\ngoroutine 1 [running]:\nmain.main()\n\t/.../panic.go:12 +0x47\n...\nexit status 2\n\n# Note that unlike some languages which use exceptions\n# for handling of many errors, in Go it is idiomatic\n# to use error-indicating return values wherever possible.\n",
+    "code": "// Un `panic` suele significar que algo salió inesperadamente\n// mal. Principalmente lo usamos para fallar rápidamente (fail-fast) ante errores\n// que no deberían ocurrir durante la operación normal, o que no\n// estamos preparados para manejar de forma elegante.\n\npackage main\n\nimport (\n\t\"os\"\n\t\"path/filepath\"\n)\n\nfunc main() {\n\n\t// Usaremos panic a lo largo de este sitio para comprobar\n\t// errores inesperados. Este es el único programa del\n\t// sitio diseñado para disparar un panic intencionadamente.\n\tpanic(\"a problem\")\n\n\t// Un uso común de panic es abortar si una función\n\t// devuelve un valor de error que no sabemos (o no deseamos)\n\t// manejar. Aquí tenemos un ejemplo de\n\t// disparar `panic` si ocurre un error inesperado al crear un archivo nuevo.\n\tpath := filepath.Join(os.TempDir(), \"file\")\n\t_, err := os.Create(path)\n\tif err != nil {\n\t\tpanic(err)\n\t}\n}\n",
+    "output": "# Ejecutar este programa provocará un panic, imprimirá\n# un mensaje de error con las trazas de goroutines y finalizará\n# con un estado distinto de cero.\n\n# Cuando se dispara el primer panic en `main`, el programa termina\n# sin alcanzar el resto del código. Si deseas ver al programa\n# intentar crear el archivo temporal, comenta la primera línea de panic.\n$ go run panic.go\npanic: a problem\n\ngoroutine 1 [running]:\nmain.main()\n\t/.../panic.go:12 +0x47\n...\nexit status 2\n\n# Ten en cuenta que, a diferencia de otros lenguajes que emplean excepciones\n# para el manejo común de errores, en Go es idiomático\n# utilizar valores de retorno explícitos siempre que sea posible.\n",
     "officialUrl": "https://gobyexample.com/panic"
   },
   {
@@ -3538,7 +3538,7 @@ const GO_TOPICS = [
     "titleEs": "Ejecución Diferida (Defer)",
     "category": "Manejo de Errores y Excepciones",
     "categorySlug": "errores-panico",
-    "categoryIcon": "🛡️",
+    "categoryIcon": "shield",
     "difficulty": "Principiante",
     "summary": "Pospone la ejecución de una función hasta que la función que la contiene termine, ideal para limpieza de recursos.",
     "originalExpl": "Defer se utiliza para asegurar que una llamada a función se realice más tarde en la ejecución del programa, usualmente para propósitos de limpieza. defer se usa a menudo donde otros lenguajes usan finally.",
@@ -3579,23 +3579,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "The Go Blog: Defer, Panic, and Recover",
+        "title": "Blog oficial de Go: Mecanismos de defer, panic y recover en Go",
         "url": "https://go.dev/blog/defer-panic-and-recover",
         "description": "Artículo oficial de Go sobre las reglas y uso idiomático de defer."
       },
       {
-        "title": "Go by Example: Defer",
+        "title": "Go by Example Original: Defer",
         "url": "https://gobyexample.com/defer",
         "description": "Ejemplo en Go by Example."
       },
       {
-        "title": "Eli Bendersky: How defer works in Go",
+        "title": "Eli Bendersky: Cómo funciona internamente defer en Go",
         "url": "https://eli.thegreenplace.net/2023/how-defer-works-in-go/",
         "description": "Análisis exhaustivo del código ensamblador y evolución de open-coded defers en Go."
       }
     ],
-    "code": "// _Defer_ is used to ensure that a function call is\n// performed later in a program's execution, usually for\n// purposes of cleanup. `defer` is often used where e.g.\n// `ensure` and `finally` would be used in other languages.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"path/filepath\"\n)\n\n// Suppose we wanted to create a file, write to it,\n// and then close when we're done. Here's how we could\n// do that with `defer`.\nfunc main() {\n\n\t// Immediately after getting a file object with\n\t// `createFile`, we defer the closing of that file\n\t// with `closeFile`. This will be executed at the end\n\t// of the enclosing function (`main`), after\n\t// `writeFile` has finished.\n\tpath := filepath.Join(os.TempDir(), \"defer.txt\")\n\tf := createFile(path)\n\tdefer closeFile(f)\n\twriteFile(f)\n}\n\nfunc createFile(p string) *os.File {\n\tfmt.Println(\"creating\")\n\tf, err := os.Create(p)\n\tif err != nil {\n\t\tpanic(err)\n\t}\n\treturn f\n}\n\nfunc writeFile(f *os.File) {\n\tfmt.Println(\"writing\")\n\tfmt.Fprintln(f, \"data\")\n}\n\nfunc closeFile(f *os.File) {\n\tfmt.Println(\"closing\")\n\terr := f.Close()\n\t// It's important to check for errors when closing a\n\t// file, even in a deferred function.\n\tif err != nil {\n\t\tpanic(err)\n\t}\n}\n",
-    "output": "# Running the program confirms that the file is closed\n# after being written.\n$ go run defer.go\ncreating\nwriting\nclosing\n",
+    "code": "// _Defer_ se utiliza para asegurar que una llamada a función se\n// ejecute más adelante en la ejecución del programa, generalmente con\n// fines de limpieza y liberación de recursos. `defer` se utiliza frecuentemente\n// donde en otros lenguajes se emplearían `ensure` o `finally`.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"path/filepath\"\n)\n\n// Supongamos que deseamos crear un archivo, escribir en él\n// y luego cerrarlo cuando hayamos concluido. Así es como\n// podríamos lograrlo con `defer`.\nfunc main() {\n\n\t// Inmediatamente después de obtener un objeto de archivo con\n\t// `createFile`, posponemos el cierre de dicho archivo\n\t// mediante `closeFile`. Esto se ejecutará al término\n\t// de la función contenedora (`main`), una vez que\n\t// `writeFile` haya concluido.\n\tpath := filepath.Join(os.TempDir(), \"defer.txt\")\n\tf := createFile(path)\n\tdefer closeFile(f)\n\twriteFile(f)\n}\n\nfunc createFile(p string) *os.File {\n\tfmt.Println(\"creating\")\n\tf, err := os.Create(p)\n\tif err != nil {\n\t\tpanic(err)\n\t}\n\treturn f\n}\n\nfunc writeFile(f *os.File) {\n\tfmt.Println(\"writing\")\n\tfmt.Fprintln(f, \"data\")\n}\n\nfunc closeFile(f *os.File) {\n\tfmt.Println(\"closing\")\n\terr := f.Close()\n\t// Es fundamental verificar si ocurrieron errores al cerrar un\n\t// archivo, incluso dentro de una función pospuesta con defer.\n\tif err != nil {\n\t\tpanic(err)\n\t}\n}\n",
+    "output": "# Ejecutar el programa confirma que el archivo se cierra\n# debidamente tras escribir en él.\n$ go run defer.go\ncreating\nwriting\nclosing\n",
     "officialUrl": "https://gobyexample.com/defer"
   },
   {
@@ -3605,7 +3605,7 @@ const GO_TOPICS = [
     "titleEs": "Recuperación de Pánico con Recover",
     "category": "Manejo de Errores y Excepciones",
     "categorySlug": "errores-panico",
-    "categoryIcon": "🛡️",
+    "categoryIcon": "shield",
     "difficulty": "Intermedio",
     "summary": "Captura y control de pánicos dentro de funciones diferidas para restaurar el flujo normal y prevenir el colapso del proceso.",
     "originalExpl": "Go hace posible recuperarse de un pánico usando la función integrada recover(). Un recover solo es útil dentro de funciones diferidas (defer). Durante una ejecución normal, recover devuelve nil.",
@@ -3646,22 +3646,22 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "The Go Blog: Defer, Panic, and Recover",
+        "title": "Blog oficial de Go: Mecanismos de defer, panic y recover en Go",
         "url": "https://go.dev/blog/defer-panic-and-recover",
         "description": "Guía canónica de los creadores de Go sobre el funcionamiento de recover."
       },
       {
-        "title": "Package runtime/debug: Stack function",
+        "title": "Paquete runtime/debug: Stack function",
         "url": "https://pkg.go.dev/runtime/debug#Stack",
         "description": "Documentación oficial para extraer el stack trace durante una recuperación."
       },
       {
-        "title": "Go by Example: Recover",
+        "title": "Go by Example Original: Recover",
         "url": "https://gobyexample.com/recover",
         "description": "Ejemplo interactivo en Go by Example."
       }
     ],
-    "code": "// Go makes it possible to _recover_ from a panic, by\n// using the `recover` built-in function. A `recover` can\n// stop a `panic` from aborting the program and let it\n// continue with execution instead.\n\n// An example of where this can be useful: a server\n// wouldn't want to crash if one of the client connections\n// exhibits a critical error. Instead, the server would\n// want to close that connection and continue serving\n// other clients. In fact, this is what Go's `net/http`\n// does by default for HTTP servers.\n\npackage main\n\nimport \"fmt\"\n\n// This function panics.\nfunc mayPanic() {\n\tpanic(\"a problem\")\n}\n\nfunc main() {\n\t// `recover` must be called within a deferred function.\n\t// When the enclosing function panics, the defer will\n\t// activate and a `recover` call within it will catch\n\t// the panic.\n\tdefer func() {\n\t\tif r := recover(); r != nil {\n\t\t\t// The return value of `recover` is the error raised in\n\t\t\t// the call to `panic`.\n\t\t\tfmt.Println(\"Recovered. Error:\\n\", r)\n\t\t}\n\t}()\n\n\tmayPanic()\n\n\t// This code will not run, because `mayPanic` panics.\n\t// The execution of `main` stops at the point of the\n\t// panic and resumes in the deferred closure.\n\tfmt.Println(\"After mayPanic()\")\n}\n",
+    "code": "// Go permite _recuperarse_ (recover) de un panic utilizando\n// la función incorporada `recover`. Un `recover` puede\n// evitar que un `panic` aborte el programa y permitirle\n// continuar con su ejecución normal.\n\n// Un ejemplo donde esto resulta de gran utilidad: un servidor\n// no debería caerse si una de las conexiones de clientes\n// experimenta un error crítico. En su lugar, el servidor\n// debe cerrar esa conexión particular y seguir atendiendo a los\n// demás clientes. De hecho, esto es exactamente lo que el paquete `net/http`\n// de Go hace por defecto en sus servidores HTTP.\n\npackage main\n\nimport \"fmt\"\n\n// Esta función dispara un panic.\nfunc mayPanic() {\n\tpanic(\"a problem\")\n}\n\nfunc main() {\n\t// `recover` debe ser invocado dentro de una función pospuesta con `defer`.\n\t// Cuando la función contenedora entra en panic, el defer se\n\t// activará y la llamada a `recover` en su interior capturará\n\t// el panic.\n\tdefer func() {\n\t\tif r := recover(); r != nil {\n\t\t\t// El valor de retorno de `recover` es el error emitido en\n\t\t\t// la llamada a `panic`.\n\t\t\tfmt.Println(\"Recovered. Error:\\n\", r)\n\t\t}\n\t}()\n\n\tmayPanic()\n\n\t// Este código no llegará a ejecutarse, dado que `mayPanic` dispara un panic.\n\t// La ejecución de `main` se detiene en el punto del\n\t// panic y se reanuda en la clausura pospuesta con defer.\n\tfmt.Println(\"After mayPanic()\")\n}\n",
     "output": "$ go run recover.go\nRecovered. Error:\n a problem\n",
     "officialUrl": "https://gobyexample.com/recover"
   },
@@ -3672,7 +3672,7 @@ const GO_TOPICS = [
     "titleEs": "Funciones del Paquete Strings",
     "category": "Manipulación de Texto y Formatos",
     "categorySlug": "texto-formatos",
-    "categoryIcon": "🔤",
+    "categoryIcon": "file-code",
     "difficulty": "Principiante",
     "summary": "Herramientas estándar para búsqueda, manipulación, división y transformación de cadenas de texto con 'strings'.",
     "originalExpl": "La biblioteca estándar del paquete 'strings' proporciona muchas funciones útiles para trabajar con cadenas de texto. Aquí hay algunos ejemplos para darte una idea del paquete.",
@@ -3713,22 +3713,22 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package strings (Standard Library)",
+        "title": "Paquete strings (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/strings",
         "description": "Documentación oficial exhaustiva de todas las funciones del paquete strings."
       },
       {
-        "title": "The Go Blog: Strings, bytes, runes and characters",
+        "title": "Blog oficial de Go: Cadenas, bytes, runas y caracteres",
         "url": "https://go.dev/blog/strings",
         "description": "Artículo de referencia sobre la arquitectura interna de cadenas en Go."
       },
       {
-        "title": "Go by Example: String Functions",
+        "title": "Go by Example Original: String Functions",
         "url": "https://gobyexample.com/string-functions",
         "description": "Ejemplo en Go by Example."
       }
     ],
-    "code": "// The standard library's `strings` package provides many\n// useful string-related functions. Here are some examples\n// to give you a sense of the package.\n\npackage main\n\nimport (\n\t\"fmt\"\n\ts \"strings\"\n)\n\n// We alias `fmt.Println` to a shorter name as we'll use\n// it a lot below.\nvar p = fmt.Println\n\nfunc main() {\n\n\t// Here's a sample of the functions available in\n\t// `strings`. Since these are functions from the\n\t// package, not methods on the string object itself,\n\t// we need to pass the string in question as the first\n\t// argument to the function. You can find more\n\t// functions in the [`strings`](https://pkg.go.dev/strings)\n\t// package docs.\n\tp(\"Contains:  \", s.Contains(\"test\", \"es\"))\n\tp(\"Count:     \", s.Count(\"test\", \"t\"))\n\tp(\"HasPrefix: \", s.HasPrefix(\"test\", \"te\"))\n\tp(\"HasSuffix: \", s.HasSuffix(\"test\", \"st\"))\n\tp(\"Index:     \", s.Index(\"test\", \"e\"))\n\tp(\"Join:      \", s.Join([]string{\"a\", \"b\"}, \"-\"))\n\tp(\"Repeat:    \", s.Repeat(\"a\", 5))\n\tp(\"Replace:   \", s.Replace(\"foo\", \"o\", \"0\", -1))\n\tp(\"Replace:   \", s.Replace(\"foo\", \"o\", \"0\", 1))\n\tp(\"Split:     \", s.Split(\"a-b-c-d-e\", \"-\"))\n\tp(\"ToLower:   \", s.ToLower(\"TEST\"))\n\tp(\"ToUpper:   \", s.ToUpper(\"test\"))\n}\n",
+    "code": "// El paquete `strings` de la biblioteca estándar proporciona numerosas\n// funciones útiles relacionadas con cadenas de texto. Aquí hay algunos ejemplos\n// para familiarizarse con el paquete.\n\npackage main\n\nimport (\n\t\"fmt\"\n\ts \"strings\"\n)\n\n// Asignamos un alias a `fmt.Println` con un nombre más breve ya que lo\n// usaremos repetidamente a continuación.\nvar p = fmt.Println\n\nfunc main() {\n\n\t// Aquí hay una muestra de las funciones disponibles en\n\t// `strings`. Como se trata de funciones del paquete\n\t// y no de métodos propios del objeto string, debemos\n\t// pasar la cadena en cuestión como primer argumento\n\t// a la función. Puedes encontrar muchas más funciones\n\t// en la documentación de [`strings`](https://pkg.go.dev/strings).\n\tp(\"Contains:  \", s.Contains(\"test\", \"es\"))\n\tp(\"Count:     \", s.Count(\"test\", \"t\"))\n\tp(\"HasPrefix: \", s.HasPrefix(\"test\", \"te\"))\n\tp(\"HasSuffix: \", s.HasSuffix(\"test\", \"st\"))\n\tp(\"Index:     \", s.Index(\"test\", \"e\"))\n\tp(\"Join:      \", s.Join([]string{\"a\", \"b\"}, \"-\"))\n\tp(\"Repeat:    \", s.Repeat(\"a\", 5))\n\tp(\"Replace:   \", s.Replace(\"foo\", \"o\", \"0\", -1))\n\tp(\"Replace:   \", s.Replace(\"foo\", \"o\", \"0\", 1))\n\tp(\"Split:     \", s.Split(\"a-b-c-d-e\", \"-\"))\n\tp(\"ToLower:   \", s.ToLower(\"TEST\"))\n\tp(\"ToUpper:   \", s.ToUpper(\"test\"))\n}\n",
     "output": "$ go run string-functions.go\nContains:   true\nCount:      2\nHasPrefix:  true\nHasSuffix:  true\nIndex:      1\nJoin:       a-b\nRepeat:     aaaaa\nReplace:    f00\nReplace:    f0o\nSplit:      [a b c d e]\nToLower:    test\nToUpper:    TEST\n",
     "officialUrl": "https://gobyexample.com/string-functions"
   },
@@ -3739,7 +3739,7 @@ const GO_TOPICS = [
     "titleEs": "Formateo de Cadenas con fmt.Printf",
     "category": "Manipulación de Texto y Formatos",
     "categorySlug": "texto-formatos",
-    "categoryIcon": "🔤",
+    "categoryIcon": "file-code",
     "difficulty": "Principiante",
     "summary": "Interpolación y formateo de cadenas con verbos de formato printf (%v, %+v, %#v, %d, %s, %t) en 'fmt'.",
     "originalExpl": "Go ofrece un excelente soporte para formatear cadenas en la tradición de printf. Aquí hay ejemplos de tareas comunes de formateo con el paquete fmt.",
@@ -3780,22 +3780,22 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package fmt (Standard Library)",
+        "title": "Paquete fmt (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/fmt",
         "description": "Documentación oficial completa con todos los verbos y modificadores de formato."
       },
       {
-        "title": "Go by Example: String Formatting",
+        "title": "Go by Example Original: String Formatting",
         "url": "https://gobyexample.com/string-formatting",
         "description": "Ejemplo en Go by Example."
       },
       {
-        "title": "Effective Go: Printing",
+        "title": "Guía canónica Effective Go: Convenciones de formateo e impresión con fmt",
         "url": "https://go.dev/doc/effective_go#printing",
         "description": "Convenciones oficiales de impresión y formateo en Go."
       }
     ],
-    "code": "// Go offers excellent support for string formatting in\n// the `printf` tradition. Here are some examples of\n// common string formatting tasks.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n)\n\ntype point struct {\n\tx, y int\n}\n\nfunc main() {\n\n\t// Go offers several printing \"verbs\" designed to\n\t// format general Go values. For example, this prints\n\t// an instance of our `point` struct.\n\tp := point{1, 2}\n\tfmt.Printf(\"struct1: %v\\n\", p)\n\n\t// If the value is a struct, the `%+v` variant will\n\t// include the struct's field names.\n\tfmt.Printf(\"struct2: %+v\\n\", p)\n\n\t// The `%#v` variant prints a Go syntax representation\n\t// of the value, i.e. the source code snippet that\n\t// would produce that value.\n\tfmt.Printf(\"struct3: %#v\\n\", p)\n\n\t// To print the type of a value, use `%T`.\n\tfmt.Printf(\"type: %T\\n\", p)\n\n\t// Formatting booleans is straight-forward.\n\tfmt.Printf(\"bool: %t\\n\", true)\n\n\t// There are many options for formatting integers.\n\t// Use `%d` for standard, base-10 formatting.\n\tfmt.Printf(\"int: %d\\n\", 123)\n\n\t// This prints a binary representation.\n\tfmt.Printf(\"bin: %b\\n\", 14)\n\n\t// This prints the character corresponding to the\n\t// given integer.\n\tfmt.Printf(\"char: %c\\n\", 33)\n\n\t// `%x` provides hex encoding.\n\tfmt.Printf(\"hex: %x\\n\", 456)\n\n\t// There are also several formatting options for\n\t// floats. For basic decimal formatting use `%f`.\n\tfmt.Printf(\"float1: %f\\n\", 78.9)\n\n\t// `%e` and `%E` format the float in (slightly\n\t// different versions of) scientific notation.\n\tfmt.Printf(\"float2: %e\\n\", 123400000.0)\n\tfmt.Printf(\"float3: %E\\n\", 123400000.0)\n\n\t// For basic string printing use `%s`.\n\tfmt.Printf(\"str1: %s\\n\", \"\\\"string\\\"\")\n\n\t// To double-quote strings as in Go source, use `%q`.\n\tfmt.Printf(\"str2: %q\\n\", \"\\\"string\\\"\")\n\n\t// As with integers seen earlier, `%x` renders\n\t// the string in base-16, with two output characters\n\t// per byte of input.\n\tfmt.Printf(\"str3: %x\\n\", \"hex this\")\n\n\t// To print a representation of a pointer, use `%p`.\n\tfmt.Printf(\"pointer: %p\\n\", &p)\n\n\t// When formatting numbers you will often want to\n\t// control the width and precision of the resulting\n\t// figure. To specify the width of an integer, use a\n\t// number after the `%` in the verb. By default the\n\t// result will be right-justified and padded with\n\t// spaces.\n\tfmt.Printf(\"width1: |%6d|%6d|\\n\", 12, 345)\n\n\t// You can also specify the width of printed floats,\n\t// though usually you'll also want to restrict the\n\t// decimal precision at the same time with the\n\t// width.precision syntax.\n\tfmt.Printf(\"width2: |%6.2f|%6.2f|\\n\", 1.2, 3.45)\n\n\t// To left-justify, use the `-` flag.\n\tfmt.Printf(\"width3: |%-6.2f|%-6.2f|\\n\", 1.2, 3.45)\n\n\t// You may also want to control width when formatting\n\t// strings, especially to ensure that they align in\n\t// table-like output. For basic right-justified width.\n\tfmt.Printf(\"width4: |%6s|%6s|\\n\", \"foo\", \"b\")\n\n\t// To left-justify use the `-` flag as with numbers.\n\tfmt.Printf(\"width5: |%-6s|%-6s|\\n\", \"foo\", \"b\")\n\n\t// So far we've seen `Printf`, which prints the\n\t// formatted string to `os.Stdout`. `Sprintf` formats\n\t// and returns a string without printing it anywhere.\n\ts := fmt.Sprintf(\"sprintf: a %s\", \"string\")\n\tfmt.Println(s)\n\n\t// You can format+print to `io.Writers` other than\n\t// `os.Stdout` using `Fprintf`.\n\tfmt.Fprintf(os.Stderr, \"io: an %s\\n\", \"error\")\n}\n",
+    "code": "// Go ofrece un soporte sobresaliente para el formateo de cadenas siguiendo\n// la tradición de `printf`. Aquí tenemos algunos ejemplos de tareas\n// habituales de formateo de texto.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n)\n\ntype point struct {\n\tx, y int\n}\n\nfunc main() {\n\n\t// Go ofrece varios \"verbos\" de impresión diseñados para\n\t// dar formato a valores generales en Go. Por ejemplo, esto imprime\n\t// una instancia de nuestra estructura `point`.\n\tp := point{1, 2}\n\tfmt.Printf(\"struct1: %v\\n\", p)\n\n\t// Si el valor es una estructura, la variante `%+v`\n\t// incluirá los nombres de los campos del struct.\n\tfmt.Printf(\"struct2: %+v\\n\", p)\n\n\t// La variante `%#v` imprime una representación en sintaxis de Go\n\t// del valor, es decir, el fragmento de código fuente que\n\t// produciría dicho valor.\n\tfmt.Printf(\"struct3: %#v\\n\", p)\n\n\t// Para imprimir el tipo de un valor, utiliza `%T`.\n\tfmt.Printf(\"type: %T\\n\", p)\n\n\t// Formatear booleanos es directo con `%t`.\n\tfmt.Printf(\"bool: %t\\n\", true)\n\n\t// Existen muchas opciones para formatear enteros.\n\t// Usa `%d` para el formato decimal estándar en base 10.\n\tfmt.Printf(\"int: %d\\n\", 123)\n\n\t// Esto imprime una representación binaria con `%b`.\n\tfmt.Printf(\"bin: %b\\n\", 14)\n\n\t// Esto imprime el carácter correspondiente al\n\t// entero especificado.\n\tfmt.Printf(\"char: %c\\n\", 33)\n\n\t// `%x` proporciona codificación hexadecimal.\n\tfmt.Printf(\"hex: %x\\n\", 456)\n\n\t// También existen varias opciones de formateo para\n\t// números flotantes. Para el formato decimal básico usa `%f`.\n\tfmt.Printf(\"float1: %f\\n\", 78.9)\n\n\t// `%e` y `%E` formatean el flotante en notación científica\n\t// con ligeras variaciones de mayúsculas/minúsculas.\n\tfmt.Printf(\"float2: %e\\n\", 123400000.0)\n\tfmt.Printf(\"float3: %E\\n\", 123400000.0)\n\n\t// Para la impresión básica de cadenas usa `%s`.\n\tfmt.Printf(\"str1: %s\\n\", \"\\\"string\\\"\")\n\n\t// Para colocar comillas dobles en las cadenas como en el código fuente de Go, usa `%q`.\n\tfmt.Printf(\"str2: %q\\n\", \"\\\"string\\\"\")\n\n\t// Al igual que con los enteros vistos anteriormente, `%x` representa\n\t// la cadena en base 16, con dos caracteres de salida por cada byte de entrada.\n\tfmt.Printf(\"str3: %x\\n\", \"hex this\")\n\n\t// Para imprimir la representación de un puntero en memoria, usa `%p`.\n\tfmt.Printf(\"pointer: %p\\n\", &p)\n\n\t// Al dar formato a números con frecuencia querrás\n\t// controlar el ancho y la precisión de la cifra resultante.\n\t// Para especificar el ancho de un entero, usa un número\n\t// después del `%` en el verbo. Por defecto el resultado\n\t// se justificará a la derecha y se rellenará con espacios.\n\tfmt.Printf(\"width1: |%6d|%6d|\\n\", 12, 345)\n\n\t// También puedes especificar el ancho de flotantes impresos,\n\t// aunque habitualmente también querrás restringir la precisión\n\t// decimal simultáneamente mediante la sintaxis ancho.precision.\n\tfmt.Printf(\"width2: |%6.2f|%6.2f|\\n\", 1.2, 3.45)\n\n\t// Para justificar a la izquierda, usa la bandera `-`.\n\tfmt.Printf(\"width3: |%-6.2f|%-6.2f|\\n\", 1.2, 3.45)\n\n\t// Es posible que también desees controlar el ancho al formatear\n\t// cadenas, en especial para alinearlas en salidas con formato de tabla.\n\t// Aquí vemos el ancho básico justificado a la derecha.\n\tfmt.Printf(\"width4: |%6s|%6s|\\n\", \"foo\", \"b\")\n\n\t// Para justificar a la izquierda se usa la bandera `-` al igual que con los números.\n\tfmt.Printf(\"width5: |%-6s|%-6s|\\n\", \"foo\", \"b\")\n\n\t// Hasta ahora hemos visto `Printf`, que imprime la cadena\n\t// formateada en `os.Stdout`. `Sprintf` formatea y retorna\n\t// una cadena sin imprimirla en ninguna parte.\n\ts := fmt.Sprintf(\"sprintf: a %s\", \"string\")\n\tfmt.Println(s)\n\n\t// Puedes formatear e imprimir hacia otros `io.Writer` distintos\n\t// de `os.Stdout` utilizando `Fprintf`.\n\tfmt.Fprintf(os.Stderr, \"io: an %s\\n\", \"error\")\n}\n",
     "output": "$ go run string-formatting.go\nstruct1: {1 2}\nstruct2: {x:1 y:2}\nstruct3: main.point{x:1, y:2}\ntype: main.point\nbool: true\nint: 123\nbin: 1110\nchar: !\nhex: 1c8\nfloat1: 78.900000\nfloat2: 1.234000e+08\nfloat3: 1.234000E+08\nstr1: \"string\"\nstr2: \"\\\"string\\\"\"\nstr3: 6865782074686973\npointer: 0xc0000ba000\nwidth1: |    12|   345|\nwidth2: |  1.20|  3.45|\nwidth3: |1.20  |3.45  |\nwidth4: |   foo|     b|\nwidth5: |foo   |b     |\nsprintf: a string\nio: an error\n",
     "officialUrl": "https://gobyexample.com/string-formatting"
   },
@@ -3806,7 +3806,7 @@ const GO_TOPICS = [
     "titleEs": "Plantillas de Texto (text/template y html/template)",
     "category": "Manipulación de Texto y Formatos",
     "categorySlug": "texto-formatos",
-    "categoryIcon": "🔤",
+    "categoryIcon": "file-code",
     "difficulty": "Intermedio",
     "summary": "Generación de texto dinámico mediante directivas de datos, condicionales y bucles en plantillas parseadas.",
     "originalExpl": "Go ofrece soporte integrado para crear texto dinámico o mostrar salidas HTML personalizadas al usuario con los paquetes text/template y html/template.",
@@ -3848,7 +3848,7 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package text/template",
+        "title": "Paquete text/template (Documentación oficial)",
         "url": "https://pkg.go.dev/text/template",
         "description": "Documentación oficial del motor de plantillas de texto de Go."
       },
@@ -3858,12 +3858,12 @@ const GO_TOPICS = [
         "description": "Guía oficial sobre cómo proteger aplicaciones contra XSS con plantillas HTML."
       },
       {
-        "title": "Go by Example: Text Templates",
+        "title": "Go by Example Original: Text Templates",
         "url": "https://gobyexample.com/text-templates",
         "description": "Ejemplo en Go by Example."
       }
     ],
-    "code": "// Go offers built-in support for creating dynamic content or showing customized\n// output to the user with the `text/template` package. A sibling package\n// named `html/template` provides the same API but has additional security\n// features and should be used for generating HTML.\n\npackage main\n\nimport (\n\t\"os\"\n\t\"text/template\"\n)\n\nfunc main() {\n\n\t// We can create a new template and parse its body from\n\t// a string.\n\t// Templates are a mix of static text and \"actions\" enclosed in\n\t// `{{...}}` that are used to dynamically insert content.\n\tt1 := template.New(\"t1\")\n\tt1, err := t1.Parse(\"Value is {{.}}\\n\")\n\tif err != nil {\n\t\tpanic(err)\n\t}\n\n\t// Alternatively, we can use the `template.Must` function to\n\t// panic in case `Parse` returns an error. This is especially\n\t// useful for templates initialized in the global scope.\n\tt1 = template.Must(t1.Parse(\"Value: {{.}}\\n\"))\n\n\t// By \"executing\" the template we generate its text with\n\t// specific values for its actions. The `{{.}}` action is\n\t// replaced by the value passed as a parameter to `Execute`.\n\tt1.Execute(os.Stdout, \"some text\")\n\tt1.Execute(os.Stdout, 5)\n\tt1.Execute(os.Stdout, []string{\n\t\t\"Go\",\n\t\t\"Rust\",\n\t\t\"C++\",\n\t\t\"C#\",\n\t})\n\n\t// Helper function we'll use below.\n\tCreate := func(name, t string) *template.Template {\n\t\treturn template.Must(template.New(name).Parse(t))\n\t}\n\n\t// If the data is a struct we can use the `{{.FieldName}}` action to access\n\t// its fields. The fields should be exported to be accessible when a\n\t// template is executing.\n\tt2 := Create(\"t2\", \"Name: {{.Name}}\\n\")\n\n\tt2.Execute(os.Stdout, struct {\n\t\tName string\n\t}{\"Jane Doe\"})\n\n\t// The same applies to maps; with maps there is no restriction on the\n\t// case of key names.\n\tt2.Execute(os.Stdout, map[string]string{\n\t\t\"Name\": \"Mickey Mouse\",\n\t})\n\n\t// if/else provide conditional execution for templates. A value is considered\n\t// false if it's the default value of a type, such as 0, an empty string,\n\t// nil pointer, etc.\n\t// This sample demonstrates another\n\t// feature of templates: using `-` in actions to trim whitespace.\n\tt3 := Create(\"t3\",\n\t\t\"{{if . -}} yes {{else -}} no {{end}}\\n\")\n\tt3.Execute(os.Stdout, \"not empty\")\n\tt3.Execute(os.Stdout, \"\")\n\n\t// range blocks let us loop through slices, arrays, maps or channels. Inside\n\t// the range block `{{.}}` is set to the current item of the iteration.\n\tt4 := Create(\"t4\",\n\t\t\"Range: {{range .}}{{.}} {{end}}\\n\")\n\tt4.Execute(os.Stdout,\n\t\t[]string{\n\t\t\t\"Go\",\n\t\t\t\"Rust\",\n\t\t\t\"C++\",\n\t\t\t\"C#\",\n\t\t})\n}\n",
+    "code": "// Go ofrece soporte integrado para crear contenido dinámico o mostrar\n// salidas personalizadas al usuario mediante el paquete `text/template`. Un paquete\n// hermano denominado `html/template` provee la misma API pero cuenta con\n// funciones de seguridad adicionales para evitar vulnerabilidades XSS en HTML.\n\npackage main\n\nimport (\n\t\"os\"\n\t\"text/template\"\n)\n\nfunc main() {\n\n\t// Podemos crear una plantilla nueva y parsear su cuerpo\n\t// a partir de una cadena de texto. Las plantillas combinan texto estático y \"acciones\"\n\t// delimitadas por `{{...}}` que se utilizan para insertar datos dinámicos.\n\tt1 := template.New(\"t1\")\n\tt1, err := t1.Parse(\"Value is {{.}}\\n\")\n\tif err != nil {\n\t\tpanic(err)\n\t}\n\n\t// De forma alternativa, podemos usar `template.Must` para disparar un panic\n\t// si `Parse` devuelve un error. Esto resulta especialmente conveniente\n\t// para plantillas inicializadas en el ámbito global.\n\tt1 = template.Must(t1.Parse(\"Value: {{.}}\\n\"))\n\n\t// Al \"ejecutar\" la plantilla, generamos su texto con\n\t// valores concretos para sus acciones. La acción `{{.}}`\n\t// se reemplaza por el valor pasado como parámetro a `Execute`.\n\tt1.Execute(os.Stdout, \"some text\")\n\tt1.Execute(os.Stdout, 5)\n\tt1.Execute(os.Stdout, []string{\n\t\t\"Go\",\n\t\t\"Rust\",\n\t\t\"C++\",\n\t\t\"C#\",\n\t})\n\n\t// Función auxiliar que utilizaremos a continuación.\n\tCreate := func(name, t string) *template.Template {\n\t\treturn template.Must(template.New(name).Parse(t))\n\t}\n\n\t// Si los datos corresponden a un struct podemos usar la acción `{{.FieldName}}` para acceder\n\t// a sus campos. Los campos deben estar exportados (iniciar con mayúscula) para ser accesibles durante la\n\t// ejecución de la plantilla.\n\tt2 := Create(\"t2\", \"Name: {{.Name}}\\n\")\n\n\tt2.Execute(os.Stdout, struct {\n\t\tName string\n\t}{\"Jane Doe\"})\n\n\t// Lo mismo aplica para los mapas; en los mapas no existe restricción\n\t// en cuanto al uso de mayúsculas o minúsculas en las claves.\n\tt2.Execute(os.Stdout, map[string]string{\n\t\t\"Name\": \"Mickey Mouse\",\n\t})\n\n\t// if/else proporcionan ejecución condicional en las plantillas. Un valor se considera\n\t// falso si coincide con el valor cero de su tipo, como 0, cadena vacía,\n\t// puntero nil, etc.\n\t// Este ejemplo demuestra además otra característica útil\n\t// de las plantillas: usar `-` en las acciones para recortar espacios en blanco adyacentes.\n\tt3 := Create(\"t3\",\n\t\t\"{{if . -}} yes {{else -}} no {{end}}\\n\")\n\tt3.Execute(os.Stdout, \"not empty\")\n\tt3.Execute(os.Stdout, \"\")\n\n\t// Los bloques range nos permiten iterar a través de slices, arrays, mapas o canales. Dentro\n\t// del bloque range, `{{.}}` se vincula al elemento actual de la iteración.\n\tt4 := Create(\"t4\",\n\t\t\"Range: {{range .}}{{.}} {{end}}\\n\")\n\tt4.Execute(os.Stdout,\n\t\t[]string{\n\t\t\t\"Go\",\n\t\t\t\"Rust\",\n\t\t\t\"C++\",\n\t\t\t\"C#\",\n\t\t})\n}\n",
     "output": "$ go run templates.go \nValue: some text\nValue: 5\nValue: [Go Rust C++ C#]\nName: Jane Doe\nName: Mickey Mouse\nyes \nno \nRange: Go Rust C++ C# \n",
     "officialUrl": "https://gobyexample.com/text-templates"
   },
@@ -3874,7 +3874,7 @@ const GO_TOPICS = [
     "titleEs": "Expresiones Regulares (regexp)",
     "category": "Manipulación de Texto y Formatos",
     "categorySlug": "texto-formatos",
-    "categoryIcon": "🔤",
+    "categoryIcon": "file-code",
     "difficulty": "Intermedio",
     "summary": "Búsqueda y extracción de patrones de texto complejos utilizando el motor RE2 determinista en 'regexp'.",
     "originalExpl": "Go ofrece soporte integrado para expresiones regulares. Aquí hay algunos ejemplos de tareas comunes relacionadas con regex en Go.",
@@ -3916,23 +3916,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package regexp (Standard Library)",
+        "title": "Paquete regexp (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/regexp",
         "description": "Documentación oficial del paquete regexp y sintaxis RE2 soportada."
       },
       {
-        "title": "Russ Cox: Regular Expression Matching Can Be Simple And Fast",
+        "title": "Russ Cox: Cómo implementar motores de expresiones regulares rápidos",
         "url": "https://research.swtch.com/regexp1",
         "description": "El famoso ensayo de Russ Cox comparando motores de backtracking vs autómatas de tiempo lineal."
       },
       {
-        "title": "Go by Example: Regular Expressions",
+        "title": "Go by Example Original: Regular Expressions",
         "url": "https://gobyexample.com/regular-expressions",
         "description": "Ejemplo en Go by Example."
       }
     ],
-    "code": "// Go offers built-in support for [regular expressions](https://en.wikipedia.org/wiki/Regular_expression).\n// Here are some examples of  common regexp-related tasks\n// in Go.\n\npackage main\n\nimport (\n\t\"bytes\"\n\t\"fmt\"\n\t\"regexp\"\n)\n\nfunc main() {\n\n\t// This tests whether a pattern matches a string.\n\tmatch, _ := regexp.MatchString(\"p([a-z]+)ch\", \"peach\")\n\tfmt.Println(match)\n\n\t// Above we used a string pattern directly, but for\n\t// other regexp tasks you'll need to `Compile` an\n\t// optimized `Regexp` struct.\n\tr, _ := regexp.Compile(\"p([a-z]+)ch\")\n\n\t// Many methods are available on these structs. Here's\n\t// a match test like we saw earlier.\n\tfmt.Println(r.MatchString(\"peach\"))\n\n\t// This finds the match for the regexp.\n\tfmt.Println(r.FindString(\"peach punch\"))\n\n\t// This also finds the first match but returns the\n\t// start and end indexes for the match instead of the\n\t// matching text.\n\tfmt.Println(\"idx:\", r.FindStringIndex(\"peach punch\"))\n\n\t// The `Submatch` variants include information about\n\t// both the whole-pattern matches and the submatches\n\t// within those matches. For example this will return\n\t// information for both `p([a-z]+)ch` and `([a-z]+)`.\n\tfmt.Println(r.FindStringSubmatch(\"peach punch\"))\n\n\t// Similarly this will return information about the\n\t// indexes of matches and submatches.\n\tfmt.Println(r.FindStringSubmatchIndex(\"peach punch\"))\n\n\t// The `All` variants of these functions apply to all\n\t// matches in the input, not just the first. For\n\t// example to find all matches for a regexp.\n\tfmt.Println(r.FindAllString(\"peach punch pinch\", -1))\n\n\t// These `All` variants are available for the other\n\t// functions we saw above as well.\n\tfmt.Println(\"all:\", r.FindAllStringSubmatchIndex(\n\t\t\"peach punch pinch\", -1))\n\n\t// Providing a non-negative integer as the second\n\t// argument to these functions will limit the number\n\t// of matches.\n\tfmt.Println(r.FindAllString(\"peach punch pinch\", 2))\n\n\t// Our examples above had string arguments and used\n\t// names like `MatchString`. We can also provide\n\t// `[]byte` arguments and drop `String` from the\n\t// function name.\n\tfmt.Println(r.Match([]byte(\"peach\")))\n\n\t// When creating global variables with regular\n\t// expressions you can use the `MustCompile` variation\n\t// of `Compile`. `MustCompile` panics instead of\n\t// returning an error, which makes it safer to use for\n\t// global variables.\n\tr = regexp.MustCompile(\"p([a-z]+)ch\")\n\tfmt.Println(\"regexp:\", r)\n\n\t// The `regexp` package can also be used to replace\n\t// subsets of strings with other values.\n\tfmt.Println(r.ReplaceAllString(\"a peach\", \"<fruit>\"))\n\n\t// The `Func` variant allows you to transform matched\n\t// text with a given function.\n\tin := []byte(\"a peach\")\n\tout := r.ReplaceAllFunc(in, bytes.ToUpper)\n\tfmt.Println(string(out))\n}\n",
-    "output": "$ go run regular-expressions.go\ntrue\ntrue\npeach\nidx: [0 5]\n[peach ea]\n[0 5 1 3]\n[peach punch pinch]\nall: [[0 5 1 3] [6 11 7 9] [12 17 13 15]]\n[peach punch]\ntrue\nregexp: p([a-z]+)ch\na <fruit>\na PEACH\n\n# For a complete reference on Go regular expressions check\n# the [`regexp`](https://pkg.go.dev/regexp) package docs.\n",
+    "code": "// Go cuenta con soporte integrado para [expresiones regulares](https://en.wikipedia.org/wiki/Regular_expression).\n// Aquí tenemos algunos ejemplos de tareas habituales relacionadas con expresiones regulares\n// en Go.\n\npackage main\n\nimport (\n\t\"bytes\"\n\t\"fmt\"\n\t\"regexp\"\n)\n\nfunc main() {\n\n\t// Esto comprueba si un patrón coincide con una cadena de texto.\n\tmatch, _ := regexp.MatchString(\"p([a-z]+)ch\", \"peach\")\n\tfmt.Println(match)\n\n\t// Arriba usamos un patrón de cadena directamente, pero para\n\t// otras tareas con expresiones regulares necesitarás compilar (`Compile`)\n\t// una estructura `Regexp` optimizada.\n\tr, _ := regexp.Compile(\"p([a-z]+)ch\")\n\n\t// Existen numerosos métodos disponibles sobre estas estructuras. Aquí tenemos\n\t// una comprobación de coincidencia idéntica a la vista anteriormente.\n\tfmt.Println(r.MatchString(\"peach\"))\n\n\t// Esto localiza la primera coincidencia de la expresión regular.\n\tfmt.Println(r.FindString(\"peach punch\"))\n\n\t// Esto también localiza la primera coincidencia pero devuelve los\n\t// índices de inicio y fin correspondientes en lugar del texto coincidente.\n\tfmt.Println(\"idx:\", r.FindStringIndex(\"peach punch\"))\n\n\t// Las variantes `Submatch` incluyen información sobre\n\t// las coincidencias del patrón completo y los subpatrones (grupos)\n\t// capturados. Por ejemplo, esto devolverá información tanto para\n\t// `p([a-z]+)ch` como para `([a-z]+)`.\n\tfmt.Println(r.FindStringSubmatch(\"peach punch\"))\n\n\t// Análogamente esto devolverá información sobre los\n\t// índices de coincidencias y subcoincidencias.\n\tfmt.Println(r.FindStringSubmatchIndex(\"peach punch\"))\n\n\t// Las variantes `All` de estas funciones aplican a todas\n\t// las coincidencias en el texto de entrada, no únicamente a la primera.\n\t// Por ejemplo, para encontrar todas las coincidencias de una regexp.\n\tfmt.Println(r.FindAllString(\"peach punch pinch\", -1))\n\n\t// Estas variantes `All` se encuentran disponibles también para las\n\t// otras funciones que examinamos arriba.\n\tfmt.Println(\"all:\", r.FindAllStringSubmatchIndex(\n\t\t\"peach punch pinch\", -1))\n\n\t// Proporcionar un entero no negativo como segundo argumento\n\t// a estas funciones limitará la cantidad máxima de coincidencias.\n\tfmt.Println(r.FindAllString(\"peach punch pinch\", 2))\n\n\t// Nuestros ejemplos anteriores recibían argumentos de tipo string y utilizaban\n\t// nombres como `MatchString`. También podemos proporcionar argumentos de tipo\n\t// `[]byte` y prescindir de `String` en el nombre de la función.\n\tfmt.Println(r.Match([]byte(\"peach\")))\n\n\t// Al crear variables globales con expresiones regulares,\n\t// se puede emplear la variación `MustCompile` en lugar de `Compile`.\n\t// `MustCompile` entra en panic en vez de devolver un error,\n\t// lo cual hace su uso mucho más seguro y directo para variables globales.\n\tr = regexp.MustCompile(\"p([a-z]+)ch\")\n\tfmt.Println(\"regexp:\", r)\n\n\t// El paquete `regexp` también puede utilizarse para reemplazar\n\t// subcadenas coincidentes por otros valores.\n\tfmt.Println(r.ReplaceAllString(\"a peach\", \"<fruit>\"))\n\n\t// La variante `Func` permite transformar el texto coincidente\n\t// mediante una función proporcionada.\n\tin := []byte(\"a peach\")\n\tout := r.ReplaceAllFunc(in, bytes.ToUpper)\n\tfmt.Println(string(out))\n}\n",
+    "output": "$ go run regular-expressions.go\ntrue\ntrue\npeach\nidx: [0 5]\n[peach ea]\n[0 5 1 3]\n[peach punch pinch]\nall: [[0 5 1 3] [6 11 7 9] [12 17 13 15]]\n[peach punch]\ntrue\nregexp: p([a-z]+)ch\na <fruit>\na PEACH\n\n# Para una referencia exhaustiva sobre expresiones regulares en Go,\n# consulta la documentación del paquete [`regexp`](https://pkg.go.dev/regexp).\n",
     "officialUrl": "https://gobyexample.com/regular-expressions"
   },
   {
@@ -3942,7 +3942,7 @@ const GO_TOPICS = [
     "titleEs": "Codificación y Decodificación JSON",
     "category": "Manipulación de Texto y Formatos",
     "categorySlug": "texto-formatos",
-    "categoryIcon": "🔤",
+    "categoryIcon": "file-code",
     "difficulty": "Intermedio",
     "summary": "Serialización (Marshal) y deserialización (Unmarshal) de datos estructurados con el paquete estándar 'encoding/json'.",
     "originalExpl": "Go ofrece soporte integrado para codificación y decodificación JSON, incluyendo hacia y desde tipos de datos nativos y personalizados mediante json.Marshal y json.Unmarshal.",
@@ -3985,23 +3985,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "The Go Blog: JSON and Go",
+        "title": "Blog oficial de Go: Serialización y deserialización de JSON en Go",
         "url": "https://go.dev/blog/json",
         "description": "Artículo canónico del equipo de Go sobre el mapeo de tipos JSON a Go."
       },
       {
-        "title": "Package encoding/json",
+        "title": "Paquete encoding/json (Documentación oficial)",
         "url": "https://pkg.go.dev/encoding/json",
         "description": "Documentación oficial del paquete de codificación y decodificación JSON."
       },
       {
-        "title": "Go by Example: JSON",
+        "title": "Go by Example Original: JSON",
         "url": "https://gobyexample.com/json",
         "description": "Ejemplo en Go by Example."
       }
     ],
-    "code": "// Go offers built-in support for JSON encoding and\n// decoding, including to and from built-in and custom\n// data types.\n\npackage main\n\nimport (\n\t\"bytes\"\n\t\"encoding/json/v2\"\n\t\"fmt\"\n\t\"strings\"\n)\n\n// We'll use these two structs to demonstrate encoding and\n// decoding of custom types below.\ntype response1 struct {\n\tPage   int\n\tFruits []string\n}\n\n// Only exported fields will be encoded/decoded in JSON.\n// Fields must start with capital letters to be exported.\ntype response2 struct {\n\tPage   int      `json:\"page\"`\n\tFruits []string `json:\"fruits\"`\n}\n\nfunc main() {\n\n\t// First we'll look at encoding basic data types to\n\t// JSON strings. Here are some examples for atomic\n\t// values.\n\tbolB, _ := json.Marshal(true)\n\tfmt.Println(string(bolB))\n\n\tintB, _ := json.Marshal(1)\n\tfmt.Println(string(intB))\n\n\tfltB, _ := json.Marshal(2.34)\n\tfmt.Println(string(fltB))\n\n\tstrB, _ := json.Marshal(\"gopher\")\n\tfmt.Println(string(strB))\n\n\t// And here are some for slices and maps, which encode\n\t// to JSON arrays and objects as you'd expect.\n\tslcD := []string{\"apple\", \"peach\", \"pear\"}\n\tslcB, _ := json.Marshal(slcD)\n\tfmt.Println(string(slcB))\n\n\tmapD := map[string]int{\"apple\": 5, \"lettuce\": 7}\n\tmapB, _ := json.Marshal(mapD)\n\tfmt.Println(string(mapB))\n\n\t// The JSON package can automatically encode your\n\t// custom data types. It will only include exported\n\t// fields in the encoded output and will by default\n\t// use those names as the JSON keys.\n\tres1D := &response1{\n\t\tPage:   1,\n\t\tFruits: []string{\"apple\", \"peach\", \"pear\"}}\n\tres1B, _ := json.Marshal(res1D)\n\tfmt.Println(string(res1B))\n\n\t// You can use tags on struct field declarations\n\t// to customize the encoded JSON key names. Check the\n\t// definition of `response2` above to see an example\n\t// of such tags.\n\tres2D := &response2{\n\t\tPage:   1,\n\t\tFruits: []string{\"apple\", \"peach\", \"pear\"}}\n\tres2B, _ := json.Marshal(res2D)\n\tfmt.Println(string(res2B))\n\n\t// Now let's look at decoding JSON data into Go\n\t// values. Here's an example for a generic data\n\t// structure.\n\tbyt := []byte(`{\"num\":6.13,\"strs\":[\"a\",\"b\"]}`)\n\n\t// We need to provide a variable where the JSON\n\t// package can put the decoded data. This\n\t// `map[string]any` will hold a map of strings\n\t// to arbitrary data types.\n\tvar dat map[string]any\n\n\t// Here's the actual decoding, and a check for\n\t// associated errors.\n\t// For the sake of brevity we ignore the errors in\n\t// these examples; in real code, you should always check\n\t// for errors and act upon them.\n\tif err := json.Unmarshal(byt, &dat); err != nil {\n\t\tpanic(err)\n\t}\n\tfmt.Println(dat)\n\n\t// In order to use the values in the decoded map,\n\t// we'll need to convert them to their appropriate type.\n\t// For example here we convert the value in `num` to\n\t// the expected `float64` type.\n\tnum := dat[\"num\"].(float64)\n\tfmt.Println(num)\n\n\t// Accessing nested data requires a series of\n\t// conversions.\n\tstrs := dat[\"strs\"].([]any)\n\tstr1 := strs[0].(string)\n\tfmt.Println(str1)\n\n\t// We can also decode JSON into custom data types.\n\t// This has the advantages of adding additional\n\t// type-safety to our programs and eliminating the\n\t// need for type assertions when accessing the decoded\n\t// data.\n\tstr := `{\"page\": 1, \"fruits\": [\"apple\", \"peach\"]}`\n\tres := response2{}\n\t_ = json.Unmarshal([]byte(str), &res)\n\tfmt.Println(res)\n\tfmt.Println(res.Fruits[0])\n\n\t// In the examples above we always used bytes and\n\t// strings as intermediates between the data and\n\t// JSON representation on standard out. We can also\n\t// stream JSON encodings directly to `io.Writer`s like\n\t// `os.Stdout` or even HTTP response bodies.\n\td := map[string]int{\"apple\": 5, \"lettuce\": 7}\n\tvar buf bytes.Buffer\n\t_ = json.MarshalWrite(&buf, d)\n\tfmt.Println(buf.String())\n\n\t// Streaming reads from `io.Reader`s like `os.Stdin`\n\t// or HTTP request bodies is done with `json.UnmarshalRead`.\n\tres1 := response2{}\n\t_ = json.UnmarshalRead(strings.NewReader(str), &res1)\n\tfmt.Println(res1)\n}\n",
-    "output": "$ go run json.go\ntrue\n1\n2.34\n\"gopher\"\n[\"apple\",\"peach\",\"pear\"]\n{\"apple\":5,\"lettuce\":7}\n{\"Page\":1,\"Fruits\":[\"apple\",\"peach\",\"pear\"]}\n{\"page\":1,\"fruits\":[\"apple\",\"peach\",\"pear\"]}\nmap[num:6.13 strs:[a b]]\n6.13\na\n{1 [apple peach]}\napple\n{\"apple\":5,\"lettuce\":7}\n{1 [apple peach]}\n\n\n# We've covered the basic of JSON in Go here, but check\n# out the [JSON and Go](https://go.dev/blog/json)\n# blog post and the [JSON package docs](https://pkg.go.dev/encoding/json/v2)\n# for more.\n",
+    "code": "// Go cuenta con soporte integrado para la codificación y decodificación\n// de JSON, incluyendo tipos de datos tanto primitivos como personalizados.\n\npackage main\n\nimport (\n\t\"bytes\"\n\t\"encoding/json/v2\"\n\t\"fmt\"\n\t\"strings\"\n)\n\n// Utilizaremos estas dos estructuras para demostrar la codificación\n// y decodificación de tipos personalizados a continuación.\ntype response1 struct {\n\tPage   int\n\tFruits []string\n}\n\n// Únicamente los campos exportados serán codificados/decodificados en JSON.\n// Los campos deben comenzar con mayúscula para ser exportados.\ntype response2 struct {\n\tPage   int      `json:\"page\"`\n\tFruits []string `json:\"fruits\"`\n}\n\nfunc main() {\n\n\t// Primero veremos la codificación de tipos de datos básicos a\n\t// cadenas JSON. Aquí hay algunos ejemplos para valores atómicos.\n\tbolB, _ := json.Marshal(true)\n\tfmt.Println(string(bolB))\n\n\tintB, _ := json.Marshal(1)\n\tfmt.Println(string(intB))\n\n\tfltB, _ := json.Marshal(2.34)\n\tfmt.Println(string(fltB))\n\n\tstrB, _ := json.Marshal(\"gopher\")\n\tfmt.Println(string(strB))\n\n\t// Y aquí algunos ejemplos para slices y mapas, los cuales se codifican\n\t// en arrays y objetos JSON según lo esperado.\n\tslcD := []string{\"apple\", \"peach\", \"pear\"}\n\tslcB, _ := json.Marshal(slcD)\n\tfmt.Println(string(slcB))\n\n\tmapD := map[string]int{\"apple\": 5, \"lettuce\": 7}\n\tmapB, _ := json.Marshal(mapD)\n\tfmt.Println(string(mapB))\n\n\t// El paquete JSON puede codificar automáticamente tus\n\t// tipos de datos personalizados. Solo incluirá campos exportados\n\t// en la salida codificada y, por defecto, utilizará esos mismos\n\t// nombres como claves de JSON.\n\tres1D := &response1{\n\t\tPage:   1,\n\t\tFruits: []string{\"apple\", \"peach\", \"pear\"}}\n\tres1B, _ := json.Marshal(res1D)\n\tfmt.Println(string(res1B))\n\n\t// Puedes usar etiquetas (tags) en las declaraciones de campos del struct\n\t// para personalizar los nombres de las claves JSON generadas. Revisa la\n\t// definición de `response2` arriba para ver un ejemplo de tales etiquetas.\n\tres2D := &response2{\n\t\tPage:   1,\n\t\tFruits: []string{\"apple\", \"peach\", \"pear\"}}\n\tres2B, _ := json.Marshal(res2D)\n\tfmt.Println(string(res2B))\n\n\t// Ahora examinemos cómo decodificar datos JSON en valores de Go.\n\t// Aquí tenemos un ejemplo para una estructura de datos genérica.\n\tbyt := []byte(`{\"num\":6.13,\"strs\":[\"a\",\"b\"]}`)\n\n\t// Necesitamos proporcionar una variable donde el paquete JSON\n\t// pueda alojar los datos decodificados. Este\n\t// `map[string]any` albergará un mapa de cadenas a\n\t// tipos de datos arbitrarios.\n\tvar dat map[string]any\n\n\t// Aquí se realiza la decodificación real, junto con una verificación\n\t// de posibles errores asociados.\n\t// En aras de la brevedad omitimos el manejo riguroso de errores en\n\t// estos ejemplos didácticos; en código real de producción siempre\n\t// debes comprobar los errores y actuar en consecuencia.\n\tif err := json.Unmarshal(byt, &dat); err != nil {\n\t\tpanic(err)\n\t}\n\tfmt.Println(dat)\n\n\t// Para utilizar los valores en el mapa decodificado,\n\t// necesitaremos convertirlos a su tipo correspondiente.\n\t// Por ejemplo, aquí convertimos el valor en `num` al\n\t// tipo esperado `float64`.\n\tnum := dat[\"num\"].(float64)\n\tfmt.Println(num)\n\n\t// Acceder a datos anidados requiere una serie de\n\t// aserciones de tipo.\n\tstrs := dat[\"strs\"].([]any)\n\tstr1 := strs[0].(string)\n\tfmt.Println(str1)\n\n\t// También podemos decodificar JSON directamente en tipos de datos personalizados.\n\t// Esto aporta la gran ventaja de añadir seguridad de tipos estricta a\n\t// nuestros programas y elimina la necesidad de comprobaciones de tipo\n\t// al acceder a los datos decodificados.\n\tstr := `{\"page\": 1, \"fruits\": [\"apple\", \"peach\"]}`\n\tres := response2{}\n\t_ = json.Unmarshal([]byte(str), &res)\n\tfmt.Println(res)\n\tfmt.Println(res.Fruits[0])\n\n\t// En los ejemplos anteriores siempre utilizamos bytes y\n\t// strings como intermediarios entre los datos y la\n\t// representación JSON en la salida estándar. También podemos\n\t// transmitir flujos de codificación JSON directamente a implementaciones\n\t// de `io.Writer` como `os.Stdout` o incluso cuerpos de respuesta HTTP.\n\td := map[string]int{\"apple\": 5, \"lettuce\": 7}\n\tvar buf bytes.Buffer\n\t_ = json.MarshalWrite(&buf, d)\n\tfmt.Println(buf.String())\n\n\t// La lectura en flujo continuo desde objetos `io.Reader` como `os.Stdin`\n\t// o cuerpos de peticiones HTTP se realiza mediante `json.UnmarshalRead`.\n\tres1 := response2{}\n\t_ = json.UnmarshalRead(strings.NewReader(str), &res1)\n\tfmt.Println(res1)\n}\n",
+    "output": "$ go run json.go\ntrue\n1\n2.34\n\"gopher\"\n[\"apple\",\"peach\",\"pear\"]\n{\"apple\":5,\"lettuce\":7}\n{\"Page\":1,\"Fruits\":[\"apple\",\"peach\",\"pear\"]}\n{\"page\":1,\"fruits\":[\"apple\",\"peach\",\"pear\"]}\nmap[num:6.13 strs:[a b]]\n6.13\na\n{1 [apple peach]}\napple\n{\"apple\":5,\"lettuce\":7}\n{1 [apple peach]}\n\n# Hemos cubierto los fundamentos de JSON en Go aquí; consulta\n# el artículo [JSON y Go](https://go.dev/blog/json)\n# y la documentación del [paquete JSON](https://pkg.go.dev/encoding/json/v2)\n# para profundizar en el tema.\n",
     "officialUrl": "https://gobyexample.com/json"
   },
   {
@@ -4011,7 +4011,7 @@ const GO_TOPICS = [
     "titleEs": "Codificación y Decodificación XML",
     "category": "Manipulación de Texto y Formatos",
     "categorySlug": "texto-formatos",
-    "categoryIcon": "🔤",
+    "categoryIcon": "file-code",
     "difficulty": "Intermedio",
     "summary": "Manejo de documentos estructurados XML mediante etiquetas, atributos y nodos con 'encoding/xml'.",
     "originalExpl": "Go ofrece soporte integrado para XML y formatos similares a XML a través del paquete encoding/xml. Al igual que con JSON, utiliza tags en las estructuras para guiar el mapeo.",
@@ -4053,22 +4053,22 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package encoding/xml (Standard Library)",
+        "title": "Paquete encoding/xml (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/encoding/xml",
         "description": "Documentación oficial del paquete de serialización XML."
       },
       {
-        "title": "Go by Example: XML",
+        "title": "Go by Example Original: XML",
         "url": "https://gobyexample.com/xml",
         "description": "Ejemplo interactivo en Go by Example."
       },
       {
-        "title": "Effective XML in Go",
+        "title": "Guía práctica de procesamiento XML idiomático en Go",
         "url": "https://www.callicoder.com/golang-xml-parsing-and-generation-example/",
         "description": "Guía práctica de parseo y generación de XML en Go."
       }
     ],
-    "code": "// Go offers built-in support for XML and XML-like\n// formats with the `encoding/xml` package.\n\npackage main\n\nimport (\n\t\"encoding/xml\"\n\t\"fmt\"\n)\n\n// Plant will be mapped to XML. Similarly to the\n// JSON examples, field tags contain directives for the\n// encoder and decoder. Here we use some special features\n// of the XML package: the `XMLName` field name dictates\n// the name of the XML element representing this struct;\n// `id,attr` means that the `Id` field is an XML\n// _attribute_ rather than a nested element.\ntype Plant struct {\n\tXMLName xml.Name `xml:\"plant\"`\n\tId      int      `xml:\"id,attr\"`\n\tName    string   `xml:\"name\"`\n\tOrigin  []string `xml:\"origin\"`\n}\n\nfunc (p Plant) String() string {\n\treturn fmt.Sprintf(\"Plant id=%v, name=%v, origin=%v\",\n\t\tp.Id, p.Name, p.Origin)\n}\n\nfunc main() {\n\tcoffee := &Plant{Id: 27, Name: \"Coffee\"}\n\tcoffee.Origin = []string{\"Ethiopia\", \"Brazil\"}\n\n\t// Emit XML representing our plant; using\n\t// `MarshalIndent` to produce a more\n\t// human-readable output.\n\tout, _ := xml.MarshalIndent(coffee, \" \", \"  \")\n\tfmt.Println(string(out))\n\n\t// To add a generic XML header to the output, append\n\t// it explicitly.\n\tfmt.Println(xml.Header + string(out))\n\n\t// Use `Unmarshal` to parse a stream of bytes with XML\n\t// into a data structure. If the XML is malformed or\n\t// cannot be mapped onto Plant, a descriptive error\n\t// will be returned.\n\tvar p Plant\n\tif err := xml.Unmarshal(out, &p); err != nil {\n\t\tpanic(err)\n\t}\n\tfmt.Println(p)\n\n\ttomato := &Plant{Id: 81, Name: \"Tomato\"}\n\ttomato.Origin = []string{\"Mexico\", \"California\"}\n\n\t// The `parent>child>plant` field tag tells the encoder\n\t// to nest all `plant`s under `<parent><child>...`\n\ttype Nesting struct {\n\t\tXMLName xml.Name `xml:\"nesting\"`\n\t\tPlants  []*Plant `xml:\"parent>child>plant\"`\n\t}\n\n\tnesting := &Nesting{}\n\tnesting.Plants = []*Plant{coffee, tomato}\n\n\tout, _ = xml.MarshalIndent(nesting, \" \", \"  \")\n\tfmt.Println(string(out))\n}\n",
+    "code": "// Go ofrece soporte integrado para XML y formatos afines\n// mediante el paquete `encoding/xml`.\n\npackage main\n\nimport (\n\t\"encoding/xml\"\n\t\"fmt\"\n)\n\n// Plant se mapeará a XML. De forma similar a los\n// ejemplos de JSON, las etiquetas de campo (field tags) contienen directivas para el\n// codificador y decodificador. Aquí usamos algunas características especiales\n// del paquete XML: el campo `XMLName` dicta\n// el nombre del elemento XML que representa esta estructura;\n// `id,attr` indica que el campo `Id` es un _atributo_ XML\n// en lugar de un elemento hijo anidado.\ntype Plant struct {\n\tXMLName xml.Name `xml:\"plant\"`\n\tId      int      `xml:\"id,attr\"`\n\tName    string   `xml:\"name\"`\n\tOrigin  []string `xml:\"origin\"`\n}\n\nfunc (p Plant) String() string {\n\treturn fmt.Sprintf(\"Plant id=%v, name=%v, origin=%v\",\n\t\tp.Id, p.Name, p.Origin)\n}\n\nfunc main() {\n\tcoffee := &Plant{Id: 27, Name: \"Coffee\"}\n\tcoffee.Origin = []string{\"Ethiopia\", \"Brazil\"}\n\n\t// Emitimos el XML que representa nuestra planta; usamos\n\t// `MarshalIndent` para producir una salida formateada\n\t// legible para humanos.\n\tout, _ := xml.MarshalIndent(coffee, \" \", \"  \")\n\tfmt.Println(string(out))\n\n\t// Para agregar una cabecera XML genérica a la salida, la concatenamos\n\t// explícitamente.\n\tfmt.Println(xml.Header + string(out))\n\n\t// Usa `Unmarshal` para parsear un flujo de bytes con XML\n\t// hacia una estructura de datos. Si el XML está mal formado o\n\t// no puede mapearse sobre Plant, se devolverá un error descriptivo.\n\tvar p Plant\n\tif err := xml.Unmarshal(out, &p); err != nil {\n\t\tpanic(err)\n\t}\n\tfmt.Println(p)\n\n\ttomato := &Plant{Id: 81, Name: \"Tomato\"}\n\ttomato.Origin = []string{\"Mexico\", \"California\"}\n\n\t// La etiqueta de campo `parent>child>plant` indica al codificador\n\t// que anide todas las etiquetas `plant` bajo `<parent><child>...`\n\ttype Nesting struct {\n\t\tXMLName xml.Name `xml:\"nesting\"`\n\t\tPlants  []*Plant `xml:\"parent>child>plant\"`\n\t}\n\n\tnesting := &Nesting{}\n\tnesting.Plants = []*Plant{coffee, tomato}\n\n\tout, _ = xml.MarshalIndent(nesting, \" \", \"  \")\n\tfmt.Println(string(out))\n}\n",
     "output": "$ go run xml.go\n <plant id=\"27\">\n   <name>Coffee</name>\n   <origin>Ethiopia</origin>\n   <origin>Brazil</origin>\n </plant>\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n <plant id=\"27\">\n   <name>Coffee</name>\n   <origin>Ethiopia</origin>\n   <origin>Brazil</origin>\n </plant>\nPlant id=27, name=Coffee, origin=[Ethiopia Brazil]\n <nesting>\n   <parent>\n     <child>\n       <plant id=\"27\">\n         <name>Coffee</name>\n         <origin>Ethiopia</origin>\n         <origin>Brazil</origin>\n       </plant>\n       <plant id=\"81\">\n         <name>Tomato</name>\n         <origin>Mexico</origin>\n         <origin>California</origin>\n       </plant>\n     </child>\n   </parent>\n </nesting>\n",
     "officialUrl": "https://gobyexample.com/xml"
   },
@@ -4079,7 +4079,7 @@ const GO_TOPICS = [
     "titleEs": "Manipulación del Tiempo (time.Time y time.Duration)",
     "category": "Tiempo, Matemáticas y Criptografía",
     "categorySlug": "tiempo-cripto",
-    "categoryIcon": "⏳",
+    "categoryIcon": "clock",
     "difficulty": "Principiante",
     "summary": "Gestión de fechas, horas, zonas horarias y duraciones con el paquete estándar 'time'.",
     "originalExpl": "Go ofrece un soporte extenso para tiempos y duraciones. Aquí hay algunos ejemplos de operaciones comunes con fechas y mediciones de tiempo.",
@@ -4121,23 +4121,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package time (Standard Library)",
+        "title": "Paquete time (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/time",
         "description": "Documentación oficial del paquete de tiempo en la biblioteca estándar de Go."
       },
       {
-        "title": "The Go Blog: Monotonic Time in Go",
+        "title": "Blog oficial de Go: Medición precisa de intervalos con tiempo monotónico",
         "url": "https://go.dev/blog/monotonic",
         "description": "Explicación de Russ Cox sobre la incorporación de relojes monotónicos en Go 1.9."
       },
       {
-        "title": "Go by Example: Time",
+        "title": "Go by Example Original: Time",
         "url": "https://gobyexample.com/time",
         "description": "Ejemplo en Go by Example."
       }
     ],
-    "code": "// Go offers extensive support for times and durations;\n// here are some examples.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc main() {\n\tp := fmt.Println\n\n\t// We'll start by getting the current time.\n\tnow := time.Now()\n\tp(now)\n\n\t// You can build a `time` struct by providing the\n\t// year, month, day, etc. Times are always associated\n\t// with a `Location`, i.e. time zone.\n\tthen := time.Date(\n\t\t2009, 11, 17, 20, 34, 58, 651387237, time.UTC)\n\tp(then)\n\n\t// You can extract the various components of the time\n\t// value as expected.\n\tp(then.Year())\n\tp(then.Month())\n\tp(then.Day())\n\tp(then.Hour())\n\tp(then.Minute())\n\tp(then.Second())\n\tp(then.Nanosecond())\n\tp(then.Location())\n\n\t// The Monday-Sunday `Weekday` is also available.\n\tp(then.Weekday())\n\n\t// These methods compare two times, testing if the\n\t// first occurs before, after, or at the same time\n\t// as the second, respectively.\n\tp(then.Before(now))\n\tp(then.After(now))\n\tp(then.Equal(now))\n\n\t// The `Sub` methods returns a `Duration` representing\n\t// the interval between two times.\n\tdiff := now.Sub(then)\n\tp(diff)\n\n\t// We can compute the length of the duration in\n\t// various units.\n\tp(diff.Hours())\n\tp(diff.Minutes())\n\tp(diff.Seconds())\n\tp(diff.Nanoseconds())\n\n\t// You can use `Add` to advance a time by a given\n\t// duration, or with a `-` to move backwards by a\n\t// duration.\n\tp(then.Add(diff))\n\tp(then.Add(-diff))\n}\n",
-    "output": "$ go run time.go\n2012-10-31 15:50:13.793654 +0000 UTC\n2009-11-17 20:34:58.651387237 +0000 UTC\n2009\nNovember\n17\n20\n34\n58\n651387237\nUTC\nTuesday\ntrue\nfalse\nfalse\n25891h15m15.142266763s\n25891.25420618521\n1.5534752523711128e+06\n9.320851514226677e+07\n93208515142266763\n2012-10-31 15:50:13.793654 +0000 UTC\n2006-12-05 01:19:43.509120474 +0000 UTC\n\n# Next we'll look at the related idea of time relative to\n# the Unix epoch.\n",
+    "code": "// Go ofrece un soporte integral para el manejo de fechas, horas y duraciones;\n// aquí tenemos algunos ejemplos clave.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc main() {\n\tp := fmt.Println\n\n\t// Comenzaremos obteniendo la fecha y hora actual con `time.Now()`.\n\tnow := time.Now()\n\tp(now)\n\n\t// Puedes construir una estructura `time` proporcionando el\n\t// año, mes, día, etc. Las horas siempre están asociadas\n\t// a una `Location`, es decir, una zona horaria.\n\tthen := time.Date(\n\t\t2009, 11, 17, 20, 34, 58, 651387237, time.UTC)\n\tp(then)\n\n\t// Puedes extraer los diversos componentes del valor de tiempo\n\t// según se espera.\n\tp(then.Year())\n\tp(then.Month())\n\tp(then.Day())\n\tp(then.Hour())\n\tp(then.Minute())\n\tp(then.Second())\n\tp(then.Nanosecond())\n\tp(then.Location())\n\n\t// El día de la semana `Weekday` (de lunes a domingo) también está disponible.\n\tp(then.Weekday())\n\n\t// Estos métodos comparan dos instantes temporales, evaluando si el\n\t// primero ocurre antes, después o al mismo tiempo exacto\n\t// que el segundo, respectivamente.\n\tp(then.Before(now))\n\tp(then.After(now))\n\tp(then.Equal(now))\n\n\t// El método `Sub` devuelve una estructura `Duration` que representa\n\t// el intervalo de tiempo entre dos instantes.\n\tdiff := now.Sub(then)\n\tp(diff)\n\n\t// Podemos calcular la longitud de la duración en\n\t// diversas unidades temporales.\n\tp(diff.Hours())\n\tp(diff.Minutes())\n\tp(diff.Seconds())\n\tp(diff.Nanoseconds())\n\n\t// Puedes usar `Add` para avanzar un instante de tiempo según una\n\t// duración dada, o con un `-` para retroceder en el tiempo.\n\tp(then.Add(diff))\n\tp(then.Add(-diff))\n}\n",
+    "output": "$ go run time.go\n2012-10-31 15:50:13.793654 +0000 UTC\n2009-11-17 20:34:58.651387237 +0000 UTC\n2009\nNovember\n17\n20\n34\n58\n651387237\nUTC\nTuesday\ntrue\nfalse\nfalse\n25891h15m15.142266763s\n25891.25420618521\n1.5534752523711128e+06\n9.320851514226677e+07\n93208515142266763\n2012-10-31 15:50:13.793654 +0000 UTC\n2006-12-05 01:19:43.509120474 +0000 UTC\n\n# A continuación veremos el concepto estrechamente relacionado del tiempo relativo a\n# la época Unix (Unix epoch).\n",
     "officialUrl": "https://gobyexample.com/time"
   },
   {
@@ -4147,7 +4147,7 @@ const GO_TOPICS = [
     "titleEs": "Época Unix (Timestamps en Segundos y Nanosegundos)",
     "category": "Tiempo, Matemáticas y Criptografía",
     "categorySlug": "tiempo-cripto",
-    "categoryIcon": "⏳",
+    "categoryIcon": "clock",
     "difficulty": "Principiante",
     "summary": "Conversión bidireccional entre fechas de Go y marcas de tiempo Unix Epoch (segundos, milisegundos y nanosegundos desde 1970).",
     "originalExpl": "Un requerimiento común en programas es obtener el número de segundos, milisegundos o nanosegundos desde la Época Unix (1 de enero de 1970 UTC).",
@@ -4188,23 +4188,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package time: Unix functions",
+        "title": "Paquete time: Unix functions",
         "url": "https://pkg.go.dev/time#Unix",
         "description": "Documentación oficial de las funciones Unix, UnixMilli y UnixMicro."
       },
       {
-        "title": "Go by Example: Epoch",
+        "title": "Go by Example Original: Epoch",
         "url": "https://gobyexample.com/epoch",
         "description": "Ejemplo en Go by Example."
       },
       {
-        "title": "Wikipedia: Unix time and the Year 2038 problem",
+        "title": "Wikipedia: El tiempo Unix y el problema del año 2038",
         "url": "https://en.wikipedia.org/wiki/Year_2038_problem",
         "description": "Explicación del problema del año 2038 resuelto en Go con enteros int64."
       }
     ],
-    "code": "// A common requirement in programs is getting the number\n// of seconds, milliseconds, or nanoseconds since the\n// [Unix epoch](https://en.wikipedia.org/wiki/Unix_time).\n// Here's how to do it in Go.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc main() {\n\n\t// Use `time.Now` with `Unix`, `UnixMilli` or `UnixNano`\n\t// to get elapsed time since the Unix epoch in seconds,\n\t// milliseconds or nanoseconds, respectively.\n\tnow := time.Now()\n\tfmt.Println(now)\n\n\tfmt.Println(now.Unix())\n\tfmt.Println(now.UnixMilli())\n\tfmt.Println(now.UnixNano())\n\n\t// You can also convert integer seconds or nanoseconds\n\t// since the epoch into the corresponding `time`.\n\tfmt.Println(time.Unix(now.Unix(), 0))\n\tfmt.Println(time.Unix(0, now.UnixNano()))\n}\n",
-    "output": "$ go run epoch.go \n2012-10-31 16:13:58.292387 +0000 UTC\n1351700038\n1351700038292\n1351700038292387000\n2012-10-31 16:13:58 +0000 UTC\n2012-10-31 16:13:58.292387 +0000 UTC\n\n# Next we'll look at another time-related task: time\n# parsing and formatting.\n",
+    "code": "// Un requerimiento frecuente en desarrollo de software es obtener el número\n// de segundos, milisegundos o nanosegundos transcurridos desde la\n// [época Unix](https://en.wikipedia.org/wiki/Unix_time) (1 de enero de 1970).\n// Así es como se realiza en Go.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc main() {\n\n\t// Usa `time.Now` junto con `Unix`, `UnixMilli` o `UnixNano`\n\t// para obtener el tiempo transcurrido desde la época Unix en segundos,\n\t// milisegundos o nanosegundos, respectivamente.\n\tnow := time.Now()\n\tfmt.Println(now)\n\n\tfmt.Println(now.Unix())\n\tfmt.Println(now.UnixMilli())\n\tfmt.Println(now.UnixNano())\n\n\t// También puedes convertir enteros de segundos o nanosegundos\n\t// transcurridos desde la época al valor `time.Time` correspondiente.\n\tfmt.Println(time.Unix(now.Unix(), 0))\n\tfmt.Println(time.Unix(0, now.UnixNano()))\n}\n",
+    "output": "$ go run epoch.go \n2012-10-31 16:13:58.292387 +0000 UTC\n1351700038\n1351700038292\n1351700038292387000\n2012-10-31 16:13:58 +0000 UTC\n2012-10-31 16:13:58.292387 +0000 UTC\n\n# A continuación veremos otra tarea clave vinculada al tiempo: el\n# formateo y parseo de fechas y horas.\n",
     "officialUrl": "https://gobyexample.com/epoch"
   },
   {
@@ -4214,7 +4214,7 @@ const GO_TOPICS = [
     "titleEs": "Formateo y Parseo de Fechas (La Fecha de Referencia)",
     "category": "Tiempo, Matemáticas y Criptografía",
     "categorySlug": "tiempo-cripto",
-    "categoryIcon": "⏳",
+    "categoryIcon": "clock",
     "difficulty": "Intermedio",
     "summary": "El singular sistema de formateo de fechas de Go basado en la fecha mnemotécnica de referencia 'Mon Jan 2 15:04:05 MST 2006'.",
     "originalExpl": "Go enfatiza el formateo y parseo de tiempo basado en ejemplos mnemotécnicos en lugar de los comodines clásicos como %Y-%m-%d. El patrón debe usar la fecha de referencia específica de Go: Mon Jan 2 15:04:05 MST 2006.",
@@ -4256,22 +4256,22 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package time: Constants and Format layout",
+        "title": "Paquete time: Constants and Format layout",
         "url": "https://pkg.go.dev/time#pkg-constants",
         "description": "Explicación de la fecha de referencia 2006-01-02 en la documentación oficial."
       },
       {
-        "title": "Go by Example: Time Formatting / Parsing",
+        "title": "Go by Example Original: Time Formatting / Parsing",
         "url": "https://gobyexample.com/time-formatting-parsing",
         "description": "Ejemplo en Go by Example."
       },
       {
-        "title": "GopherAcademy: Why is the reference time Jan 2 15:04:05 2006?",
+        "title": "GopherAcademy: El origen mnemotécnico de la fecha de referencia en Go",
         "url": "https://blog.gopheracademy.com/advent-2017/time-formatting/",
         "description": "Historia y diseño de la fecha mnemotécnica 1 2 3 4 5 6 7 en Go."
       }
     ],
-    "code": "// Go supports time formatting and parsing via\n// pattern-based layouts.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc main() {\n\tp := fmt.Println\n\n\t// Here's a basic example of formatting a time\n\t// according to RFC3339, using the corresponding layout\n\t// constant.\n\tt := time.Now()\n\tp(t.Format(time.RFC3339))\n\n\t// Time parsing uses the same layout values as `Format`.\n\tt1, _ := time.Parse(time.RFC3339, \"2012-11-01T22:08:41+00:00\")\n\tp(t1)\n\n\t// `Format` and `Parse` use example-based layouts. Usually\n\t// you'll use a constant from `time` for these layouts, but\n\t// you can also supply custom layouts. Layouts must use the\n\t// reference time `Mon Jan 2 15:04:05 MST 2006` to show the\n\t// pattern with which to format/parse a given time/string.\n\t// The example time must be exactly as shown: the year 2006,\n\t// 15 for the hour, Monday for the day of the week, etc.\n\tp(t.Format(\"3:04PM\"))\n\tp(t.Format(\"Mon Jan _2 15:04:05 2006\"))\n\tp(t.Format(\"2006-01-02T15:04:05.999999-07:00\"))\n\tform := \"3 04 PM\"\n\tt2, _ := time.Parse(form, \"8 41 PM\")\n\tp(t2)\n\n\t// For purely numeric representations you can also\n\t// use standard string formatting with the extracted\n\t// components of the time value.\n\tfmt.Printf(\"%d-%02d-%02dT%02d:%02d:%02d-00:00\\n\",\n\t\tt.Year(), t.Month(), t.Day(),\n\t\tt.Hour(), t.Minute(), t.Second())\n\n\t// `Parse` will return an error on malformed input\n\t// explaining the parsing problem.\n\t_, err := time.Parse(\"Mon Jan _2 15:04:05 2006\", \"8:41PM\")\n\tp(err)\n}\n",
+    "code": "// Go admite el formateo y parseo de tiempo mediante diseños\n// (layouts) basados en ejemplos mnemotécnicos.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc main() {\n\tp := fmt.Println\n\n\t// Aquí tenemos un ejemplo básico de cómo formatear una hora\n\t// según la norma RFC3339, usando la constante de diseño\n\t// correspondiente.\n\tt := time.Now()\n\tp(t.Format(time.RFC3339))\n\n\t// El parseo de fechas utiliza los mismos valores de diseño que `Format`.\n\tt1, _ := time.Parse(time.RFC3339, \"2012-11-01T22:08:41+00:00\")\n\tp(t1)\n\n\t// `Format` y `Parse` emplean formatos basados en ejemplos. Habitualmente\n\t// usarás una constante de `time` para estos formatos, pero\n\t// también puedes proporcionar patrones personalizados. Los formatos deben basarse en la\n\t// fecha de referencia canónica `Mon Jan 2 15:04:05 MST 2006` para indicar\n\t// el patrón con el cual formatear/parsear una fecha/cadena dada.\n\t// La fecha de ejemplo debe coincidir con dicha referencia: el año 2006,\n\t// 15 para la hora, lunes (Mon) para el día de la semana, etc.\n\tp(t.Format(\"3:04PM\"))\n\tp(t.Format(\"Mon Jan _2 15:04:05 2006\"))\n\tp(t.Format(\"2006-01-02T15:04:05.999999-07:00\"))\n\tform := \"3 04 PM\"\n\tt2, _ := time.Parse(form, \"8 41 PM\")\n\tp(t2)\n\n\t// Para representaciones puramente numéricas también puedes\n\t// usar formateo de cadenas estándar extrayendo los componentes\n\t// individuales del valor de tiempo.\n\tfmt.Printf(\"%d-%02d-%02dT%02d:%02d:%02d-00:00\\n\",\n\t\tt.Year(), t.Month(), t.Day(),\n\t\tt.Hour(), t.Minute(), t.Second())\n\n\t// `Parse` devolverá un error descriptivo ante una entrada mal formada,\n\t// explicando con exactitud el problema de parseo.\n\t_, err := time.Parse(\"Mon Jan _2 15:04:05 2006\", \"8:41PM\")\n\tp(err)\n}\n",
     "output": "$ go run time-formatting-parsing.go \n2014-04-15T18:00:15-07:00\n2012-11-01 22:08:41 +0000 +0000\n6:00PM\nTue Apr 15 18:00:15 2014\n2014-04-15T18:00:15.161182-07:00\n0000-01-01 20:41:00 +0000 UTC\n2014-04-15T18:00:15-00:00\nparsing time \"8:41PM\" as \"Mon Jan _2 15:04:05 2006\": ...\n",
     "officialUrl": "https://gobyexample.com/time-formatting-parsing"
   },
@@ -4282,7 +4282,7 @@ const GO_TOPICS = [
     "titleEs": "Números Pseudoaleatorios (math/rand y math/rand/v2)",
     "category": "Tiempo, Matemáticas y Criptografía",
     "categorySlug": "tiempo-cripto",
-    "categoryIcon": "⏳",
+    "categoryIcon": "clock",
     "difficulty": "Intermedio",
     "summary": "Generación de números aleatorios para simulaciones con 'math/rand' y el moderno paquete 'math/rand/v2' de Go 1.22+.",
     "originalExpl": "El paquete math/rand de Go proporciona generación de números pseudoaleatorios. En Go 1.22 se introdujo math/rand/v2 con algoritmos más modernos y rápidos y soporte nativo para genéricos.",
@@ -4324,23 +4324,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "The Go Blog: Modernizing math/rand in Go 1.22",
+        "title": "Blog oficial de Go: Modernización del generador de números aleatorios en Go 1.22",
         "url": "https://go.dev/blog/randv2",
         "description": "Artículo oficial de Russ Cox explicando las mejoras y arquitectura de math/rand/v2."
       },
       {
-        "title": "Package math/rand/v2",
+        "title": "Paquete math/rand/v2 (Documentación oficial)",
         "url": "https://pkg.go.dev/math/rand/v2",
         "description": "Documentación oficial del paquete math/rand/v2 de la biblioteca estándar."
       },
       {
-        "title": "Go by Example: Random Numbers",
+        "title": "Go by Example Original: Random Numbers",
         "url": "https://gobyexample.com/random-numbers",
         "description": "Ejemplo en Go by Example."
       }
     ],
-    "code": "// Go's `math/rand/v2` package provides\n// [pseudorandom number](https://en.wikipedia.org/wiki/Pseudorandom_number_generator)\n// generation.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"math/rand/v2\"\n)\n\nfunc main() {\n\n\t// For example, `rand.IntN` returns a random `int` n,\n\t// `0 <= n < 100`.\n\tfmt.Print(rand.IntN(100), \",\")\n\tfmt.Print(rand.IntN(100))\n\tfmt.Println()\n\n\t// `rand.Float64` returns a `float64` `f`,\n\t// `0.0 <= f < 1.0`.\n\tfmt.Println(rand.Float64())\n\n\t// This can be used to generate random floats in\n\t// other ranges, for example `5.0 <= f' < 10.0`.\n\tfmt.Print((rand.Float64()*5)+5, \",\")\n\tfmt.Print((rand.Float64() * 5) + 5)\n\tfmt.Println()\n\n\t// If you want a known seed, create a new\n\t// `rand.Source` and pass it into the `New`\n\t// constructor. `NewPCG` creates a new\n\t// [PCG](https://en.wikipedia.org/wiki/Permuted_congruential_generator)\n\t// source that requires a seed of two `uint64`\n\t// numbers.\n\ts2 := rand.NewPCG(42, 1024)\n\tr2 := rand.New(s2)\n\tfmt.Print(r2.IntN(100), \",\")\n\tfmt.Print(r2.IntN(100))\n\tfmt.Println()\n\n\ts3 := rand.NewPCG(42, 1024)\n\tr3 := rand.New(s3)\n\tfmt.Print(r3.IntN(100), \",\")\n\tfmt.Print(r3.IntN(100))\n\tfmt.Println()\n}\n",
-    "output": "# Some of the generated numbers may be\n# different when you run the sample.\n$ go run random-numbers.go\n68,56\n0.8090228139659177\n5.840125017402497,6.937056298890035\n94,49\n94,49\n\n# See the [`math/rand/v2`](https://pkg.go.dev/math/rand/v2)\n# package docs for references on other random quantities\n# that Go can provide.\n",
+    "code": "// El paquete `math/rand/v2` de Go proporciona generación de\n// [números pseudoaleatorios](https://en.wikipedia.org/wiki/Pseudorandom_number_generator).\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"math/rand/v2\"\n)\n\nfunc main() {\n\n\t// Por ejemplo, `rand.IntN` devuelve un entero aleatorio `n`,\n\t// donde `0 <= n < 100`.\n\tfmt.Print(rand.IntN(100), \",\")\n\tfmt.Print(rand.IntN(100))\n\tfmt.Println()\n\n\t// `rand.Float64` devuelve un flotante `f` de tipo `float64`,\n\t// tal que `0.0 <= f < 1.0`.\n\tfmt.Println(rand.Float64())\n\n\t// Esto puede emplearse para generar números flotantes aleatorios en\n\t// otros rangos, por ejemplo `5.0 <= f' < 10.0`.\n\tfmt.Print((rand.Float64()*5)+5, \",\")\n\tfmt.Print((rand.Float64() * 5) + 5)\n\tfmt.Println()\n\n\t// Si deseas una semilla fija predecible, crea un nuevo\n\t// `rand.Source` y pásalo al constructor `New`. `NewPCG` genera una nueva\n\t// fuente [PCG](https://en.wikipedia.org/wiki/Permuted_congruential_generator)\n\t// que requiere una semilla compuesta por dos números `uint64`.\n\ts2 := rand.NewPCG(42, 1024)\n\tr2 := rand.New(s2)\n\tfmt.Print(r2.IntN(100), \",\")\n\tfmt.Print(r2.IntN(100))\n\tfmt.Println()\n\n\ts3 := rand.NewPCG(42, 1024)\n\tr3 := rand.New(s3)\n\tfmt.Print(r3.IntN(100), \",\")\n\tfmt.Print(r3.IntN(100))\n\tfmt.Println()\n}\n",
+    "output": "# Algunos de los números generados pueden diferir\n# cuando ejecutes el ejemplo.\n$ go run random-numbers.go\n68,56\n0.8090228139659177\n5.840125017402497,6.937056298890035\n94,49\n94,49\n\n# Consulta la documentación del paquete [`math/rand/v2`](https://pkg.go.dev/math/rand/v2)\n# para obtener información detallada sobre otras distribuciones y funciones\n# aleatorias que ofrece Go.\n",
     "officialUrl": "https://gobyexample.com/random-numbers"
   },
   {
@@ -4350,7 +4350,7 @@ const GO_TOPICS = [
     "titleEs": "Conversión y Parseo de Números (strconv)",
     "category": "Tiempo, Matemáticas y Criptografía",
     "categorySlug": "tiempo-cripto",
-    "categoryIcon": "⏳",
+    "categoryIcon": "clock",
     "difficulty": "Principiante",
     "summary": "Conversión segura y precisa entre cadenas de texto y valores numéricos con el paquete nativo 'strconv'.",
     "originalExpl": "Parsear números desde cadenas de texto es una tarea básica pero común en muchos programas. El paquete integrado strconv proporciona funciones para este propósito.",
@@ -4392,23 +4392,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package strconv (Standard Library)",
+        "title": "Paquete strconv (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/strconv",
         "description": "Documentación oficial del paquete strconv con todas las funciones de conversión."
       },
       {
-        "title": "Go by Example: Number Parsing",
+        "title": "Go by Example Original: Number Parsing",
         "url": "https://gobyexample.com/number-parsing",
         "description": "Ejemplo en Go by Example."
       },
       {
-        "title": "Daniel Lemire: Fast Number Parsing in Go",
+        "title": "Daniel Lemire: Conversión y procesamiento ultrarrápido de números en Go",
         "url": "https://lemire.me/blog/",
         "description": "Artículo de investigación sobre los algoritmos de parseo de enteros y flotantes adoptados en Go."
       }
     ],
-    "code": "// Parsing numbers from strings is a basic but common task\n// in many programs; here's how to do it in Go.\n\npackage main\n\n// The built-in package `strconv` provides the number\n// parsing.\nimport (\n\t\"fmt\"\n\t\"strconv\"\n)\n\nfunc main() {\n\n\t// With `ParseFloat`, this `64` tells how many bits of\n\t// precision to parse.\n\tf, _ := strconv.ParseFloat(\"1.234\", 64)\n\tfmt.Println(f)\n\n\t// For `ParseInt`, the `0` means infer the base from\n\t// the string. `64` requires that the result fit in 64\n\t// bits.\n\ti, _ := strconv.ParseInt(\"123\", 0, 64)\n\tfmt.Println(i)\n\n\t// `ParseInt` will recognize hex-formatted numbers.\n\td, _ := strconv.ParseInt(\"0x1c8\", 0, 64)\n\tfmt.Println(d)\n\n\t// A `ParseUint` is also available.\n\tu, _ := strconv.ParseUint(\"789\", 0, 64)\n\tfmt.Println(u)\n\n\t// `Atoi` is a convenience function for basic base-10\n\t// `int` parsing.\n\tk, _ := strconv.Atoi(\"135\")\n\tfmt.Println(k)\n\n\t// Parse functions return an error on bad input.\n\t_, e := strconv.Atoi(\"wat\")\n\tfmt.Println(e)\n}\n",
-    "output": "$ go run number-parsing.go \n1.234\n123\n456\n789\n135\nstrconv.ParseInt: parsing \"wat\": invalid syntax\n\n# Next we'll look at another common parsing task: URLs.\n",
+    "code": "// El parseo de números a partir de cadenas de texto es una tarea básica pero frecuente\n// en muchos programas; aquí veremos cómo llevarla a cabo en Go.\n\npackage main\n\n// El paquete integrado `strconv` provee las funciones para\n// parsear números.\nimport (\n\t\"fmt\"\n\t\"strconv\"\n)\n\nfunc main() {\n\n\t// Con `ParseFloat`, este `64` indica cuántos bits de\n\t// precisión se deben utilizar para el parseo.\n\tf, _ := strconv.ParseFloat(\"1.234\", 64)\n\tfmt.Println(f)\n\n\t// Para `ParseInt`, el `0` indica inferir la base numérica a partir\n\t// de la cadena. `64` exige que el resultado quepa en 64\n\t// bits.\n\ti, _ := strconv.ParseInt(\"123\", 0, 64)\n\tfmt.Println(i)\n\n\t// `ParseInt` reconocerá números con formato hexadecimal.\n\td, _ := strconv.ParseInt(\"0x1c8\", 0, 64)\n\tfmt.Println(d)\n\n\t// También existe la función `ParseUint` para enteros sin signo.\n\tu, _ := strconv.ParseUint(\"789\", 0, 64)\n\tfmt.Println(u)\n\n\t// `Atoi` es una función de conveniencia para el parseo básico de enteros\n\t// en base 10 (`int`).\n\tk, _ := strconv.Atoi(\"135\")\n\tfmt.Println(k)\n\n\t// Las funciones de parseo devuelven un error cuando reciben entradas no válidas.\n\t_, e := strconv.Atoi(\"wat\")\n\tfmt.Println(e)\n}\n",
+    "output": "$ go run number-parsing.go \n1.234\n123\n456\n789\n135\nstrconv.ParseInt: parsing \"wat\": invalid syntax\n\n# A continuación veremos otra tarea habitual de parseo: las URLs.\n",
     "officialUrl": "https://gobyexample.com/number-parsing"
   },
   {
@@ -4418,7 +4418,7 @@ const GO_TOPICS = [
     "titleEs": "Parseo y Análisis de URLs (net/url)",
     "category": "Tiempo, Matemáticas y Criptografía",
     "categorySlug": "tiempo-cripto",
-    "categoryIcon": "⏳",
+    "categoryIcon": "clock",
     "difficulty": "Intermedio",
     "summary": "Descomposición estructurada, validación y extracción de componentes de direcciones web con 'net/url'.",
     "originalExpl": "Las URLs proporcionan una forma uniforme de localizar recursos. El paquete net/url de Go permite parsear y construir URLs fácilmente.",
@@ -4460,23 +4460,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package net/url (Standard Library)",
+        "title": "Paquete net/url (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/net/url",
         "description": "Documentación oficial del paquete net/url en la biblioteca estándar."
       },
       {
-        "title": "Go by Example: URL Parsing",
+        "title": "Go by Example Original: URL Parsing",
         "url": "https://gobyexample.com/url-parsing",
         "description": "Ejemplo interactivo en Go by Example."
       },
       {
-        "title": "RFC 3986: Uniform Resource Identifier (URI)",
+        "title": "Estándar RFC 3986: Identificadores uniformes de recursos (URI)",
         "url": "https://datatracker.ietf.org/doc/html/rfc3986",
         "description": "La especificación estándar oficial implementada por Go."
       }
     ],
-    "code": "// URLs provide a [uniform way to locate resources](https://adam.herokuapp.com/past/2010/3/30/urls_are_the_uniform_way_to_locate_resources/).\n// Here's how to parse URLs in Go.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"net\"\n\t\"net/url\"\n)\n\nfunc main() {\n\n\t// We'll parse this example URL, which includes a\n\t// scheme, authentication info, host, port, path,\n\t// query params, and query fragment.\n\ts := \"postgres://user:pass@host.com:5432/path?k=v#f\"\n\n\t// Parse the URL and ensure there are no errors.\n\tu, err := url.Parse(s)\n\tif err != nil {\n\t\tpanic(err)\n\t}\n\n\t// Accessing the scheme is straightforward.\n\tfmt.Println(u.Scheme)\n\n\t// `User` contains all authentication info; call\n\t// `Username` and `Password` on this for individual\n\t// values.\n\tfmt.Println(u.User)\n\tfmt.Println(u.User.Username())\n\tp, _ := u.User.Password()\n\tfmt.Println(p)\n\n\t// The `Host` contains both the hostname and the port,\n\t// if present. Use `SplitHostPort` to extract them.\n\tfmt.Println(u.Host)\n\thost, port, _ := net.SplitHostPort(u.Host)\n\tfmt.Println(host)\n\tfmt.Println(port)\n\n\t// Here we extract the `path` and the fragment after\n\t// the `#`.\n\tfmt.Println(u.Path)\n\tfmt.Println(u.Fragment)\n\n\t// To get query params in a string of `k=v` format,\n\t// use `RawQuery`. You can also parse query params\n\t// into a map. The parsed query param maps are from\n\t// strings to slices of strings, so index into `[0]`\n\t// if you only want the first value.\n\tfmt.Println(u.RawQuery)\n\tm, _ := url.ParseQuery(u.RawQuery)\n\tfmt.Println(m)\n\tfmt.Println(m[\"k\"][0])\n}\n",
-    "output": "# Running our URL parsing program shows all the different\n# pieces that we extracted.\n$ go run url-parsing.go \npostgres\nuser:pass\nuser\npass\nhost.com:5432\nhost.com\n5432\n/path\nf\nk=v\nmap[k:[v]]\nv\n",
+    "code": "// Las URLs proporcionan una [forma uniforme de localizar recursos](https://adam.herokuapp.com/past/2010/3/30/urls_are_the_uniform_way_to_locate_resources/).\n// Aquí veremos cómo parsear URLs en Go.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"net\"\n\t\"net/url\"\n)\n\nfunc main() {\n\n\t// Parsearemos esta URL de ejemplo, la cual incluye\n\t// esquema, credenciales de autenticación, host, puerto, ruta,\n\t// parámetros de consulta y fragmento.\n\ts := \"postgres://user:pass@host.com:5432/path?k=v#f\"\n\n\t// Parseamos la URL y aseguramos que no contenga errores.\n\tu, err := url.Parse(s)\n\tif err != nil {\n\t\tpanic(err)\n\t}\n\n\t// Acceder al esquema es directo.\n\tfmt.Println(u.Scheme)\n\n\t// `User` contiene toda la información de autenticación; invoca\n\t// `Username` y `Password` sobre él para obtener los valores individuales.\n\tfmt.Println(u.User)\n\tfmt.Println(u.User.Username())\n\tp, _ := u.User.Password()\n\tfmt.Println(p)\n\n\t// `Host` contiene tanto el nombre del host como el puerto,\n\t// si están presentes. Usa `SplitHostPort` para extraerlos por separado.\n\tfmt.Println(u.Host)\n\thost, port, _ := net.SplitHostPort(u.Host)\n\tfmt.Println(host)\n\tfmt.Println(port)\n\n\t// Aquí extraemos la ruta (`path`) y el fragmento posterior\n\t// al símbolo `#`.\n\tfmt.Println(u.Path)\n\tfmt.Println(u.Fragment)\n\n\t// Para obtener los parámetros de consulta en una cadena con formato `k=v`,\n\t// usa `RawQuery`. También puedes parsear los parámetros\n\t// hacia un mapa. Los mapas de parámetros resultantes van de\n\t// cadenas a slices de cadenas, por lo que accede a `[0]`\n\t// si solo necesitas el primer valor.\n\tfmt.Println(u.RawQuery)\n\tm, _ := url.ParseQuery(u.RawQuery)\n\tfmt.Println(m)\n\tfmt.Println(m[\"k\"][0])\n}\n",
+    "output": "# Ejecutar nuestro programa de parseo de URLs muestra todas las\n# partes individuales que logramos extraer.\n$ go run url-parsing.go \npostgres\nuser:pass\nuser\npass\nhost.com:5432\nhost.com\n5432\n/path\nf\nk=v\nmap[k:[v]]\nv\n",
     "officialUrl": "https://gobyexample.com/url-parsing"
   },
   {
@@ -4486,7 +4486,7 @@ const GO_TOPICS = [
     "titleEs": "Hashing Criptográfico SHA-256 (crypto/sha256)",
     "category": "Tiempo, Matemáticas y Criptografía",
     "categorySlug": "tiempo-cripto",
-    "categoryIcon": "⏳",
+    "categoryIcon": "clock",
     "difficulty": "Intermedio",
     "summary": "Generación de huellas digitales criptográficas seguras de 256 bits (32 bytes) para verificación de integridad.",
     "originalExpl": "Los hashes SHA256 son frecuentemente utilizados para computar identificadores binarios o huellas digitales para documentos y datos. El paquete crypto/sha256 implementa el algoritmo de hash criptográfico SHA224 y SHA256.",
@@ -4528,23 +4528,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package crypto/sha256 (Standard Library)",
+        "title": "Paquete crypto/sha256 (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/crypto/sha256",
         "description": "Documentación oficial del paquete crypto/sha256."
       },
       {
-        "title": "Go by Example: SHA256 Hashes",
+        "title": "Go by Example Original: SHA256 Hashes",
         "url": "https://gobyexample.com/sha256-hashes",
         "description": "Ejemplo en Go by Example."
       },
       {
-        "title": "NIST FIPS 180-4: Secure Hash Standard (SHS)",
+        "title": "Estándar NIST FIPS 180-4: Funciones de dispersión criptográfica segura (SHA)",
         "url": "https://csrc.nist.gov/publications/detail/fips/180/4/final",
         "description": "Especificación federal oficial de los algoritmos de la familia SHA-2."
       }
     ],
-    "code": "// [_SHA256 hashes_](https://en.wikipedia.org/wiki/SHA-2) are\n// frequently used to compute short identities for binary\n// or text blobs. For example, TLS/SSL certificates use SHA256\n// to compute a certificate's signature. Here's how to compute\n// SHA256 hashes in Go.\n\npackage main\n\n// Go implements several hash functions in various\n// `crypto/*` packages.\nimport (\n\t\"crypto/sha256\"\n\t\"fmt\"\n)\n\nfunc main() {\n\ts := \"sha256 this string\"\n\n\t// Here we start with a new hash.\n\th := sha256.New()\n\n\t// `Write` expects bytes. If you have a string `s`,\n\t// use `[]byte(s)` to coerce it to bytes.\n\th.Write([]byte(s))\n\n\t// This gets the finalized hash result as a byte\n\t// slice. The argument to `Sum` can be used to append\n\t// to an existing byte slice: it usually isn't needed.\n\tbs := h.Sum(nil)\n\n\tfmt.Println(s)\n\tfmt.Printf(\"%x\\n\", bs)\n}\n",
-    "output": "# Running the program computes the hash and prints it in\n# a human-readable hex format.\n$ go run sha256-hashes.go\nsha256 this string\n1af1dfa857bf1d8814fe1af8983c18080019922e557f15a8a...\n\n\n# You can compute other hashes using a similar pattern to\n# the one shown above. For example, to compute\n# SHA512 hashes import `crypto/sha512` and use\n# `sha512.New()`.\n\n# Note that if you need cryptographically secure hashes,\n# you should carefully research\n# [hash strength](https://en.wikipedia.org/wiki/Cryptographic_hash_function)!\n",
+    "code": "// Los [_hashes SHA256_](https://en.wikipedia.org/wiki/SHA-2) se utilizan\n// con frecuencia para calcular identificadores breves e irrepetibles para fragmentos\n// binarios o de texto. Por ejemplo, los certificados TLS/SSL emplean SHA256\n// para calcular su firma criptográfica. Así es como se calculan\n// hashes SHA256 en Go.\n\npackage main\n\n// Go implementa diversas funciones de hash en varios\n// paquetes dentro de `crypto/*`.\nimport (\n\t\"crypto/sha256\"\n\t\"fmt\"\n)\n\nfunc main() {\n\ts := \"sha256 this string\"\n\n\t// Aquí iniciamos un nuevo cálculo de hash.\n\th := sha256.New()\n\n\t// `Write` espera bytes. Si tienes una cadena `s`,\n\t// usa `[]byte(s)` para convertirla a bytes.\n\th.Write([]byte(s))\n\n\t// Esto obtiene el resultado final del hash como un\n\t// slice de bytes. El argumento para `Sum` puede usarse para adjuntar\n\t// a un slice de bytes existente; generalmente no se necesita (usa `nil`).\n\tbs := h.Sum(nil)\n\n\tfmt.Println(s)\n\tfmt.Printf(\"%x\\n\", bs)\n}\n",
+    "output": "# Ejecutar el programa calcula el hash y lo imprime en\n# un formato hexadecimal legible para humanos.\n$ go run sha256-hashes.go\nsha256 this string\n1af1dfa857bf1d8814fe1af8983c18080019922e557f15a8a...\n\n# Puedes calcular otros hashes empleando un patrón muy similar\n# al mostrado arriba. Por ejemplo, para calcular hashes\n# SHA512 importa `crypto/sha512` y utiliza\n# `sha512.New()`.\n\n# Ten en cuenta que si requieres hashes criptográficamente seguros,\n# debes investigar cuidadosamente la\n# [fortaleza del algoritmo](https://en.wikipedia.org/wiki/Cryptographic_hash_function).\n",
     "officialUrl": "https://gobyexample.com/sha256-hashes"
   },
   {
@@ -4554,7 +4554,7 @@ const GO_TOPICS = [
     "titleEs": "Codificación y Decodificación Base64",
     "category": "Tiempo, Matemáticas y Criptografía",
     "categorySlug": "tiempo-cripto",
-    "categoryIcon": "⏳",
+    "categoryIcon": "clock",
     "difficulty": "Principiante",
     "summary": "Transformación de datos binarios arbitrarios en texto ASCII seguro para transporte en redes y protocolos web.",
     "originalExpl": "Go proporciona soporte integrado para codificación y decodificación base64. El paquete encoding/base64 soporta tanto el alfabeto estándar como el compatible con URLs.",
@@ -4597,23 +4597,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package encoding/base64 (Standard Library)",
+        "title": "Paquete encoding/base64 (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/encoding/base64",
         "description": "Documentación oficial del paquete encoding/base64."
       },
       {
-        "title": "Go by Example: Base64 Encoding",
+        "title": "Go by Example Original: Base64 Encoding",
         "url": "https://gobyexample.com/base64-encoding",
         "description": "Ejemplo en Go by Example."
       },
       {
-        "title": "RFC 4648: The Base16, Base32, and Base64 Data Encodings",
+        "title": "Estándar RFC 4648: Codificaciones Base16, Base32 y Base64",
         "url": "https://datatracker.ietf.org/doc/html/rfc4648",
         "description": "La especificación estándar oficial de alfabetos Base64."
       }
     ],
-    "code": "// Go provides built-in support for [base64\n// encoding/decoding](https://en.wikipedia.org/wiki/Base64).\n\npackage main\n\n// This syntax imports the `encoding/base64` package with\n// the `b64` name instead of the default `base64`. It'll\n// save us some space below.\nimport (\n\tb64 \"encoding/base64\"\n\t\"fmt\"\n)\n\nfunc main() {\n\n\t// Here's the `string` we'll encode/decode.\n\tdata := \"abc123!?$*&()'-=@~\"\n\n\t// Go supports both standard and URL-compatible\n\t// base64. Here's how to encode using the standard\n\t// encoder. The encoder requires a `[]byte` so we\n\t// convert our `string` to that type.\n\tsEnc := b64.StdEncoding.EncodeToString([]byte(data))\n\tfmt.Println(sEnc)\n\n\t// Decoding may return an error, which you can check\n\t// if you don't already know the input to be\n\t// well-formed.\n\tsDec, _ := b64.StdEncoding.DecodeString(sEnc)\n\tfmt.Println(string(sDec))\n\tfmt.Println()\n\n\t// This encodes/decodes using a URL-compatible base64\n\t// format.\n\tuEnc := b64.URLEncoding.EncodeToString([]byte(data))\n\tfmt.Println(uEnc)\n\tuDec, _ := b64.URLEncoding.DecodeString(uEnc)\n\tfmt.Println(string(uDec))\n}\n",
-    "output": "# The string encodes to slightly different values with the\n# standard and URL base64 encoders (trailing `+` vs `-`)\n# but they both decode to the original string as desired.\n$ go run base64-encoding.go\nYWJjMTIzIT8kKiYoKSctPUB+\nabc123!?$*&()'-=@~\n\nYWJjMTIzIT8kKiYoKSctPUB-\nabc123!?$*&()'-=@~\n",
+    "code": "// Go provee soporte integrado para la\n// [codificación y decodificación en Base64](https://en.wikipedia.org/wiki/Base64).\n\npackage main\n\n// Esta sintaxis importa el paquete `encoding/base64` asignándole\n// el alias `b64` en vez del predeterminado `base64`. Esto nos\n// ahorrará espacio a continuación.\nimport (\n\tb64 \"encoding/base64\"\n\t\"fmt\"\n)\n\nfunc main() {\n\n\t// Aquí tenemos la cadena (`string`) que codificaremos y decodificaremos.\n\tdata := \"abc123!?$*&()'-=@~\"\n\n\t// Go admite Base64 estándar y compatible con URLs.\n\t// Aquí vemos cómo codificar usando el codificador estándar.\n\t// El codificador requiere un `[]byte`, por lo que convertimos\n\t// nuestra cadena a dicho tipo.\n\tsEnc := b64.StdEncoding.EncodeToString([]byte(data))\n\tfmt.Println(sEnc)\n\n\t// La decodificación puede devolver un error, el cual puedes comprobar\n\t// si no sabes con certeza si la entrada está bien formada.\n\tsDec, _ := b64.StdEncoding.DecodeString(sEnc)\n\tfmt.Println(string(sDec))\n\tfmt.Println()\n\n\t// Esto codifica y decodifica utilizando el formato Base64\n\t// compatible con URLs.\n\tuEnc := b64.URLEncoding.EncodeToString([]byte(data))\n\tfmt.Println(uEnc)\n\tuDec, _ := b64.URLEncoding.DecodeString(uEnc)\n\tfmt.Println(string(uDec))\n}\n",
+    "output": "# La cadena se codifica con valores ligeramente distintos entre los\n# codificadores estándar y de URL (signo `+` frente a `-` al final),\n# pero ambos decodifican a la cadena original según lo esperado.\n$ go run base64-encoding.go\nYWJjMTIzIT8kKiYoKSctPUB+\nabc123!?$*&()'-=@~\n\nYWJjMTIzIT8kKiYoKSctPUB-\nabc123!?$*&()'-=@~\n",
     "officialUrl": "https://gobyexample.com/base64-encoding"
   },
   {
@@ -4623,7 +4623,7 @@ const GO_TOPICS = [
     "titleEs": "Lectura de Archivos en Disco (os y io)",
     "category": "Entrada / Salida y Archivos",
     "categorySlug": "archivos-io",
-    "categoryIcon": "📁",
+    "categoryIcon": "folder",
     "difficulty": "Principiante",
     "summary": "Lectura básica completa con os.ReadFile y lectura avanzada por bloques y desplazamientos con os.Open, f.Read y f.Seek.",
     "originalExpl": "Leer y escribir archivos son tareas básicas requeridas por muchos programas de Go. En este ejemplo veremos cómo leer archivos completos o por partes.",
@@ -4665,23 +4665,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package os (Standard Library)",
+        "title": "Paquete os (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/os",
         "description": "Documentación oficial del paquete os para manejo de archivos."
       },
       {
-        "title": "Package io (Standard Library)",
+        "title": "Paquete io (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/io",
         "description": "Interfaces universales Reader, Writer, Closer y utilidades de copia."
       },
       {
-        "title": "Go by Example: Reading Files",
+        "title": "Go by Example Original: Reading Files",
         "url": "https://gobyexample.com/reading-files",
         "description": "Ejemplo interactivo en Go by Example."
       }
     ],
-    "code": "// Reading and writing files are basic tasks needed for\n// many Go programs. First we'll look at some examples of\n// reading files.\n\npackage main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"io\"\n\t\"os\"\n\t\"path/filepath\"\n)\n\n// Reading files requires checking most calls for errors.\n// This helper will streamline our error checks below.\nfunc check(e error) {\n\tif e != nil {\n\t\tpanic(e)\n\t}\n}\n\nfunc main() {\n\n\t// Perhaps the most basic file reading task is\n\t// slurping a file's entire contents into memory.\n\tpath := filepath.Join(os.TempDir(), \"dat\")\n\tdat, err := os.ReadFile(path)\n\tcheck(err)\n\tfmt.Print(string(dat))\n\n\t// You'll often want more control over how and what\n\t// parts of a file are read. For these tasks, start\n\t// by `Open`ing a file to obtain an `os.File` value.\n\tf, err := os.Open(path)\n\tcheck(err)\n\n\t// Read some bytes from the beginning of the file.\n\t// Allow up to 5 to be read but also note how many\n\t// actually were read.\n\tb1 := make([]byte, 5)\n\tn1, err := f.Read(b1)\n\tcheck(err)\n\tfmt.Printf(\"%d bytes: %s\\n\", n1, string(b1[:n1]))\n\n\t// You can also `Seek` to a known location in the file\n\t// and `Read` from there.\n\to2, err := f.Seek(6, io.SeekStart)\n\tcheck(err)\n\tb2 := make([]byte, 2)\n\tn2, err := f.Read(b2)\n\tcheck(err)\n\tfmt.Printf(\"%d bytes @ %d: \", n2, o2)\n\tfmt.Printf(\"%v\\n\", string(b2[:n2]))\n\n\t// Other methods of seeking are relative to the\n\t// current cursor position,\n\t_, err = f.Seek(2, io.SeekCurrent)\n\tcheck(err)\n\n\t// and relative to the end of the file.\n\t_, err = f.Seek(-4, io.SeekEnd)\n\tcheck(err)\n\n\t// The `io` package provides some functions that may\n\t// be helpful for file reading. For example, reads\n\t// like the ones above can be more robustly\n\t// implemented with `ReadAtLeast`.\n\to3, err := f.Seek(6, io.SeekStart)\n\tcheck(err)\n\tb3 := make([]byte, 2)\n\tn3, err := io.ReadAtLeast(f, b3, 2)\n\tcheck(err)\n\tfmt.Printf(\"%d bytes @ %d: %s\\n\", n3, o3, string(b3))\n\n\t// There is no built-in rewind, but\n\t// `Seek(0, io.SeekStart)` accomplishes this.\n\t_, err = f.Seek(0, io.SeekStart)\n\tcheck(err)\n\n\t// The `bufio` package implements a buffered\n\t// reader that may be useful both for its efficiency\n\t// with many small reads and because of the additional\n\t// reading methods it provides.\n\tr4 := bufio.NewReader(f)\n\tb4, err := r4.Peek(5)\n\tcheck(err)\n\tfmt.Printf(\"5 bytes: %s\\n\", string(b4))\n\n\t// Close the file when you're done (usually this would\n\t// be scheduled immediately after `Open`ing with\n\t// `defer`).\n\tf.Close()\n}\n",
-    "output": "$ echo \"hello\" > /tmp/dat\n$ echo \"go\" >>   /tmp/dat\n$ go run reading-files.go\nhello\ngo\n5 bytes: hello\n2 bytes @ 6: go\n2 bytes @ 6: go\n5 bytes: hello\n\n# Next we'll look at writing files.\n",
+    "code": "// Leer y escribir archivos son tareas fundamentales para\n// la mayoría de programas en Go. Primero revisaremos algunos ejemplos\n// de lectura de archivos.\n\npackage main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"io\"\n\t\"os\"\n\t\"path/filepath\"\n)\n\n// La lectura de archivos requiere comprobar errores en la mayoría de llamadas.\n// Esta función auxiliar simplificará nuestras comprobaciones de error a continuación.\nfunc check(e error) {\n\tif e != nil {\n\t\tpanic(e)\n\t}\n}\n\nfunc main() {\n\n\t// Quizás la tarea de lectura más básica sea\n\t// volcar el contenido completo de un archivo directamente en memoria.\n\tpath := filepath.Join(os.TempDir(), \"dat\")\n\tdat, err := os.ReadFile(path)\n\tcheck(err)\n\tfmt.Print(string(dat))\n\n\t// A menudo desearás un mayor control sobre cómo y qué partes\n\t// del archivo se leen. Para estas tareas, comienza\n\t// abriendo el archivo con `os.Open` para obtener un valor `os.File`.\n\tf, err := os.Open(path)\n\tcheck(err)\n\n\t// Lee algunos bytes desde el comienzo del archivo.\n\t// Permitimos leer hasta 5 bytes, pero también registramos cuántos\n\t// fueron leídos realmente.\n\tb1 := make([]byte, 5)\n\tn1, err := f.Read(b1)\n\tcheck(err)\n\tfmt.Printf(\"%d bytes: %s\\n\", n1, string(b1[:n1]))\n\n\t// También puedes posicionarte con `Seek` en una ubicación conocida del archivo\n\t// y leer desde allí.\n\to2, err := f.Seek(6, io.SeekStart)\n\tcheck(err)\n\tb2 := make([]byte, 2)\n\tn2, err := f.Read(b2)\n\tcheck(err)\n\tfmt.Printf(\"%d bytes @ %d: \", n2, o2)\n\tfmt.Printf(\"%v\\n\", string(b2[:n2]))\n\n\t// Otros métodos de posicionamiento son relativos a la\n\t// posición actual del cursor,\n\t_, err = f.Seek(2, io.SeekCurrent)\n\tcheck(err)\n\n\t// y relativos al final del archivo.\n\t_, err = f.Seek(-4, io.SeekEnd)\n\tcheck(err)\n\n\t// El paquete `io` ofrece algunas funciones muy útiles\n\t// para la lectura de archivos. Por ejemplo, lecturas como\n\t// las anteriores pueden implementarse de forma más robusta con `ReadAtLeast`.\n\to3, err := f.Seek(6, io.SeekStart)\n\tcheck(err)\n\tb3 := make([]byte, 2)\n\tn3, err := io.ReadAtLeast(f, b3, 2)\n\tcheck(err)\n\tfmt.Printf(\"%d bytes @ %d: %s\\n\", n3, o3, string(b3))\n\n\t// No existe una función dedicada para rebobinar, pero\n\t// `Seek(0, io.SeekStart)` cumple exactamente ese propósito.\n\t_, err = f.Seek(0, io.SeekStart)\n\tcheck(err)\n\n\t// El paquete `bufio` implementa un lector con búfer\n\t// que resulta muy eficiente tanto para lecturas pequeñas múltiples\n\t// como por los métodos adicionales de lectura que provee.\n\tr4 := bufio.NewReader(f)\n\tb4, err := r4.Peek(5)\n\tcheck(err)\n\tfmt.Printf(\"5 bytes: %s\\n\", string(b4))\n\n\t// Cierra el archivo al concluir (habitualmente esto se\n\t// programaría inmediatamente tras `Open` mediante `defer`).\n\tf.Close()\n}\n",
+    "output": "$ echo \"hello\" > /tmp/dat\n$ echo \"go\" >>   /tmp/dat\n$ go run reading-files.go\nhello\ngo\n5 bytes: hello\n2 bytes @ 6: go\n2 bytes @ 6: go\n5 bytes: hello\n\n# A continuación veremos la escritura de archivos.\n",
     "officialUrl": "https://gobyexample.com/reading-files"
   },
   {
@@ -4691,7 +4691,7 @@ const GO_TOPICS = [
     "titleEs": "Escritura de Archivos en Disco (os y bufio)",
     "category": "Entrada / Salida y Archivos",
     "categorySlug": "archivos-io",
-    "categoryIcon": "📁",
+    "categoryIcon": "folder",
     "difficulty": "Principiante",
     "summary": "Escritura atómica directa con os.WriteFile, creación y anexado con os.Create/os.OpenFile y escritura con búfer en bufio.Writer.",
     "originalExpl": "Escribir archivos en Go sigue patrones similares a los que vimos anteriormente para la lectura. En este ejemplo veremos cómo escribir bytes, cadenas y utilizar búferes de escritura.",
@@ -4733,23 +4733,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package os: OpenFile flags",
+        "title": "Paquete os: OpenFile flags",
         "url": "https://pkg.go.dev/os#pkg-constants",
         "description": "Constantes de apertura O_RDONLY, O_WRONLY, O_APPEND, etc."
       },
       {
-        "title": "Package bufio: Writer",
+        "title": "Paquete bufio: Writer",
         "url": "https://pkg.go.dev/bufio#Writer",
         "description": "Documentación oficial del escritor en búfer bufio.Writer."
       },
       {
-        "title": "Go by Example: Writing Files",
+        "title": "Go by Example Original: Writing Files",
         "url": "https://gobyexample.com/writing-files",
         "description": "Ejemplo en Go by Example."
       }
     ],
-    "code": "// Writing files in Go follows similar patterns to the\n// ones we saw earlier for reading.\n\npackage main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"path/filepath\"\n)\n\nfunc check(e error) {\n\tif e != nil {\n\t\tpanic(e)\n\t}\n}\n\nfunc main() {\n\n\t// To start, here's how to dump a string (or just\n\t// bytes) into a file.\n\td1 := []byte(\"hello\\ngo\\n\")\n\tpath1 := filepath.Join(os.TempDir(), \"dat1\")\n\terr := os.WriteFile(path1, d1, 0644)\n\tcheck(err)\n\n\t// For more granular writes, open a file for writing.\n\tpath2 := filepath.Join(os.TempDir(), \"dat2\")\n\tf, err := os.Create(path2)\n\tcheck(err)\n\n\t// It's idiomatic to defer a `Close` immediately\n\t// after opening a file.\n\tdefer f.Close()\n\n\t// You can `Write` byte slices as you'd expect.\n\td2 := []byte{115, 111, 109, 101, 10}\n\tn2, err := f.Write(d2)\n\tcheck(err)\n\tfmt.Printf(\"wrote %d bytes\\n\", n2)\n\n\t// A `WriteString` is also available.\n\tn3, err := f.WriteString(\"writes\\n\")\n\tcheck(err)\n\tfmt.Printf(\"wrote %d bytes\\n\", n3)\n\n\t// Issue a `Sync` to flush writes to stable storage.\n\tf.Sync()\n\n\t// `bufio` provides buffered writers in addition\n\t// to the buffered readers we saw earlier.\n\tw := bufio.NewWriter(f)\n\tn4, err := w.WriteString(\"buffered\\n\")\n\tcheck(err)\n\tfmt.Printf(\"wrote %d bytes\\n\", n4)\n\n\t// Use `Flush` to ensure all buffered operations have\n\t// been applied to the underlying writer.\n\tw.Flush()\n\n}\n",
-    "output": "# Try running the file-writing code.\n$ go run writing-files.go \nwrote 5 bytes\nwrote 7 bytes\nwrote 9 bytes\n\n# Then check the contents of the written files.\n$ cat /tmp/dat1\nhello\ngo\n$ cat /tmp/dat2\nsome\nwrites\nbuffered\n\n# Next we'll look at applying some of the file I/O ideas\n# we've just seen to the `stdin` and `stdout` streams.\n",
+    "code": "// Escribir archivos en Go sigue patrones análogos a los\n// que examinamos previamente para la lectura.\n\npackage main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"path/filepath\"\n)\n\nfunc check(e error) {\n\tif e != nil {\n\t\tpanic(e)\n\t}\n}\n\nfunc main() {\n\n\t// Para comenzar, aquí vemos cómo volcar una cadena (o simplemente\n\t// bytes) dentro de un archivo.\n\td1 := []byte(\"hello\\ngo\\n\")\n\tpath1 := filepath.Join(os.TempDir(), \"dat1\")\n\terr := os.WriteFile(path1, d1, 0644)\n\tcheck(err)\n\n\t// Para escrituras más granulares, abre un archivo para escritura con `os.Create`.\n\tpath2 := filepath.Join(os.TempDir(), \"dat2\")\n\tf, err := os.Create(path2)\n\tcheck(err)\n\n\t// Es idiomático posponer el `Close` mediante `defer` inmediatamente\n\t// después de abrir un archivo.\n\tdefer f.Close()\n\n\t// Puedes escribir slices de bytes con `Write` como se espera.\n\td2 := []byte{115, 111, 109, 101, 10}\n\tn2, err := f.Write(d2)\n\tcheck(err)\n\tfmt.Printf(\"wrote %d bytes\\n\", n2)\n\n\t// La función `WriteString` también se encuentra disponible.\n\tn3, err := f.WriteString(\"writes\\n\")\n\tcheck(err)\n\tfmt.Printf(\"wrote %d bytes\\n\", n3)\n\n\t// Ejecuta un `Sync` para descargar y asegurar las escrituras en almacenamiento persistente.\n\tf.Sync()\n\n\t// `bufio` provee escritores con búfer además\n\t// de los lectores con búfer que vimos anteriormente.\n\tw := bufio.NewWriter(f)\n\tn4, err := w.WriteString(\"buffered\\n\")\n\tcheck(err)\n\tfmt.Printf(\"wrote %d bytes\\n\", n4)\n\n\t// Usa `Flush` para asegurar que todas las operaciones en búfer hayan\n\t// sido aplicadas al escritor subyacente.\n\tw.Flush()\n\n}\n",
+    "output": "# Prueba a ejecutar el código de escritura de archivos.\n$ go run writing-files.go \nwrote 5 bytes\nwrote 7 bytes\nwrote 9 bytes\n\n# Luego comprueba el contenido de los archivos creados.\n$ cat /tmp/dat1\nhello\ngo\n$ cat /tmp/dat2\nsome\nwrites\nbuffered\n\n# A continuación veremos cómo aplicar estas ideas de E/S de archivos\n# a los flujos de entrada y salida estándar `stdin` y `stdout`.\n",
     "officialUrl": "https://gobyexample.com/writing-files"
   },
   {
@@ -4759,7 +4759,7 @@ const GO_TOPICS = [
     "titleEs": "Filtros de Línea y Búferes (bufio.Scanner)",
     "category": "Entrada / Salida y Archivos",
     "categorySlug": "archivos-io",
-    "categoryIcon": "📁",
+    "categoryIcon": "folder",
     "difficulty": "Intermedio",
     "summary": "Procesamiento de flujos de texto en streaming leyendo línea por línea desde os.Stdin o archivos con bufio.Scanner.",
     "originalExpl": "Un filtro de línea es un tipo común de programa que lee la entrada en stdin, la procesa y luego imprime algún resultado derivado en stdout. grep y sed son filtros de línea comunes.",
@@ -4801,23 +4801,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package bufio: Scanner",
+        "title": "Paquete bufio: Scanner",
         "url": "https://pkg.go.dev/bufio#Scanner",
         "description": "Documentación oficial de bufio.Scanner y funciones de división."
       },
       {
-        "title": "Go by Example: Line Filters",
+        "title": "Go by Example Original: Line Filters",
         "url": "https://gobyexample.com/line-filters",
         "description": "Ejemplo en Go by Example."
       },
       {
-        "title": "Effective Go: Streams and Scanners",
+        "title": "Guía canónica Effective Go: Flujos de lectura continua y scanners",
         "url": "https://go.dev/doc/effective_go#concurrency",
         "description": "Uso de streams y scanners para filtrado eficiente."
       }
     ],
-    "code": "// A _line filter_ is a common type of program that reads\n// input on stdin, processes it, and then prints some\n// derived result to stdout. `grep` and `sed` are common\n// line filters.\n\n// Here's an example line filter in Go that writes a\n// capitalized version of all input text. You can use this\n// pattern to write your own Go line filters.\npackage main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n)\n\nfunc main() {\n\n\t// Wrapping the unbuffered `os.Stdin` with a buffered\n\t// scanner gives us a convenient `Scan` method that\n\t// advances the scanner to the next token; which is\n\t// the next line in the default scanner.\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tfor scanner.Scan() {\n\t\t// `Text` returns the current token, here the next line,\n\t\t// from the input.\n\t\tucl := strings.ToUpper(scanner.Text())\n\n\t\t// Write out the uppercased line.\n\t\tfmt.Println(ucl)\n\t}\n\n\t// Check for errors during `Scan`. End of file is\n\t// expected and not reported by `Scan` as an error.\n\tif err := scanner.Err(); err != nil {\n\t\tfmt.Fprintln(os.Stderr, \"error:\", err)\n\t\tos.Exit(1)\n\t}\n}\n",
-    "output": "# To try out our line filter, first make a file with a few\n# lowercase lines.\n$ echo 'hello'   > /tmp/lines\n$ echo 'filter' >> /tmp/lines\n\n# Then use the line filter to get uppercase lines.\n$ cat /tmp/lines | go run line-filters.go\nHELLO\nFILTER\n",
+    "code": "// Un _filtro de línea_ es un tipo de programa común que lee\n// entradas desde stdin, las procesa y luego imprime algún\n// resultado derivado en stdout. `grep` y `sed` son filtros\n// de línea habituales.\n\n// Aquí tenemos un ejemplo de filtro de línea en Go que escribe en\n// mayúsculas todo el texto de entrada. Puedes utilizar este patrón\n// para escribir tus propios filtros de línea en Go.\npackage main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n)\n\nfunc main() {\n\n\t// Envolver el flujo sin búfer `os.Stdin` con un scanner con\n\t// búfer nos proporciona un método conveniente `Scan` que\n\t// avanza el scanner al siguiente token (la siguiente línea por defecto).\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tfor scanner.Scan() {\n\t\t// `Text` devuelve el token actual (aquí la línea siguiente)\n\t\t// proveniente de la entrada.\n\t\tucl := strings.ToUpper(scanner.Text())\n\n\t\t// Escribe la línea convertida a mayúsculas.\n\t\tfmt.Println(ucl)\n\t}\n\n\t// Comprobamos si ocurrieron errores durante `Scan`. El fin de archivo (EOF)\n\t// es esperado y `Scan` no lo reporta como un error.\n\tif err := scanner.Err(); err != nil {\n\t\tfmt.Fprintln(os.Stderr, \"error:\", err)\n\t\tos.Exit(1)\n\t}\n}\n",
+    "output": "# Para probar nuestro filtro de línea, primero creamos un archivo con unas\n# pocas líneas en minúsculas.\n$ echo 'hello'   > /tmp/lines\n$ echo 'filter' >> /tmp/lines\n\n# Luego usamos el filtro de línea para obtener las líneas en mayúsculas.\n$ cat /tmp/lines | go run line-filters.go\nHELLO\nFILTER\n",
     "officialUrl": "https://gobyexample.com/line-filters"
   },
   {
@@ -4827,7 +4827,7 @@ const GO_TOPICS = [
     "titleEs": "Rutas de Archivos Multiplataforma (path/filepath)",
     "category": "Entrada / Salida y Archivos",
     "categorySlug": "archivos-io",
-    "categoryIcon": "📁",
+    "categoryIcon": "folder",
     "difficulty": "Principiante",
     "summary": "Construcción, análisis y normalización de rutas de archivos de forma portable entre Windows, Linux y macOS con 'path/filepath'.",
     "originalExpl": "El paquete filepath proporciona funciones para analizar y construir rutas de archivos de una manera que sea portable entre sistemas operativos; por ejemplo, 'dir/file' en Linux vs 'dir\\file' en Windows.",
@@ -4869,22 +4869,22 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package path/filepath (Standard Library)",
+        "title": "Paquete path/filepath (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/path/filepath",
         "description": "Documentación oficial del paquete path/filepath."
       },
       {
-        "title": "Go by Example: File Paths",
+        "title": "Go by Example Original: File Paths",
         "url": "https://gobyexample.com/file-paths",
         "description": "Ejemplo en Go by Example."
       },
       {
-        "title": "OWASP: Path Traversal Vulnerability",
+        "title": "Guía OWASP: Prevención de vulnerabilidades de salto de directorio (Path Traversal)",
         "url": "https://owasp.org/www-community/attacks/Path_Traversal",
         "description": "Guía de seguridad de OWASP sobre prevención de ataques de rutas."
       }
     ],
-    "code": "// The `filepath` package provides functions to parse\n// and construct *file paths* in a way that is portable\n// between operating systems; `dir/file` on Linux vs.\n// `dir\\file` on Windows, for example.\npackage main\n\nimport (\n\t\"fmt\"\n\t\"path/filepath\"\n\t\"strings\"\n)\n\nfunc main() {\n\n\t// `Join` should be used to construct paths in a\n\t// portable way. It takes any number of arguments\n\t// and constructs a hierarchical path from them.\n\tp := filepath.Join(\"dir1\", \"dir2\", \"filename\")\n\tfmt.Println(\"p:\", p)\n\n\t// You should always use `Join` instead of\n\t// concatenating `/`s or `\\`s manually. In addition\n\t// to providing portability, `Join` will also\n\t// normalize paths by removing superfluous separators\n\t// and directory changes.\n\tfmt.Println(filepath.Join(\"dir1//\", \"filename\"))\n\tfmt.Println(filepath.Join(\"dir1/../dir1\", \"filename\"))\n\n\t// `Dir` and `Base` can be used to split a path to the\n\t// directory and the file. Alternatively, `Split` will\n\t// return both in the same call.\n\tfmt.Println(\"Dir(p):\", filepath.Dir(p))\n\tfmt.Println(\"Base(p):\", filepath.Base(p))\n\n\t// We can check whether a path is absolute.\n\tfmt.Println(filepath.IsAbs(\"dir/file\"))\n\tfmt.Println(filepath.IsAbs(\"/dir/file\"))\n\n\tfilename := \"config.json\"\n\n\t// Some file names have extensions following a dot. We\n\t// can split the extension out of such names with `Ext`.\n\text := filepath.Ext(filename)\n\tfmt.Println(ext)\n\n\t// To find the file's name with the extension removed,\n\t// use `strings.TrimSuffix`.\n\tfmt.Println(strings.TrimSuffix(filename, ext))\n\n\t// `Rel` finds a relative path between a *base* and a\n\t// *target*. It returns an error if the target cannot\n\t// be made relative to base.\n\trel, err := filepath.Rel(\"a/b\", \"a/b/t/file\")\n\tif err != nil {\n\t\tpanic(err)\n\t}\n\tfmt.Println(rel)\n\n\trel, err = filepath.Rel(\"a/b\", \"a/c/t/file\")\n\tif err != nil {\n\t\tpanic(err)\n\t}\n\tfmt.Println(rel)\n}\n",
+    "code": "// El paquete `filepath` proporciona funciones para parsear\n// y construir *rutas de archivos* de forma completamente portable\n// entre sistemas operativos; por ejemplo, `dir/file` en Linux frente\n// a `dir\\file` en Windows.\npackage main\n\nimport (\n\t\"fmt\"\n\t\"path/filepath\"\n\t\"strings\"\n)\n\nfunc main() {\n\n\t// `Join` debe utilizarse para construir rutas de forma\n\t// portable. Recibe cualquier número de argumentos\n\t// y construye una ruta jerárquica a partir de ellos.\n\tp := filepath.Join(\"dir1\", \"dir2\", \"filename\")\n\tfmt.Println(\"p:\", p)\n\n\t// Siempre debes utilizar `Join` en vez de concatenar\n\t// `/` o `\\` manualmente. Además de brindar portabilidad,\n\t// `Join` normaliza las rutas eliminando separadores superfluos\n\t// y cambios de directorio redundantes.\n\tfmt.Println(filepath.Join(\"dir1//\", \"filename\"))\n\tfmt.Println(filepath.Join(\"dir1/../dir1\", \"filename\"))\n\n\t// `Dir` y `Base` pueden usarse para separar la ruta del\n\t// directorio y el archivo. Como alternativa, `Split`\n\t// devolverá ambos componentes en una sola llamada.\n\tfmt.Println(\"Dir(p):\", filepath.Dir(p))\n\tfmt.Println(\"Base(p):\", filepath.Base(p))\n\n\t// Podemos verificar si una ruta es absoluta.\n\tfmt.Println(filepath.IsAbs(\"dir/file\"))\n\tfmt.Println(filepath.IsAbs(\"/dir/file\"))\n\n\tfilename := \"config.json\"\n\n\t// Algunos nombres de archivo tienen extensiones tras un punto.\n\t// Podemos separar la extensión de dichos nombres mediante `Ext`.\n\text := filepath.Ext(filename)\n\tfmt.Println(ext)\n\n\t// Para obtener el nombre del archivo sin su extensión,\n\t// utiliza `strings.TrimSuffix`.\n\tfmt.Println(strings.TrimSuffix(filename, ext))\n\n\t// `Rel` encuentra una ruta relativa entre una ruta *base* y un\n\t// *objetivo*. Devuelve un error si el objetivo no puede hacerse\n\t// relativo respecto a la base.\n\trel, err := filepath.Rel(\"a/b\", \"a/b/t/file\")\n\tif err != nil {\n\t\tpanic(err)\n\t}\n\tfmt.Println(rel)\n\n\trel, err = filepath.Rel(\"a/b\", \"a/c/t/file\")\n\tif err != nil {\n\t\tpanic(err)\n\t}\n\tfmt.Println(rel)\n}\n",
     "output": "$ go run file-paths.go\np: dir1/dir2/filename\ndir1/filename\ndir1/filename\nDir(p): dir1/dir2\nBase(p): filename\nfalse\ntrue\n.json\nconfig\nt/file\n../c/t/file\n",
     "officialUrl": "https://gobyexample.com/file-paths"
   },
@@ -4895,7 +4895,7 @@ const GO_TOPICS = [
     "titleEs": "Manejo y Recorrido de Directorios (os y filepath.WalkDir)",
     "category": "Entrada / Salida y Archivos",
     "categorySlug": "archivos-io",
-    "categoryIcon": "📁",
+    "categoryIcon": "folder",
     "difficulty": "Intermedio",
     "summary": "Creación, lectura y recorrido recursivo de árboles de directorios con os.MkdirAll, os.ReadDir y filepath.WalkDir.",
     "originalExpl": "Go tiene varias funciones útiles para trabajar con directorios en el sistema de archivos. En este ejemplo veremos cómo crear directorios, leer sus contenidos y recorrerlos recursivamente.",
@@ -4937,22 +4937,22 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package filepath: WalkDir",
+        "title": "Paquete filepath: WalkDir",
         "url": "https://pkg.go.dev/path/filepath#WalkDir",
         "description": "Documentación oficial de la función de recorrido de directorios WalkDir."
       },
       {
-        "title": "Package io/fs (Standard Library)",
+        "title": "Paquete io/fs (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/io/fs",
         "description": "La interfaz de sistema de archivos virtual introducida en Go 1.16."
       },
       {
-        "title": "Go by Example: Directories",
+        "title": "Go by Example Original: Directories",
         "url": "https://gobyexample.com/directories",
         "description": "Ejemplo interactivo en Go by Example."
       }
     ],
-    "code": "// Go has several useful functions for working with\n// *directories* in the file system.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"io/fs\"\n\t\"os\"\n\t\"path/filepath\"\n)\n\nfunc check(e error) {\n\tif e != nil {\n\t\tpanic(e)\n\t}\n}\n\nfunc main() {\n\n\t// Create a new sub-directory in the current working\n\t// directory.\n\terr := os.Mkdir(\"subdir\", 0755)\n\tcheck(err)\n\n\t// When creating temporary directories, it's good\n\t// practice to `defer` their removal. `os.RemoveAll`\n\t// will delete a whole directory tree (similarly to\n\t// `rm -rf`).\n\tdefer os.RemoveAll(\"subdir\")\n\n\t// Helper function to create a new empty file.\n\tcreateEmptyFile := func(name string) {\n\t\td := []byte(\"\")\n\t\tcheck(os.WriteFile(name, d, 0644))\n\t}\n\n\tcreateEmptyFile(\"subdir/file1\")\n\n\t// We can create a hierarchy of directories, including\n\t// parents with `MkdirAll`. This is similar to the\n\t// command-line `mkdir -p`.\n\terr = os.MkdirAll(\"subdir/parent/child\", 0755)\n\tcheck(err)\n\n\tcreateEmptyFile(\"subdir/parent/file2\")\n\tcreateEmptyFile(\"subdir/parent/file3\")\n\tcreateEmptyFile(\"subdir/parent/child/file4\")\n\n\t// `ReadDir` lists directory contents, returning a\n\t// slice of `os.DirEntry` objects.\n\tc, err := os.ReadDir(\"subdir/parent\")\n\tcheck(err)\n\n\tfmt.Println(\"Listing subdir/parent\")\n\tfor _, entry := range c {\n\t\tfmt.Println(\" \", entry.Name(), entry.IsDir())\n\t}\n\n\t// `Chdir` lets us change the current working directory,\n\t// similarly to `cd`.\n\terr = os.Chdir(\"subdir/parent/child\")\n\tcheck(err)\n\n\t// Now we'll see the contents of `subdir/parent/child`\n\t// when listing the *current* directory.\n\tc, err = os.ReadDir(\".\")\n\tcheck(err)\n\n\tfmt.Println(\"Listing subdir/parent/child\")\n\tfor _, entry := range c {\n\t\tfmt.Println(\" \", entry.Name(), entry.IsDir())\n\t}\n\n\t// `cd` back to where we started.\n\terr = os.Chdir(\"../../..\")\n\tcheck(err)\n\n\t// We can also visit a directory *recursively*,\n\t// including all its sub-directories. `WalkDir` accepts\n\t// a callback function to handle every file or\n\t// directory visited.\n\tfmt.Println(\"Visiting subdir\")\n\terr = filepath.WalkDir(\"subdir\", visit)\n\tcheck(err)\n}\n\n// `visit` is called for every file or directory found\n// recursively by `filepath.WalkDir`.\nfunc visit(path string, d fs.DirEntry, err error) error {\n\tif err != nil {\n\t\treturn err\n\t}\n\tfmt.Println(\" \", path, d.IsDir())\n\treturn nil\n}\n",
+    "code": "// Go cuenta con varias funciones útiles para trabajar con\n// *directorios* en el sistema de archivos.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"io/fs\"\n\t\"os\"\n\t\"path/filepath\"\n)\n\nfunc check(e error) {\n\tif e != nil {\n\t\tpanic(e)\n\t}\n}\n\nfunc main() {\n\n\t// Crea un nuevo subdirectorio en el directorio de trabajo\n\t// actual.\n\terr := os.Mkdir(\"subdir\", 0755)\n\tcheck(err)\n\n\t// Al crear directorios temporales o de prueba, es buena\n\t// práctica posponer (`defer`) su eliminación. `os.RemoveAll`\n\t// eliminará un árbol completo de directorios (similar a `rm -rf`).\n\tdefer os.RemoveAll(\"subdir\")\n\n\t// Función auxiliar para crear un archivo vacío nuevo.\n\tcreateEmptyFile := func(name string) {\n\t\td := []byte(\"\")\n\t\tcheck(os.WriteFile(name, d, 0644))\n\t}\n\n\tcreateEmptyFile(\"subdir/file1\")\n\n\t// Podemos crear una jerarquía completa de directorios, incluyendo\n\t// los padres faltantes con `MkdirAll` (similar a `mkdir -p` en la terminal).\n\terr = os.MkdirAll(\"subdir/parent/child\", 0755)\n\tcheck(err)\n\n\tcreateEmptyFile(\"subdir/parent/file2\")\n\tcreateEmptyFile(\"subdir/parent/file3\")\n\tcreateEmptyFile(\"subdir/parent/child/file4\")\n\n\t// `ReadDir` lista el contenido de un directorio, devolviendo\n\t// un slice de objetos `os.DirEntry`.\n\tc, err := os.ReadDir(\"subdir/parent\")\n\tcheck(err)\n\n\tfmt.Println(\"Listing subdir/parent\")\n\tfor _, entry := range c {\n\t\tfmt.Println(\" \", entry.Name(), entry.IsDir())\n\t}\n\n\t// `Chdir` nos permite cambiar el directorio de trabajo actual,\n\t// de manera similar al comando `cd`.\n\terr = os.Chdir(\"subdir/parent/child\")\n\tcheck(err)\n\n\t// Ahora veremos el contenido de `subdir/parent/child`\n\t// al listar el directorio *actual*.\n\tc, err = os.ReadDir(\".\")\n\tcheck(err)\n\n\tfmt.Println(\"Listing subdir/parent/child\")\n\tfor _, entry := range c {\n\t\tfmt.Println(\" \", entry.Name(), entry.IsDir())\n\t}\n\n\t// Regresamos mediante `cd` al punto de partida.\n\terr = os.Chdir(\"../../..\")\n\tcheck(err)\n\n\t// También podemos recorrer un directorio de forma *recursiva*,\n\t// incluyendo todos sus subdirectorios. `WalkDir` acepta\n\t// una función de retorno (callback) para procesar cada archivo o directorio visitado.\n\tfmt.Println(\"Visiting subdir\")\n\terr = filepath.WalkDir(\"subdir\", visit)\n\tcheck(err)\n}\n\n// `visit` es invocada por cada archivo o directorio hallado\n// recursivamente mediante `filepath.WalkDir`.\nfunc visit(path string, d fs.DirEntry, err error) error {\n\tif err != nil {\n\t\treturn err\n\t}\n\tfmt.Println(\" \", path, d.IsDir())\n\treturn nil\n}\n",
     "output": "$ go run directories.go\nListing subdir/parent\n  child true\n  file2 false\n  file3 false\nListing subdir/parent/child\n  file4 false\nVisiting subdir\n  subdir true\n  subdir/file1 false\n  subdir/parent true\n  subdir/parent/child true\n  subdir/parent/child/file4 false\n  subdir/parent/file2 false\n  subdir/parent/file3 false\n",
     "officialUrl": "https://gobyexample.com/directories"
   },
@@ -4963,7 +4963,7 @@ const GO_TOPICS = [
     "titleEs": "Archivos y Carpetas Temporales (os.CreateTemp)",
     "category": "Entrada / Salida y Archivos",
     "categorySlug": "archivos-io",
-    "categoryIcon": "📁",
+    "categoryIcon": "folder",
     "difficulty": "Principiante",
     "summary": "Creación segura de archivos y carpetas efímeros en el directorio temporal del sistema con auto-limpieza garantizada.",
     "originalExpl": "A lo largo de la ejecución de programas, a menudo queremos crear datos que no son necesarios después de que el programa salga. Los archivos y directorios temporales son ideales para este propósito.",
@@ -5005,22 +5005,22 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package os: CreateTemp and MkdirTemp",
+        "title": "Paquete os: CreateTemp and MkdirTemp",
         "url": "https://pkg.go.dev/os#CreateTemp",
         "description": "Documentación oficial de creación de archivos y carpetas temporales."
       },
       {
-        "title": "Go by Example: Temporary Files and Directories",
+        "title": "Go by Example Original: Temporary Files and Directories",
         "url": "https://gobyexample.com/temporary-files-and-directories",
         "description": "Ejemplo en Go by Example."
       },
       {
-        "title": "Testing: t.TempDir function",
+        "title": "Pruebas unitarias: Función t.TempDir para directorios temporales",
         "url": "https://pkg.go.dev/testing#T.TempDir",
         "description": "Cómo gestionar directorios temporales en pruebas unitarias con Go."
       }
     ],
-    "code": "// Throughout program execution, we often want to create\n// data that isn't needed after the program exits.\n// *Temporary files and directories* are useful for this\n// purpose since they don't pollute the file system over\n// time.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"path/filepath\"\n)\n\nfunc check(e error) {\n\tif e != nil {\n\t\tpanic(e)\n\t}\n}\n\nfunc main() {\n\n\t// The easiest way to create a temporary file is by\n\t// calling `os.CreateTemp`. It creates a file *and*\n\t// opens it for reading and writing. We provide `\"\"`\n\t// as the first argument, so `os.CreateTemp` will\n\t// create the file in the default location for our OS.\n\tf, err := os.CreateTemp(\"\", \"sample\")\n\tcheck(err)\n\n\t// Display the name of the temporary file. On\n\t// Unix-based OSes the directory will likely be `/tmp`.\n\t// The file name starts with the prefix given as the\n\t// second argument to `os.CreateTemp` and the rest\n\t// is chosen automatically to ensure that concurrent\n\t// calls will always create different file names.\n\tfmt.Println(\"Temp file name:\", f.Name())\n\n\t// Clean up the file after we're done. The OS is\n\t// likely to clean up temporary files by itself after\n\t// some time, but it's good practice to do this\n\t// explicitly.\n\tdefer os.Remove(f.Name())\n\n\t// We can write some data to the file.\n\t_, err = f.Write([]byte{1, 2, 3, 4})\n\tcheck(err)\n\n\t// If we intend to write many temporary files, we may\n\t// prefer to create a temporary *directory*.\n\t// `os.MkdirTemp`'s arguments are the same as\n\t// `CreateTemp`'s, but it returns a directory *name*\n\t// rather than an open file.\n\tdname, err := os.MkdirTemp(\"\", \"sampledir\")\n\tcheck(err)\n\tfmt.Println(\"Temp dir name:\", dname)\n\n\tdefer os.RemoveAll(dname)\n\n\t// Now we can synthesize temporary file names by\n\t// prefixing them with our temporary directory.\n\tfname := filepath.Join(dname, \"file1\")\n\terr = os.WriteFile(fname, []byte{1, 2}, 0666)\n\tcheck(err)\n}\n",
+    "code": "// Durante la ejecución de un programa, a menudo deseamos crear\n// datos que no se requieren una vez que el programa concluye.\n// Los *archivos y directorios temporales* resultan idóneos para este\n// propósito, ya que no ensucian el sistema de archivos con el paso del\n// tiempo.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"path/filepath\"\n)\n\nfunc check(e error) {\n\tif e != nil {\n\t\tpanic(e)\n\t}\n}\n\nfunc main() {\n\n\t// La forma más directa de crear un archivo temporal es invocando\n\t// `os.CreateTemp`. Crea un archivo *y* lo abre para\n\t// lectura y escritura. Proporcionamos `\"\"` como primer argumento\n\t// para que `os.CreateTemp` cree el archivo en la ubicación\n\t// predeterminada del sistema operativo (por ejemplo `/tmp` en Unix).\n\tf, err := os.CreateTemp(\"\", \"sample\")\n\tcheck(err)\n\n\t// Muestra el nombre del archivo temporal. En sistemas basados\n\t// en Unix el directorio suele ser `/tmp`. El nombre del archivo\n\t// inicia con el prefijo indicado como segundo argumento y el resto\n\t// se genera automáticamente para garantizar unicidad ante accesos concurrentes.\n\tfmt.Println(\"Temp file name:\", f.Name())\n\n\t// Limpiamos el archivo una vez que terminamos. El sistema operativo\n\t// eventualmente limpia los temporales, pero es una buena práctica\n\t// hacerlo explícitamente con `defer`.\n\tdefer os.Remove(f.Name())\n\n\t// Podemos escribir datos en el archivo temporal.\n\t_, err = f.Write([]byte{1, 2, 3, 4})\n\tcheck(err)\n\n\t// Si tenemos la intención de escribir múltiples archivos temporales,\n\t// es preferible crear un *directorio* temporal. Los argumentos de\n\t// `os.MkdirTemp` son iguales a los de `CreateTemp`, pero retorna el\n\t// *nombre* del directorio en lugar de un archivo abierto.\n\tdname, err := os.MkdirTemp(\"\", \"sampledir\")\n\tcheck(err)\n\tfmt.Println(\"Temp dir name:\", dname)\n\n\tdefer os.RemoveAll(dname)\n\n\t// Ahora podemos componer nombres de archivos temporales\n\t// anteponiendo la ruta de nuestro directorio temporal.\n\tfname := filepath.Join(dname, \"file1\")\n\terr = os.WriteFile(fname, []byte{1, 2}, 0666)\n\tcheck(err)\n}\n",
     "output": "$ go run temporary-files-and-directories.go\nTemp file name: /tmp/sample610887201\nTemp dir name: /tmp/sampledir898854668\n",
     "officialUrl": "https://gobyexample.com/temporary-files-and-directories"
   },
@@ -5031,7 +5031,7 @@ const GO_TOPICS = [
     "titleEs": "Directiva //go:embed (Incrustación de Archivos en el Binario)",
     "category": "Entrada / Salida y Archivos",
     "categorySlug": "archivos-io",
-    "categoryIcon": "📁",
+    "categoryIcon": "folder",
     "difficulty": "Intermedio",
     "summary": "Incrustación de archivos estáticos (HTML, plantillas, imágenes, scripts SQL) directamente dentro del binario compilado en Go 1.16+.",
     "originalExpl": "//go:embed es una directiva del compilador que permite incrustar archivos y carpetas estáticas directamente dentro del binario de Go en tiempo de compilación.",
@@ -5073,23 +5073,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package embed (Standard Library)",
+        "title": "Paquete embed (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/embed",
         "description": "Documentación oficial del paquete embed y la directiva //go:embed."
       },
       {
-        "title": "The Go Blog: How Go 1.16 embeds files",
+        "title": "Blog oficial de Go: Cómo incrusta archivos el paquete embed desde Go 1.16",
         "url": "https://go.dev/blog/go1.16",
         "description": "Lanzamiento y especificación técnica de la directiva embed en Go 1.16."
       },
       {
-        "title": "Go by Example: Embed Directive",
+        "title": "Go by Example Original: Embed Directive",
         "url": "https://gobyexample.com/embed-directive",
         "description": "Ejemplo en Go by Example."
       }
     ],
-    "code": "// `//go:embed` is a [compiler\n// directive](https://pkg.go.dev/cmd/compile#hdr-Compiler_Directives) that\n// allows programs to include arbitrary files and folders in the Go binary at\n// build time. Read more about the embed directive\n// [here](https://pkg.go.dev/embed).\npackage main\n\n// Import the `embed` package; if you don't use any exported\n// identifiers from this package, you can do a blank import with `_ \"embed\"`.\nimport (\n\t\"embed\"\n)\n\n// `embed` directives accept paths relative to the directory containing the\n// Go source file. This directive embeds the contents of the file into the\n// `string` variable immediately following it.\n//\n//go:embed folder/single_file.txt\nvar fileString string\n\n// Or embed the contents of the file into a `[]byte`.\n//\n//go:embed folder/single_file.txt\nvar fileByte []byte\n\n// We can also embed multiple files or even folders with wildcards. This uses\n// a variable of the [embed.FS type](https://pkg.go.dev/embed#FS), which\n// implements a simple virtual file system.\n//\n//go:embed folder/single_file.txt\n//go:embed folder/*.hash\nvar folder embed.FS\n\nfunc main() {\n\n\t// Print out the contents of `single_file.txt`.\n\tprint(fileString)\n\tprint(string(fileByte))\n\n\t// Retrieve some files from the embedded folder.\n\tcontent1, _ := folder.ReadFile(\"folder/file1.hash\")\n\tprint(string(content1))\n\n\tcontent2, _ := folder.ReadFile(\"folder/file2.hash\")\n\tprint(string(content2))\n}\n",
-    "output": "# Use these commands to run the example.\n# (Note: due to limitation on go playground,\n# this example can only be run on your local machine.)\n$ mkdir -p folder\n$ echo \"hello go\" > folder/single_file.txt\n$ echo \"123\" > folder/file1.hash\n$ echo \"456\" > folder/file2.hash\n\n$ go run embed-directive.go\nhello go\nhello go\n123\n456\n\n",
+    "code": "// `//go:embed` es una [directiva del\n// compilador](https://pkg.go.dev/cmd/compile#hdr-Compiler_Directives) que\n// permite a los programas incrustar archivos y carpetas arbitrarias dentro del binario\n// compilado de Go. Lee más acerca de la directiva embed\n// [aquí](https://pkg.go.dev/embed).\npackage main\n\n// Importa el paquete `embed`; si no utilizas ningún identificador\n// exportado de dicho paquete, puedes realizar una importación en blanco con `_ \"embed\"`.\nimport (\n\t\"embed\"\n)\n\n// Las directivas `embed` aceptan rutas relativas al directorio que contiene el\n// archivo fuente de Go. Esta directiva incrusta el contenido del archivo dentro de la\n// variable `string` inmediatamente subsiguiente.\n//\n//go:embed folder/single_file.txt\nvar fileString string\n\n// O incrusta el contenido del archivo dentro de un `[]byte`.\n//\n//go:embed folder/single_file.txt\nvar fileByte []byte\n\n// También podemos incrustar múltiples archivos o incluso carpetas enteras utilizando comodines.\n// Esto emplea una variable del [tipo embed.FS](https://pkg.go.dev/embed#FS), la cual\n// implementa un sistema de archivos virtual simple.\n//\n//go:embed folder/single_file.txt\n//go:embed folder/*.hash\nvar folder embed.FS\n\nfunc main() {\n\n\t// Imprime el contenido de `single_file.txt`.\n\tprint(fileString)\n\tprint(string(fileByte))\n\n\t// Recupera algunos archivos desde la carpeta incrustada.\n\tcontent1, _ := folder.ReadFile(\"folder/file1.hash\")\n\tprint(string(content1))\n\n\tcontent2, _ := folder.ReadFile(\"folder/file2.hash\")\n\tprint(string(content2))\n}\n",
+    "output": "# Utiliza estos comandos para ejecutar el ejemplo.\n# (Nota: debido a limitaciones en Go Playground, este ejemplo\n# solo puede ejecutarse en tu máquina local).\n$ mkdir -p folder\n$ echo \"hello go\" > folder/single_file.txt\n$ echo \"123\" > folder/file1.hash\n$ echo \"456\" > folder/file2.hash\n\n$ go run embed-directive.go\nhello go\nhello go\n123\n456\n",
     "officialUrl": "https://gobyexample.com/embed-directive"
   },
   {
@@ -5099,7 +5099,7 @@ const GO_TOPICS = [
     "titleEs": "Pruebas Unitarias y Benchmarking (testing)",
     "category": "CLI, Pruebas y Benchmarking",
     "categorySlug": "cli-testing",
-    "categoryIcon": "🧪",
+    "categoryIcon": "target",
     "difficulty": "Intermedio",
     "summary": "El ecosistema nativo de pruebas unitarias (TestXxx), pruebas por tablas (table-driven tests) y benchmarks (BenchmarkXxx).",
     "originalExpl": "Escribir pruebas unitarias es una parte importante de escribir código Go correcto. El paquete 'testing' y la herramienta 'go test' proporcionan las herramientas que necesitas para escribir y ejecutar pruebas y benchmarks.",
@@ -5142,23 +5142,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package testing (Standard Library)",
+        "title": "Paquete testing (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/testing",
         "description": "Documentación oficial del paquete testing para tests y benchmarks."
       },
       {
-        "title": "The Go Blog: Subtests and Sub-benchmarks",
+        "title": "Blog oficial de Go: Sub-pruebas y sub-benchmarks en testing",
         "url": "https://go.dev/blog/subtests",
         "description": "Guía oficial sobre el uso de t.Run y b.Run en Go."
       },
       {
-        "title": "Go by Example: Testing and Benchmarking",
+        "title": "Go by Example Original: Testing and Benchmarking",
         "url": "https://gobyexample.com/testing-and-benchmarking",
         "description": "Ejemplo en Go by Example."
       }
     ],
-    "code": "// Unit testing is an important part of writing\n// principled Go programs. The `testing` package\n// provides the tools we need to write unit tests\n// and the `go test` command runs tests.\n\n// For the sake of demonstration, this code is in package\n// `main`, but it could be any package. Testing code\n// typically lives in the same package as the code it tests.\npackage main\n\nimport (\n\t\"fmt\"\n\t\"testing\"\n)\n\n// We'll be testing this simple implementation of an\n// integer minimum. Typically, the code we're testing\n// would be in a source file named something like\n// `intutils.go`, and the test file for it would then\n// be named `intutils_test.go`.\nfunc IntMin(a, b int) int {\n\tif a < b {\n\t\treturn a\n\t}\n\treturn b\n}\n\n// A test is created by writing a function with a name\n// beginning with `Test`.\nfunc TestIntMinBasic(t *testing.T) {\n\tans := IntMin(2, -2)\n\tif ans != -2 {\n\t\t// `t.Error*` will report test failures but continue\n\t\t// executing the test. `t.Fatal*` will report test\n\t\t// failures and stop the test immediately.\n\t\tt.Errorf(\"IntMin(2, -2) = %d; want -2\", ans)\n\t}\n}\n\n// Writing tests can be repetitive, so it's idiomatic to\n// use a *table-driven style*, where test inputs and\n// expected outputs are listed in a table and a single loop\n// walks over them and performs the test logic.\nfunc TestIntMinTableDriven(t *testing.T) {\n\tvar tests = []struct {\n\t\ta, b int\n\t\twant int\n\t}{\n\t\t{0, 1, 0},\n\t\t{1, 0, 0},\n\t\t{2, -2, -2},\n\t\t{0, -1, -1},\n\t\t{-1, 0, -1},\n\t}\n\n\tfor _, tt := range tests {\n\t\t// `t.Run` enables running \"subtests\", one for each\n\t\t// table entry. These are shown separately\n\t\t// when executing `go test -v`.\n\t\ttestname := fmt.Sprintf(\"%d,%d\", tt.a, tt.b)\n\t\tt.Run(testname, func(t *testing.T) {\n\t\t\tans := IntMin(tt.a, tt.b)\n\t\t\tif ans != tt.want {\n\t\t\t\tt.Errorf(\"got %d, want %d\", ans, tt.want)\n\t\t\t}\n\t\t})\n\t}\n}\n\n// Benchmark tests typically go in `_test.go` files and are\n// named beginning with `Benchmark`.\n// Any code that's required for the benchmark to run but should\n// not be measured goes before this loop.\nfunc BenchmarkIntMin(b *testing.B) {\n\tfor b.Loop() {\n\t\t// The benchmark runner will automatically execute this loop\n\t\t// body many times to determine a reasonable estimate of the\n\t\t// run-time of a single iteration.\n\t\tIntMin(1, 2)\n\t}\n}\n",
-    "output": "# Run all tests in the current project in verbose mode.\n$ go test -v\n== RUN   TestIntMinBasic\n--- PASS: TestIntMinBasic (0.00s)\n=== RUN   TestIntMinTableDriven\n=== RUN   TestIntMinTableDriven/0,1\n=== RUN   TestIntMinTableDriven/1,0\n=== RUN   TestIntMinTableDriven/2,-2\n=== RUN   TestIntMinTableDriven/0,-1\n=== RUN   TestIntMinTableDriven/-1,0\n--- PASS: TestIntMinTableDriven (0.00s)\n    --- PASS: TestIntMinTableDriven/0,1 (0.00s)\n    --- PASS: TestIntMinTableDriven/1,0 (0.00s)\n    --- PASS: TestIntMinTableDriven/2,-2 (0.00s)\n    --- PASS: TestIntMinTableDriven/0,-1 (0.00s)\n    --- PASS: TestIntMinTableDriven/-1,0 (0.00s)\nPASS\nok  \texamples/testing-and-benchmarking\t0.023s\n\n# Run all benchmarks in the current project. All tests\n# are run prior to benchmarks. The `bench` flag filters\n# benchmark function names with a regexp.\n$ go test -bench=.\ngoos: darwin\ngoarch: arm64\npkg: examples/testing\nBenchmarkIntMin-8 1000000000 0.3136 ns/op\nPASS\nok  \texamples/testing-and-benchmarking\t0.351s\n",
+    "code": "// Las pruebas unitarias son una parte indispensable al escribir\n// programas robustos en Go. El paquete `testing`\n// proporciona las herramientas necesarias para escribir pruebas unitarias\n// y el comando `go test` se encarga de ejecutarlas.\n\n// A modo de demostración, este código se encuentra en el paquete\n// `main`, pero podría residir en cualquiera. El código de pruebas\n// típicamente vive en el mismo paquete que el código que evalúa.\npackage main\n\nimport (\n\t\"fmt\"\n\t\"testing\"\n)\n\n// Evaluaremos esta sencilla implementación del mínimo entre dos\n// números enteros. Típicamente, el código a probar residiría en un\n// archivo fuente llamado `intutils.go`, y su archivo de pruebas\n// correspondiente se llamaría `intutils_test.go`.\nfunc IntMin(a, b int) int {\n\tif a < b {\n\t\treturn a\n\t}\n\treturn b\n}\n\n// Una prueba se crea escribiendo una función cuyo nombre\n// comienza con el prefijo `Test`.\nfunc TestIntMinBasic(t *testing.T) {\n\tans := IntMin(2, -2)\n\tif ans != -2 {\n\t\t// `t.Error*` reportará fallos en la prueba pero continuará\n\t\t// la ejecución. `t.Fatal*` reportará fallos y detendrá\n\t\t// la prueba inmediatamente.\n\t\tt.Errorf(\"IntMin(2, -2) = %d; want -2\", ans)\n\t}\n}\n\n// Escribir pruebas individuales puede ser repetitivo, por lo que es idiomático\n// usar un *estilo basado en tablas* (table-driven tests), donde las entradas y\n// salidas esperadas se declaran en una tabla y un único bucle\n// las recorre ejecutando la lógica de prueba.\nfunc TestIntMinTableDriven(t *testing.T) {\n\tvar tests = []struct {\n\t\ta, b int\n\t\twant int\n\t}{\n\t\t{0, 1, 0},\n\t\t{1, 0, 0},\n\t\t{2, -2, -2},\n\t\t{0, -1, -1},\n\t\t{-1, 0, -1},\n\t}\n\n\tfor _, tt := range tests {\n\t\t// `t.Run` permite ejecutar \"subpruebas\", una por cada\n\t\t// fila de la tabla. Estas se muestran de forma independiente\n\t\t// al ejecutar `go test -v`.\n\t\ttestname := fmt.Sprintf(\"%d,%d\", tt.a, tt.b)\n\t\tt.Run(testname, func(t *testing.T) {\n\t\t\tans := IntMin(tt.a, tt.b)\n\t\t\tif ans != tt.want {\n\t\t\t\tt.Errorf(\"got %d, want %d\", ans, tt.want)\n\t\t\t}\n\t\t})\n\t}\n}\n\n// Las pruebas de benchmarking suelen ir en archivos `_test.go` y sus\n// nombres inician con el prefijo `Benchmark`.\n// Cualquier código requerido para preparar el benchmark pero que no deba\n// medirse se ubica antes de este bucle.\nfunc BenchmarkIntMin(b *testing.B) {\n\tfor b.Loop() {\n\t\t// El ejecutor de benchmarks repetirá este cuerpo de bucle\n\t\t// muchas veces automáticamente para determinar una estimación precisa\n\t\t// del tiempo de ejecución de una sola iteración.\n\t\tIntMin(1, 2)\n\t}\n}\n",
+    "output": "# Ejecuta todas las pruebas del proyecto actual en modo detallado (verbose).\n$ go test -v\n=== RUN   TestIntMinBasic\n--- PASS: TestIntMinBasic (0.00s)\n=== RUN   TestIntMinTableDriven\n=== RUN   TestIntMinTableDriven/0,1\n=== RUN   TestIntMinTableDriven/1,0\n=== RUN   TestIntMinTableDriven/2,-2\n=== RUN   TestIntMinTableDriven/0,-1\n=== RUN   TestIntMinTableDriven/-1,0\n--- PASS: TestIntMinTableDriven (0.00s)\n    --- PASS: TestIntMinTableDriven/0,1 (0.00s)\n    --- PASS: TestIntMinTableDriven/1,0 (0.00s)\n    --- PASS: TestIntMinTableDriven/2,-2 (0.00s)\n    --- PASS: TestIntMinTableDriven/0,-1 (0.00s)\n    --- PASS: TestIntMinTableDriven/-1,0 (0.00s)\nPASS\nok  \texamples/testing-and-benchmarking\t0.023s\n\n# Ejecuta todos los benchmarks del proyecto actual. Todas las pruebas\n# se ejecutan previamente a los benchmarks. La bandera `bench` filtra\n# las funciones de benchmark con una expresión regular.\n$ go test -bench=.\ngoos: darwin\ngoarch: arm64\npkg: examples/testing\nBenchmarkIntMin-8 1000000000 0.3136 ns/op\nPASS\nok  \texamples/testing-and-benchmarking\t0.351s\n",
     "officialUrl": "https://gobyexample.com/testing-and-benchmarking"
   },
   {
@@ -5168,7 +5168,7 @@ const GO_TOPICS = [
     "titleEs": "Argumentos de Línea de Comandos (os.Args)",
     "category": "CLI, Pruebas y Benchmarking",
     "categorySlug": "cli-testing",
-    "categoryIcon": "🧪",
+    "categoryIcon": "target",
     "difficulty": "Principiante",
     "summary": "Acceso a los parámetros crudos pasados al ejecutar un programa en la terminal mediante os.Args.",
     "originalExpl": "Los argumentos de línea de comandos son una forma común de parametrizar la ejecución de programas. Por ejemplo, 'go run hello.go' usa los argumentos 'run' y 'hello.go' para el programa 'go'.",
@@ -5210,23 +5210,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package os: Args variable",
+        "title": "Paquete os: Args variable",
         "url": "https://pkg.go.dev/os#Args",
         "description": "Documentación oficial de la variable os.Args en la biblioteca estándar."
       },
       {
-        "title": "Go by Example: Command-Line Arguments",
+        "title": "Go by Example Original: Command-Line Arguments",
         "url": "https://gobyexample.com/command-line-arguments",
         "description": "Ejemplo en Go by Example."
       },
       {
-        "title": "Effective Go: Command line arguments",
+        "title": "Guía canónica Effective Go: Argumentos de línea de comandos",
         "url": "https://go.dev/doc/effective_go",
         "description": "Convenciones de interacción con el sistema operativo en Effective Go."
       }
     ],
-    "code": "// [_Command-line arguments_](https://en.wikipedia.org/wiki/Command-line_interface#Arguments)\n// are a common way to parameterize execution of programs.\n// For example, `go run hello.go` uses `run` and\n// `hello.go` arguments to the `go` program.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc main() {\n\n\t// `os.Args` provides access to raw command-line\n\t// arguments. Note that the first value in this slice\n\t// is the path to the program, and `os.Args[1:]`\n\t// holds the arguments to the program.\n\targsWithProg := os.Args\n\targsWithoutProg := os.Args[1:]\n\n\t// You can get individual args with normal indexing.\n\targ := os.Args[3]\n\n\tfmt.Println(argsWithProg)\n\tfmt.Println(argsWithoutProg)\n\tfmt.Println(arg)\n}\n",
-    "output": "# To experiment with command-line arguments it's best to\n# build a binary with `go build` first.\n$ go build command-line-arguments.go\n$ ./command-line-arguments a b c d\n[./command-line-arguments a b c d]       \n[a b c d]\nc\n\n# Next we'll look at more advanced command-line processing\n# with flags.\n",
+    "code": "// Los [_argumentos de línea de comandos_](https://en.wikipedia.org/wiki/Command-line_interface#Arguments)\n// son una forma habitual de parametrizar la ejecución de programas.\n// Por ejemplo, `go run hello.go` utiliza `run` y\n// `hello.go` como argumentos para el ejecutable `go`.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc main() {\n\n\t// `os.Args` proporciona acceso directo a los argumentos de línea de comandos\n\t// originales. Ten en cuenta que el primer valor en este slice\n\t// corresponde a la ruta del programa, mientras que `os.Args[1:]`\n\t// contiene los argumentos pasados al programa.\n\targsWithProg := os.Args\n\targsWithoutProg := os.Args[1:]\n\n\t// Puedes acceder a argumentos individuales mediante la indexación habitual.\n\targ := os.Args[3]\n\n\tfmt.Println(argsWithProg)\n\tfmt.Println(argsWithoutProg)\n\tfmt.Println(arg)\n}\n",
+    "output": "# Para experimentar con argumentos de línea de comandos es mejor\n# construir un binario con `go build` primero.\n$ go build command-line-arguments.go\n$ ./command-line-arguments a b c d\n[./command-line-arguments a b c d]       \n[a b c d]\nc\n\n# A continuación veremos el procesamiento avanzado de opciones de línea\n# de comandos con banderas (flags).\n",
     "officialUrl": "https://gobyexample.com/command-line-arguments"
   },
   {
@@ -5236,7 +5236,7 @@ const GO_TOPICS = [
     "titleEs": "Banderas y Flags de Consola (flag)",
     "category": "CLI, Pruebas y Benchmarking",
     "categorySlug": "cli-testing",
-    "categoryIcon": "🧪",
+    "categoryIcon": "target",
     "difficulty": "Intermedio",
     "summary": "Definición y parseo de opciones de consola con nombre (--puerto, -v, --ayuda) con el paquete estándar 'flag'.",
     "originalExpl": "Las banderas de línea de comandos son una forma común de especificar opciones para programas de línea de comandos. Por ejemplo, en 'wc -l', '-l' es una bandera de línea de comandos.",
@@ -5280,23 +5280,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package flag (Standard Library)",
+        "title": "Paquete flag (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/flag",
         "description": "Documentación oficial del paquete flag de la biblioteca estándar."
       },
       {
-        "title": "Go by Example: Command-Line Flags",
+        "title": "Go by Example Original: Command-Line Flags",
         "url": "https://gobyexample.com/command-line-flags",
         "description": "Ejemplo en Go by Example."
       },
       {
-        "title": "spf13/cobra (Librería de CLI moderna en Go)",
+        "title": "spf13/cobra (Librería moderna para CLI en Go)",
         "url": "https://github.com/spf13/cobra",
         "description": "La biblioteca estándar de la industria utilizada por Docker, Kubernetes y GitHub CLI."
       }
     ],
-    "code": "// [_Command-line flags_](https://en.wikipedia.org/wiki/Command-line_interface#Command-line_option)\n// are a common way to specify options for command-line\n// programs. For example, in `wc -l` the `-l` is a\n// command-line flag.\n\npackage main\n\n// Go provides a `flag` package supporting basic\n// command-line flag parsing. We'll use this package to\n// implement our example command-line program.\nimport (\n\t\"flag\"\n\t\"fmt\"\n)\n\nfunc main() {\n\n\t// Basic flag declarations are available for string,\n\t// integer, and boolean options. Here we declare a\n\t// string flag `word` with a default value `\"foo\"`\n\t// and a short description. This `flag.String` function\n\t// returns a string pointer (not a string value);\n\t// we'll see how to use this pointer below.\n\twordPtr := flag.String(\"word\", \"foo\", \"a string\")\n\n\t// This declares `numb` and `fork` flags, using a\n\t// similar approach to the `word` flag.\n\tnumbPtr := flag.Int(\"numb\", 42, \"an int\")\n\tforkPtr := flag.Bool(\"fork\", false, \"a bool\")\n\n\t// It's also possible to declare an option that uses an\n\t// existing var declared elsewhere in the program.\n\t// Note that we need to pass in a pointer to the flag\n\t// declaration function.\n\tvar svar string\n\tflag.StringVar(&svar, \"svar\", \"bar\", \"a string var\")\n\n\t// Once all flags are declared, call `flag.Parse()`\n\t// to execute the command-line parsing.\n\tflag.Parse()\n\n\t// Here we'll just dump out the parsed options and\n\t// any trailing positional arguments. Note that we\n\t// need to dereference the pointers with e.g. `*wordPtr`\n\t// to get the actual option values.\n\tfmt.Println(\"word:\", *wordPtr)\n\tfmt.Println(\"numb:\", *numbPtr)\n\tfmt.Println(\"fork:\", *forkPtr)\n\tfmt.Println(\"svar:\", svar)\n\tfmt.Println(\"tail:\", flag.Args())\n}\n",
-    "output": "# To experiment with the command-line flags program it's\n# best to first compile it and then run the resulting\n# binary directly.\n$ go build command-line-flags.go\n\n# Try out the built program by first giving it values for\n# all flags.\n$ ./command-line-flags -word=opt -numb=7 -fork -svar=flag\nword: opt\nnumb: 7\nfork: true\nsvar: flag\ntail: []\n\n# Note that if you omit flags they automatically take\n# their default values.\n$ ./command-line-flags -word=opt\nword: opt\nnumb: 42\nfork: false\nsvar: bar\ntail: []\n\n# Trailing positional arguments can be provided after\n# any flags.\n$ ./command-line-flags -word=opt a1 a2 a3\nword: opt\n...\ntail: [a1 a2 a3]\n\n# Note that the `flag` package requires all flags to\n# appear before positional arguments (otherwise the flags\n# will be interpreted as positional arguments).\n$ ./command-line-flags -word=opt a1 a2 a3 -numb=7\nword: opt\nnumb: 42\nfork: false\nsvar: bar\ntail: [a1 a2 a3 -numb=7]\n\n# Use `-h` or `--help` flags to get automatically\n# generated help text for the command-line program.\n$ ./command-line-flags -h\nUsage of ./command-line-flags:\n  -fork=false: a bool\n  -numb=42: an int\n  -svar=\"bar\": a string var\n  -word=\"foo\": a string\n\n# If you provide a flag that wasn't specified to the\n# `flag` package, the program will print an error message\n# and show the help text again.\n$ ./command-line-flags -wat\nflag provided but not defined: -wat\nUsage of ./command-line-flags:\n...\n",
+    "code": "// Las [_banderas de línea de comandos_](https://en.wikipedia.org/wiki/Command-line_interface#Command-line_option) (flags)\n// son una forma estándar de especificar opciones en programas de consola.\n// Por ejemplo, en `wc -l`, `-l` es una bandera de línea de comandos.\n\npackage main\n\n// Go provee el paquete `flag` que admite el parseo básico\n// de banderas de línea de comandos. Usaremos este paquete para\n// implementar nuestro programa de ejemplo.\nimport (\n\t\"flag\"\n\t\"fmt\"\n)\n\nfunc main() {\n\n\t// Las declaraciones básicas de banderas están disponibles para opciones de\n\t// tipo string, integer y boolean. Aquí declaramos una bandera\n\t// de cadena `word` con valor predeterminado `\"foo\"` y una breve\n\t// descripción. Esta función `flag.String` retorna un puntero a string\n\t// (no un valor string directo); veremos cómo utilizar este puntero abajo.\n\twordPtr := flag.String(\"word\", \"foo\", \"a string\")\n\n\t// Esto declara las banderas `numb` y `fork`, siguiendo un\n\t// enfoque similar al de la bandera `word`.\n\tnumbPtr := flag.Int(\"numb\", 42, \"an int\")\n\tforkPtr := flag.Bool(\"fork\", false, \"a bool\")\n\n\t// También es posible declarar una opción que utilice una variable\n\t// preexistente declarada en otra parte del programa. Nota que\n\t// debemos pasar un puntero a la función de declaración de la bandera.\n\tvar svar string\n\tflag.StringVar(&svar, \"svar\", \"bar\", \"a string var\")\n\n\t// Una vez declaradas todas las banderas, invocamos `flag.Parse()`\n\t// para ejecutar el análisis sintáctico de la línea de comandos.\n\tflag.Parse()\n\n\t// Aquí simplemente volcamos las opciones parseadas y los\n\t// argumentos posicionales finales restantes. Ten en cuenta que\n\t// debemos desreferenciar los punteros mediante `*wordPtr` para\n\t// obtener los valores reales de las opciones.\n\tfmt.Println(\"word:\", *wordPtr)\n\tfmt.Println(\"numb:\", *numbPtr)\n\tfmt.Println(\"fork:\", *forkPtr)\n\tfmt.Println(\"svar:\", svar)\n\tfmt.Println(\"tail:\", flag.Args())\n}\n",
+    "output": "# Para experimentar con el programa de banderas de línea de comandos es\n# recomendable compilarlo primero y luego ejecutar directamente el binario resultante.\n$ go build command-line-flags.go\n\n# Prueba el programa compilado pasándole valores para todas las banderas.\n$ ./command-line-flags -word=opt -numb=7 -fork -svar=flag\nword: opt\nnumb: 7\nfork: true\nsvar: flag\ntail: []\n\n# Ten en cuenta que si omites banderas, estas tomarán automáticamente\n# sus valores predeterminados.\n$ ./command-line-flags -word=opt\nword: opt\nnumb: 42\nfork: false\nsvar: bar\ntail: []\n\n# Los argumentos posicionales adicionales pueden proporcionarse después\n# de cualquier bandera.\n$ ./command-line-flags -word=opt a1 a2 a3\nword: opt\n...\ntail: [a1 a2 a3]\n\n# Nota que el paquete `flag` exige que todas las banderas aparezcan\n# antes de los argumentos posicionales (de lo contrario las banderas\n# posteriores se interpretarán como argumentos posicionales ordinarios).\n$ ./command-line-flags -word=opt a1 a2 a3 -numb=7\nword: opt\nnumb: 42\nfork: false\nsvar: bar\ntail: [a1 a2 a3 -numb=7]\n\n# Usa las banderas `-h` o `--help` para obtener el texto de ayuda\n# generado automáticamente para el programa de línea de comandos.\n$ ./command-line-flags -h\nUsage of ./command-line-flags:\n  -fork=false: a bool\n  -numb=42: an int\n  -svar=\"bar\": a string var\n  -word=\"foo\": a string\n\n# Si ingresas una bandera no registrada en el paquete `flag`,\n# el programa imprimirá un mensaje de error y mostrará el texto de ayuda nuevamente.\n$ ./command-line-flags -wat\nflag provided but not defined: -wat\nUsage of ./command-line-flags:\n...\n",
     "officialUrl": "https://gobyexample.com/command-line-flags"
   },
   {
@@ -5306,7 +5306,7 @@ const GO_TOPICS = [
     "titleEs": "Subcomandos CLI Estilo Git/Docker (flag.NewFlagSet)",
     "category": "CLI, Pruebas y Benchmarking",
     "categorySlug": "cli-testing",
-    "categoryIcon": "🧪",
+    "categoryIcon": "target",
     "difficulty": "Intermedio",
     "summary": "Construcción de herramientas de terminal complejas con múltiples comandos anidados (como 'git commit' o 'docker run').",
     "originalExpl": "Algunas herramientas de línea de comandos, como las herramientas 'go' o 'git', tienen muchos subcomandos, cada uno con su propio conjunto de banderas. Por ejemplo, 'go build' y 'go test' son dos subcomandos diferentes de la herramienta 'go'.",
@@ -5347,23 +5347,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package flag: FlagSet",
+        "title": "Paquete flag: FlagSet",
         "url": "https://pkg.go.dev/flag#FlagSet",
         "description": "Documentación oficial de FlagSet para subcomandos en la biblioteca estándar."
       },
       {
-        "title": "Go by Example: Command-Line Subcommands",
+        "title": "Go by Example Original: Command-Line Subcommands",
         "url": "https://gobyexample.com/command-line-subcommands",
         "description": "Ejemplo en Go by Example."
       },
       {
-        "title": "Cobra CLI Framework",
+        "title": "Librería Cobra: Creación moderna de aplicaciones CLI en Go",
         "url": "https://cobra.dev/",
         "description": "Documentación oficial del framework de subcomandos Cobra para Go."
       }
     ],
-    "code": "// Some command-line tools, like the `go` tool or `git`\n// have many *subcommands*, each with its own set of\n// flags. For example, `go build` and `go get` are two\n// different subcommands of the `go` tool.\n// The `flag` package lets us easily define simple\n// subcommands that have their own flags.\n\npackage main\n\nimport (\n\t\"flag\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc main() {\n\n\t// We declare a subcommand using the `NewFlagSet`\n\t// function, and proceed to define new flags specific\n\t// for this subcommand.\n\tfooCmd := flag.NewFlagSet(\"foo\", flag.ExitOnError)\n\tfooEnable := fooCmd.Bool(\"enable\", false, \"enable\")\n\tfooName := fooCmd.String(\"name\", \"\", \"name\")\n\n\t// For a different subcommand we can define different\n\t// supported flags.\n\tbarCmd := flag.NewFlagSet(\"bar\", flag.ExitOnError)\n\tbarLevel := barCmd.Int(\"level\", 0, \"level\")\n\n\t// The subcommand is expected as the first argument\n\t// to the program.\n\tif len(os.Args) < 2 {\n\t\tfmt.Println(\"expected 'foo' or 'bar' subcommands\")\n\t\tos.Exit(1)\n\t}\n\n\t// Check which subcommand is invoked.\n\tswitch os.Args[1] {\n\n\t// For every subcommand, we parse its own flags and\n\t// have access to trailing positional arguments.\n\tcase \"foo\":\n\t\tfooCmd.Parse(os.Args[2:])\n\t\tfmt.Println(\"subcommand 'foo'\")\n\t\tfmt.Println(\"  enable:\", *fooEnable)\n\t\tfmt.Println(\"  name:\", *fooName)\n\t\tfmt.Println(\"  tail:\", fooCmd.Args())\n\tcase \"bar\":\n\t\tbarCmd.Parse(os.Args[2:])\n\t\tfmt.Println(\"subcommand 'bar'\")\n\t\tfmt.Println(\"  level:\", *barLevel)\n\t\tfmt.Println(\"  tail:\", barCmd.Args())\n\tdefault:\n\t\tfmt.Println(\"expected 'foo' or 'bar' subcommands\")\n\t\tos.Exit(1)\n\t}\n}\n",
-    "output": "$ go build command-line-subcommands.go \n\n# First invoke the foo subcommand.\n$ ./command-line-subcommands foo -enable -name=joe a1 a2\nsubcommand 'foo'\n  enable: true\n  name: joe\n  tail: [a1 a2]\n\n# Now try bar.\n$ ./command-line-subcommands bar -level 8 a1\nsubcommand 'bar'\n  level: 8\n  tail: [a1]\n\n# But bar won't accept foo's flags.\n$ ./command-line-subcommands bar -enable a1\nflag provided but not defined: -enable\nUsage of bar:\n  -level int\n    \tlevel\n\n# Next we'll look at environment variables, another common\n# way to parameterize programs.\n",
+    "code": "// Algunas herramientas de línea de comandos, como la herramienta `go` o `git`,\n// tienen múltiples *subcomandos*, cada uno con su propio conjunto de\n// banderas. Por ejemplo, `go build` y `go get` son dos subcomandos\n// distintos de la herramienta `go`.\n// El paquete `flag` nos permite definir fácilmente subcomandos sencillos\n// que poseen sus propias banderas individuales.\n\npackage main\n\nimport (\n\t\"flag\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc main() {\n\n\t// Declaramos un subcomando utilizando la función `NewFlagSet`\n\t// y procedemos a definir nuevas banderas específicas para este subcomando.\n\tfooCmd := flag.NewFlagSet(\"foo\", flag.ExitOnError)\n\tfooEnable := fooCmd.Bool(\"enable\", false, \"enable\")\n\tfooName := fooCmd.String(\"name\", \"\", \"name\")\n\n\t// Para un subcomando diferente podemos definir banderas\n\t// compatibles distintas.\n\tbarCmd := flag.NewFlagSet(\"bar\", flag.ExitOnError)\n\tbarLevel := barCmd.Int(\"level\", 0, \"level\")\n\n\t// Se espera el nombre del subcomando como primer argumento\n\t// del programa.\n\tif len(os.Args) < 2 {\n\t\tfmt.Println(\"expected 'foo' or 'bar' subcommands\")\n\t\tos.Exit(1)\n\t}\n\n\t// Comprobamos cuál subcomando fue invocado.\n\tswitch os.Args[1] {\n\n\t// Para cada subcomando, parseamos sus propias banderas y\n\t// tenemos acceso a los argumentos posicionales posteriores.\n\tcase \"foo\":\n\t\tfooCmd.Parse(os.Args[2:])\n\t\tfmt.Println(\"subcommand 'foo'\")\n\t\tfmt.Println(\"  enable:\", *fooEnable)\n\t\tfmt.Println(\"  name:\", *fooName)\n\t\tfmt.Println(\"  tail:\", fooCmd.Args())\n\tcase \"bar\":\n\t\tbarCmd.Parse(os.Args[2:])\n\t\tfmt.Println(\"subcommand 'bar'\")\n\t\tfmt.Println(\"  level:\", *barLevel)\n\t\tfmt.Println(\"  tail:\", barCmd.Args())\n\tdefault:\n\t\tfmt.Println(\"expected 'foo' or 'bar' subcommands\")\n\t\tos.Exit(1)\n\t}\n}\n",
+    "output": "$ go build command-line-subcommands.go \n\n# Primero invocamos el subcomando foo.\n$ ./command-line-subcommands foo -enable -name=joe a1 a2\nsubcommand 'foo'\n  enable: true\n  name: joe\n  tail: [a1 a2]\n\n# Ahora probamos con bar.\n$ ./command-line-subcommands bar -level 8 a1\nsubcommand 'bar'\n  level: 8\n  tail: [a1]\n\n# Pero bar no aceptará las banderas de foo.\n$ ./command-line-subcommands bar -enable a1\nflag provided but not defined: -enable\nUsage of bar:\n  -level int\n    \tlevel\n\n# A continuación veremos las variables de entorno, otra forma común\n# de parametrizar programas.\n",
     "officialUrl": "https://gobyexample.com/command-line-subcommands"
   },
   {
@@ -5373,7 +5373,7 @@ const GO_TOPICS = [
     "titleEs": "Variables de Entorno del SO (os.Getenv y os.Setenv)",
     "category": "CLI, Pruebas y Benchmarking",
     "categorySlug": "cli-testing",
-    "categoryIcon": "🧪",
+    "categoryIcon": "target",
     "difficulty": "Principiante",
     "summary": "Lectura, escritura e iteración de variables de entorno del sistema operativo, estándar de configuración en contenedores y la nube.",
     "originalExpl": "Las variables de entorno son un mecanismo universal para comunicar información de configuración a programas Unix y Windows. En este ejemplo veremos cómo configurar, obtener y listar variables de entorno.",
@@ -5415,23 +5415,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package os: Environment functions",
+        "title": "Paquete os: Environment functions",
         "url": "https://pkg.go.dev/os#Getenv",
         "description": "Documentación oficial de Getenv, Setenv, LookupEnv y Environ."
       },
       {
-        "title": "The Twelve-Factor App: Config",
+        "title": "Metodología Twelve-Factor App: Configuración externa",
         "url": "https://12factor.net/config",
         "description": "El estándar de la industria para configuración de software en la nube."
       },
       {
-        "title": "Go by Example: Environment Variables",
+        "title": "Go by Example Original: Environment Variables",
         "url": "https://gobyexample.com/environment-variables",
         "description": "Ejemplo en Go by Example."
       }
     ],
-    "code": "// [Environment variables](https://en.wikipedia.org/wiki/Environment_variable)\n// are a universal mechanism for [conveying configuration\n// information to Unix programs](https://www.12factor.net/config).\n// Let's look at how to set, get, and list environment variables.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n)\n\nfunc main() {\n\n\t// To set a key/value pair, use `os.Setenv`. To get a\n\t// value for a key, use `os.Getenv`. This will return\n\t// an empty string if the key isn't present in the\n\t// environment.\n\tos.Setenv(\"FOO\", \"1\")\n\tfmt.Println(\"FOO:\", os.Getenv(\"FOO\"))\n\tfmt.Println(\"BAR:\", os.Getenv(\"BAR\"))\n\n\t// Use `os.Environ` to list all key/value pairs in the\n\t// environment. This returns a slice of strings in the\n\t// form `KEY=value`. You can `strings.SplitN` them to\n\t// get the key and value. Here we print all the keys.\n\tfmt.Println()\n\tfor _, e := range os.Environ() {\n\t\tpair := strings.SplitN(e, \"=\", 2)\n\t\tfmt.Println(pair[0])\n\t}\n}\n",
-    "output": "# Running the program shows that we pick up the value\n# for `FOO` that we set in the program, but that\n# `BAR` is empty.\n$ go run environment-variables.go\nFOO: 1\nBAR: \n\n# The list of keys in the environment will depend on your\n# particular machine.\nTERM_PROGRAM\nPATH\nSHELL\n...\nFOO\n\n# If we set `BAR` in the environment first, the running\n# program picks that value up.\n$ BAR=2 go run environment-variables.go\nFOO: 1\nBAR: 2\n...\n",
+    "code": "// Las [variables de entorno](https://en.wikipedia.org/wiki/Environment_variable)\n// son un mecanismo universal para [transmitir información de\n// configuración a programas Unix](https://www.12factor.net/config).\n// Veamos cómo definir, obtener y listar variables de entorno.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n)\n\nfunc main() {\n\n\t// Para definir un par clave/valor, usa `os.Setenv`. Para obtener el\n\t// valor de una clave, usa `os.Getenv`. Esto devolverá\n\t// una cadena vacía si la clave no está presente en el\n\t// entorno.\n\tos.Setenv(\"FOO\", \"1\")\n\tfmt.Println(\"FOO:\", os.Getenv(\"FOO\"))\n\tfmt.Println(\"BAR:\", os.Getenv(\"BAR\"))\n\n\t// Usa `os.Environ` para listar todos los pares clave/valor presentes en el\n\t// entorno. Esto devuelve un slice de cadenas con el\n\t// formato `KEY=value`. Puedes usar `strings.SplitN` para\n\t// separar la clave y el valor. Aquí imprimimos todas las claves.\n\tfmt.Println()\n\tfor _, e := range os.Environ() {\n\t\tpair := strings.SplitN(e, \"=\", 2)\n\t\tfmt.Println(pair[0])\n\t}\n}\n",
+    "output": "# Ejecutar el programa demuestra que recuperamos el valor\n# para `FOO` configurado en el código, mientras que\n# `BAR` permanece vacío.\n$ go run environment-variables.go\nFOO: 1\nBAR: \n\n# La lista de claves en el entorno dependerá de la configuración\n# de tu máquina particular.\nTERM_PROGRAM\nPATH\nSHELL\n...\nFOO\n\n# Si definimos `BAR` en el entorno antes de la invocación, el programa\n# en ejecución capturará dicho valor.\n$ BAR=2 go run environment-variables.go\nFOO: 1\nBAR: 2\n...\n",
     "officialUrl": "https://gobyexample.com/environment-variables"
   },
   {
@@ -5441,7 +5441,7 @@ const GO_TOPICS = [
     "titleEs": "Registro de Logs (log y log/slog Estructurado)",
     "category": "CLI, Pruebas y Benchmarking",
     "categorySlug": "cli-testing",
-    "categoryIcon": "🧪",
+    "categoryIcon": "target",
     "difficulty": "Intermedio",
     "summary": "Emisión de mensajes de diagnóstico tradicionales con 'log' y logs estructurados en JSON de alto rendimiento con 'log/slog' (Go 1.21+).",
     "originalExpl": "La biblioteca estándar de Go proporciona herramientas sencillas para la salida de logs. En Go 1.21 se introdujo el paquete oficial 'log/slog' para logging estructurado.",
@@ -5484,23 +5484,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "The Go Blog: Structured Logging with slog",
+        "title": "Blog oficial de Go: Registro estructurado de eventos con el paquete slog",
         "url": "https://go.dev/blog/slog",
         "description": "Artículo oficial de lanzamiento del paquete de logging estructurado slog en Go 1.21."
       },
       {
-        "title": "Package log/slog (Standard Library)",
+        "title": "Paquete log/slog (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/log/slog",
         "description": "Documentación oficial del paquete log/slog."
       },
       {
-        "title": "Go by Example: Logging",
+        "title": "Go by Example Original: Logging",
         "url": "https://gobyexample.com/logging",
         "description": "Ejemplo en Go by Example."
       }
     ],
-    "code": "// The Go standard library provides straightforward\n// tools for outputting logs from Go programs, with\n// the [log](https://pkg.go.dev/log) package for\n// free-form output and the\n// [log/slog](https://pkg.go.dev/log/slog) package for\n// structured output.\npackage main\n\nimport (\n\t\"bytes\"\n\t\"fmt\"\n\t\"log\"\n\t\"os\"\n\n\t\"log/slog\"\n)\n\nfunc main() {\n\n\t// Simply invoking functions like `Println` from the\n\t// `log` package uses the _standard_ logger, which\n\t// is already pre-configured for reasonable logging\n\t// output to `os.Stderr`. Additional methods like\n\t// `Fatal*` or `Panic*` will exit the program after\n\t// logging.\n\tlog.Println(\"standard logger\")\n\n\t// Loggers can be configured with _flags_ to set\n\t// their output format. By default, the standard\n\t// logger has the `log.Ldate` and `log.Ltime` flags\n\t// set, and these are collected in `log.LstdFlags`.\n\t// We can change its flags to emit time with\n\t// microsecond accuracy, for example.\n\tlog.SetFlags(log.LstdFlags | log.Lmicroseconds)\n\tlog.Println(\"with micro\")\n\n\t// It also supports emitting the file name and\n\t// line from which the `log` function is called.\n\tlog.SetFlags(log.LstdFlags | log.Lshortfile)\n\tlog.Println(\"with file/line\")\n\n\t// It may be useful to create a custom logger and\n\t// pass it around. When creating a new logger, we\n\t// can set a _prefix_ to distinguish its output\n\t// from other loggers.\n\tmylog := log.New(os.Stdout, \"my:\", log.LstdFlags)\n\tmylog.Println(\"from mylog\")\n\n\t// We can set the prefix\n\t// on existing loggers (including the standard one)\n\t// with the `SetPrefix` method.\n\tmylog.SetPrefix(\"ohmy:\")\n\tmylog.Println(\"from mylog\")\n\n\t// Loggers can have custom output targets;\n\t// any `io.Writer` works.\n\tvar buf bytes.Buffer\n\tbuflog := log.New(&buf, \"buf:\", log.LstdFlags)\n\n\t// This call writes the log output into `buf`.\n\tbuflog.Println(\"hello\")\n\n\t// This will actually show it on standard output.\n\tfmt.Print(\"from buflog:\", buf.String())\n\n\t// The `slog` package provides\n\t// _structured_ log output. For example, logging\n\t// in JSON format is straightforward.\n\tjsonHandler := slog.NewJSONHandler(os.Stderr, nil)\n\tmyslog := slog.New(jsonHandler)\n\tmyslog.Info(\"hi there\")\n\n\t// In addition to the message, `slog` output can\n\t// contain an arbitrary number of key=value\n\t// pairs.\n\tmyslog.Info(\"hello again\", \"key\", \"val\", \"age\", 25)\n}\n",
-    "output": "# Sample output; the date and time\n# emitted will depend on when the example ran.\n$ go run logging.go\n2023/08/22 10:45:16 standard logger\n2023/08/22 10:45:16.904141 with micro\n2023/08/22 10:45:16 logging.go:40: with file/line\nmy:2023/08/22 10:45:16 from mylog\nohmy:2023/08/22 10:45:16 from mylog\nfrom buflog:buf:2023/08/22 10:45:16 hello\n\n# These are wrapped for clarity of presentation\n# on the website; in reality they are emitted\n# on a single line.\n{\"time\":\"2023-08-22T10:45:16.904166391-07:00\",\n \"level\":\"INFO\",\"msg\":\"hi there\"}\n{\"time\":\"2023-08-22T10:45:16.904178985-07:00\",\n\t\"level\":\"INFO\",\"msg\":\"hello again\",\n\t\"key\":\"val\",\"age\":25}\n",
+    "code": "// La biblioteca estándar de Go proporciona excelentes\n// herramientas para emitir registros (logs) desde programas, con\n// el paquete [log](https://pkg.go.dev/log) para\n// salidas en texto libre y el paquete\n// [log/slog](https://pkg.go.dev/log/slog) para\n// salidas estructuradas.\npackage main\n\nimport (\n\t\"bytes\"\n\t\"fmt\"\n\t\"log\"\n\t\"os\"\n\n\t\"log/slog\"\n)\n\nfunc main() {\n\n\t// La simple invocación de funciones como `Println` desde el\n\t// paquete `log` utiliza el logger _estándar_, el cual\n\t// viene preconfigurado con una salida razonable\n\t// hacia `os.Stderr`. Métodos adicionales como\n\t// `Fatal*` o `Panic*` terminarán el programa tras\n\t// registrar el mensaje.\n\tlog.Println(\"standard logger\")\n\n\t// Los loggers pueden configurarse con _banderas_ (flags) para definir\n\t// su formato de salida. Por defecto, el logger estándar\n\t// tiene activadas las banderas `log.Ldate` y `log.Ltime`,\n\t// agrupadas en `log.LstdFlags`.\n\t// Podemos modificar sus banderas para emitir la hora con\n\t// precisión de microsegundos, por ejemplo.\n\tlog.SetFlags(log.LstdFlags | log.Lmicroseconds)\n\tlog.Println(\"with micro\")\n\n\t// También permite emitir el nombre del archivo y la\n\t// línea exacta desde donde se invocó la función `log`.\n\tlog.SetFlags(log.LstdFlags | log.Lshortfile)\n\tlog.Println(\"with file/line\")\n\n\t// Puede resultar muy útil crear un logger personalizado y\n\t// pasarlo entre componentes. Al crear un nuevo logger, podemos\n\t// definir un _prefijo_ para distinguir su salida\n\t// de la de otros loggers.\n\tmylog := log.New(os.Stdout, \"my:\", log.LstdFlags)\n\tmylog.Println(\"from mylog\")\n\n\t// Podemos modificar el prefijo\n\t// en loggers existentes (incluyendo el estándar)\n\t// mediante el método `SetPrefix`.\n\tmylog.SetPrefix(\"ohmy:\")\n\tmylog.Println(\"from mylog\")\n\n\t// Los loggers admiten destinos de salida personalizados;\n\t// cualquier implementación de `io.Writer` es válida.\n\tvar buf bytes.Buffer\n\tbuflog := log.New(&buf, \"buf:\", log.LstdFlags)\n\n\t// Esta llamada escribe la salida de log dentro de `buf`.\n\tbuflog.Println(\"hello\")\n\n\t// Esto lo mostrará en la salida estándar.\n\tfmt.Print(\"from buflog:\", buf.String())\n\n\t// El paquete `slog` provee\n\t// salida de registros _estructurada_. Por ejemplo, registrar\n\t// en formato JSON es sumamente sencillo.\n\tjsonHandler := slog.NewJSONHandler(os.Stderr, nil)\n\tmyslog := slog.New(jsonHandler)\n\tmyslog.Info(\"hi there\")\n\n\t// Además del mensaje principal, la salida de `slog` puede\n\t// contener un número arbitrario de pares clave=valor.\n\tmyslog.Info(\"hello again\", \"key\", \"val\", \"age\", 25)\n}\n",
+    "output": "# Salida de ejemplo; la fecha y la hora\n# emitidas dependerán de cuándo se ejecutó el ejemplo.\n$ go run logging.go\n2023/08/22 10:45:16 standard logger\n2023/08/22 10:45:16.904141 with micro\n2023/08/22 10:45:16 logging.go:40: with file/line\nmy:2023/08/22 10:45:16 from mylog\nohmy:2023/08/22 10:45:16 from mylog\nfrom buflog:buf:2023/08/22 10:45:16 hello\n\n# Estos registros se muestran divididos en líneas para mayor claridad didáctica;\n# en la práctica se emiten en una sola línea continua.\n{\"time\":\"2023-08-22T10:45:16.904166391-07:00\",\n \"level\":\"INFO\",\"msg\":\"hi there\"}\n{\"time\":\"2023-08-22T10:45:16.904178985-07:00\",\n\t\"level\":\"INFO\",\"msg\":\"hello again\",\n\t\"key\":\"val\",\"age\":25}\n",
     "officialUrl": "https://gobyexample.com/logging"
   },
   {
@@ -5510,7 +5510,7 @@ const GO_TOPICS = [
     "titleEs": "Cliente HTTP y Peticiones Web (net/http)",
     "category": "Redes, Procesos y Sistema Operativo",
     "categorySlug": "redes-sistema",
-    "categoryIcon": "🌐",
+    "categoryIcon": "globe",
     "difficulty": "Intermedio",
     "summary": "Consumo de APIs REST y servicios web con http.Get, http.Post y configuración de clientes http.Client con timeouts.",
     "originalExpl": "La biblioteca estándar de Go viene con un soporte excelente para clientes y servidores HTTP en el paquete net/http. En este ejemplo lo usaremos para emitir peticiones HTTP sencillas.",
@@ -5552,28 +5552,28 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package net/http (Standard Library)",
+        "title": "Paquete net/http (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/net/http",
         "description": "Documentación oficial del paquete net/http de la biblioteca estándar."
       },
       {
-        "title": "The Go Blog: The HTTP Client and Transport",
+        "title": "Blog oficial de Go: Cliente HTTP y configuración de la capa de transporte",
         "url": "https://go.dev/blog/http-tracing",
         "description": "Inspección y rastreo de peticiones con HTTP Client Tracing."
       },
       {
-        "title": "Cloudflare: The complete guide to Go net/http timeouts",
+        "title": "Cloudflare: Guía integral sobre tiempos de espera (Timeouts) en net/http",
         "url": "https://blog.cloudflare.com/the-complete-guide-to-golang-net-http-timeouts/",
         "description": "Guía canónica de Cloudflare sobre la configuración correcta de timeouts en Go."
       },
       {
-        "title": "Go by Example: HTTP Client",
+        "title": "Go by Example Original: HTTP Client",
         "url": "https://gobyexample.com/http-client",
         "description": "Página oficial del ejemplo en Go by Example.",
         "type": "Referencia Original"
       }
     ],
-    "code": "// The Go standard library comes with excellent support\n// for HTTP clients and servers in the `net/http`\n// package. In this example we'll use it to issue simple\n// HTTP requests.\npackage main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"net/http\"\n)\n\nfunc main() {\n\n\t// Issue an HTTP GET request to a server. `http.Get` is a\n\t// convenient shortcut around creating an `http.Client`\n\t// object and calling its `Get` method; it uses the\n\t// `http.DefaultClient` object which has useful default\n\t// settings.\n\tresp, err := http.Get(\"https://gobyexample.com\")\n\tif err != nil {\n\t\tpanic(err)\n\t}\n\tdefer resp.Body.Close()\n\n\t// Print the HTTP response status.\n\tfmt.Println(\"Response status:\", resp.Status)\n\n\t// Print the first 5 lines of the response body.\n\tscanner := bufio.NewScanner(resp.Body)\n\tfor i := 0; scanner.Scan() && i < 5; i++ {\n\t\tfmt.Println(scanner.Text())\n\t}\n\n\tif err := scanner.Err(); err != nil {\n\t\tpanic(err)\n\t}\n}\n",
+    "code": "// La biblioteca estándar de Go incluye un soporte sobresaliente\n// para clientes y servidores HTTP en el paquete `net/http`.\n// En este ejemplo lo utilizaremos para emitir peticiones\n// HTTP básicas.\npackage main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"net/http\"\n)\n\nfunc main() {\n\n\t// Emite una petición HTTP GET a un servidor. `http.Get` es un\n\t// atajo conveniente que evita tener que crear un objeto `http.Client`\n\t// y llamar a su método `Get`; utiliza el objeto\n\t// `http.DefaultClient`, el cual posee configuraciones predeterminadas útiles.\n\tresp, err := http.Get(\"https://gobyexample.com\")\n\tif err != nil {\n\t\tpanic(err)\n\t}\n\tdefer resp.Body.Close()\n\n\t// Imprime el estado de la respuesta HTTP.\n\tfmt.Println(\"Response status:\", resp.Status)\n\n\t// Imprime las primeras 5 líneas del cuerpo de la respuesta.\n\tscanner := bufio.NewScanner(resp.Body)\n\tfor i := 0; scanner.Scan() && i < 5; i++ {\n\t\tfmt.Println(scanner.Text())\n\t}\n\n\tif err := scanner.Err(); err != nil {\n\t\tpanic(err)\n\t}\n}\n",
     "output": "$ go run http-clients.go\nResponse status: 200 OK\n<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\">\n    <title>Go by Example</title>\n",
     "officialUrl": "https://gobyexample.com/http-client"
   },
@@ -5584,7 +5584,7 @@ const GO_TOPICS = [
     "titleEs": "Servidor Web HTTP Nativo (net/http)",
     "category": "Redes, Procesos y Sistema Operativo",
     "categorySlug": "redes-sistema",
-    "categoryIcon": "🌐",
+    "categoryIcon": "globe",
     "difficulty": "Intermedio",
     "summary": "Creación de servidores web de producción, enrutamiento con ServeMux (Go 1.22+) y manejadores http.Handler.",
     "originalExpl": "Escribir un servidor HTTP básico es fácil usando el paquete net/http. Un concepto fundamental en los servidores net/http son los handlers, que implementan la interfaz http.Handler.",
@@ -5626,23 +5626,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "The Go Blog: Routing Enhancements for Go 1.22",
+        "title": "Blog oficial de Go: Enrutamiento avanzado con métodos y patrones en Go 1.22",
         "url": "https://go.dev/blog/routing-enhancements",
         "description": "Explicación oficial de las nuevas capacidades de enrutamiento en Go 1.22."
       },
       {
-        "title": "Package net/http: Server and ServeMux",
+        "title": "Paquete net/http: Server and ServeMux",
         "url": "https://pkg.go.dev/net/http#ServeMux",
         "description": "Documentación oficial del servidor y enrutador ServeMux."
       },
       {
-        "title": "Go by Example: HTTP Server",
+        "title": "Go by Example Original: HTTP Server",
         "url": "https://gobyexample.com/http-server",
         "description": "Ejemplo en Go by Example."
       }
     ],
-    "code": "// Writing a basic HTTP server is easy using the\n// `net/http` package.\npackage main\n\nimport (\n\t\"fmt\"\n\t\"net/http\"\n)\n\n// A fundamental concept in `net/http` servers is\n// *handlers*. A handler is an object implementing the\n// `http.Handler` interface. A common way to write\n// a handler is by using the `http.HandlerFunc` adapter\n// on functions with the appropriate signature.\nfunc hello(w http.ResponseWriter, req *http.Request) {\n\n\t// Functions serving as handlers take a\n\t// `http.ResponseWriter` and a `http.Request` as\n\t// arguments. The response writer is used to fill in the\n\t// HTTP response. Here our simple response is just\n\t// \"hello\\n\".\n\tfmt.Fprintf(w, \"hello\\n\")\n}\n\nfunc headers(w http.ResponseWriter, req *http.Request) {\n\n\t// This handler does something a little more\n\t// sophisticated by reading all the HTTP request\n\t// headers and echoing them into the response body.\n\tfor name, headers := range req.Header {\n\t\tfor _, h := range headers {\n\t\t\tfmt.Fprintf(w, \"%v: %v\\n\", name, h)\n\t\t}\n\t}\n}\n\nfunc main() {\n\n\t// We register our handlers on server routes using the\n\t// `http.HandleFunc` convenience function. It sets up\n\t// the *default router* in the `net/http` package and\n\t// takes a function as an argument.\n\thttp.HandleFunc(\"/hello\", hello)\n\thttp.HandleFunc(\"/headers\", headers)\n\n\t// Finally, we call the `ListenAndServe` with the port\n\t// and a handler. `nil` tells it to use the default\n\t// router we've just set up.\n\thttp.ListenAndServe(\":8090\", nil)\n}\n",
-    "output": "# Run the server in the background.\n$ go run http-server.go &\n\n# Access the `/hello` route.\n$ curl localhost:8090/hello\nhello\n",
+    "code": "// Escribir un servidor HTTP básico es muy directo utilizando el\n// paquete `net/http`.\npackage main\n\nimport (\n\t\"fmt\"\n\t\"net/http\"\n)\n\n// Un concepto fundamental en los servidores de `net/http` son\n// los *manejadores* (handlers). Un handler es un objeto que implementa la\n// interfaz `http.Handler`. Una forma común de escribir\n// un handler es utilizar el adaptador `http.HandlerFunc`\n// sobre funciones con la firma adecuada.\nfunc hello(w http.ResponseWriter, req *http.Request) {\n\n\t// Las funciones que actúan como handlers reciben un\n\t// `http.ResponseWriter` y un `http.Request` como\n\t// argumentos. El escritor de respuesta se utiliza para construir la\n\t// respuesta HTTP. Aquí nuestra respuesta sencilla es solo\n\t// \"hello\\n\".\n\tfmt.Fprintf(w, \"hello\\n\")\n}\n\nfunc headers(w http.ResponseWriter, req *http.Request) {\n\n\t// Este handler realiza una tarea un poco más\n\t// sofisticada leyendo todas las cabeceras de la petición HTTP\n\t// y reflejándolas en el cuerpo de la respuesta.\n\tfor name, headers := range req.Header {\n\t\tfor _, h := range headers {\n\t\t\tfmt.Fprintf(w, \"%v: %v\\n\", name, h)\n\t\t}\n\t}\n}\n\nfunc main() {\n\n\t// Registramos nuestros manejadores en las rutas del servidor usando la\n\t// función de conveniencia `http.HandleFunc`. Esta configura\n\t// el *enrutador predeterminado* en el paquete `net/http` y\n\t// toma una función como argumento.\n\thttp.HandleFunc(\"/hello\", hello)\n\thttp.HandleFunc(\"/headers\", headers)\n\n\t// Finalmente, invocamos `ListenAndServe` con el puerto\n\t// y un handler. Pasar `nil` le indica que use el enrutador\n\t// predeterminado que acabamos de configurar.\n\thttp.ListenAndServe(\":8090\", nil)\n}\n",
+    "output": "# Inicia el servidor en segundo plano.\n$ go run http-server.go &\n\n# Accede a la ruta `/hello`.\n$ curl localhost:8090/hello\nhello\n",
     "officialUrl": "https://gobyexample.com/http-server"
   },
   {
@@ -5652,7 +5652,7 @@ const GO_TOPICS = [
     "titleEs": "Servidor TCP de Sockets de Red (net)",
     "category": "Redes, Procesos y Sistema Operativo",
     "categorySlug": "redes-sistema",
-    "categoryIcon": "🌐",
+    "categoryIcon": "globe",
     "difficulty": "Avanzado",
     "summary": "Programación de red de bajo nivel mediante sockets TCP con net.Listen y manejo concurrente de conexiones net.Conn.",
     "originalExpl": "Escribir un servidor TCP de bajo nivel es muy sencillo con el paquete 'net'. En este ejemplo crearemos un servidor TCP que responde a conexiones concurrentes.",
@@ -5694,23 +5694,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package net (Standard Library)",
+        "title": "Paquete net (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/net",
         "description": "Documentación oficial del paquete net para sockets TCP, UDP e IP."
       },
       {
-        "title": "The Go Blog: The Go netpoller",
+        "title": "Blog oficial de Go: Arquitectura del netpoller de E/S asíncrona de Go",
         "url": "https://morsmachine.dk/netpoller",
         "description": "Análisis técnico de cómo el Network Poller de Go interactúa con epoll en el kernel."
       },
       {
-        "title": "Go by Example: TCP Server",
+        "title": "Go by Example Original: TCP Server",
         "url": "https://gobyexample.com/tcp-server",
         "description": "Ejemplo en Go by Example."
       }
     ],
-    "code": "// The `net` package provides the tools we need to easily build\n// TCP socket servers.\npackage main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"log\"\n\t\"net\"\n\t\"strings\"\n)\n\nfunc main() {\n\n\t// `net.Listen` starts the server on the given network\n\t// (TCP) and address (port 8090 on all interfaces).\n\tlistener, err := net.Listen(\"tcp\", \":8090\")\n\tif err != nil {\n\t\tlog.Fatal(\"Error listening:\", err)\n\t}\n\n\t// Close the listener to free the port\n\t// when the application exits.\n\tdefer listener.Close()\n\n\t// Loop indefinitely to accept new client connections.\n\tfor {\n\t\t// Wait for a connection.\n\t\tconn, err := listener.Accept()\n\t\tif err != nil {\n\t\t\tlog.Println(\"Error accepting conn:\", err)\n\t\t\tcontinue\n\t\t}\n\n\t\t// We use a goroutine here to handle the connection\n\t\t// so that the main loop can continue accepting more\n\t\t// connections.\n\t\tgo handleConnection(conn)\n\t}\n}\n\n// `handleConnection` handles a single client connection,\n// reading one line of text from the client and returning a response.\nfunc handleConnection(conn net.Conn) {\n\t// Closing the connection releases resources when\n\t// we are finished interacting with the client.\n\tdefer conn.Close()\n\n\t// Use `bufio.NewReader` to read one line of data\n\t// from the client (terminated by a newline).\n\treader := bufio.NewReader(conn)\n\tmessage, err := reader.ReadString('\\n')\n\tif err != nil {\n\t\tlog.Printf(\"Read error: %v\", err)\n\t\treturn\n\t}\n\n\t// Create and send a response back to the client,\n\t// demonstrating two-way communication.\n\tackMsg := strings.ToUpper(strings.TrimSpace(message))\n\tresponse := fmt.Sprintf(\"ACK: %s\\n\", ackMsg)\n\t_, err = conn.Write([]byte(response))\n\tif err != nil {\n\t\tlog.Printf(\"Server write error: %v\", err)\n\t}\n}\n",
-    "output": "# Run the TCP server in the background.\n$ go run tcp-server.go &\n\n# Send data and capture the response using netcat.\n$ echo \"Hello from netcat\" | nc localhost 8090\nACK: HELLO FROM NETCAT\n\n",
+    "code": "// El paquete `net` provee las herramientas necesarias para construir\n// fácilmente servidores de sockets TCP.\npackage main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"log\"\n\t\"net\"\n\t\"strings\"\n)\n\nfunc main() {\n\n\t// `net.Listen` inicia el servidor en la red indicada\n\t// (TCP) y dirección (puerto 8090 en todas las interfaces).\n\tlistener, err := net.Listen(\"tcp\", \":8090\")\n\tif err != nil {\n\t\tlog.Fatal(\"Error listening:\", err)\n\t}\n\n\t// Cierra el listener para liberar el puerto\n\t// cuando la aplicación finalice.\n\tdefer listener.Close()\n\n\t// Bucle indefinido para aceptar nuevas conexiones de clientes.\n\tfor {\n\t\t// Espera una conexión entrante.\n\t\tconn, err := listener.Accept()\n\t\tif err != nil {\n\t\t\tlog.Println(\"Error accepting conn:\", err)\n\t\t\tcontinue\n\t\t}\n\n\t\t// Usamos una goroutine aquí para atender la conexión,\n\t\t// permitiendo que el bucle principal continúe aceptando más\n\t\t// conexiones entrantes.\n\t\tgo handleConnection(conn)\n\t}\n}\n\n// `handleConnection` gestiona una única conexión de cliente,\n// leyendo una línea de texto del cliente y retornando una respuesta.\nfunc handleConnection(conn net.Conn) {\n\t// Cerrar la conexión libera los recursos cuando\n\t// terminamos de interactuar con el cliente.\n\tdefer conn.Close()\n\n\t// Usa `bufio.NewReader` para leer una línea de datos\n\t// del cliente (delimitada por salto de línea).\n\treader := bufio.NewReader(conn)\n\tmessage, err := reader.ReadString('\\n')\n\tif err != nil {\n\t\tlog.Printf(\"Read error: %v\", err)\n\t\treturn\n\t}\n\n\t// Crea y envía una respuesta de vuelta al cliente,\n\t// demostrando comunicación bidireccional.\n\tackMsg := strings.ToUpper(strings.TrimSpace(message))\n\tresponse := fmt.Sprintf(\"ACK: %s\\n\", ackMsg)\n\t_, err = conn.Write([]byte(response))\n\tif err != nil {\n\t\tlog.Printf(\"Server write error: %v\", err)\n\t}\n}\n",
+    "output": "# Inicia el servidor TCP en segundo plano.\n$ go run tcp-server.go &\n\n# Envía datos y captura la respuesta utilizando netcat.\n$ echo \"Hello from netcat\" | nc localhost 8090\nACK: HELLO FROM NETCAT\n",
     "officialUrl": "https://gobyexample.com/tcp-server"
   },
   {
@@ -5720,7 +5720,7 @@ const GO_TOPICS = [
     "titleEs": "Gestión de Contextos y Cancelación (context)",
     "category": "Redes, Procesos y Sistema Operativo",
     "categorySlug": "redes-sistema",
-    "categoryIcon": "🌐",
+    "categoryIcon": "globe",
     "difficulty": "Avanzado",
     "summary": "Propagación de plazos (deadlines), señales de cancelación y valores entre límites de APIs y goroutines concurrentes.",
     "originalExpl": "En el ejemplo anterior vimos cómo configurar un servidor HTTP básico. Los servidores HTTP son útiles para demostrar el uso de context.Context para controlar la cancelación. Un Context transporta plazos, señales de cancelación y otros valores entre límites de API.",
@@ -5764,23 +5764,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "The Go Blog: Go Concurrency Patterns: Context",
+        "title": "Blog oficial de Go: Patrones de concurrencia: El paquete Context",
         "url": "https://go.dev/blog/context",
         "description": "El artículo canónico de Sameer Ajmani que definió el estándar de context en Go."
       },
       {
-        "title": "Package context (Standard Library)",
+        "title": "Paquete context (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/context",
         "description": "Documentación oficial del paquete context en la biblioteca estándar."
       },
       {
-        "title": "Go by Example: Context",
+        "title": "Go by Example Original: Context",
         "url": "https://gobyexample.com/context",
         "description": "Ejemplo en Go by Example."
       }
     ],
-    "code": "// In the previous example we looked at setting up a simple\n// [HTTP server](http-server). HTTP servers are useful for\n// demonstrating the usage of `context.Context` for\n// controlling cancellation. A `Context` carries deadlines,\n// cancellation signals, and other request-scoped values\n// across API boundaries and goroutines.\npackage main\n\nimport (\n\t\"fmt\"\n\t\"net/http\"\n\t\"time\"\n)\n\nfunc hello(w http.ResponseWriter, req *http.Request) {\n\n\t// A `context.Context` is created for each request by\n\t// the `net/http` machinery, and is available with\n\t// the `Context()` method.\n\tctx := req.Context()\n\tfmt.Println(\"server: hello handler started\")\n\tdefer fmt.Println(\"server: hello handler ended\")\n\n\t// Wait for a few seconds before sending a reply to the\n\t// client. This could simulate some work the server is\n\t// doing. While working, keep an eye on the context's\n\t// `Done()` channel for a signal that we should cancel\n\t// the work and return as soon as possible.\n\tselect {\n\tcase <-time.After(10 * time.Second):\n\t\tfmt.Fprintf(w, \"hello\\n\")\n\tcase <-ctx.Done():\n\t\t// The context's `Err()` method returns an error\n\t\t// that explains why the `Done()` channel was\n\t\t// closed.\n\t\terr := ctx.Err()\n\t\tfmt.Println(\"server:\", err)\n\t\tinternalError := http.StatusInternalServerError\n\t\thttp.Error(w, err.Error(), internalError)\n\t}\n}\n\nfunc main() {\n\n\t// As before, we register our handler on the \"/hello\"\n\t// route, and start serving.\n\thttp.HandleFunc(\"/hello\", hello)\n\thttp.ListenAndServe(\":8090\", nil)\n}\n",
-    "output": "# Run the server in the background.\n$ go run context.go &\n\n# Simulate a client request to `/hello`, hitting\n# Ctrl+C shortly after starting to signal\n# cancellation.\n$ curl localhost:8090/hello\nserver: hello handler started\n^C\nserver: context canceled\nserver: hello handler ended\n",
+    "code": "// En el ejemplo anterior vimos cómo configurar un\n// [servidor HTTP](http-server) simple. Los servidores HTTP son muy útiles para\n// demostrar el uso de `context.Context` en el\n// control de cancelación. Un `Context` transporta plazos de tiempo (deadlines),\n// señales de cancelación y otros valores de ámbito de petición\n// a través de límites de APIs y goroutines.\npackage main\n\nimport (\n\t\"fmt\"\n\t\"net/http\"\n\t\"time\"\n)\n\nfunc hello(w http.ResponseWriter, req *http.Request) {\n\n\t// La infraestructura de `net/http` crea un `context.Context` para cada petición,\n\t// disponible a través del método `Context()`.\n\tctx := req.Context()\n\tfmt.Println(\"server: hello handler started\")\n\tdefer fmt.Println(\"server: hello handler ended\")\n\n\t// Esperamos unos segundos antes de enviar una respuesta al\n\t// cliente. Esto simula algún trabajo en progreso que realiza el servidor.\n\t// Mientras se trabaja, monitoreamos el canal `Done()` del contexto\n\t// para detectar si debemos cancelar la tarea y retornar lo antes posible.\n\tselect {\n\tcase <-time.After(10 * time.Second):\n\t\tfmt.Fprintf(w, \"hello\\n\")\n\tcase <-ctx.Done():\n\t\t// El método `Err()` del contexto devuelve un error\n\t\t// que explica por qué se cerró el canal `Done()`.\n\t\terr := ctx.Err()\n\t\tfmt.Println(\"server:\", err)\n\t\tinternalError := http.StatusInternalServerError\n\t\thttp.Error(w, err.Error(), internalError)\n\t}\n}\n\nfunc main() {\n\n\t// Como antes, registramos nuestro manejador en la ruta \"/hello\"\n\t// y comenzamos a servir peticiones.\n\thttp.HandleFunc(\"/hello\", hello)\n\thttp.ListenAndServe(\":8090\", nil)\n}\n",
+    "output": "# Ejecuta el servidor en segundo plano.\n$ go run context.go &\n\n# Simula una petición de cliente hacia `/hello`, presionando\n# Ctrl+C poco después de iniciar para enviar una señal\n# de cancelación.\n$ curl localhost:8090/hello\nserver: hello handler started\n^C\nserver: context canceled\nserver: hello handler ended\n",
     "officialUrl": "https://gobyexample.com/context"
   },
   {
@@ -5790,7 +5790,7 @@ const GO_TOPICS = [
     "titleEs": "Creación de Procesos Hijos (os/exec)",
     "category": "Redes, Procesos y Sistema Operativo",
     "categorySlug": "redes-sistema",
-    "categoryIcon": "🌐",
+    "categoryIcon": "globe",
     "difficulty": "Intermedio",
     "summary": "Ejecución de programas externos del sistema operativo, captura de salidas y tuberías con 'os/exec'.",
     "originalExpl": "A veces nuestros programas de Go necesitan generar otros procesos que no son de Go. Por ejemplo, la función exec de este ejemplo genera un proceso externo.",
@@ -5833,23 +5833,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package os/exec (Standard Library)",
+        "title": "Paquete os/exec (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/os/exec",
         "description": "Documentación oficial del paquete os/exec."
       },
       {
-        "title": "Go by Example: Spawning Processes",
+        "title": "Go by Example Original: Spawning Processes",
         "url": "https://gobyexample.com/spawning-processes",
         "description": "Ejemplo en Go by Example."
       },
       {
-        "title": "Brad Fitzpatrick: How Go runs subprocesses",
+        "title": "Brad Fitzpatrick: Cómo ejecuta Go los subprocesos en el sistema operativo",
         "url": "https://bradfitz.com/",
         "description": "Detalles históricos de la implementación de vfork y clone en el runtime de Go."
       }
     ],
-    "code": "// Sometimes our Go programs need to spawn other\n// processes.\n\npackage main\n\nimport (\n\t\"errors\"\n\t\"fmt\"\n\t\"io\"\n\t\"os/exec\"\n)\n\nfunc main() {\n\n\t// We'll start with a simple command that takes no\n\t// arguments or input and just prints something to\n\t// stdout. The `exec.Command` helper creates an object\n\t// to represent this external process.\n\tdateCmd := exec.Command(\"date\")\n\n\t// The `Output` method runs the command, waits for it\n\t// to finish and collects its standard output.\n\t//  If there were no errors, `dateOut` will hold bytes\n\t// with the date info.\n\tdateOut, err := dateCmd.Output()\n\tif err != nil {\n\t\tpanic(err)\n\t}\n\tfmt.Println(\"> date\")\n\tfmt.Println(string(dateOut))\n\n\t// `Output` and other methods of `Command` will return\n\t// `*exec.Error` if there was a problem executing the\n\t// command (e.g. wrong path), and `*exec.ExitError`\n\t// if the command ran but exited with a non-zero return\n\t// code.\n\t_, err = exec.Command(\"date\", \"-x\").Output()\n\tif err != nil {\n\t\tif e, ok := errors.AsType[*exec.Error](err); ok {\n\t\t\tfmt.Println(\"failed executing:\", e)\n\t\t} else if e, ok := errors.AsType[*exec.ExitError](err); ok {\n\t\t\texitCode := e.ExitCode()\n\t\t\tfmt.Println(\"command exit rc =\", exitCode)\n\t\t} else {\n\t\t\tpanic(err)\n\t\t}\n\t}\n\n\t// Next we'll look at a slightly more involved case\n\t// where we pipe data to the external process on its\n\t// `stdin` and collect the results from its `stdout`.\n\tgrepCmd := exec.Command(\"grep\", \"hello\")\n\n\t// Here we explicitly grab input/output pipes, start\n\t// the process, write some input to it, read the\n\t// resulting output, and finally wait for the process\n\t// to exit.\n\tgrepIn, _ := grepCmd.StdinPipe()\n\tgrepOut, _ := grepCmd.StdoutPipe()\n\tgrepCmd.Start()\n\tgrepIn.Write([]byte(\"hello grep\\ngoodbye grep\"))\n\tgrepIn.Close()\n\tgrepBytes, _ := io.ReadAll(grepOut)\n\tgrepCmd.Wait()\n\n\t// We omitted error checks in the above example, but\n\t// you could use the usual `if err != nil` pattern for\n\t// all of them. We also only collect the `StdoutPipe`\n\t// results, but you could collect the `StderrPipe` in\n\t// exactly the same way.\n\tfmt.Println(\"> grep hello\")\n\tfmt.Println(string(grepBytes))\n\n\t// Note that when spawning commands we need to\n\t// provide an explicitly delineated command and\n\t// argument array, vs. being able to just pass in one\n\t// command-line string. If you want to spawn a full\n\t// command with a string, you can use `bash`'s `-c`\n\t// option:\n\tlsCmd := exec.Command(\"bash\", \"-c\", \"ls -a -l -h\")\n\tlsOut, err := lsCmd.Output()\n\tif err != nil {\n\t\tpanic(err)\n\t}\n\tfmt.Println(\"> ls -a -l -h\")\n\tfmt.Println(string(lsOut))\n}\n",
-    "output": "# The spawned programs return output that is the same\n# as if we had run them directly from the command-line.\n$ go run spawning-processes.go \n> date\nThu 05 May 2022 10:10:12 PM PDT\n\n# date doesn't have a `-x` flag so it will exit with\n# an error message and non-zero return code.\ncommand exit rc = 1\n> grep hello\nhello grep\n\n> ls -a -l -h\ndrwxr-xr-x  4 mark 136B Oct 3 16:29 .\ndrwxr-xr-x 91 mark 3.0K Oct 3 12:50 ..\n-rw-r--r--  1 mark 1.3K Oct 3 16:28 spawning-processes.go\n",
+    "code": "// En ocasiones nuestros programas en Go necesitan iniciar y controlar otros\n// procesos del sistema operativo.\n\npackage main\n\nimport (\n\t\"errors\"\n\t\"fmt\"\n\t\"io\"\n\t\"os/exec\"\n)\n\nfunc main() {\n\n\t// Comenzaremos con un comando simple que no toma\n\t// argumentos ni entrada y solo imprime información en\n\t// stdout. El asistente `exec.Command` crea un objeto\n\t// para representar este proceso externo.\n\tdateCmd := exec.Command(\"date\")\n\n\t// El método `Output` ejecuta el comando, espera a que\n\t// finalice y recopila su salida estándar.\n\t// Si no hubo errores, `dateOut` contendrá los bytes\n\t// con la información de la fecha.\n\tdateOut, err := dateCmd.Output()\n\tif err != nil {\n\t\tpanic(err)\n\t}\n\tfmt.Println(\"> date\")\n\tfmt.Println(string(dateOut))\n\n\t// `Output` y otros métodos de `Command` devolverán\n\t// `*exec.Error` si hubo un problema al ejecutar el\n\t// comando (por ejemplo, ruta incorrecta), y `*exec.ExitError`\n\t// si el comando se ejecutó pero finalizó con un código de retorno\n\t// distinto de cero.\n\t_, err = exec.Command(\"date\", \"-x\").Output()\n\tif err != nil {\n\t\tif e, ok := errors.AsType[*exec.Error](err); ok {\n\t\t\tfmt.Println(\"failed executing:\", e)\n\t\t} else if e, ok := errors.AsType[*exec.ExitError](err); ok {\n\t\t\texitCode := e.ExitCode()\n\t\t\tfmt.Println(\"command exit rc =\", exitCode)\n\t\t} else {\n\t\t\tpanic(err)\n\t\t}\n\t}\n\n\t// A continuación veremos un caso un poco más elaborado\n\t// donde canalizamos datos al proceso externo en su entrada\n\t// `stdin` y recopilamos los resultados de su salida `stdout`.\n\tgrepCmd := exec.Command(\"grep\", \"hello\")\n\n\t// Aquí capturamos explícitamente las tuberías de entrada/salida, iniciamos\n\t// el proceso, le escribimos datos de entrada, leemos la\n\t// salida resultante y finalmente esperamos a que el proceso\n\t// termine.\n\tgrepIn, _ := grepCmd.StdinPipe()\n\tgrepOut, _ := grepCmd.StdoutPipe()\n\tgrepCmd.Start()\n\tgrepIn.Write([]byte(\"hello grep\\ngoodbye grep\"))\n\tgrepIn.Close()\n\tgrepBytes, _ := io.ReadAll(grepOut)\n\tgrepCmd.Wait()\n\n\t// Omitimos comprobaciones exhaustivas de error en el ejemplo anterior, pero\n\t// puedes usar el patrón habitual `if err != nil` para\n\t// todas ellas. También solo recopilamos los resultados de `StdoutPipe`,\n\t// pero podrías recopilar los de `StderrPipe` de la misma manera.\n\tfmt.Println(\"> grep hello\")\n\tfmt.Println(string(grepBytes))\n\n\t// Ten en cuenta que al lanzar comandos debemos\n\t// proporcionar un array explícito del comando y sus\n\t// argumentos, en lugar de pasar una sola cadena continua. Si\n\t// deseas ejecutar un comando completo mediante una cadena, puedes usar\n\t// la opción `-c` de `bash`:\n\tlsCmd := exec.Command(\"bash\", \"-c\", \"ls -a -l -h\")\n\tlsOut, err := lsCmd.Output()\n\tif err != nil {\n\t\tpanic(err)\n\t}\n\tfmt.Println(\"> ls -a -l -h\")\n\tfmt.Println(string(lsOut))\n}\n",
+    "output": "# Los programas generados devuelven una salida idéntica a\n# si los hubiésemos ejecutado directamente desde la línea de comandos.\n$ go run spawning-processes.go \n> date\nThu 05 May 2022 10:10:12 PM PDT\n\n# `date` no tiene una bandera `-x`, por lo que saldrá con\n# un mensaje de error y un código de retorno distinto de cero.\ncommand exit rc = 1\n> grep hello\nhello grep\n\n> ls -a -l -h\ndrwxr-xr-x  4 mark 136B Oct 3 16:29 .\ndrwxr-xr-x 91 mark 3.0K Oct 3 12:50 ..\n-rw-r--r--  1 mark 1.3K Oct 3 16:28 spawning-processes.go\n",
     "officialUrl": "https://gobyexample.com/spawning-processes"
   },
   {
@@ -5859,7 +5859,7 @@ const GO_TOPICS = [
     "titleEs": "Reemplazo de Procesos (syscall.Exec)",
     "category": "Redes, Procesos y Sistema Operativo",
     "categorySlug": "redes-sistema",
-    "categoryIcon": "🌐",
+    "categoryIcon": "globe",
     "difficulty": "Avanzado",
     "summary": "Reemplazo total del proceso de Go actual por otro ejecutable en el mismo espacio de proceso con syscall.Exec.",
     "originalExpl": "En el ejemplo anterior vimos cómo generar procesos externos. Hacemos esto cuando queremos un proceso externo accesible a un proceso Go en ejecución. A veces solo queremos reemplazar completamente el proceso Go actual por otro.",
@@ -5901,23 +5901,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package syscall: Exec",
+        "title": "Paquete syscall: Exec",
         "url": "https://pkg.go.dev/syscall#Exec",
         "description": "Documentación oficial de la llamada syscall.Exec en la biblioteca estándar."
       },
       {
-        "title": "Go by Example: Exec'ing Processes",
+        "title": "Go by Example Original: Exec'ing Processes",
         "url": "https://gobyexample.com/execing-processes",
         "description": "Ejemplo en Go by Example."
       },
       {
-        "title": "Man 2 execve (Linux Programmer's Manual)",
+        "title": "Manual de Linux: Llamada al sistema execve(2)",
         "url": "https://man7.org/linux/man-pages/man2/execve.2.html",
         "description": "La especificación del kernel de Unix de la llamada al sistema execve."
       }
     ],
-    "code": "// In the previous example we looked at\n// [spawning external processes](spawning-processes). We\n// do this when we need an external process accessible to\n// a running Go process. Sometimes we just want to\n// completely replace the current Go process with another\n// (perhaps non-Go) one. To do this we'll use Go's\n// implementation of the classic\n// <a href=\"https://en.wikipedia.org/wiki/Exec_(operating_system)\"><code>exec</code></a>\n// function.\n\npackage main\n\nimport (\n\t\"os\"\n\t\"os/exec\"\n\t\"syscall\"\n)\n\nfunc main() {\n\n\t// For our example we'll exec `ls`. Go requires an\n\t// absolute path to the binary we want to execute, so\n\t// we'll use `exec.LookPath` to find it (probably\n\t// `/bin/ls`).\n\tbinary, lookErr := exec.LookPath(\"ls\")\n\tif lookErr != nil {\n\t\tpanic(lookErr)\n\t}\n\n\t// `Exec` requires arguments in slice form (as\n\t// opposed to one big string). We'll give `ls` a few\n\t// common arguments. Note that the first argument should\n\t// be the program name.\n\targs := []string{\"ls\", \"-a\", \"-l\", \"-h\"}\n\n\t// `Exec` also needs a set of [environment variables](environment-variables)\n\t// to use. Here we just provide our current\n\t// environment.\n\tenv := os.Environ()\n\n\t// Here's the actual `syscall.Exec` call. If this call is\n\t// successful, the execution of our process will end\n\t// here and be replaced by the `/bin/ls -a -l -h`\n\t// process. If there is an error we'll get a return\n\t// value.\n\texecErr := syscall.Exec(binary, args, env)\n\tif execErr != nil {\n\t\tpanic(execErr)\n\t}\n}\n",
-    "output": "# When we run our program it is replaced by `ls`.\n$ go run execing-processes.go\ntotal 16\ndrwxr-xr-x  4 mark 136B Oct 3 16:29 .\ndrwxr-xr-x 91 mark 3.0K Oct 3 12:50 ..\n-rw-r--r--  1 mark 1.3K Oct 3 16:28 execing-processes.go\n\n# Note that Go does not offer a classic Unix `fork`\n# function. Usually this isn't an issue though, since\n# starting goroutines, spawning processes, and exec'ing\n# processes covers most use cases for `fork`.\n",
+    "code": "// En el ejemplo anterior revisamos cómo\n// [iniciar subprocesos externos](spawning-processes). Hacemos esto\n// cuando necesitamos un proceso externo accesible a un proceso Go\n// en ejecución. A veces simplemente deseamos reemplazar\n// por completo el proceso Go actual por otro (quizás no escrito en Go).\n// Para lograrlo utilizaremos la implementación en Go de la clásica\n// función <a href=\"https://en.wikipedia.org/wiki/Exec_(operating_system)\"><code>exec</code></a>.\n\npackage main\n\nimport (\n\t\"os\"\n\t\"os/exec\"\n\t\"syscall\"\n)\n\nfunc main() {\n\n\t// Para nuestro ejemplo ejecutaremos `ls`. Go requiere una\n\t// ruta absoluta al binario que deseamos ejecutar, por lo que\n\t// usaremos `exec.LookPath` para localizarlo (probablemente `/bin/ls`).\n\tbinary, lookErr := exec.LookPath(\"ls\")\n\tif lookErr != nil {\n\t\tpanic(lookErr)\n\t}\n\n\t// `Exec` requiere argumentos en forma de slice (a diferencia\n\t// de una única cadena grande). Le pasaremos a `ls` varios\n\t// argumentos comunes. Ten en cuenta que el primer argumento debe\n\t// ser el nombre del programa mismo.\n\targs := []string{\"ls\", \"-a\", \"-l\", \"-h\"}\n\n\t// `Exec` también necesita un conjunto de [variables de entorno](environment-variables)\n\t// a utilizar. Aquí simplemente proporcionamos nuestro\n\t// entorno actual.\n\tenv := os.Environ()\n\n\t// Aquí se realiza la llamada real a `syscall.Exec`. Si esta llamada tiene\n\t// éxito, la ejecución de nuestro proceso terminará aquí\n\t// y será reemplazada por el proceso `/bin/ls -a -l -h`.\n\t// Si ocurre un error recibiremos un valor de retorno.\n\texecErr := syscall.Exec(binary, args, env)\n\tif execErr != nil {\n\t\tpanic(execErr)\n\t}\n}\n",
+    "output": "# Al ejecutar nuestro programa, este es reemplazado por `ls`.\n$ go run execing-processes.go\ntotal 16\ndrwxr-xr-x  4 mark 136B Oct 3 16:29 .\ndrwxr-xr-x 91 mark 3.0K Oct 3 12:50 ..\n-rw-r--r--  1 mark 1.3K Oct 3 16:28 execing-processes.go\n\n# Ten en cuenta que Go no ofrece una función `fork` clásica de Unix.\n# Por lo general esto no representa ningún problema, ya que iniciar\n# goroutines, lanzar procesos y reemplazar procesos con exec cubren\n# la gran mayoría de casos de uso de `fork`.\n",
     "officialUrl": "https://gobyexample.com/execing-processes"
   },
   {
@@ -5927,7 +5927,7 @@ const GO_TOPICS = [
     "titleEs": "Manejo de Señales del Sistema Operativo (os/signal)",
     "category": "Redes, Procesos y Sistema Operativo",
     "categorySlug": "redes-sistema",
-    "categoryIcon": "🌐",
+    "categoryIcon": "globe",
     "difficulty": "Intermedio",
     "summary": "Captura y gestión de señales de terminación del sistema operativo (SIGINT, SIGTERM) para apagado controlado y elegante (Graceful Shutdown).",
     "originalExpl": "A veces queremos que nuestros programas de Go manejen de manera inteligente las señales de Unix. Por ejemplo, podríamos querer que un servidor se apague correctamente cuando recibe un SIGINT (Ctrl+C).",
@@ -5970,23 +5970,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package os/signal (Standard Library)",
+        "title": "Paquete os/signal (Biblioteca estándar de Go)",
         "url": "https://pkg.go.dev/os/signal",
         "description": "Documentación oficial del paquete os/signal."
       },
       {
-        "title": "Go by Example: Signals",
+        "title": "Go by Example Original: Signals",
         "url": "https://gobyexample.com/signals",
         "description": "Ejemplo en Go by Example."
       },
       {
-        "title": "Kubernetes: Termination of Pods and Graceful Shutdown",
+        "title": "Kubernetes: Terminación ordenada de pods y señales del sistema operativo",
         "url": "https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#pod-termination",
         "description": "Cómo interactúan SIGTERM y Graceful Shutdown en entornos de contenedores."
       }
     ],
-    "code": "// Sometimes we'd like our Go programs to intelligently\n// handle [Unix signals](https://en.wikipedia.org/wiki/Unix_signal).\n// For example, we might want a server to gracefully\n// shutdown when it receives a `SIGTERM`, or a command-line\n// tool to stop processing input if it receives a `SIGINT`.\n// Here's a modern way to handle signals using contexts.\n\npackage main\n\nimport (\n\t\"context\"\n\t\"fmt\"\n\t\"os/signal\"\n\t\"syscall\"\n)\n\nfunc main() {\n\t// `signal.NotifyContext` returns a context that's canceled\n\t// when one of the listed signals arrives.\n\tctx, stop := signal.NotifyContext(\n\t\tcontext.Background(), syscall.SIGINT, syscall.SIGTERM)\n\tdefer stop()\n\n\t// The program will wait here until one of the\n\t// configured signals is received.\n\tfmt.Println(\"awaiting signal\")\n\t<-ctx.Done()\n\n\t// `context.Cause` reports why the context was canceled.\n\t// For a signal-triggered cancellation, this includes\n\t// the signal value.\n\tfmt.Println()\n\tfmt.Println(context.Cause(ctx))\n\tfmt.Println(\"exiting\")\n}\n",
-    "output": "# When we run this program it will block waiting for a\n# signal. By typing `ctrl-C` (which the\n# terminal shows as `^C`) we can send a `SIGINT` signal,\n# causing the program to print the cancellation cause and then exit.\n$ go run signals.go\nawaiting signal\n^C\ninterrupt signal received\nexiting\n",
+    "code": "// En ocasiones deseamos que nuestros programas en Go manejen\n// inteligentemente [señales de Unix](https://en.wikipedia.org/wiki/Unix_signal).\n// Por ejemplo, podríamos querer que un servidor cierre de forma ordenada (graceful shutdown)\n// al recibir una señal `SIGTERM`, o que una herramienta de consola\n// detenga el procesamiento si recibe `SIGINT`.\n// Aquí tenemos una forma moderna de manejar señales utilizando contextos.\n\npackage main\n\nimport (\n\t\"context\"\n\t\"fmt\"\n\t\"os/signal\"\n\t\"syscall\"\n)\n\nfunc main() {\n\t// `signal.NotifyContext` devuelve un contexto que se cancela\n\t// cuando llega alguna de las señales listadas.\n\tctx, stop := signal.NotifyContext(\n\t\tcontext.Background(), syscall.SIGINT, syscall.SIGTERM)\n\tdefer stop()\n\n\t// El programa esperará aquí hasta que se reciba\n\t// una de las señales configuradas.\n\tfmt.Println(\"awaiting signal\")\n\t<-ctx.Done()\n\n\t// `context.Cause` informa la razón por la cual se canceló el contexto.\n\t// Para una cancelación activada por señal, esto incluye\n\t// el valor de la señal.\n\tfmt.Println()\n\tfmt.Println(context.Cause(ctx))\n\tfmt.Println(\"exiting\")\n}\n",
+    "output": "# Al ejecutar este programa se bloqueará esperando una\n# señal. Al teclear `ctrl-C` (que la terminal\n# muestra como `^C`) enviamos una señal `SIGINT`,\n# lo que provoca que el programa imprima la causa de cancelación y luego finalice.\n$ go run signals.go\nawaiting signal\n^C\ninterrupt signal received\nexiting\n",
     "officialUrl": "https://gobyexample.com/signals"
   },
   {
@@ -5996,7 +5996,7 @@ const GO_TOPICS = [
     "titleEs": "Salida del Programa y Códigos de Retorno (os.Exit)",
     "category": "Redes, Procesos y Sistema Operativo",
     "categorySlug": "redes-sistema",
-    "categoryIcon": "🌐",
+    "categoryIcon": "globe",
     "difficulty": "Principiante",
     "summary": "Terminación inmediata del proceso con código de estado del sistema operativo mediante os.Exit y su impacto en defers.",
     "originalExpl": "Usa os.Exit para salir inmediatamente con un estado dado. A diferencia de C, donde main devuelve un entero, en Go se debe invocar os.Exit explícitamente para devolver un código distinto de cero.",
@@ -6039,23 +6039,23 @@ const GO_TOPICS = [
     },
     "externalLinks": [
       {
-        "title": "Package os: Exit function",
+        "title": "Paquete os: Exit function",
         "url": "https://pkg.go.dev/os#Exit",
         "description": "Documentación oficial de la función os.Exit en la biblioteca estándar."
       },
       {
-        "title": "Go by Example: Exit",
+        "title": "Go by Example Original: Exit",
         "url": "https://gobyexample.com/exit",
         "description": "Ejemplo en Go by Example."
       },
       {
-        "title": "Dave Cheney: How to exit a Go program cleanly",
+        "title": "Dave Cheney: Cómo finalizar un programa en Go de forma limpia",
         "url": "https://dave.cheney.net/",
         "description": "Guía de Dave Cheney sobre el patrón func run() error y gestión de códigos de salida."
       }
     ],
-    "code": "// Use `os.Exit` to immediately exit with a given\n// status.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc main() {\n\n\t// `defer`s will _not_ be run when using `os.Exit`, so\n\t// this `fmt.Println` will never be called.\n\tdefer fmt.Println(\"!\")\n\n\t// Exit with status 3.\n\tos.Exit(3)\n}\n\n// Note that unlike e.g. C, Go does not use an integer\n// return value from `main` to indicate exit status. If\n// you'd like to exit with a non-zero status you should\n// use `os.Exit`.\n",
-    "output": "#  If you run `exit.go` using `go run`, the exit\n# will be picked up by `go` and printed.\n$ go run exit.go\nexit status 3\n\n# By building and executing a binary you can see\n# the status in the terminal.\n$ go build exit.go\n$ ./exit\n$ echo $?\n3\n\n# Note that the `!` from our program never got printed.\n",
+    "code": "// Usa `os.Exit` para salir inmediatamente con un código de\n// estado determinado.\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc main() {\n\n\t// Las funciones pospuestas con `defer` _no_ se ejecutarán al usar `os.Exit`,\n\t// por lo que este `fmt.Println` jamás será invocado.\n\tdefer fmt.Println(\"!\")\n\n\t// Salir con estado 3.\n\tos.Exit(3)\n}\n\n// Ten en cuenta que, a diferencia de lenguajes como C, Go no utiliza un\n// valor de retorno entero desde `main` para indicar el estado de salida. Si\n// deseas salir con un estado distinto de cero debes\n// emplear `os.Exit`.\n",
+    "output": "# Si ejecutas `exit.go` usando `go run`, la salida\n# será interceptada por `go` e impresa en pantalla.\n$ go run exit.go\nexit status 3\n\n# Compilando y ejecutando el binario directamente puedes observar\n# el código de estado devuelto en la terminal.\n$ go build exit.go\n$ ./exit\n$ echo $?\n3\n\n# Observa que el `!` de nuestro programa nunca llegó a imprimirse.\n",
     "officialUrl": "https://gobyexample.com/exit"
   }
 ];

@@ -1,5 +1,5 @@
-// Our first program will print the classic "hello world"
-// message. Here's the full source code.
+// Nuestro primer programa imprimirá el clásico mensaje "hello world".
+// Aquí está el código fuente completo.
 package main
 
 import "fmt"

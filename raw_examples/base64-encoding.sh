@@ -1,6 +1,6 @@
-# The string encodes to slightly different values with the
-# standard and URL base64 encoders (trailing `+` vs `-`)
-# but they both decode to the original string as desired.
+# La cadena se codifica con valores ligeramente distintos entre los
+# codificadores estándar y de URL (signo `+` frente a `-` al final),
+# pero ambos decodifican a la cadena original según lo esperado.
 $ go run base64-encoding.go
 YWJjMTIzIT8kKiYoKSctPUB+
 abc123!?$*&()'-=@~

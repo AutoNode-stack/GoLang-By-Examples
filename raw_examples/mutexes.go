@@ -1,7 +1,7 @@
-// In the previous example we saw how to manage simple
-// counter state using [atomic operations](atomic-counters).
-// For more complex state we can use a [_mutex_](https://en.wikipedia.org/wiki/Mutual_exclusion)
-// to safely access data across multiple goroutines.
+// En el ejemplo anterior vimos cómo gestionar el estado de un contador
+// simple utilizando [operaciones atómicas](atomic-counters).
+// Para estados más complejos podemos recurrir a un [_mutex_](https://en.wikipedia.org/wiki/Mutual_exclusion)
+// (exclusión mutua) para acceder a los datos de forma segura entre múltiples goroutines.
 
 package main
 
@@ -10,21 +10,20 @@ import (
 	"sync"
 )
 
-// Container holds a map of counters; since we want to
-// update it concurrently from multiple goroutines, we
-// add a `Mutex` to synchronize access.
-// Note that mutexes must not be copied, so if this
-// `struct` is passed around, it should be done by
-// pointer.
+// Container almacena un mapa de contadores; como deseamos
+// actualizarlo concurrentemente desde múltiples goroutines,
+// añadimos un `Mutex` para sincronizar el acceso.
+// Ten en cuenta que los mutexes no deben copiarse; si este
+// `struct` se pasa como parámetro, debe hacerse siempre
+// por puntero.
 type Container struct {
 	mu       sync.Mutex
 	counters map[string]int
 }
 
 func (c *Container) inc(name string) {
-	// Lock the mutex before accessing `counters`; unlock
-	// it at the end of the function using a [defer](defer)
-	// statement.
+	// Bloqueamos el mutex antes de acceder a `counters`; lo liberamos
+	// al final de la función mediante una sentencia [defer](defer).
 	c.mu.Lock()
 	defer c.mu.Unlock()
 	c.counters[name]++
@@ -32,24 +31,24 @@ func (c *Container) inc(name string) {
 
 func main() {
 	c := Container{
-		// Note that the zero value of a mutex is usable as-is, so no
-		// initialization is required here.
+		// Observa que el valor cero de un mutex es completamente utilizable tal cual,
+		// por lo que no se requiere inicialización explícita aquí.
 		counters: map[string]int{"a": 0, "b": 0},
 	}
 
 	var wg sync.WaitGroup
 
-	// This function increments a named counter
-	// in a loop.
+	// Esta función incrementa un contador por nombre
+	// dentro de un bucle.
 	doIncrement := func(name string, n int) {
 		for range n {
 			c.inc(name)
 		}
 	}
 
-	// Run several goroutines concurrently; note
-	// that they all access the same `Container`,
-	// and two of them access the same counter.
+	// Ejecutamos varias goroutines de manera concurrente; observa
+	// que todas acceden al mismo `Container`, y dos de ellas
+	// acceden al mismo contador "a".
 	wg.Go(func() {
 		doIncrement("a", 10000)
 	})
@@ -62,7 +61,7 @@ func main() {
 		doIncrement("b", 10000)
 	})
 
-	// Wait for the goroutines to finish
+	// Esperamos a que las goroutines finalicen.
 	wg.Wait()
 	fmt.Println(c.counters)
 }

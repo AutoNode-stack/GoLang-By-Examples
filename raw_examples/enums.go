@@ -1,21 +1,21 @@
-// _Enumerated types_ (enums) are a special case of
-// [sum types](https://en.wikipedia.org/wiki/Algebraic_data_type).
-// An enum is a type that has a fixed number of possible
-// values, each with a distinct name. Go doesn't have an
-// enum type as a distinct language feature, but enums
-// are simple to implement using existing language idioms.
+// Los _tipos enumerados_ (enums) son un caso especial de
+// [tipos suma](https://en.wikipedia.org/wiki/Algebraic_data_type).
+// Un enum es un tipo que posee un número fijo de valores posibles,
+// cada uno con un nombre distintivo. Go no cuenta con una palabra clave
+// `enum` dedicada en su sintaxis, pero los enums son muy sencillos
+// de implementar usando los modismos habituales del lenguaje.
 
 package main
 
 import "fmt"
 
-// Our enum type `ServerState` has an underlying `int` type.
+// Nuestro tipo de enumeración `ServerState` tiene un tipo subyacente `int`.
 type ServerState int
 
-// The possible values for `ServerState` are defined as
-// constants. The special keyword [iota](https://go.dev/ref/spec#Iota)
-// generates successive constant values automatically; in this
-// case 0, 1, 2 and so on.
+// Los valores posibles para `ServerState` se definen como
+// constantes. La palabra reservada especial [iota](https://go.dev/ref/spec#Iota)
+// genera valores constantes sucesivos de forma automática; en este
+// caso 0, 1, 2 y así sucesivamente.
 const (
 	StateIdle ServerState = iota
 	StateConnected
@@ -23,15 +23,15 @@ const (
 	StateRetrying
 )
 
-// By implementing the [fmt.Stringer](https://pkg.go.dev/fmt#Stringer)
-// interface, values of `ServerState` can be printed out or converted
-// to strings.
+// Al implementar la interfaz [fmt.Stringer](https://pkg.go.dev/fmt#Stringer),
+// los valores de `ServerState` pueden imprimirse o convertirse
+// a cadenas de texto.
 //
-// This can get cumbersome if there are many possible values. In such
-// cases the [stringer tool](https://pkg.go.dev/golang.org/x/tools/cmd/stringer)
-// can be used in conjunction with `go:generate` to automate the
-// process. See [this post](https://eli.thegreenplace.net/2021/a-comprehensive-guide-to-go-generate)
-// for a longer explanation.
+// Esto puede volverse tedioso si hay muchos valores posibles. En tales casos,
+// la herramienta [stringer](https://pkg.go.dev/golang.org/x/tools/cmd/stringer)
+// puede usarse junto con `go:generate` para automatizar el
+// proceso. Consulta [este artículo](https://eli.thegreenplace.net/2021/a-comprehensive-guide-to-go-generate)
+// para una explicación más exhaustiva.
 var stateName = map[ServerState]string{
 	StateIdle:      "idle",
 	StateConnected: "connected",
@@ -46,24 +46,24 @@ func (ss ServerState) String() string {
 func main() {
 	ns := transition(StateIdle)
 	fmt.Println(ns)
-	// If we have a value of type `int`, we cannot pass it to `transition` - the
-	// compiler will complain about type mismatch. This provides some degree of
-	// compile-time type safety for enums.
+	// Si tenemos un valor de tipo `int`, no podemos pasarlo a `transition`: el
+	// compilador señalará un error de incompatibilidad de tipos. Esto otorga cierta
+	// seguridad de tipos en tiempo de compilación para los enums.
 
 	ns2 := transition(ns)
 	fmt.Println(ns2)
 }
 
-// transition emulates a state transition for a
-// server; it takes the existing state and returns
-// a new state.
+// `transition` emula una transición de estado para un
+// servidor; toma el estado existente y retorna
+// un nuevo estado.
 func transition(s ServerState) ServerState {
 	switch s {
 	case StateIdle:
 		return StateConnected
 	case StateConnected, StateRetrying:
-		// Suppose we check some predicates here to
-		// determine the next state...
+		// Supongamos que aquí evaluamos ciertos predicados para
+		// determinar el próximo estado...
 		return StateIdle
 	case StateError:
 		return StateError

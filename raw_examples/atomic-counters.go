@@ -1,9 +1,9 @@
-// The primary mechanism for managing state in Go is
-// communication over channels. We saw this for example
-// with [worker pools](worker-pools). There are a few other
-// options for managing state though. Here we'll
-// look at using the `sync/atomic` package for _atomic
-// counters_ accessed by multiple goroutines.
+// El mecanismo primordial para gestionar estado en Go es
+// la comunicación a través de canales. Vimos esto, por ejemplo,
+// con los [pools de trabajadores](worker-pools). Existen no obstante
+// otras opciones para gestionar estado. Aquí examinaremos el uso
+// del paquete `sync/atomic` para _contadores atómicos_
+// accedidos por múltiples goroutines simultáneamente.
 
 package main
 
@@ -15,30 +15,30 @@ import (
 
 func main() {
 
-	// We'll use an atomic integer type to represent our
-	// (always-positive) counter.
+	// Usaremos un tipo entero atómico para representar nuestro
+	// contador (siempre positivo).
 	var ops atomic.Uint64
 
-	// A WaitGroup will help us wait for all goroutines
-	// to finish their work.
+	// Un WaitGroup nos ayudará a esperar a que todas las goroutines
+	// concluyan su trabajo.
 	var wg sync.WaitGroup
 
-	// We'll start 50 goroutines that each increment the
-	// counter exactly 1000 times.
+	// Iniciaremos 50 goroutines que incrementarán el
+	// contador exactamente 1000 veces cada una.
 	for range 50 {
 		wg.Go(func() {
 			for range 1000 {
-				// To atomically increment the counter we use `Add`.
+				// Para incrementar el contador de forma atómica usamos `Add`.
 				ops.Add(1)
 			}
 		})
 	}
 
-	// Wait until all the goroutines are done.
+	// Esperamos hasta que todas las goroutines hayan finalizado.
 	wg.Wait()
 
-	// Here no goroutines are writing to 'ops', but using
-	// `Load` it's safe to atomically read a value even while
-	// other goroutines are (atomically) updating it.
+	// En este punto ninguna goroutine escribe en 'ops', pero usando
+	// `Load` es completamente seguro leer un valor de forma atómica incluso
+	// mientras otras goroutines lo están actualizando (atómicamente).
 	fmt.Println("ops:", ops.Load())
 }

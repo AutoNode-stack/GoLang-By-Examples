@@ -1,16 +1,16 @@
-// Go supports [_anonymous functions_](https://en.wikipedia.org/wiki/Anonymous_function),
-// which can form <a href="https://en.wikipedia.org/wiki/Closure_(computer_science)"><em>closures</em></a>.
-// Anonymous functions are useful when you want to define
-// a function inline without having to name it.
+// Go admite [_funciones anónimas_](https://en.wikipedia.org/wiki/Anonymous_function),
+// que pueden formar <a href="https://en.wikipedia.org/wiki/Closure_(computer_science)"><em>closures</em></a> (clausuras).
+// Las funciones anónimas resultan muy útiles cuando deseas definir
+// una función en línea sin necesidad de asignarle un nombre.
 
 package main
 
 import "fmt"
 
-// This function `intSeq` returns another function, which
-// we define anonymously in the body of `intSeq`. The
-// returned function _closes over_ the variable `i` to
-// form a closure.
+// Esta función `intSeq` retorna otra función, la cual
+// definimos de manera anónima en el cuerpo de `intSeq`. La
+// función retornada _captura_ la variable `i` para
+// formar un closure.
 func intSeq() func() int {
 	i := 0
 	return func() int {
@@ -21,20 +21,20 @@ func intSeq() func() int {
 
 func main() {
 
-	// We call `intSeq`, assigning the result (a function)
-	// to `nextInt`. This function value captures its
-	// own `i` value, which will be updated each time
-	// we call `nextInt`.
+	// Llamamos a `intSeq`, asignando el resultado (una función)
+	// a `nextInt`. Este valor de función captura su
+	// propio valor de `i`, el cual se actualizará cada vez
+	// que invoquemos `nextInt`.
 	nextInt := intSeq()
 
-	// See the effect of the closure by calling `nextInt`
-	// a few times.
+	// Observa el efecto del closure invocando `nextInt`
+	// varias veces consecutivas.
 	fmt.Println(nextInt())
 	fmt.Println(nextInt())
 	fmt.Println(nextInt())
 
-	// To confirm that the state is unique to that
-	// particular function, create and test a new one.
+	// Para confirmar que el estado es único para esa
+	// función en particular, creamos y probamos una nueva instancia.
 	newInts := intSeq()
 	fmt.Println(newInts())
 }

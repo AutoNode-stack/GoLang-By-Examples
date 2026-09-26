@@ -1,10 +1,10 @@
-// Parsing numbers from strings is a basic but common task
-// in many programs; here's how to do it in Go.
+// El parseo de números a partir de cadenas de texto es una tarea básica pero frecuente
+// en muchos programas; aquí veremos cómo llevarla a cabo en Go.
 
 package main
 
-// The built-in package `strconv` provides the number
-// parsing.
+// El paquete integrado `strconv` provee las funciones para
+// parsear números.
 import (
 	"fmt"
 	"strconv"
@@ -12,31 +12,31 @@ import (
 
 func main() {
 
-	// With `ParseFloat`, this `64` tells how many bits of
-	// precision to parse.
+	// Con `ParseFloat`, este `64` indica cuántos bits de
+	// precisión se deben utilizar para el parseo.
 	f, _ := strconv.ParseFloat("1.234", 64)
 	fmt.Println(f)
 
-	// For `ParseInt`, the `0` means infer the base from
-	// the string. `64` requires that the result fit in 64
+	// Para `ParseInt`, el `0` indica inferir la base numérica a partir
+	// de la cadena. `64` exige que el resultado quepa en 64
 	// bits.
 	i, _ := strconv.ParseInt("123", 0, 64)
 	fmt.Println(i)
 
-	// `ParseInt` will recognize hex-formatted numbers.
+	// `ParseInt` reconocerá números con formato hexadecimal.
 	d, _ := strconv.ParseInt("0x1c8", 0, 64)
 	fmt.Println(d)
 
-	// A `ParseUint` is also available.
+	// También existe la función `ParseUint` para enteros sin signo.
 	u, _ := strconv.ParseUint("789", 0, 64)
 	fmt.Println(u)
 
-	// `Atoi` is a convenience function for basic base-10
-	// `int` parsing.
+	// `Atoi` es una función de conveniencia para el parseo básico de enteros
+	// en base 10 (`int`).
 	k, _ := strconv.Atoi("135")
 	fmt.Println(k)
 
-	// Parse functions return an error on bad input.
+	// Las funciones de parseo devuelven un error cuando reciben entradas no válidas.
 	_, e := strconv.Atoi("wat")
 	fmt.Println(e)
 }

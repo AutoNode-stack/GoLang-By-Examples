@@ -1,10 +1,10 @@
-# We receive the values `"one"` and then `"two"` as
-# expected.
+# Recibimos los valores `"one"` y luego `"two"` como
+# se esperaba.
 $ time go run select.go 
 received one
 received two
 
-# Note that the total execution time is only ~2 seconds
-# since both the 1 and 2 second `Sleeps` execute
-# concurrently.
+# Ten en cuenta que el tiempo total de ejecución es de apenas ~2 segundos,
+# ya que ambos `Sleep` de 1 y 2 segundos se ejecutan de
+# forma concurrente.
 real	0m2.245s

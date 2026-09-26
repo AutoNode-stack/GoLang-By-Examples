@@ -1,26 +1,26 @@
-// Go supports <em><a href="https://en.wikipedia.org/wiki/Pointer_(computer_programming)">pointers</a></em>,
-// allowing you to pass references to values and records
-// within your program.
+// Go admite <em><a href="https://en.wikipedia.org/wiki/Pointer_(computer_programming)">punteros</a></em>,
+// lo que permite pasar referencias a valores y registros
+// dentro de tu programa.
 
 package main
 
 import "fmt"
 
-// We'll show how pointers work in contrast to values with
-// 2 functions: `zeroval` and `zeroptr`. `zeroval` has an
-// `int` parameter, so arguments will be passed to it by
-// value. `zeroval` will get a copy of `ival` distinct
-// from the one in the calling function.
+// Mostraremos cómo funcionan los punteros en contraste con los valores
+// mediante 2 funciones: `zeroval` y `zeroptr`. `zeroval` tiene un
+// parámetro de tipo `int`, por lo que los argumentos se pasan por
+// valor. `zeroval` recibirá una copia de `ival` distinta
+// a la de la función que la invoca.
 func zeroval(ival int) {
 	ival = 0
 }
 
-// `zeroptr` in contrast has an `*int` parameter, meaning
-// that it takes an `int` pointer. The `*iptr` code in the
-// function body then _dereferences_ the pointer from its
-// memory address to the current value at that address.
-// Assigning a value to a dereferenced pointer changes the
-// value at the referenced address.
+// `zeroptr`, en cambio, tiene un parámetro `*int`, lo que significa
+// que recibe un puntero a `int`. El código `*iptr` en el cuerpo
+// de la función _desreferencia_ el puntero desde su dirección
+// de memoria al valor actual almacenado en dicha dirección.
+// Asignar un valor a un puntero desreferenciado modifica el
+// valor en la dirección referenciada.
 func zeroptr(iptr *int) {
 	*iptr = 0
 }
@@ -32,16 +32,16 @@ func main() {
 	zeroval(i)
 	fmt.Println("zeroval:", i)
 
-	// The `&i` syntax gives the memory address of `i`,
-	// i.e. a pointer to `i`.
+	// La sintaxis `&i` proporciona la dirección de memoria de `i`,
+	// es decir, un puntero a `i`.
 	zeroptr(&i)
 	fmt.Println("zeroptr:", i)
 
-	// Pointers can be printed too.
+	// Los punteros también pueden imprimirse directamente.
 	fmt.Println("pointer:", &i)
 
-	// A new pointer to a value can be created with the
-	// builtin function `new`.
+	// Se puede crear un puntero nuevo a un valor utilizando la
+	// función incorporada `new`.
 	p := new(42)
 	fmt.Println("value at *p:", *p)
 	zeroptr(p)

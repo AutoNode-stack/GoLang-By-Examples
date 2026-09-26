@@ -1,5 +1,5 @@
-// Go supports _constants_ of character, string, boolean,
-// and numeric values.
+// Go admite _constantes_ de caracteres, cadenas de texto, valores booleanos
+// y numéricos.
 
 package main
 
@@ -8,28 +8,28 @@ import (
 	"math"
 )
 
-// `const` declares a constant value.
+// `const` declara un valor constante.
 const s string = "constant"
 
 func main() {
 	fmt.Println(s)
 
-	// A `const` statement can also appear inside a
-	// function body.
+	// Una sentencia `const` también puede aparecer dentro del
+	// cuerpo de una función.
 	const n = 500000000
 
-	// Constant expressions perform arithmetic with
-	// arbitrary precision.
+	// Las expresiones constantes realizan aritmética con
+	// precisión arbitraria.
 	const d = 3e20 / n
 	fmt.Println(d)
 
-	// A numeric constant has no type until it's given
-	// one, such as by an explicit conversion.
+	// Una constante numérica no tiene un tipo definido hasta que se le asigna
+	// uno, por ejemplo mediante una conversión explícita.
 	fmt.Println(int64(d))
 
-	// A number can be given a type by using it in a
-	// context that requires one, such as a variable
-	// assignment or function call. For example, here
-	// `math.Sin` expects a `float64`.
+	// A un número se le puede asignar un tipo utilizándolo en un
+	// contexto que lo requiera, como una asignación de variable
+	// o una llamada a función. Por ejemplo, aquí
+	// `math.Sin` espera un `float64`.
 	fmt.Println(math.Sin(n))
 }

@@ -9,26 +9,33 @@ Diseñado tanto para desarrolladores que inician en Go como para ingenieros de s
 ## ✨ Características Principales
 
 - 📚 **85 Temas Oficiales Completos**: Desde fundamentos de sintaxis (`Variables`, `Slices`, `Maps`) hasta concurrencia avanzada (`Goroutines`, `Worker Pools`, `Mutexes`, `Rate Limiting`) y paquetes del sistema (`HTTP Server`, `Context`, `JSON`, `Exec`).
-- 🎯 **Explicaciones Multinivel por Tema**:
+- 🎯 **Explicaciones y Niveles Avanzados por Tema**:
   - **Nivel Básico (Esencial)**: Concepto elemental, analogía práctica y reglas sintácticas obligatorias.
   - **Nivel Intermedio (Práctico / Idiomático)**: Patrones de producción, manejo de errores idiomáticos y mejores prácticas de la comunidad Go.
   - **Nivel Experto (Arquitectura y Rendimiento)**: Comportamiento interno del runtime, asignación de memoria (*heap vs stack*), *escape analysis*, costos de sincronización y *gotchas* críticos.
-- 🧪 **Laboratorio de Evaluación y Ejercicios**:
+  - **💡 Gotchas y Anti-patrones de Producción**: Trampas comunes en memoria, data races, fugas de goroutines y comparativa visual de código peligroso vs idiomático.
+  - **💼 Preguntas de Entrevista FAANG / Senior**: Preguntas trampa y respuestas argumentadas frecuentes en entrevistas de Google, Amazon, Uber, Mercado Libre y Meta.
+- 🧪 **Laboratorio de Evaluación y Editor Ergonómico**:
   - Enunciado práctico de ingeniería con caso de uso realista para cada tema.
-  - Editor de código interactivo integrado.
+  - Soporte de tecla <kbd>Tab</kbd> (4 espacios), auto-indentación al dar <kbd>Enter</kbd> y auto-cierre de pares `()`, `{}`, `[]`, `""`.
+  - Validador estático inteligente de código Go (`package main`, balance de llaves, estructuras idiomáticas requeridas).
   - Sistema de **Pistas** graduales y **Solución canónica documentada paso a paso**.
   - Botón directo para probar o compartir el ejercicio en el **Go Playground Oficial** (`go.dev/play`).
+- ⚡ **Command Palette Global (<kbd>Ctrl</kbd> + <kbd>K</kbd>)**:
+  - Modal flotante estilo Raycast / VS Code con búsqueda difusa instantánea entre los 85 temas y ejecución de comandos directos (cambiar tema, alternar completado, respaldos).
+- 🏆 **Métricas y Generador de Certificado Digital**:
+  - Desglose de progreso por nivel de complejidad (*Principiante*, *Intermedio*, *Avanzado*).
+  - Generación de diploma oficial en alta resolución (HTML5 Canvas) descargable en PNG con nombre personalizado.
+- 📦 **Respaldo 100% Privado (Exportar / Importar JSON)**:
+  - Descarga tu progreso en un archivo JSON portátil y restáuralo en cualquier dispositivo sin depender de bases de datos remotas.
+- 📡 **PWA y Soporte 100% Offline**:
+  - Instalable como aplicación de escritorio o móvil con Service Worker (`sw.js`) y `manifest.json`. Funciona sin conexión a internet.
 - 🌙 **Diseño Antifatiga Visual y Ergonómico**:
   - **Modo Calma Nocturna (Dark Slate)**: Contraste optimizado para sesiones prolongadas de lectura y programación nocturna.
   - **Modo Papel Cálido (Sepia)**: Filtro de luz azul para lectura diurna confortable.
   - **Modo OLED (Negro Puro)**: Máximo ahorro energético y alto contraste para pantallas AMOLED.
-- ⚡ **Búsqueda Instantánea y Filtros Rápidos**:
-  - Acceso global rápido con <kbd>Ctrl</kbd> + <kbd>K</kbd> (o <kbd>Cmd</kbd> + <kbd>K</kbd>).
-  - Búsqueda en tiempo real por título, descripción técnica o palabras clave.
-  - Filtros por nivel de dificultad (*Principiante*, *Intermedio*, *Avanzado*), estado (*Pendientes*, *Completados*) y *Favoritos* (★).
-- 💾 **100% Privado y Estático**:
-  - No requiere backend, login ni bases de datos remotas.
-  - El progreso de estudio y los marcadores se conservan de forma segura en el `localStorage` del navegador.
+  - **Modo Gris Nórdico (Nord)**: Paleta suave inspirada en temas escandinavos.
+  - **Modo Zen**: Oculta la barra lateral con <kbd>Ctrl</kbd> + <kbd>B</kbd> para lectura inmersiva sin distracciones.
 
 ---
 
@@ -131,10 +138,11 @@ docker run -d -p 80:80 --name go-learning go-by-example-es
 
 | Atajo | Acción |
 | :--- | :--- |
-| <kbd>Ctrl</kbd> + <kbd>K</kbd> / <kbd>Cmd</kbd> + <kbd>K</kbd> | Enfocar la barra de búsqueda global |
-| <kbd>Esc</kbd> | Limpiar la búsqueda y cerrar menús flotantes |
-| <kbd>Alt</kbd> + <kbd>→</kbd> | Avanzar al tema siguiente |
-| <kbd>Alt</kbd> + <kbd>←</kbd> | Regresar al tema anterior |
+| <kbd>Ctrl</kbd> + <kbd>K</kbd> / <kbd>Cmd</kbd> + <kbd>K</kbd> | Abrir Command Palette (Búsqueda difusa y comandos) |
+| <kbd>Ctrl</kbd> + <kbd>B</kbd> | Alternar Modo Zen (Ocultar/Mostrar barra lateral en desktop) |
+| <kbd>Tab</kbd> / <kbd>Shift</kbd> + <kbd>Tab</kbd> | Indentar / Desindentar código en el editor de retos |
+| <kbd>→</kbd> / <kbd>←</kbd> | Avanzar o retroceder al tema siguiente o anterior |
+| <kbd>Esc</kbd> | Cerrar Command Palette o menús flotantes |
 
 ---
 

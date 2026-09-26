@@ -1,7 +1,7 @@
-// In Go, an _array_ is a numbered sequence of elements of a
-// specific length. In typical Go code, [slices](slices) are
-// much more common; arrays are useful in some special
-// scenarios.
+// En Go, un _array_ (arreglo) es una secuencia numerada de elementos de una
+// longitud específica. En el código idiomático de Go, los [slices](slices) son
+// mucho más comunes; los arrays son útiles en algunos escenarios
+// particulares de memoria contigua.
 
 package main
 
@@ -9,41 +9,41 @@ import "fmt"
 
 func main() {
 
-	// Here we create an array `a` that will hold exactly
-	// 5 `int`s. The type of elements and length are both
-	// part of the array's type. By default an array is
-	// zero-valued, which for `int`s means `0`s.
+	// Aquí creamos un array `a` que contendrá exactamente
+	// 5 valores de tipo `int`. Tanto el tipo de los elementos como la longitud
+	// forman parte del tipo del array. Por defecto, un array tiene el
+	// valor cero, que para los `int` representa `0`.
 	var a [5]int
 	fmt.Println("emp:", a)
 
-	// We can set a value at an index using the
-	// `array[index] = value` syntax, and get a value with
+	// Podemos establecer un valor en un índice mediante la
+	// sintaxis `array[index] = value`, y obtener un valor con
 	// `array[index]`.
 	a[4] = 100
 	fmt.Println("set:", a)
 	fmt.Println("get:", a[4])
 
-	// The builtin `len` returns the length of an array.
+	// La función incorporada `len` devuelve la longitud de un array.
 	fmt.Println("len:", len(a))
 
-	// Use this syntax to declare and initialize an array
-	// in one line.
+	// Usa esta sintaxis para declarar e inicializar un array
+	// en una sola línea.
 	b := [5]int{1, 2, 3, 4, 5}
 	fmt.Println("dcl:", b)
 
-	// You can also have the compiler count the number of
-	// elements for you with `...`
+	// También puedes hacer que el compilador cuente la cantidad de
+	// elementos automáticamente utilizando `...`
 	b = [...]int{1, 2, 3, 4, 5}
 	fmt.Println("dcl:", b)
 
-	// If you specify the index with `:`, the elements in
-	// between will be zeroed.
+	// Si especificas el índice con `:`, los elementos
+	// intermedios se rellenarán con ceros.
 	b = [...]int{100, 3: 400, 500}
 	fmt.Println("idx:", b)
 
-	// Array types are one-dimensional, but you can
-	// compose types to build multi-dimensional data
-	// structures.
+	// Los tipos de array son unidimensionales, pero puedes
+	// componer tipos para construir estructuras de datos
+	// multidimensionales.
 	var twoD [2][3]int
 	for i := range 2 {
 		for j := range 3 {
@@ -52,8 +52,8 @@ func main() {
 	}
 	fmt.Println("2d: ", twoD)
 
-	// You can create and initialize multi-dimensional
-	// arrays at once too.
+	// También puedes crear e inicializar arrays multidimensionales
+	// de una sola vez.
 	twoD = [2][3]int{
 		{1, 2, 3},
 		{1, 2, 3},

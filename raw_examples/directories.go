@@ -1,5 +1,5 @@
-// Go has several useful functions for working with
-// *directories* in the file system.
+// Go cuenta con varias funciones útiles para trabajar con
+// *directorios* en el sistema de archivos.
 
 package main
 
@@ -18,18 +18,17 @@ func check(e error) {
 
 func main() {
 
-	// Create a new sub-directory in the current working
-	// directory.
+	// Crea un nuevo subdirectorio en el directorio de trabajo
+	// actual.
 	err := os.Mkdir("subdir", 0755)
 	check(err)
 
-	// When creating temporary directories, it's good
-	// practice to `defer` their removal. `os.RemoveAll`
-	// will delete a whole directory tree (similarly to
-	// `rm -rf`).
+	// Al crear directorios temporales o de prueba, es buena
+	// práctica posponer (`defer`) su eliminación. `os.RemoveAll`
+	// eliminará un árbol completo de directorios (similar a `rm -rf`).
 	defer os.RemoveAll("subdir")
 
-	// Helper function to create a new empty file.
+	// Función auxiliar para crear un archivo vacío nuevo.
 	createEmptyFile := func(name string) {
 		d := []byte("")
 		check(os.WriteFile(name, d, 0644))
@@ -37,9 +36,8 @@ func main() {
 
 	createEmptyFile("subdir/file1")
 
-	// We can create a hierarchy of directories, including
-	// parents with `MkdirAll`. This is similar to the
-	// command-line `mkdir -p`.
+	// Podemos crear una jerarquía completa de directorios, incluyendo
+	// los padres faltantes con `MkdirAll` (similar a `mkdir -p` en la terminal).
 	err = os.MkdirAll("subdir/parent/child", 0755)
 	check(err)
 
@@ -47,8 +45,8 @@ func main() {
 	createEmptyFile("subdir/parent/file3")
 	createEmptyFile("subdir/parent/child/file4")
 
-	// `ReadDir` lists directory contents, returning a
-	// slice of `os.DirEntry` objects.
+	// `ReadDir` lista el contenido de un directorio, devolviendo
+	// un slice de objetos `os.DirEntry`.
 	c, err := os.ReadDir("subdir/parent")
 	check(err)
 
@@ -57,13 +55,13 @@ func main() {
 		fmt.Println(" ", entry.Name(), entry.IsDir())
 	}
 
-	// `Chdir` lets us change the current working directory,
-	// similarly to `cd`.
+	// `Chdir` nos permite cambiar el directorio de trabajo actual,
+	// de manera similar al comando `cd`.
 	err = os.Chdir("subdir/parent/child")
 	check(err)
 
-	// Now we'll see the contents of `subdir/parent/child`
-	// when listing the *current* directory.
+	// Ahora veremos el contenido de `subdir/parent/child`
+	// al listar el directorio *actual*.
 	c, err = os.ReadDir(".")
 	check(err)
 
@@ -72,21 +70,20 @@ func main() {
 		fmt.Println(" ", entry.Name(), entry.IsDir())
 	}
 
-	// `cd` back to where we started.
+	// Regresamos mediante `cd` al punto de partida.
 	err = os.Chdir("../../..")
 	check(err)
 
-	// We can also visit a directory *recursively*,
-	// including all its sub-directories. `WalkDir` accepts
-	// a callback function to handle every file or
-	// directory visited.
+	// También podemos recorrer un directorio de forma *recursiva*,
+	// incluyendo todos sus subdirectorios. `WalkDir` acepta
+	// una función de retorno (callback) para procesar cada archivo o directorio visitado.
 	fmt.Println("Visiting subdir")
 	err = filepath.WalkDir("subdir", visit)
 	check(err)
 }
 
-// `visit` is called for every file or directory found
-// recursively by `filepath.WalkDir`.
+// `visit` es invocada por cada archivo o directorio hallado
+// recursivamente mediante `filepath.WalkDir`.
 func visit(path string, d fs.DirEntry, err error) error {
 	if err != nil {
 		return err
