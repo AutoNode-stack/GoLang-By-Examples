@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Go by Example en Español | Edición Pro Ampliada con Evaluaciones</title>
+  <meta name="description" content="Aprende y domina Go (Golang) con los 85 ejemplos oficiales de Go by Example ampliados en español: explicaciones de nivel Básico, Intermedio y Experto, Gotchas de producción, preguntas de entrevistas FAANG, evaluaciones interactivas y modo offline.">
+  <meta name="theme-color" content="#0e131b">
+  
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Go by Example en Español | Edición Pro Ampliada">
+  <meta property="og:description" content="Plataforma de aprendizaje integral de Go con 85 temas, evaluaciones, niveles pedagógicos y gotchas de producción.">
+  <meta property="og:image" content="assets/icon-512.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Go by Example en Español (Edición Pro)">
+  <meta name="twitter:description" content="85 temas completos de Go con ejercicios, niveles básico, intermedio y experto, y preguntas de entrevistas técnicas.">
+
+  <!-- Manifest PWA para instalación Offline -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/icon-192.svg">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2096109916903722"
+     crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/styles.css?v=2.6">
+</head>
+<body>
+  <div class="app-layout">
+    
+    <!-- ÁREA DE CONTENIDO PRINCIPAL -->
+    <main class="main-wrapper">
+      
+      <!-- Topbar de Navegación y Herramientas (Botones anclados a la izquierda) -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <nav class="breadcrumbs" aria-label="Miga de pan">
+            <a href="../index.html" class="bread-home-link" title="Ir al Catálogo de Cursos" style="color: var(--accent); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
+              <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              <span>Cursos</span>
+            </a>
+            <span class="sep">/</span>
+            <span class="badge-cat" id="breadCategory">Fundamentos</span>
+            <span class="sep">/</span>
+            <span class="current" id="breadCurrent">Hola Mundo</span>
+          </nav>
+
+          <div class="topbar-divider"></div>
+
+          <!-- Selector de Temas Antifatiga Visual -->
+          <div class="theme-selector-wrap" title="Selecciona un tema para descanso visual">
+            <button class="theme-btn active" data-theme="slate" title="Modo Calma Nocturna (Pizarra oscura)">
+              <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+              <span class="theme-name">Calma</span>
+            </button>
+            <button class="theme-btn" data-theme="sepia" title="Modo Sepia / Papel Cálido (Filtro de luz azul)">
+              <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+              <span class="theme-name">Sepia</span>
+            </button>
+            <button class="theme-btn" data-theme="oled" title="Modo OLED (Negro absoluto)">
+              <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a10 10 0 0 1 0 20z" fill="currentColor"></path></svg>
+              <span class="theme-name">OLED</span>
+            </button>
+            <button class="theme-btn" data-theme="nord" title="Modo Gris Nórdico (Paleta Nord)">
+              <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="20" y1="16" x2="4" y2="8"></line><line x1="4" y1="16" x2="20" y2="8"></line></svg>
+              <span class="theme-name">Nórdico</span>
+            </button>
+          </div>
+
+          <!-- Botones de Acción (Anclados a la izquierda junto a la navegación) -->
+          <div class="topbar-actions-left">
+            <a href="../index.html" class="action-btn" title="Volver al Catálogo de Cursos" style="text-decoration: none;">
+              <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+              <span class="btn-label">Catálogo</span>
+            </a>
+
+            <button class="action-btn" id="btnShare" title="Copiar enlace directo con pestaña activa">
+              <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+              <span class="btn-label">Compartir</span>
+            </button>
+
+            <button class="action-btn" id="btnStats" title="Ver métricas de estudio y diploma">
+              <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34"></path><path d="M6 2h12v7a6 6 0 0 1-12 0V2z"></path></svg>
+              <span class="btn-label">Métricas</span>
+            </button>
+
+            <button class="action-btn" id="btnBackup" title="Descargar o restaurar tu progreso">
+              <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+              <span class="btn-label">Respaldo</span>
+            </button>
+
+            <button class="action-btn" id="btnToggleBookmark" title="Guardar en favoritos">
+              <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span class="btn-label">Favorito</span>
+            </button>
+
+            <button class="action-btn" id="btnToggleCompleted" title="Marcar como tema estudiado y completado">
+              <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span class="btn-label">Completar</span>
+            </button>
+
+            <button class="action-btn playground-btn" id="btnOpenPlayground" title="Abrir código en el área de pruebas oficial de Go">
+              <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+              <span class="btn-label">Área de pruebas</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <!-- Botón Alternar Barra Lateral (a la derecha) -->
+          <button class="menu-toggle-btn" id="menuToggleBtn" title="Alternar barra lateral (Ctrl+B)" aria-label="Alternar menú lateral">
+            <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- Contenedor con Scroll del Artículo -->
+      <div class="content-scrollable">
+        <div class="content-inner">
+          
+          <!-- Encabezado del Tema -->
+          <article class="topic-header">
+            <div class="topic-meta">
+              <span class="topic-num" id="topicNum">#1</span>
+              <span class="topic-badge-difficulty badge-principiante" id="topicBadgeDifficulty">Principiante</span>
+              <span class="chip-btn" id="topicBadgeCategory" style="cursor: default;">Fundamentos del Lenguaje</span>
+            </div>
+
+            <h1 class="topic-title-h1" id="topicTitle">Hola Mundo</h1>
+            <div class="topic-title-en" id="topicTitleEn">Título original: "Hello World" (Go by Example)</div>
+            <div class="topic-summary" id="topicSummary">
+              El primer programa canónico en Go que inicializa un paquete ejecutable e imprime un mensaje en la salida estándar.
+            </div>
+          </article>
+
+          <!-- Barra de Pestañas (Tabs) con Iconos SVG -->
+          <nav class="tabs-container" role="tablist">
+            <button class="tab-btn active" data-tab="code" role="tab">
+              <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              <span>Código Original</span>
+            </button>
+            <button class="tab-btn" data-tab="basic" role="tab">
+              <span class="tab-indicator ind-basic"></span>
+              <span>Nivel Básico</span>
+            </button>
+            <button class="tab-btn" data-tab="inter" role="tab">
+              <span class="tab-indicator ind-inter"></span>
+              <span>Nivel Intermedio</span>
+            </button>
+            <button class="tab-btn" data-tab="expert" role="tab">
+              <span class="tab-indicator ind-expert"></span>
+              <span>Nivel Experto</span>
+            </button>
+            <button class="tab-btn" data-tab="gotchas" role="tab" style="color: var(--accent-warning);">
+              <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+              <span>Trampas y Errores</span>
+            </button>
+            <button class="tab-btn" data-tab="interview" role="tab" style="color: var(--accent-purple);">
+              <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              <span>Entrevistas Técnicas</span>
+            </button>
+            <button class="tab-btn" data-tab="eval" role="tab" style="color: var(--accent-primary);">
+              <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+              <span>Ejercicio Práctico</span>
+            </button>
+            <button class="tab-btn" data-tab="links" role="tab">
+              <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              <span>Documentación y Enlaces</span>
+            </button>
+          </nav>
+
+          <!-- PESTAÑA 1: CÓDIGO ORIGINAL Y EJECUCIÓN -->
+          <section class="tab-content active" id="tab-code">
+            <div class="level-card" style="margin-bottom: 20px; border-left: 3px solid var(--accent-primary);">
+              <div style="font-size: 12px; font-weight: 700; color: var(--accent-primary); text-transform: uppercase; margin-bottom: 8px;">
+                Explicación Oficial de Go by Example (Adaptada al Español)
+              </div>
+              <p id="originalDocText" style="font-size: 15px; color: var(--text-main); line-height: 1.7;">
+                Cargando explicación original...
+              </p>
+            </div>
+
+            <!-- Panel de Código Fuente de Go -->
+            <div class="code-panel">
+              <div class="code-header">
+                <div class="code-title">
+                  <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                  <span>Archivo: main.go</span>
+                </div>
+                <div class="code-actions">
+                  <button class="code-btn" id="btnCopyCode" title="Copiar código al portapapeles">
+                    <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <span>Copiar Código</span>
+                  </button>
+                </div>
+              </div>
+              <div class="code-container" id="codeContainer">
+                <pre><code>// Cargando código de Go...</code></pre>
+              </div>
+            </div>
+
+            <!-- Panel de Ejecución en Terminal -->
+            <div class="terminal-panel">
+              <div class="terminal-header">
+                <span class="terminal-dot dot-red"></span>
+                <span class="terminal-dot dot-yellow"></span>
+                <span class="terminal-dot dot-green"></span>
+                <span style="margin-left: 6px;">Consola de Salida ($ go run)</span>
+                <button class="code-btn" id="btnCopyTerminal" style="margin-left: auto; padding: 2px 8px; font-size: 11px;">
+                  <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Copiar Salida</span>
+                </button>
+              </div>
+              <div class="terminal-body" id="terminalContainer">
+                $ go run hello-world.go
+                hello world
+              </div>
+            </div>
+          </section>
+
+          <!-- PESTAÑA 2: NIVEL BÁSICO -->
+          <section class="tab-content" id="tab-basic">
+            <div class="level-card">
+              <div class="level-card-header">
+                <div class="level-icon-badge badge-basic-color">
+                  <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                </div>
+                <div>
+                  <h3 class="level-card-title" id="basicTitle">Conceptos Fundamentales para Principiantes</h3>
+                  <span style="font-size: 12px; color: var(--accent-success); font-weight: 600;">Para quien se inicia en Go o en la programación</span>
+                </div>
+              </div>
+              <div class="level-card-body" id="basicContent"></div>
+              <div class="keypoints-list">
+                <div class="keypoints-title">Puntos Clave a Recordar</div>
+                <ul id="basicKeypoints"></ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- PESTAÑA 3: NIVEL INTERMEDIO -->
+          <section class="tab-content" id="tab-inter">
+            <div class="level-card">
+              <div class="level-card-header">
+                <div class="level-icon-badge badge-inter-color">
+                  <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </div>
+                <div>
+                  <h3 class="level-card-title" id="interTitle">Mecanismos Internos y Buenas Prácticas</h3>
+                  <span style="font-size: 12px; color: var(--accent-warning); font-weight: 600;">Para desarrolladores con experiencia y código idiomático</span>
+                </div>
+              </div>
+              <div class="level-card-body" id="interContent"></div>
+              <div class="keypoints-list" style="border-left-color: var(--accent-warning);">
+                <div class="keypoints-title" style="color: var(--accent-warning);">Buenas Prácticas y Convenciones</div>
+                <ul id="interKeypoints"></ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- PESTAÑA 4: NIVEL EXPERTO -->
+          <section class="tab-content" id="tab-expert">
+            <div class="level-card">
+              <div class="level-card-header">
+                <div class="level-icon-badge badge-expert-color">
+                  <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect> <rect x="9" y="9" width="6" height="6"></rect> <line x1="9" y1="1" x2="9" y2="4"></line> <line x1="15" y1="1" x2="15" y2="4"></line> <line x1="9" y1="20" x2="9" y2="23"></line> <line x1="15" y1="20" x2="15" y2="23"></line> <line x1="20" y1="9" x2="23" y2="9"></line> <line x1="20" y1="14" x2="23" y2="14"></line> <line x1="1" y1="9" x2="4" y2="9"></line> <line x1="1" y1="14" x2="4" y2="14"></line> </svg>
+                </div>
+                <div>
+                  <h3 class="level-card-title" id="expertTitle">Bajo Nivel, Rendimiento e Internals</h3>
+                  <span style="font-size: 12px; color: var(--accent-purple); font-weight: 600;">Para ingenieros senior, arquitectos y optimización de sistemas</span>
+                </div>
+              </div>
+              <div class="level-card-body" id="expertContent"></div>
+              <div class="keypoints-list" style="border-left-color: var(--accent-purple);">
+                <div class="keypoints-title" style="color: var(--accent-purple);">Internals del Compilador y Runtime</div>
+                <ul id="expertKeypoints"></ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- NUEVA PESTAÑA 5: GOTCHAS Y ERRORES EN PRODUCCIÓN -->
+          <section class="tab-content" id="tab-gotchas">
+            <div class="level-card">
+              <div class="level-card-header">
+                <div class="level-icon-badge" style="background: var(--accent-warning-subtle); color: var(--accent-warning);">
+                  <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                </div>
+                <div>
+                  <h3 class="level-card-title">Trampas Clásicas, Anti-patrones y Errores Ocultos</h3>
+                  <span style="font-size: 12px; color: var(--accent-warning); font-weight: 600;">Comportamientos inesperados que provocan caídas o fugas en producción</span>
+                </div>
+              </div>
+              <div id="gotchasContainer">
+                <!-- Renderizado dinámico -->
+              </div>
+              
+              <div class="mental-model-box" id="mentalModelBox">
+                <div class="mm-header">
+                  <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                  <span>Modelo Mental de Memoria y Flujo</span>
+                </div>
+                <div class="mm-content" id="mentalModelContent"></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- NUEVA PESTAÑA 6: PREGUNTAS DE ENTREVISTA FAANG -->
+          <section class="tab-content" id="tab-interview">
+            <div class="level-card">
+              <div class="level-card-header">
+                <div class="level-icon-badge" style="background: var(--accent-purple-subtle); color: var(--accent-purple);">
+                  <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                </div>
+                <div>
+                  <h3 class="level-card-title">Preguntas Frecuentes en Entrevistas Técnicas (FAANG & Senior)</h3>
+                  <span style="font-size: 12px; color: var(--accent-purple); font-weight: 600;">Preguntas de arquitectura, internals y casos de borde de entrevistas de trabajo</span>
+                </div>
+              </div>
+              <div id="interviewsContainer" class="interviews-list">
+                <!-- Renderizado dinámico -->
+              </div>
+            </div>
+          </section>
+
+          <!-- PESTAÑA 7: EJERCICIO DE EVALUACIÓN PRÁCTICO -->
+          <section class="tab-content" id="tab-eval">
+            <div class="eval-card">
+              <div class="eval-header">
+                <div class="level-icon-badge" style="background: var(--accent-primary-hover); color: #fff;">
+                  <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                </div>
+                <h3 id="evalTitle">Reto de Evaluación Práctica</h3>
+              </div>
+
+              <div class="eval-statement" id="evalStatement">
+                Consigna del ejercicio...
+              </div>
+
+              <div class="eval-editor-wrap">
+                <div class="eval-editor-header">
+                  <span>Tu Área de Práctica (Escribe y prueba tu código)</span>
+                  <span>Sintaxis de Go 1.22+</span>
+                </div>
+                <textarea 
+                  id="evalTextarea" 
+                  class="eval-textarea" 
+                  placeholder="// Escribe aquí tu código en Go..." 
+                  spellcheck="false"
+                ></textarea>
+                <div class="eval-statusbar">
+                  <span id="evalCursorPos">Línea 1, Col 1</span>
+                  <span><kbd>Tab</kbd> = 4 espacios · Auto-indentación activa · Auto-cierre (), {}, []</span>
+                </div>
+              </div>
+
+              <!-- Botones de Acción de Evaluación -->
+              <div class="eval-actions-bar">
+                <button class="action-btn" id="btnToggleHint" style="border-color: var(--accent-warning); color: var(--accent-warning);">
+                  <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="9" y1="18" x2="15" y2="18"></line><line x1="10" y1="22" x2="14" y2="22"></line><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"></path></svg>
+                  <span>Ver Pista</span>
+                </button>
+                <button class="action-btn primary-action" id="btnValidateCode">
+                  <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                  <span>Evaluar y Analizar Código</span>
+                </button>
+                <button class="action-btn" id="btnRevealSolution" style="border-color: var(--accent-success); color: var(--accent-success);">
+                  <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                  <span>Revelar Solución Canónica</span>
+                </button>
+                <button class="action-btn" id="btnResetCode" title="Restaurar plantilla inicial del reto">
+                  <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                  <span>Reiniciar</span>
+                </button>
+                <button class="action-btn" id="btnPlaygroundEval" style="border-color: #00ADD8; color: #00ADD8;">
+                  <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+                  <span>Área de pruebas</span>
+                </button>
+              </div>
+
+              <!-- Caja de Validación Inteligente (Oculta por defecto) -->
+              <div class="validation-box" id="validationBox" style="display: none;"></div>
+
+              <!-- Caja de Pista (Oculta por defecto) -->
+              <div class="hint-box" id="hintBox"></div>
+
+              <!-- Caja de Solución Revelada (Oculta por defecto) -->
+              <div class="solution-box" id="solutionBox">
+                <div style="font-size: 16px; font-weight: 700; color: var(--accent-success); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                  <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                  <span>Solución Canónica en Go</span>
+                </div>
+                
+                <div class="code-panel">
+                  <div class="code-header">
+                    <div class="code-title">
+                      <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                      <span>Archivo: solucion.go</span>
+                    </div>
+                  </div>
+                  <div class="code-container" id="solutionCode">
+                    <pre><code>// Solución en Go...</code></pre>
+                  </div>
+                </div>
+
+                <div class="solution-explanation" id="solutionExplanation">
+                  Explicación de la solución...
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- PESTAÑA 8: ENLACES EXTERNOS Y DOCUMENTACIÓN OFICIAL -->
+          <section class="tab-content" id="tab-links">
+            <div style="margin-bottom: 20px;">
+              <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 6px;">Recursos Externos y Enlaces Oficiales</h3>
+              <p style="color: var(--text-muted); font-size: 14px;">
+                Acceso directo a la documentación oficial de Go (go.dev), la especificación del lenguaje, paquetes estándar y tutoriales recomendados para este tema.
+              </p>
+            </div>
+
+            <div class="external-links-grid" id="externalLinksGrid">
+              <!-- Renderizado dinámico desde app.js -->
+            </div>
+          </section>
+
+          <!-- Barra Inferior de Navegación (Anterior / Siguiente) -->
+          <footer class="bottom-nav">
+            <a href="#" class="nav-target-btn" id="btnNavPrev">
+              <span class="nav-target-label">
+                <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                <span>Tema Anterior</span>
+              </span>
+              <span class="nav-target-title" id="prevTitleText">Hola Mundo</span>
+            </a>
+
+            <a href="#" class="nav-target-btn" id="btnNavNext" style="text-align: right; margin-left: auto;">
+              <span class="nav-target-label">
+                <span>Tema Siguiente</span>
+                <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </span>
+              <span class="nav-target-title" id="nextTitleText">Valores</span>
+            </a>
+          </footer>
+
+        </div>
+      </div>
+
+    </main>
+
+    <!-- BARRA LATERAL A LA DERECHA (SIDEBAR) -->
+    <aside class="sidebar" id="sidebar">
+      
+      <!-- Cabecera de la Marca -->
+      <div class="sidebar-header">
+        <a href="#" class="brand">
+          <div class="brand-logo">Go</div>
+          <div class="brand-text">
+            <h1>Go by Example</h1>
+            <span>Edición Pro en Español</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Barra de Progreso Global -->
+      <div class="progress-widget">
+        <div class="progress-header">
+          <span>Tu Progreso de Estudio</span>
+          <span class="progress-count" id="progressCount">0 / 85 (0%)</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progressBarFill"></div>
+        </div>
+      </div>
+
+      <!-- Buscador Rápido -->
+      <div class="search-box-wrapper">
+        <div class="search-box" id="sidebarSearchTrigger" title="Haz clic o presiona Ctrl+K para abrir la paleta de comandos">
+          <svg aria-hidden="true" class="icon-svg search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input 
+            type="text" 
+            id="searchInput" 
+            class="search-input" 
+            placeholder="Buscar tema o código..." 
+            autocomplete="off"
+            spellcheck="false"
+          >
+          <kbd class="search-kbd">Ctrl K</kbd>
+        </div>
+      </div>
+
+      <!-- Filtros por Chip -->
+      <div class="filter-chips">
+        <button class="chip-btn active" data-filter="all">Todos (85)</button>
+        <button class="chip-btn" data-filter="principiante">Principiante</button>
+        <button class="chip-btn" data-filter="intermedio">Intermedio</button>
+        <button class="chip-btn" data-filter="avanzado">Avanzado</button>
+        <button class="chip-btn" data-filter="pendientes">Pendientes</button>
+        <button class="chip-btn" data-filter="completados">Completados</button>
+        <button class="chip-btn" data-filter="favoritos">Favoritos</button>
+      </div>
+
+      <!-- Lista de Temas por Categoría -->
+      <nav class="topics-nav" id="topicsNav">
+        <!-- Renderizado dinámico desde app.js -->
+      </nav>
+
+    </aside>
+
+  </div>
+
+  <!-- MODAL: COMMAND PALETTE GLOBAL (Ctrl+K) -->
+  <div class="modal-overlay" id="commandPaletteModal" style="display: none;">
+    <div class="command-palette">
+      <div class="cp-header">
+        <svg aria-hidden="true" class="icon-svg cp-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+        <input 
+          type="text" 
+          id="cpInput" 
+          class="cp-input" 
+          placeholder="Escribe un comando o busca entre los 85 temas..." 
+          autocomplete="off" 
+          spellcheck="false"
+        >
+        <kbd class="cp-esc-badge" id="btnCpClose">Esc</kbd>
+      </div>
+      <div class="cp-results" id="cpResults">
+        <!-- Renderizado reactivo desde app.js -->
+      </div>
+      <div class="cp-footer">
+        <span><kbd>↑</kbd> <kbd>↓</kbd> Navegar</span>
+        <span><kbd>↵</kbd> Seleccionar</span>
+        <span><kbd>Esc</kbd> Cerrar</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: RESPALDO DE PROGRESO (EXPORTAR / IMPORTAR JSON) -->
+  <div class="modal-overlay" id="backupModal" style="display: none;">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>
+          <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+          <span>Respaldo de Progreso (100% Privado)</span>
+        </h3>
+        <button class="modal-close-btn" id="btnCloseBackup">
+          <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px; line-height: 1.6;">
+          Tu avance de estudio se almacena de forma segura y privada en este navegador. Descarga tu archivo de respaldo en formato JSON para guardar tus temas completados, marcadores y transferirlos a otro dispositivo.
+        </p>
+        <div class="backup-actions-grid">
+          <button class="action-btn primary-action" id="btnExportProgress" style="justify-content: center; padding: 12px;">
+            <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Descargar Respaldo (.json)</span>
+          </button>
+          <label class="action-btn" style="justify-content: center; padding: 12px; cursor: pointer; border-color: var(--accent-primary); color: var(--accent-primary);">
+            <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+            <span>Cargar Respaldo (.json)</span>
+            <input type="file" id="importFileInput" accept=".json" style="display: none;">
+          </label>
+        </div>
+        <hr style="border: none; border-top: 1px solid var(--border-color); margin: 24px 0;">
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px;">
+          <div>
+            <div style="font-weight: 600; color: var(--accent-danger); font-size: 14px;">Reiniciar Progreso</div>
+            <div style="font-size: 12px; color: var(--text-dim);">Limpia todos los temas completados y favoritos guardados</div>
+          </div>
+          <button class="action-btn" id="btnResetProgress" style="border-color: var(--accent-danger); color: var(--accent-danger);">
+            <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+            <span>Reiniciar</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: MÉTRICAS DE APRENDIZAJE Y CERTIFICADO -->
+  <div class="modal-overlay" id="statsModal" style="display: none;">
+    <div class="modal-card modal-lg">
+      <div class="modal-header">
+        <h3>
+          <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34"></path><path d="M6 2h12v7a6 6 0 0 1-12 0V2z"></path></svg>
+          <span>Métricas de Aprendizaje y Certificación</span>
+        </h3>
+        <button class="modal-close-btn" id="btnCloseStats">
+          <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="stats-overview-grid">
+          <div class="stat-box">
+            <div class="stat-val" id="statCompletedNum">0 / 85</div>
+            <div class="stat-lbl">Temas Completados</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-val" id="statPercentNum">0%</div>
+            <div class="stat-lbl">Dominio Global</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-val" id="statBookmarksNum">0</div>
+            <div class="stat-lbl">Favoritos Guardados</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-val" id="statEstHours">0 h</div>
+            <div class="stat-lbl">Horas de Estudio Est.</div>
+          </div>
+        </div>
+
+        <div class="stats-diff-breakdown" id="statsDiffBreakdown">
+          <!-- Desglose por dificultad dinámico -->
+        </div>
+
+        <div class="certificate-section">
+          <h4 style="margin-bottom: 6px; font-size: 16px;">
+            <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            <span>Certificado Digital de Finalización</span>
+          </h4>
+          <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 14px;">
+            Genera un diploma oficial en alta resolución listo para compartir en LinkedIn, Twitter o tu portafolio personal.
+          </p>
+          <div class="cert-input-row">
+            <input 
+              type="text" 
+              id="certUserName" 
+              class="search-input" 
+              placeholder="Ingresa tu nombre y apellido..." 
+              style="max-width: 320px;"
+            >
+            <button class="action-btn primary-action" id="btnGenerateCert">
+              <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.5 17.5 2 12 2z"></path></svg>
+              <span>Generar Diploma</span>
+            </button>
+          </div>
+          <div class="cert-canvas-wrap" id="certCanvasWrap" style="display: none; margin-top: 16px;">
+            <canvas id="certCanvas" width="960" height="540" style="max-width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: var(--shadow-md);"></canvas>
+            <div style="margin-top: 12px; display: flex; gap: 10px;">
+              <button class="action-btn" id="btnDownloadCert" style="border-color: var(--accent-success); color: var(--accent-success);">
+                <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>Descargar Diploma (PNG)</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Píldora de Estado Offline -->
+  <div class="offline-pill" id="offlinePill" style="display: none;">
+    <svg aria-hidden="true" class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="1" y1="1" x2="23" y2="23"></line><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"></path><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"></path><path d="M10.71 5.05A16 16 0 0 1 22.58 9"></path><path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
+    <span>Modo sin conexión activo (Disponible de forma local)</span>
+  </div>
+
+  <!-- Contenedor Flotante de Toasts de Notificación -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="js/icons.js?v=2.6"></script>
+  <script src="js/topics-data.js?v=2.6"></script>
+  <script src="js/gotchas-interviews.js?v=2.6"></script>
+  <script src="js/app.js?v=2.6"></script>
+</body>
+</html>
